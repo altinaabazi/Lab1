@@ -36,19 +36,24 @@ function Dashboard() {
                         {/*  <!-- Sidebar - Brand --> */}
                         <a className="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                             <div className="sidebar-brand-icon rotate-n-15">
-                                <i className="fas fa-laugh-wink"></i>
+                                <i className="fas fa-book"></i>
                             </div>
-                            <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                            <div className="sidebar-brand-text mx-3">LibraTech</div>
                             <div className="text-center d-none d-md-inline">
                             <button className="rounded-circle border-0" id="sidebarToggle" onClick={changeStyle}></button>
                         </div>
                         </a>
+                        
 
                         {/*   <!-- Divider --> */}
                         <hr className="sidebar-divider my-0" />
 
                         {/*  <!-- Nav Item - Dashboard --> */}
+                        
                         <li className="nav-item active">
+                            <a className="nav-link" href="index.html">
+                            <i className="fa fa-home" aria-hidden="true"></i>
+                                <span>Home</span></a>
                             <a className="nav-link" href="index.html">
                                 <i className="fas fa-fw fa-tachometer-alt"></i>
                                 <span>Dashboard</span></a>
@@ -58,22 +63,20 @@ function Dashboard() {
                         <hr className="sidebar-divider" />
 
                         {/*   <!-- Heading --> */}
-                        <div className="sidebar-heading">
-                            Interface
-                        </div>
+                        
 
                         {/*  <!-- Nav Item - Pages Collapse Menu --> */}
+                       
                         <li className="nav-item">
                             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                                 aria-expanded="true" aria-controls="collapseTwo">
-                                <i className="fas fa-fw fa-cog"></i>
-                                <span>Components</span>
+                                 <i className="fa fa-user" aria-hidden="true"></i>
+                                <span>User Profile</span>
                             </a>
                             <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                                 <div className="bg-white py-2 collapse-inner rounded">
-                                    <h6 className="collapse-header">Custom Components:</h6>
-                                    <a className="collapse-item" href="buttons.html">Buttons</a>
-                                    <a className="collapse-item" href="cards.html">Cards</a>
+                                    <a className="collapse-item" href="buttons.html">My Profile</a>
+                                    <a className="collapse-item" href="cards.html">Edit Profile</a>
                                 </div>
                             </div>
                         </li>
@@ -82,17 +85,19 @@ function Dashboard() {
                         <li className="nav-item">
                             <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                                 aria-expanded="true" aria-controls="collapseUtilities">
-                                <i className="fas fa-fw fa-wrench"></i>
-                                <span>Utilities</span>
+                               <i className="fa fa-list"></i>
+                                <span>Books</span>
                             </a>
                             <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities"
                                 data-parent="#accordionSidebar">
                                 <div className="bg-white py-2 collapse-inner rounded">
-                                    <h6 className="collapse-header">Custom Utilities:</h6>
-                                    <a className="collapse-item" href="utilities-color.html">Colors</a>
-                                    <a className="collapse-item" href="utilities-border.html">Borders</a>
-                                    <a className="collapse-item" href="utilities-animation.html">Animations</a>
-                                    <a className="collapse-item" href="utilities-other.html">Other</a>
+                                    <h6 className="collapse-header">Category:</h6>
+                                    <a className="collapse-item" href="#">Art</a>
+                                    <a className="collapse-item" href="#">Biography</a>
+                                    <a className="collapse-item" href="#">Dictionary</a>
+                                    <a className="collapse-item" href="#">Fashion</a>
+                                    <a className="collapse-item" href="#">History</a>
+                                    <a className="collapse-item" href="#">Science</a>
                                 </div>
                             </div>
                         </li>
@@ -102,7 +107,7 @@ function Dashboard() {
 
                         {/* <!-- Heading --> */}
                         <div className="sidebar-heading">
-                            Addons
+                           ...
                         </div>
 
                         {/*  <!-- Nav Item - Pages Collapse Menu --> */}
@@ -119,9 +124,7 @@ function Dashboard() {
                                     <a className="collapse-item" href="register.html">Register</a>
                                     <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
                                     <div className="collapse-divider"></div>
-                                    <h6 className="collapse-header">Other Pages:</h6>
-                                    <a className="collapse-item" href="404.html">404 Page</a>
-                                    <a className="collapse-item" href="blank.html">Blank Page</a>
+                                    
                                 </div>
                             </div>
                         </li>
@@ -152,7 +155,6 @@ function Dashboard() {
                         <div className="sidebar-card d-none d-lg-flex">
                             <img className="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="..." />
                             <p className="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                            <a className="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
                         </div>
 
                     </ul>
@@ -214,15 +216,15 @@ function Dashboard() {
                                     </li>
 
                                     {/*  <!-- Nav Item - Alerts --> */}
-                                    <li className="nav-item dropdown no-arrow mx-1">
+                                    {/* <li className="nav-item dropdown no-arrow mx-1">
                                         <a className="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i className="fas fa-bell fa-fw"></i>
+                                            <i className="fas fa-bell fa-fw"></i> */}
                                             {/*  <!-- Counter - Alerts --> */}
-                                            <span className="badge badge-danger badge-counter">3+</span>
-                                        </a>
+                                            {/* <span className="badge badge-danger badge-counter">3+</span>
+                                        </a> */}
                                         {/*   <!-- Dropdown - Alerts --> */}
-                                        <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                        {/* <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                             aria-labelledby="alertsDropdown">
                                             <h6 className="dropdown-header">
                                                 Alerts Center
@@ -262,18 +264,18 @@ function Dashboard() {
                                             </a>
                                             <a className="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                                         </div>
-                                    </li>
+                                    </li> */}
 
                                     {/*  <!-- Nav Item - Messages --> */}
-                                    <li className="nav-item dropdown no-arrow mx-1">
+                                    {/* <li className="nav-item dropdown no-arrow mx-1">
                                         <a className="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i className="fas fa-envelope fa-fw"></i>
+                                            <i className="fas fa-envelope fa-fw"></i> */}
                                             {/*  <!-- Counter - Messages --> */}
-                                            <span className="badge badge-danger badge-counter">7</span>
-                                        </a>
+                                            {/* <span className="badge badge-danger badge-counter">7</span>
+                                        </a> */}
                                         {/*   <!-- Dropdown - Messages --> */}
-                                        <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                        {/* <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                             aria-labelledby="messagesDropdown">
                                             <h6 className="dropdown-header">
                                                 Message Center
@@ -328,15 +330,15 @@ function Dashboard() {
                                             </a>
                                             <a className="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                                         </div>
-                                    </li>
+                                    </li> */}
 
-                                    <div className="topbar-divider d-none d-sm-block"></div>
+                                    {/* <div className="topbar-divider d-none d-sm-block"></div> */}
 
                                     {/* <!-- Nav Item - User Information --> */}
                                     <li className="nav-item dropdown no-arrow">
                                         <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span className="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                            <span className="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                                             <img className="img-profile rounded-circle"
                                                 src="img/undraw_profile.svg" />
                                         </a>
@@ -370,7 +372,7 @@ function Dashboard() {
 
                             {/* <!-- Begin Page Content --> */}
                             <div className="container-fluid">
-
+                                
                                 {/*  <!-- Page Heading --> */}
                                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
                                     <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>

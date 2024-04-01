@@ -152,10 +152,10 @@ function Dashboard() {
                         </div> */}
 
                         {/*  <!-- Sidebar Message --> */}
-                        <div className="sidebar-card d-none d-lg-flex">
+                        {/* <div className="sidebar-card d-none d-lg-flex">
                             <img className="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="..." />
                             <p className="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                        </div>
+                        </div> */}
 
                     </ul>
                     {/*  <!-- End of Sidebar --> */}

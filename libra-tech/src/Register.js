@@ -4,13 +4,14 @@ function Register() {
   return (
     <body className="bg-gradient-primary">
 
-    <div className="container">
+    <div className="container" style={{padding: 3 + 'em'}}>
 
         <div className="card o-hidden border-0 shadow-lg my-5">
             <div className="card-body p-0">
                {/*  <!-- Nested Row within Card Body --> */}
                 <div className="row">
-                    <div className="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    {/* <div className="col-lg-5 d-none d-lg-block bg-register-image"></div> */}
+                    <img src="img/book.png" alt="foto" width="400" height="600" />
                     <div className="col-lg-7">
                         <div className="p-5">
                             <div className="text-center">
@@ -45,12 +46,12 @@ function Register() {
                                     Register Account
                                 </a>
                                 <hr/>
-                                <a href="index.html" className="btn btn-google btn-user btn-block">
+                                {/* <a href="index.html" className="btn btn-google btn-user btn-block">
                                     <i className="fab fa-google fa-fw"></i> Register with Google
                                 </a>
                                 <a href="index.html" className="btn btn-facebook btn-user btn-block">
                                     <i className="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                                </a>
+                                </a> */}
                             </form>
                             <hr/>
                             <div className="text-center">

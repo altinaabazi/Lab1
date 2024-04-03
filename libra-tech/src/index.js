@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 /* import './index.css'; */
-import Dashboard from './Dashboard';
+// import Dashboard from './Dashboard';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
+import Login from './login';
+// import Register from './Register';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Dashboard />
+     <App />
   </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

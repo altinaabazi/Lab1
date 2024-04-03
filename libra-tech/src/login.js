@@ -15,7 +15,9 @@ function Login() {
                     <div className="card-body p-0">
                         {/* <!-- Nested Row within Card Body --> */}
                         <div className="row">
-                            <div className="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            
+                            {/* <div className="col-lg-6 d-none d-lg-block bg-login-image"></div> */}
+                            <img src="img/book.png" alt="foto" width="400" height="600" />
                             <div className="col-lg-6">
                                 <div className="p-5">
                                     <div className="text-center">
@@ -42,12 +44,12 @@ function Login() {
                                             Login
                                         </a>
                                         <hr/>
-                                        <a href="index.html" className="btn btn-google btn-user btn-block">
+                                        {/* <a href="index.html" className="btn btn-google btn-user btn-block">
                                             <i className="fab fa-google fa-fw"></i> Login with Google
                                         </a>
                                         <a href="index.html" className="btn btn-facebook btn-user btn-block">
                                             <i className="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
+                                        </a> */}
                                     </form>
                                     <hr/>
                                     <div className="text-center">

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj": {}
+    "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj": {
+    "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
+        "projectUniqueName": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
         "projectName": "Lab1_Backend",
-        "projectPath": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
-        "packagesPath": "C:\\Users\\Zgjim\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\obj\\",
+        "projectPath": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
+        "packagesPath": "C:\\Users\\NB\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Zgjim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NB\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

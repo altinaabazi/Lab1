@@ -120,8 +120,8 @@ function Dashboard() {
                             <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                                 <div className="bg-white py-2 collapse-inner rounded">
                                     <h6 className="collapse-header">Login Screens:</h6>
-                                    <a className="collapse-item" href="login.html">Login</a>
-                                    <a className="collapse-item" href="register.html">Register</a>
+                                    <a className="collapse-item" href="/">Login</a>
+                                    <a className="collapse-item" href="register">Register</a>
                                     <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
                                     <div className="collapse-divider"></div>
                                     

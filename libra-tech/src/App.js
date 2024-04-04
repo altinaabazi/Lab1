@@ -5,6 +5,7 @@ import './App.css';
 import Login from './login';
 import Register from './Register';
 import Dashboard from './Dashboard';
+import ForgotPassword from './forgot-password';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
       </Routes>
     </Router>
   );

@@ -6,6 +6,9 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import axios from "axios";
+import {ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Books = () => {
     const [show, setShow] = useState(false);
 
@@ -14,14 +17,14 @@ const Books = () => {
 
     const [Titulli, setTitulli] = useState('')
     const [Autori,setAutori] = useState('')
-    const [VitiPublikimit,setVitiPubblikimit] = useState('')
+    const [VitiPublikimit,setVitiPublikimit] = useState('')
     const [Cmimi,setCmimi] = useState('')
     const [Sasia,setSasia] = useState('')
 
-    const [editISBN, setEditISBN] = useState('')
+    const [editID, setEditID] = useState('')
     const [editTitulli, setEditTitulli] = useState('')
     const [editAutori,setEditAutori] = useState('')
-    const [editVitiPublikimit,setEditVitiPubblikimit] = useState('')
+    const [editVitiPublikimit,setEditVitiPublikimit] = useState('')
     const [editCmimi,setEditCmimi] = useState('')
     const [editSasia,setEditSasia] = useState('')
 
@@ -29,7 +32,7 @@ const Books = () => {
 
     const empdata = [
         {
-            ISBN: 123,
+            ID: 1,
             Titulli: 'a',
             Autori: 'a',
             VitiPublikimit: 2020,
@@ -40,53 +43,134 @@ const Books = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        setData(empdata);
+       getData();
     }, [])
 
-    const handleEdit = (ISBN) => {
-        // if (window.confirm('Are you sure to edit this book?') == true) {
-        //     alert(ISBN);
-        // }
+    const getData = () =>{
+        axios.get('http://localhost:32596/api/Book')
+        .then((result)=>{
+            setData(result.data)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    }
+
+    const handleEdit = (ID) => {
         handleShow();
+        axios.get(`http://localhost:32596/api/Book/${ID}`)
+        .then((result)=>{
+            setEditTitulli(result.data.Titulli);
+            setEditAutori(result.data.Autori);
+            setEditVitiPublikimit(result.data.VitiPublikimit);
+            setEditCmimi(result.data.Cmimi);
+            setEditSasia(result.data.Sasia);
+            setEditID(ID);
+
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    }
+    
+    const handleSave =()=>{
+        const url ='http://localhost:32596/api/Book';
+        const data={
+
+            "Titulli": Titulli,
+            "Autori": Autori,
+            "VitiPublikimit": VitiPublikimit,
+            "Cmimi": Cmimi,
+            "Sasia": Sasia
+          }
+          axios.post(url, data)
+          .then((result)=>{
+            getData();
+            clear();
+            toast.success('Book has been added');
+          }).catch((error)=>{
+            toast.error(error);
+          })
+    }
+    const clear = ()=>{
+        setTitulli('');
+        setAutori('');
+        setVitiPublikimit('');
+        setCmimi('');
+        setSasia('')
+        setEditTitulli('');
+        setEditAutori('');
+        setEditVitiPublikimit('');
+        setEditCmimi('');
+        setEditSasia('');
+        setEditID('');
 
     }
-    const handleDelete = (ISBN) => {
+    const handleDelete = (id) => {
         if (window.confirm('Are you sure to delete this book?') == true) {
-            alert(ISBN);
+            axios.delete(`http://localhost:32596/api/Book/${id}`)
+            .then((result)=>{
+                if(result.status === 200 )
+                {
+                    toast.success('Book has been deleted');
+                    getData();
+                }
+            }).catch((error)=>{
+                toast.error(error);
+              })
         }
     }
-    const handleUpdate = () => {
 
+    const handleUpdate = () => {
+        const url = `http://localhost:32596/api/Book/${editID}`
+        const data={
+            "ID": editID,
+            "Titulli": editTitulli,
+            "Autori": editAutori,
+            "VitiPublikimit": editVitiPublikimit,
+            "Cmimi": editCmimi,
+            "Sasia": editSasia
+          }
+          axios.put(url, data)
+          .then((result)=>{
+            handleClose();
+            getData();
+            clear();
+            toast.success('Book has been updated');
+          }).catch((error)=>{
+            toast.error(error);
+          })
     }
 
     return (
         <Fragment>
+            <ToastContainer/>
             <Container>
                 <Row>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter Titulli' value={Titulli}
+                    <input type='text' className='form-control' placeholder='Titulli' value={Titulli}
                       onChange={(e)=> setTitulli(e.target.value)}/>
                     </Col>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter Autori' value={Autori}
+                    <input type='text' className='form-control' placeholder='Autori' value={Autori}
                       onChange={(e)=> setAutori(e.target.value)}/>
                     </Col>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter VitiPublikimit' value={VitiPublikimit}
-                      onChange={(e)=> setVitiPubblikimit(e.target.value)}/>
+                    <input type='text' className='form-control' placeholder='VitiPublikimit' value={VitiPublikimit}
+                      onChange={(e)=> setVitiPublikimit(e.target.value)}/>
 
                     </Col>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter Cmimi' value={Cmimi}
+                    <input type='text' className='form-control' placeholder='Cmimi' value={Cmimi}
                       onChange={(e)=> setCmimi(e.target.value)}/>
 
                     </Col>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter Sasia'value={Sasia}
+                    <input type='text' className='form-control' placeholder='Sasia'value={Sasia}
                       onChange={(e)=> setSasia(e.target.value)}/>
                     </Col>
                     <Col>
-                    <button className='btn btn-primary'>Submit</button>
+                    <button className='btn btn-primary' onClick={()=>handleSave() }>Submit</button>
                     </Col>
                      
                 </Row>
@@ -96,7 +180,6 @@ const Books = () => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>ISBN</th>
                         <th>Titulli</th>
                         <th>Autori</th>
                         <th>VitiPublikimit</th>
@@ -113,15 +196,15 @@ const Books = () => {
                                 return (
                                     <tr key={index}>
                                         <td>{index + 1}</td>
-                                        <td>{Item.ISBN}</td>
+                                        <td>{Item.ID}</td>
                                         <td>{Item.Titulli}</td>
                                         <td>{Item.Autori}</td>
                                         <td>{Item.VitiPublikimit}</td>
                                         <td>{Item.Cmimi}</td>
                                         <td>{Item.Sasia}</td>
                                         <td colSpan={2}>
-                                            <button className="btn btn-primary" onClick={() => handleEdit(Item.ISBN)}>Edit</button> &nbsp;
-                                            <button className="btn btn-danger" onClick={() => handleDelete(Item.ISBN)}>Delete</button>
+                                            <button className="btn btn-primary" onClick={() => handleEdit(Item.ID)}>Edit</button> &nbsp;
+                                            <button className="btn btn-danger" onClick={() => handleDelete(Item.ID)}>Delete</button>
                                         </td>
 
                                     </tr>
@@ -129,7 +212,7 @@ const Books = () => {
                             })
                             :
                             'Loading...'
-                    }
+                        }
 
 
                 </tbody>
@@ -142,25 +225,25 @@ const Books = () => {
                 <Modal.Body>
                 <Row>
                 <Col>
-                    <input type='text' className='form-control' placeholder='Enter Titulli' value={editTitulli}
+                    <input type='text' className='form-control' placeholder='Titulli' value={editTitulli}
                       onChange={(e)=> setEditTitulli(e.target.value)}/>
                     </Col>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter Autori' value={editAutori}
+                    <input type='text' className='form-control' placeholder='Autori' value={editAutori}
                       onChange={(e)=> setEditAutori(e.target.value)}/>
                     </Col>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter VitiPublikimit' value={editVitiPublikimit}
-                      onChange={(e)=> setEditVitiPubblikimit(e.target.value)}/>
+                    <input type='text' className='form-control' placeholder='VitiPublikimit' value={editVitiPublikimit}
+                      onChange={(e)=> setEditVitiPublikimit(e.target.value)}/>
 
                     </Col>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter Cmimi' value={editCmimi}
+                    <input type='text' className='form-control' placeholder='Cmimi' value={editCmimi}
                       onChange={(e)=> setEditCmimi(e.target.value)}/>
 
                     </Col>
                     <Col>
-                    <input type='text' className='form-control' placeholder='Enter Sasia'value={editSasia}
+                    <input type='text' className='form-control' placeholder='Sasia'value={editSasia}
                       onChange={(e)=> setEditSasia(e.target.value)}/>
                     </Col>
             

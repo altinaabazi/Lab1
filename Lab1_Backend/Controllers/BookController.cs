@@ -10,9 +10,96 @@ using Microsoft.Extensions.Configuration;
 using Lab1_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 
-/*
 
 namespace Lab1_Backend.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class BookController : ControllerBase
+    {
+        private readonly BookContext _bookContext;
+        public BookController(BookContext bookContext)
+        {
+            _bookContext = bookContext;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Book>>> GetBook()
+        {
+            if (_bookContext.Books == null)
+            {
+                return NotFound();
+            }
+            return await _bookContext.Books.ToListAsync();
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Book>> GetBook(int id)
+        {
+            if (_bookContext.Books == null)
+            {
+                return NotFound();
+            }
+            var book = await _bookContext.Books.FindAsync(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+            return book;
+
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Book>> PostBook(Book book)
+        {
+            _bookContext.Books.Add(book);
+            await _bookContext.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetBook), new { id = book.ID }, book);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> PutBook(int id, Book book)
+        {
+            if (id != book.ID)
+            {
+                return BadRequest();
+
+            }
+            _bookContext.Entry(book).State = EntityState.Modified;
+            try
+            {
+                await _bookContext.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteBook(int id)
+        {
+            if (_bookContext.Books == null)
+            {
+                return NotFound();
+            }
+            var book = await _bookContext.Books.FindAsync(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+            _bookContext.Books.Remove(book);
+            await _bookContext.SaveChangesAsync();
+            return Ok();
+        }
+    }
+}
+
+
+
+
+/*namespace Lab1_Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -29,7 +116,7 @@ namespace Lab1_Backend.Controllers
             string query = "select * from dbo.Libri";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -52,21 +139,20 @@ namespace Lab1_Backend.Controllers
         [Route("PostBook")]
         public JsonResult PostBook(Book b)
         {
-            string query =@"INSERT INTO dbo.Libri(ISBN,Titulli,Autori,VitiPublikimit,Cmimi,Sasia,IDDepo,NrPorosise)
+            string query =@"INSERT INTO dbo.Libri(ID,Titulli,Autori,VitiPublikimit,Cmimi,Sasia)
                          values
-                           ('" + b.ISBN + @"'
+                           ('" + b.ID + @"'
                            ,'" + b.Titulli + @"'
                            ,'" + b.Autori + @"'
                            ,'" + b.VitiPublikimit + @"'
                            ,'" + b.Cmimi + @"'
                            ,'" + b.Sasia + @"'
-                           ,'" + b.IDDepo + @"'
-                           ,'" + b.NrPorosise + @"'
+                           
 
                             )";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -97,15 +183,13 @@ namespace Lab1_Backend.Controllers
                    VitiPublikimit = '" + b.VitiPublikimit + @"',
                    Cmimi = '" + b.Cmimi + @"',
                    Sasia = '" + b.Sasia + @"',
-                   IDLibraria = '" + b.IDLibraria + @"',
-                   IDDepo = '" + b.IDDepo + @"',
-                   NrPorosise = '" + b.NrPorosise+ @"',
+                  
 
-                   where ISBN = '" + b.ISBN + @"'";
+                   where ISBN = '" + b.ID + @"'";
             
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {
@@ -130,10 +214,10 @@ namespace Lab1_Backend.Controllers
         public JsonResult DeleteBook(int id)
         {
             string query = @"delete from  dbo.Libri   
-                   where ISBN = " + id + @"";
+                   where ID = " + id + @"";
 
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
+            string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
             SqlDataReader myReader;
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
             {

@@ -1,8 +1,17 @@
 using Newtonsoft.Json.Serialization;
+using Lab1_Backend.Models;
+using Microsoft.EntityFrameworkCore;
+using Lab1_Backend.Controllers;
+using Microsoft.Extensions.DependencyInjection;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<BookContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -14,10 +23,12 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore).AddNewtonsoftJson(
    options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 //Enable CORS
-app.UseCors(c=>c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+//app.UseCors(c=>c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -25,6 +36,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(builder =>
+{
+    builder
+    .AllowAnyHeader()
+    .AllowAnyOrigin()
+    .AllowAnyMethod();
+
+});
+
+
 
 app.UseAuthorization();
 

@@ -6,17 +6,24 @@ import Login from './login';
 import Register from './Register';
 import Dashboard from './Dashboard';
 import ForgotPassword from './forgot-password';
+import Books from './Books';
+
 
 function App() {
+  // return (
+  //   <Router>
+  //     <Routes>
+  //       <Route path='/' element={<Login/>}></Route>
+  //       <Route path='/register' element={<Register/>}></Route>
+  //       <Route path='/dashboard' element={<Dashboard/>}></Route>
+  //       <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
+  //     </Routes>
+  //   </Router>
+  // );
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Login/>}></Route>
-        <Route path='/register' element={<Register/>}></Route>
-        <Route path='/dashboard' element={<Dashboard/>}></Route>
-        <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
-      </Routes>
-    </Router>
+    <div className="App">
+      <Books />
+    </div>
   );
 }
 

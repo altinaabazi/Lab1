@@ -1,7 +1,7 @@
 
-CREATE DATABASE DB_BookStore
+CREATE DATABASE LibraTechDB
 
-USE  DB_BookStore
+USE  LibraTechDB
 --Tabela Libraria
 CREATE TABLE Libraria(
 IDLibrari int primary key not null,
@@ -12,21 +12,29 @@ Qyteti varchar(50) null,
 
 --Tabela Stafi
 CREATE TABLE Stafi(
-IDStafi int primary key identity (1,1),
+IDStafi int primary key,
 Emri varchar(30) not null,
 Mbiemri varchar(40) not null,
-ZipCode int not null,
+Adresa varchar(40),
 Gjinia char(1) not null check(Gjinia = 'F' or Gjinia = 'M'),
-Pervoja varchar(20) null,
 IDLibrari int foreign key references Libraria 
 );
 
 --Tabela StafiTeknik
+/*
 CREATE TABLE STeknik(
 StafiID int primary key,
 Stafi_ID int not null  foreign key references Stafi,
-Menaxheri int foreign key references STeknik
+
 );
+--Tabela Depo
+CREATE TABLE Depo(
+IDDepo int primary key,
+Viti int,
+Pershkrimi varchar(60),
+Sasia int not null,
+LibrariaID int foreign  key references Libraria
+);*/
 
 
 --Tabela StafiDergues
@@ -38,25 +46,13 @@ Nr_Pakove int not null,
 );
 
 
---Tabela Depo
-CREATE TABLE Depo(
-IDDepo int primary key,
-Viti int,
-Pershkrimi varchar(60),
-Sasia int not null,
-LibrariaID int foreign  key references Libraria
-);
-
 --Tabela Klienti
 CREATE TABLE Klienti(
 ID int primary key identity(1,1),
 Emri varchar(30),
 Mbiemri varchar(30),
-Datelindja Date,
 Email varchar(50) unique not null,
-Qyteti varchar(30) not null,
-Rruga varchar(30) not null,
-ZipCode int null,
+Adresa varchar(60),
 LibrariaID int foreign key references Libraria
 );
 
@@ -77,9 +73,8 @@ foreign key (IDStafi) references SDergues(StafiID),
 foreign key (IDPorosia) references Porosia(NrPorosia)
 );
 
+
 --Tabela Telefoni
-
-
 CREATE TABLE Telefoni (
     KlientiID int FOREIGN KEY REFERENCES Klienti(ID) ON DELETE CASCADE,
     PRIMARY KEY (KlientiID,Nr_Tel),

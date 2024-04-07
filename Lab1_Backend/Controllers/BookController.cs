@@ -8,8 +8,9 @@ using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using Lab1_Backend.Models;
+using Microsoft.EntityFrameworkCore;
 
-
+/*
 
 namespace Lab1_Backend.Controllers
 {
@@ -25,7 +26,7 @@ namespace Lab1_Backend.Controllers
         [HttpGet]
         [Route("GetBook")]
         public JsonResult GetBook() {
-            string query = "select * from dbo.Libraria";
+            string query = "select * from dbo.Libri";
 
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
@@ -51,12 +52,17 @@ namespace Lab1_Backend.Controllers
         [Route("PostBook")]
         public JsonResult PostBook(Book b)
         {
-            string query =@"INSERT INTO dbo.Libraria(IDLibrari,Emri,Rruga,Qyteti)
+            string query =@"INSERT INTO dbo.Libri(ISBN,Titulli,Autori,VitiPublikimit,Cmimi,Sasia,IDDepo,NrPorosise)
                          values
-                           ('" + b.IDLibrari + @"'
-                           ,'" + b.Emri + @"'
-                           ,'" + b.Rruga + @"'
-                           ,'" + b.Qyteti + @"'
+                           ('" + b.ISBN + @"'
+                           ,'" + b.Titulli + @"'
+                           ,'" + b.Autori + @"'
+                           ,'" + b.VitiPublikimit + @"'
+                           ,'" + b.Cmimi + @"'
+                           ,'" + b.Sasia + @"'
+                           ,'" + b.IDDepo + @"'
+                           ,'" + b.NrPorosise + @"'
+
                             )";
 
             DataTable table = new DataTable();
@@ -83,12 +89,19 @@ namespace Lab1_Backend.Controllers
         [Route("PutBook")]
         public JsonResult PutBook(Book b)
         {
-            string query = @"UPDATE  dbo.Libraria set
+            string query = @"UPDATE  dbo.Libri set
                
-                   Emri = '" + b.Emri + @"',
-                   Rruga = '" + b.Rruga + @"',
-                   Qyteti = '" + b.Qyteti + @"'
-                   where IDLibrari = '" + b.IDLibrari + @"'";
+           
+                   Titulli = '" + b.Titulli + @"',
+                   Autori = '" + b.Autori + @"',
+                   VitiPublikimit = '" + b.VitiPublikimit + @"',
+                   Cmimi = '" + b.Cmimi + @"',
+                   Sasia = '" + b.Sasia + @"',
+                   IDLibraria = '" + b.IDLibraria + @"',
+                   IDDepo = '" + b.IDDepo + @"',
+                   NrPorosise = '" + b.NrPorosise+ @"',
+
+                   where ISBN = '" + b.ISBN + @"'";
             
 
             DataTable table = new DataTable();
@@ -116,8 +129,8 @@ namespace Lab1_Backend.Controllers
        
         public JsonResult DeleteBook(int id)
         {
-            string query = @"delete from  dbo.Libraria   
-                   where IDLibrari = " + id + @"";
+            string query = @"delete from  dbo.Libri   
+                   where ISBN = " + id + @"";
 
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
@@ -142,3 +155,4 @@ namespace Lab1_Backend.Controllers
 
 
     }
+*/

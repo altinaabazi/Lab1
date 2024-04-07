@@ -2,9 +2,14 @@
 {
     public class Book
     {
-        public int IDLibrari { get; set; }
-        public string Emri { get; set; }
-        public string Rruga { get; set; }
-        public string Qyteti { get; set; }
+        public int ID { get; set; }
+        public string? Titulli { get; set; }
+        public string? Autori { get; set; }
+        public int VitiPublikimit  { get; set; }
+        public double Cmimi { get; set; }
+        public int Sasia { get; set; }
+       
+
+
     }
 }

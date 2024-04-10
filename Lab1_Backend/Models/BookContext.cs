@@ -9,5 +9,6 @@ namespace Lab1_Backend.Models
 
     }
     public DbSet<Book> Books { get; set; }
-}
+   
+    }
 }

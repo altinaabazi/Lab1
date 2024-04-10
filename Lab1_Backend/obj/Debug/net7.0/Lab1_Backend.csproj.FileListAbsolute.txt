@@ -263,3 +263,5 @@ C:\Users\Naim\OneDrive\Desktop\viti2\Lab1\Lab1_Backend\obj\Debug\net7.0\refint\L
 C:\Users\Naim\OneDrive\Desktop\viti2\Lab1\Lab1_Backend\obj\Debug\net7.0\Lab1_Backend.pdb
 C:\Users\Naim\OneDrive\Desktop\viti2\Lab1\Lab1_Backend\obj\Debug\net7.0\Lab1_Backend.genruntimeconfig.cache
 C:\Users\Naim\OneDrive\Desktop\viti2\Lab1\Lab1_Backend\obj\Debug\net7.0\ref\Lab1_Backend.dll
+C:\Users\Naim\OneDrive\Desktop\viti2\Lab1\Lab1_Backend\obj\Debug\net7.0\Lab1_Backend.RazorAssemblyInfo.cache
+C:\Users\Naim\OneDrive\Desktop\viti2\Lab1\Lab1_Backend\obj\Debug\net7.0\Lab1_Backend.RazorAssemblyInfo.cs

@@ -7,6 +7,7 @@ import Register from './Register';
 import Dashboard from './Dashboard';
 import ForgotPassword from './forgot-password';
 import Books from './Books';
+import Porosia from './Porosia';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
   // );
   return (
     <div className="App">
-      <Books />
+      <Porosia />
     </div>
   );
 }

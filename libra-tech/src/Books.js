@@ -1,14 +1,12 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import Table from 'react-bootstrap/Table';
+import { Table, Button, Modal, Row, Col, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import axios from "axios";
-import {ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify'; // Import toast
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
+
+// Rest of your code...
+
 const Books = () => {
     const [show, setShow] = useState(false);
 

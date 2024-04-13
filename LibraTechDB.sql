@@ -48,13 +48,16 @@ Nr_Pakove int not null,
 
 --Tabela Klienti
 CREATE TABLE Klienti(
-ID int primary key identity(1,1),
-Emri varchar(30),
-Mbiemri varchar(30),
-Email varchar(50) unique not null,
-Adresa varchar(60),
-LibrariaID int foreign key references Libraria
+    ID int primary key identity(1,1),
+    Emri varchar(30),
+    Mbiemri varchar(30),
+    Email varchar(50) unique not null,
+    Password varchar(100)
 );
+--
+select * from Klienti;
+
+
 
 --Tabela Porosia
 CREATE TABLE Porosia(

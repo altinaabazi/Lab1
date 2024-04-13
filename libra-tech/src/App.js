@@ -11,21 +11,21 @@ import Porosia from './Porosia';
 
 
 function App() {
-  // return (
-  //   <Router>
-  //     <Routes>
-  //       <Route path='/' element={<Login/>}></Route>
-  //       <Route path='/register' element={<Register/>}></Route>
-  //       <Route path='/dashboard' element={<Dashboard/>}></Route>
-  //       <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
-  //     </Routes>
-  //   </Router>
-  // );
   return (
-    <div className="App">
-      <Porosia />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Login/>}></Route>
+        <Route path='/register' element={<Register/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
+      </Routes>
+    </Router>
   );
+  // return (
+  //   <div className="App">
+  //     <Porosia />
+  //   </div>
+  // );
 }
 
 export default App;

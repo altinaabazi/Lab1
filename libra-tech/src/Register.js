@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; 
 
 function Register() {
     const [firstName, setFirstName] = useState('');
@@ -7,39 +9,46 @@ function Register() {
     const [password, setPassword] = useState('');
     const [repeatPassword, setRepeatPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate(); // Initialize useNavigate hook
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-
+    
         // Basic validation
         if (!firstName.trim() || !lastName.trim() || !email.trim() || !password.trim() || !repeatPassword.trim()) {
             setErrorMessage('Please fill in all fields.');
             return;
         }
-
+    
         if (password !== repeatPassword) {
             setErrorMessage('Passwords do not match.');
             return;
         }
-
-        // If validation passes, you can proceed with registration logic
-        // For now, just log the form data
-        console.log('First Name:', firstName);
-        console.log('Last Name:', lastName);
-        console.log('Email:', email);
-        console.log('Password:', password);
-
-        // Reset fields and error message after submission
-        setFirstName('');
-        setLastName('');
-        setEmail('');
-        setPassword('');
-        setRepeatPassword('');
-        setErrorMessage('');
+    
+        try {
+            const response = await axios.post('http://localhost:32596/api/Klienti/PostKlienti', {
+                Emri: firstName,
+                Mbiemri: lastName,
+                Email: email,
+                Password: password,
+            });
+    
+            if (response.status === 200) {
+                console.log('Registration successful');
+                // Redirect to login page
+                navigate('/');
+            } else {
+                setErrorMessage('Registration failed.'); 
+            }
+        } catch (error) {
+            console.error('Error during registration:', error);
+            setErrorMessage('Registration failed.');
+        }
     };
-
+    
     return (
-        <div className="container" style={{ padding: '3em' }}>
+        <Fragment>
+            <div className="container" style={{ padding: '3em' }}>
             <div className="card o-hidden border-0 shadow-lg my-5">
                 <div className="card-body p-0">
                     <div className="row">
@@ -58,7 +67,7 @@ function Register() {
                                                 className="form-control form-control-user"
                                                 placeholder="First Name"
                                                 value={firstName}
-                                                onChange={(e) => setFirstName(e.target.value)}
+                                                onChange={(e) => setFirstName (e.target.value)}
                                             />
                                         </div>
                                         <div className="col-sm-6">
@@ -67,7 +76,7 @@ function Register() {
                                                 className="form-control form-control-user"
                                                 placeholder="Last Name"
                                                 value={lastName}
-                                                onChange={(e) => setLastName(e.target.value)}
+                                                onChange={(e) => setLastName (e.target.value)}
                                             />
                                         </div>
                                     </div>
@@ -77,7 +86,7 @@ function Register() {
                                             className="form-control form-control-user"
                                             placeholder="Email Address"
                                             value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
+                                            onChange={(e) => setEmail (e.target.value)}
                                         />
                                     </div>
                                     <div className="form-group row">
@@ -87,7 +96,7 @@ function Register() {
                                                 className="form-control form-control-user"
                                                 placeholder="Password"
                                                 value={password}
-                                                onChange={(e) => setPassword(e.target.value)}
+                                                onChange={(e) => setPassword (e.target.value)}
                                             />
                                         </div>
                                         <div className="col-sm-6">
@@ -96,11 +105,11 @@ function Register() {
                                                 className="form-control form-control-user"
                                                 placeholder="Repeat Password"
                                                 value={repeatPassword}
-                                                onChange={(e) => setRepeatPassword(e.target.value)}
+                                                onChange={(e) => setRepeatPassword (e.target.value)}
                                             />
                                         </div>
                                     </div>
-                                    <button type="submit" className="btn btn-primary btn-user btn-block">
+                                    <button type="submit" onSubmit={()=>handleSubmit()} className="btn btn-primary btn-user btn-block">
                                         Register Account
                                     </button>
                                     <hr />
@@ -114,6 +123,7 @@ function Register() {
                 </div>
             </div>
         </div>
+        </Fragment>
     );
 }
 

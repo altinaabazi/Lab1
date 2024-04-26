@@ -9,6 +9,8 @@ namespace Lab1_Backend.Models
 
         }
         public DbSet<Libraria> libraria { get; set; }
+        public DbSet<MjeteShkollore> MjeteShkollore { get; set; }
+        public DbSet<Tipi> Tipi { get; set; }
 
     }
 }

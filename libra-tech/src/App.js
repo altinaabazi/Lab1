@@ -8,14 +8,19 @@ import Dashboard from './Dashboard';
 import ForgotPassword from './forgot-password';
 import Books from './Books';
 import Porosia from './Porosia';
-
-
+import Home from './Home';
+import MjeteShkollore from './MjeteShkollore';
+import Tipi from './Tipi';
+import React from 'react';
 function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
+        <Route path='/home' element={<Home/>}></Route>
+        <Route path='/mjeteShkollore' element={<MjeteShkollore/>}></Route>
+        <Route path='/tipi' element={<Tipi/>}></Route>
         <Route path='/dashboard' element={<Dashboard/>}></Route>
         <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
       </Routes>
@@ -75,3 +80,4 @@ export default App;
 // }
 
 // export default App;
+

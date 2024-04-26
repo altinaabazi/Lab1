@@ -3,13 +3,36 @@ CREATE DATABASE LibraTechDB
 
 USE  LibraTechDB
 --Tabela Libraria
-CREATE TABLE Libraria(
-IDLibrari int primary key not null,
-Emri varchar(50) null,
-Rruga varchar(50) null,
-Qyteti varchar(50) null,
+CREATE TABLE libraria(
+ID int primary key,
+Emri varchar(50) ,
+Rruga varchar(50) ,
+Qyteti varchar(50) ,
 );
 
+Create table Tipi(
+TipiID int primary key identity(1,1),
+TipiEmri varchar(30)
+)
+drop table Tipi
+insert into Tipi values (1,'a');
+
+insert into libraria values (0,'a','b','v')
+select *
+from mjeteShkollore
+
+delete from Tipi where TipiID=1
+create Table MjeteShkollore(
+ID int primary key,
+Pershkrimi varchar(600),
+Tipi varchar(500),
+ImgPath varchar(500),
+Cmimi float,
+Sasia int
+)
+insert into MjeteShkollore values(0,'Fletore','a','img.png',20,2);
+select *
+from MjeteShkollore
 --Tabela Stafi
 CREATE TABLE Stafi(
 IDStafi int primary key,

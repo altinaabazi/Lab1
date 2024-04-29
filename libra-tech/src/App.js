@@ -6,7 +6,8 @@ import Login from './login';
 import Register from './Register';
 import Dashboard from './Dashboard';
 import ForgotPassword from './forgot-password';
-import Books from './Books';
+import Libri from './Libri';
+import Autori from './Autori';
 import Porosia from './Porosia';
 import Home from './Home';
 import MjeteShkollore from './MjeteShkollore';
@@ -23,6 +24,10 @@ function App() {
         <Route path='/tipi' element={<Tipi/>}></Route>
         <Route path='/dashboard' element={<Dashboard/>}></Route>
         <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
+        <Route path='/libri' element={<Libri/>}></Route>
+        <Route path='/autori' element={<Autori/>}></Route>
+
+        
       </Routes>
     </Router>
   );

@@ -12,9 +12,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<BookContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
-
 
 builder.Services.AddDbContext<PorosiaContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
@@ -83,3 +80,5 @@ app.UseStaticFiles(new StaticFileOptions
         Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
     RequestPath = "/Photots"
 });
+
+

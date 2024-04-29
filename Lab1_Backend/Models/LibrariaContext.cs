@@ -12,5 +12,8 @@ namespace Lab1_Backend.Models
         public DbSet<MjeteShkollore> MjeteShkollore { get; set; }
         public DbSet<Tipi> Tipi { get; set; }
 
+        public DbSet<Libri> Libri { get; set; }
+
+        public DbSet<Autori> Autori { get; set; }
     }
 }

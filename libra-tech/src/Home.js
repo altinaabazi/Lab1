@@ -5,7 +5,7 @@ export class Home extends Component{
         return(
             <div>
                 <h3>This is Home page</h3>
-                <a href='./MjeteShkollore'>a</a>
+                <a href='./Libri'>a</a>
             </div>
         )
     }

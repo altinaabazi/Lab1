@@ -3,16 +3,19 @@ using Lab1_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Lab1Backend.Migrations
+namespace Lab1Backend.Migrations.Libraria
 {
     [DbContext(typeof(LibrariaContext))]
-    partial class BookContextModelSnapshot : ModelSnapshot
+    [Migration("20240427000350_libri")]
+    partial class libri
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,7 +46,7 @@ namespace Lab1Backend.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("libraria", (string)null);
+                    b.ToTable("libraria");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Libri", b =>
@@ -81,7 +84,7 @@ namespace Lab1Backend.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Libri", (string)null);
+                    b.ToTable("Libri");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.MjeteShkollore", b =>
@@ -112,7 +115,7 @@ namespace Lab1Backend.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("MjeteShkollore", (string)null);
+                    b.ToTable("MjeteShkollore");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Tipi", b =>
@@ -128,7 +131,7 @@ namespace Lab1Backend.Migrations
 
                     b.HasKey("TipiID");
 
-                    b.ToTable("Tipi", (string)null);
+                    b.ToTable("Tipi");
                 });
 #pragma warning restore 612, 618
         }

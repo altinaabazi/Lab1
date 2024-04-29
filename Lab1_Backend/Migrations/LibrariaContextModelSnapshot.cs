@@ -21,6 +21,23 @@ namespace Lab1Backend.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Lab1_Backend.Models.Autori", b =>
+                {
+                    b.Property<int>("AutoriID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AutoriID"));
+
+                    b.Property<string>("Emri")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AutoriID");
+
+                    b.ToTable("Autori");
+                });
+
             modelBuilder.Entity("Lab1_Backend.Models.Libraria", b =>
                 {
                     b.Property<int>("ID")
@@ -44,6 +61,48 @@ namespace Lab1Backend.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("libraria");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.Libri", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Autori")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Cmimi")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ISBN")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pershkrimi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Sasia")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ShtepiaBotuese")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Titulli")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VitiPublikimit")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Libri");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.MjeteShkollore", b =>

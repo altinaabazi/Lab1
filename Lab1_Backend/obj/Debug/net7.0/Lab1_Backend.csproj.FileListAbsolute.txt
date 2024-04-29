@@ -396,3 +396,4 @@ C:\Users\Erjon\desktop\React project\Lab1\Lab1_Backend\obj\Debug\net7.0\refint\L
 C:\Users\Erjon\desktop\React project\Lab1\Lab1_Backend\obj\Debug\net7.0\Lab1_Backend.pdb
 C:\Users\Erjon\desktop\React project\Lab1\Lab1_Backend\obj\Debug\net7.0\Lab1_Backend.genruntimeconfig.cache
 C:\Users\Erjon\desktop\React project\Lab1\Lab1_Backend\obj\Debug\net7.0\ref\Lab1_Backend.dll
+C:\Users\Naim\OneDrive\Desktop\viti2\Lab1\Lab1_Backend\bin\Debug\net7.0\appsettings.Book.json

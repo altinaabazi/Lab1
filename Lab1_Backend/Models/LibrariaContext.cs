@@ -15,5 +15,10 @@ namespace Lab1_Backend.Models
         public DbSet<Libri> Libri { get; set; }
 
         public DbSet<Autori> Autori { get; set; }
+        public DbSet<QytetiLibraria> QytetiLibraria{ get; set; }
+        public DbSet<LokacioniLibraria> LokacioniLibraria { get; set; }
+        public DbSet<Furnizimi> Furnizimi { get; set; }
+
+
     }
 }

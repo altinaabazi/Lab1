@@ -13,6 +13,10 @@ import Home from './Home';
 import MjeteShkollore from './MjeteShkollore';
 import Tipi from './Tipi';
 import React from 'react';
+import Libraria from './Libraria';
+import Lokacioni from './Lokacioni';
+import Furnizimi from './Furnizimi';
+import Qyteti from './Qyteti';
 function App() {
   return (
     <Router>
@@ -26,6 +30,11 @@ function App() {
         <Route path='/forgot-password' element={<ForgotPassword/>}></Route>
         <Route path='/libri' element={<Libri/>}></Route>
         <Route path='/autori' element={<Autori/>}></Route>
+        <Route path='/libraria' element={<Libraria/>}></Route>
+        <Route path='/lokacioni' element={<Lokacioni/>}></Route>
+        <Route path='/qyteti' element={<Qyteti/>}></Route>
+        <Route path='/furnizimi' element={<Furnizimi/>}></Route>
+
 
         
       </Routes>

@@ -21,6 +21,39 @@ namespace Lab1Backend.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Lab1_Backend.Models.Autori", b =>
+                {
+                    b.Property<int>("AutoriID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AutoriID"));
+
+                    b.Property<string>("Emri")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AutoriID");
+
+                    b.ToTable("Autori");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.Furnizimi", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Kompania")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Furnizimi");
+                });
+
             modelBuilder.Entity("Lab1_Backend.Models.Libraria", b =>
                 {
                     b.Property<int>("ID")
@@ -29,7 +62,11 @@ namespace Lab1Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("Emri")
+                    b.Property<string>("Furnizimi")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Lokacioni")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -37,13 +74,9 @@ namespace Lab1Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Rruga")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("ID");
 
-                    b.ToTable("libraria", (string)null);
+                    b.ToTable("libraria");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Libri", b =>
@@ -64,7 +97,11 @@ namespace Lab1Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Pershrkimi")
+                    b.Property<string>("ImgPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pershkrimi")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Sasia")
@@ -81,7 +118,23 @@ namespace Lab1Backend.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Libri", (string)null);
+                    b.ToTable("Libri");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.LokacioniLibraria", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Lokacioni")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("LokacioniLibraria");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.MjeteShkollore", b =>
@@ -112,7 +165,23 @@ namespace Lab1Backend.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("MjeteShkollore", (string)null);
+                    b.ToTable("MjeteShkollore");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.QytetiLibraria", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Qyteti")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("QytetiLibraria");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Tipi", b =>
@@ -128,7 +197,7 @@ namespace Lab1Backend.Migrations
 
                     b.HasKey("TipiID");
 
-                    b.ToTable("Tipi", (string)null);
+                    b.ToTable("Tipi");
                 });
 #pragma warning restore 612, 618
         }

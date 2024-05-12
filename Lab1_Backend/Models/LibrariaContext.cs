@@ -18,6 +18,10 @@ namespace Lab1_Backend.Models
         public DbSet<QytetiLibraria> QytetiLibraria{ get; set; }
         public DbSet<LokacioniLibraria> LokacioniLibraria { get; set; }
         public DbSet<Furnizimi> Furnizimi { get; set; }
+        public DbSet<DimensionetMSh> DimensionetMSh { get; set; }
+        public DbSet<ShtetiMSh> ShtetiMSh { get; set; }
+        public DbSet<NgjyraMSh> NgjyraMSh { get; set; }
+        public DbSet<ProdhuesiMSh> ProdhuesiMSh { get; set; }
 
 
     }

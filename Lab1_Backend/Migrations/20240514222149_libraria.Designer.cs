@@ -3,16 +3,19 @@ using Lab1_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Lab1Backend.Migrations
+namespace Lab1Backend.Migrations.Libraria
 {
     [DbContext(typeof(LibrariaContext))]
-    partial class BookContextModelSnapshot : ModelSnapshot
+    [Migration("20240514222149_libraria")]
+    partial class libraria
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

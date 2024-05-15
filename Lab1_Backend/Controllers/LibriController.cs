@@ -97,30 +97,26 @@ namespace Lab1_Backend.Controllers
             return Ok();
         }
         [HttpPost("SaveFile")]
-        public IActionResult SaveFile()
+        public JsonResult SaveFile()
         {
             try
             {
-                var httpRequest = HttpContext.Request;
-                var postedFile = httpRequest.Form.Files[0];
-
-                // Sigurohuni që të krijoni një emër unik për imazhin
-                string filename = Guid.NewGuid().ToString() + Path.GetExtension(postedFile.FileName);
-
-                var physicalPath = Path.Combine(_env.ContentRootPath, "Photos", filename);
+                var httpRequest = Request.Form;
+                var postedFile = httpRequest.Files[0];
+                string filename = postedFile.FileName;
+                var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
 
                 using (var stream = new FileStream(physicalPath, FileMode.Create))
                 {
                     postedFile.CopyTo(stream);
                 }
 
-                // Kthe rrugën e ruajtjes së imazhit si përgjigje
-                return Ok(new { filePath = "/Photos/" + filename });
+                return new JsonResult(filename);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // Kthe një mesazh gabimi në rast se ndodh një problem gjatë ngarkimit
-                return BadRequest(new { message = "Problem gjatë ngarkimit të skedarit: " + ex.Message });
+
+                return new JsonResult("img.png");
             }
         }
     }

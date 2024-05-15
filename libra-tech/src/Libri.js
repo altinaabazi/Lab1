@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { variables } from './Variables.js';
+import Kategoria from './Kategoria.js';
+import { Gjuha } from './Gjuha.js';
 
 export class Libri extends Component {
   constructor(props) {
@@ -8,14 +10,21 @@ export class Libri extends Component {
     this.state = {
       autoret: [],
       librat: [],
+      kategorit:[],
+      gjuhet:[],
+      faqet:[],
+      botuesit:[],
       modalTitle: "",
       ID: 0,
       ISBN: "",
       Titulli: "",
       Pershkrimi: "",
       Autori: "",
+      NrFaqeve:"",
+      Kategoria:"",
       VitiPublikimit: 0,
       ShtepiaBotuese: "",
+      Gjuha:"",
       Cmimi: 0.0,
       Sasia: 0,
       isFormValid: false,
@@ -46,8 +55,11 @@ export class Libri extends Component {
       Titulli: "",
       Pershkrimi: "",
       Autori: "",
+      NrFaqeve:"",
+      Kategoria:"",
       VitiPublikimit: 0,
       ShtepiaBotuese: "",
+      Gjuha:"",
       Cmimi: 0.0,
       Sasia: 0,
       isFormValid: false,
@@ -56,7 +68,7 @@ export class Libri extends Component {
   }
 
   validateForm = () => {
-    const { ISBN, Titulli, Pershkrimi, Autori, VitiPublikimit, ShtepiaBotuese, Cmimi, Sasia } = this.state;
+    const { ISBN, Titulli, Pershkrimi, Autori,NrFaqeve,Kategoria, VitiPublikimit, ShtepiaBotuese,Gjuha, Cmimi, Sasia } = this.state;
     return ISBN && Titulli && Pershkrimi && Autori && VitiPublikimit && ShtepiaBotuese && Cmimi && Sasia;
   };
 
@@ -72,6 +84,28 @@ export class Libri extends Component {
       .then(data => {
         this.setState({ autoret: data });
       });
+      fetch(variables.API_URL + 'kategoria')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ kategorit: data });
+      });
+
+      fetch(variables.API_URL + 'gjuha')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ gjuhet: data });
+      });
+
+      fetch(variables.API_URL + 'nrfaqeve')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ faqet: data });
+      });
+      fetch(variables.API_URL + 'shtepiabotuese')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ botuesit: data });
+      });
   }
 
   changeISBN = (e) => {
@@ -86,11 +120,20 @@ export class Libri extends Component {
   changeAutori = (e) => {
     this.setState({ Autori: e.target.value });
   }
+  changeNrFaqeve = (e) => {
+    this.setState({ NrFaqeve: e.target.value });
+  }
+  changeKategoria = (e) => {
+    this.setState({ Kategoria: e.target.value });
+  }
   changeVitiPublikimit = (e) => {
     this.setState({ VitiPublikimit: e.target.value });
   }
   changeShtepiaBotuese = (e) => {
     this.setState({ ShtepiaBotuese: e.target.value });
+  }
+  changeGjuha = (e) => {
+    this.setState({ Gjuha: e.target.value });
   }
   changeCmimi = (e) => {
     this.setState({ Cmimi: e.target.value });
@@ -107,8 +150,11 @@ export class Libri extends Component {
       Titulli: "",
       Pershkrimi: "",
       Autori: "",
+      NrFaqeve:"",
+      Kategoria:"",
       VitiPublikimit: 0,
       ShtepiaBotuese: "",
+      Gjuha:"",
       Cmimi: 0.0,
       Sasia: 0,
       ImgPath:"img.png"
@@ -122,8 +168,11 @@ export class Libri extends Component {
       Titulli: emp.Titulli,
       Pershkrimi: emp.Pershkrimi,
       Autori: emp.Autori,
+      NrFaqeve: emp.NrFaqeve,
+      Kategoria: emp.Kategoria,
       VitiPublikimit: emp.VitiPublikimit,
       ShtepiaBotuese: emp.ShtepiaBotuese,
+      Gjuha: emp.Gjuha,
       Cmimi: emp.Cmimi,
       Sasia: emp.Sasia,
       ImgPath:emp.ImgPath
@@ -144,8 +193,11 @@ export class Libri extends Component {
         Titulli: this.state.Titulli,
         Pershkrimi: this.state.Pershkrimi,
         Autori: this.state.Autori,
+        NrFaqeve: this.state.NrFaqeve,
+        Kategoria: this.state.Kategoria,
         VitiPublikimit: this.state.VitiPublikimit,
         ShtepiaBotuese: this.state.ShtepiaBotuese,
+        Gjuha: this.state.Gjuha,
         Cmimi: this.state.Cmimi,
         Sasia: this.state.Sasia,
         ImgPath:this.state.ImgPath
@@ -175,8 +227,11 @@ export class Libri extends Component {
         Titulli: this.state.Titulli,
         Pershkrimi: this.state.Pershkrimi,
         Autori: this.state.Autori,
+        NrFaqeve: this.state.NrFaqeve,
+        Kategoria: this.state.Kategoria,
         VitiPublikimit: this.state.VitiPublikimit,
         ShtepiaBotuese: this.state.ShtepiaBotuese,
+        Gjuha: this.state.Gjuha,
         Cmimi: this.state.Cmimi,
         Sasia: this.state.Sasia,
         ImgPath:this.state.ImgPath
@@ -241,14 +296,21 @@ export class Libri extends Component {
     const {
       autoret,
       librat,
+      kategorit,
+      gjuhet,
+      faqet,
+      botuesit,
       modalTitle,
       ID,
       ISBN,
       Titulli,
       Pershkrimi,
       Autori,
+      NrFaqeve,
+      Kategoria,
       VitiPublikimit,
       ShtepiaBotuese,
+      Gjuha,
       Cmimi,
       Sasia,
       PhotoFileName,
@@ -275,8 +337,11 @@ export class Libri extends Component {
               <th>Titulli</th>
               <th>Pershkrimi</th>
               <th>Autori</th>
+              <th>Nr.Faqeve</th>
+              <th>Kategoria</th>
               <th>VitiPublikimit</th>
               <th>ShtepiaBotuese</th>
+              <th>Gjuha</th>
               <th>Cmimi</th>
               <th>Sasia</th>
               <th>Options</th>
@@ -290,8 +355,11 @@ export class Libri extends Component {
                 <td>{emp.Titulli}</td>
                 <td>{emp.Pershkrimi}</td>
                 <td>{emp.Autori}</td>
+                <td>{emp.NrFaqeve}</td>
+                <td>{emp.Kategoria}</td>
                 <td>{emp.VitiPublikimit}</td>
                 <td>{emp.ShtepiaBotuese}</td>
+                <td>{emp.Gjuha}</td>
                 <td>{emp.Cmimi}</td>
                 <td>{emp.Sasia}</td>
                 <td>
@@ -359,16 +427,50 @@ export class Libri extends Component {
                   </select>
                 </div>
                 <div className="input-group mb-3">
+                  <span className="input-group-text">Nr.Faqeve</span>
+                  <select className="form-select"
+                    onChange={this.changeNrFaqeve}
+                    value={NrFaqeve}>
+                    {faqet.map(dep => <option key={dep.ID}>
+                      {dep.nrfaqeve}
+                    </option>)}
+                  </select>
+                </div>
+                <div className="input-group mb-3">
+                  <span className="input-group-text">Kategoria</span>
+                  <select className="form-select"
+                    onChange={this.changeKategoria}
+                    value={Kategoria}>
+                    {kategorit.map(dep => <option key={dep.ID}>
+                      {dep.kategoria}
+                    </option>)}
+                  </select>
+                </div>
+                <div className="input-group mb-3">
                   <span className="input-group-text">VitiPublikimit</span>
                   <input type="text" className="form-control"
                     value={VitiPublikimit}
                     onChange={this.changeVitiPublikimit} />
                 </div>
                 <div className="input-group mb-3">
-                  <span className="input-group-text">ShtepiaBotuese</span>
-                  <input type="text" className="form-control"
-                    value={ShtepiaBotuese}
-                    onChange={this.changeShtepiaBotuese} />
+                  <span className="input-group-text">Shtepia Botuese</span>
+                  <select className="form-select"
+                    onChange={this.changeShtepiaBotuese}
+                    value={ShtepiaBotuese}>
+                    {botuesit.map(dep => <option key={dep.ID}>
+                      {dep.shtepiaBotuese}
+                    </option>)}
+                  </select>
+                </div>
+                <div className="input-group mb-3">
+                  <span className="input-group-text">Gjuha</span>
+                  <select className="form-select"
+                    onChange={this.changeGjuha}
+                    value={Gjuha}>
+                    {gjuhet.map(dep => <option key={dep.ID}>
+                      {dep.gjuha}
+                    </option>)}
+                  </select>
                 </div>
               </div>
               <div className="p-2 w-50 bd-highlight">
@@ -384,12 +486,12 @@ export class Libri extends Component {
                     value={Sasia}
                     onChange={this.changeSasia} />
                 </div>
-              </div>
-              <div className="p-2 w-50 bd-highlight">
-         <img width="250px" height="250px" 
-         src={PhotoFileName+ImgPath}/>
+                <div className="p-2 w-50 bd-highlight">
+                <img width="250px" height="250px" 
+      src={PhotoFileName + '/' + ImgPath} />
          <input className="m-2" type="file" onChange={this.imageUpload}/>
      </div>
+              </div>
             </div>
 
             {ID === 0 ?

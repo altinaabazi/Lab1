@@ -11,12 +11,21 @@ import Autori from './Autori';
 import Porosia from './Porosia';
 import Home from './Home';
 import MjeteShkollore from './MjeteShkollore';
+import NgjyraMSh from './NgjyraMSh';
 import Tipi from './Tipi';
 import React from 'react';
 import Libraria from './Libraria';
 import Lokacioni from './Lokacioni';
 import Furnizimi from './Furnizimi';
 import Qyteti from './Qyteti';
+import ProdhuesiMSh from './ProdhuesiMSh';
+import ShtetiMSh from './ShtetiMSh';
+import DimensionetMSh from './DimensionetMSh';
+import Kategoria from './Kategoria';
+import Gjuha from './Gjuha';
+import ShtepiaBotuese from './ShtepiaBotuese';
+import NrFaqeve from './NrFaqeve';
+
 function App() {
   return (
     <Router>
@@ -34,6 +43,29 @@ function App() {
         <Route path='/lokacioni' element={<Lokacioni/>}></Route>
         <Route path='/qyteti' element={<Qyteti/>}></Route>
         <Route path='/furnizimi' element={<Furnizimi/>}></Route>
+        <Route path='/prodhuesiMSh' element={<ProdhuesiMSh/>}></Route>
+        <Route path='/ngjyraMSh' element={<NgjyraMSh/>}></Route>
+        <Route path='/shtetiMSh' element={<ShtetiMSh/>}></Route>
+        <Route path='/dimensionetMSh' element={<DimensionetMSh/>}></Route>
+        <Route path='/kategoria' element={<Kategoria/>}></Route>
+        <Route path='/gjuha' element={<Gjuha/>}></Route>
+        <Route path='/shtepiaBotuese' element={<ShtepiaBotuese/>}></Route>
+        <Route path='/nrfaqeve' element={<NrFaqeve/>}></Route>
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         

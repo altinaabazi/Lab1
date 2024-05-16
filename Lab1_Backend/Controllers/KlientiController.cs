@@ -1,15 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Lab1_Backend.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Net;
-using System.Net.Http;
-using System.Data.SqlClient;
-using System.Linq;
-using Microsoft.Extensions.Configuration;
-using Lab1_Backend.Models;
 using Microsoft.EntityFrameworkCore;
+
+
 
 namespace Lab1_Backend.Controllers
 {
@@ -17,162 +11,190 @@ namespace Lab1_Backend.Controllers
     [ApiController]
     public class KlientiController : ControllerBase
     {
-        /*SqlConnection LibraTechConn = new SqlConnection(ConfigurationManager.ConnectionString["LibraTechConn"].ConnectionString);*/
-
-
-        private readonly IConfiguration _configuration;
-        public KlientiController(IConfiguration configuration)
+        private readonly KlientiContext _dbContext;
+        public KlientiController(KlientiContext dbContext)
         {
-            _configuration = configuration;
+            _dbContext = dbContext;
         }
 
+
+        /*[HttpGet]
+        public async Task<ActionResult<IEnumerable<Klienti>>> GetKlient()
+        {
+            var klientiList = await _dbContext.Klienti.ToListAsync();
+
+            if (klientiList == null || klientiList.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return klientiList;
+        }*/
         [HttpGet]
-        [Route("GetKlienti")]
-        public JsonResult GetKlienti()
+        public async Task<ActionResult<IEnumerable<Klienti>>> GetKlients()
         {
-            string query = "SELECT ID, Emri, Mbiemri, Email FROM Klienti";
-            // Modify the query to retrieve only necessary fields
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
-            SqlDataReader myReader;
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            var klientiList = await _dbContext.Klienti.ToListAsync();
+
+            // Log information about the retrieved klientiList
+            Console.WriteLine($"Retrieved {klientiList.Count} Klienti from the database.");
+
+            if (klientiList == null || klientiList.Count == 0)
             {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-                    myReader.Close();
-                    myCon.Close();
-                }
+                return NotFound();
             }
-            return new JsonResult(table);
+
+            return klientiList;
         }
 
+        /*[HttpGet]
+        public async Task<ActionResult<IEnumerable<Klienti>>> GetKlients()
+        {
+            var klientiList = await _dbContext.Klienti
+                .Include(k => k.GjiniaId) // Include the related Gjinia entity
+                .ToListAsync();
 
+            if (klientiList == null || !klientiList.Any())
+            {
+                return NotFound();
+            }
+
+            return klientiList;
+        }
+        */
+
+        /*[HttpGet]
+        public async Task<ActionResult<IEnumerable<Klienti>>> GetKlients()
+        {
+            if (_dbContext.Klienti == null)
+            {
+                return NotFound();
+            }
+            return await _dbContext.Klienti.ToListAsync();
+        }*/
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Klienti>> GetKlienti(int id)
+        {
+            if (_dbContext.Klienti == null)
+            {
+                return NotFound();
+            }
+
+            var klienti = await _dbContext.Klienti.FindAsync(id);
+            if (klienti == null)
+            {
+                return NotFound();
+            }
+
+            return klienti;
+        }
         [HttpPost]
-        [Route("PostKlienti")]
-        public IActionResult PostKlienti([FromBody] Klienti k)
+        public async Task<ActionResult<Klienti>> PostKlienti(Klienti klienti)
         {
-            try
-            {
-                string query = @"INSERT INTO Klienti (Emri, Mbiemri, Email, Password)
-                 VALUES (@firstName, @lastName, @email, @password)";
+            _dbContext.Klienti.Add(klienti);
+            await _dbContext.SaveChangesAsync();
 
-                string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
-                using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-                {
-                    using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                    {
-                        myCommand.Parameters.AddWithValue("@firstName", k.Emri);
-                        myCommand.Parameters.AddWithValue("@lastName", k.Mbiemri);
-                        myCommand.Parameters.AddWithValue("@email", k.Email);
-                        myCommand.Parameters.AddWithValue("@password", k.Password);
-                        myCon.Open();
-                        myCommand.ExecuteNonQuery();
-                        myCon.Close();
-                    }
-                }
-                return Ok("Registration successful");
-            }
-            catch (Exception ex)
+            return CreatedAtAction(nameof(GetKlienti), new { id = klienti.ID }, klienti);
+        }
+        /*post per login*/
+        [HttpPost("login")]
+        public async Task<ActionResult<Klienti>> Login(LoginModel loginModel)
+        {
+            // Find the user in the database based on the provided email
+            var user = await _dbContext.Klienti.FirstOrDefaultAsync(x => x.Email == loginModel.Email);
+
+            // Check if the user exists and if the provided password matches the stored password
+            if (user != null && user.Password == loginModel.Password)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error registering user: {ex.Message}");
+                // If authentication is successful, return the user data
+                return Ok(user);
+            }
+            else
+            {
+                // If authentication fails (incorrect email or password), return Unauthorized status
+                return Unauthorized();
             }
         }
 
 
-
-        [HttpPost]
-        [Route("Login")]
-        public IActionResult Login([FromBody] LoginModel loginModel)
+        /*post per register edhe login prej chatgpt*/
+        /*[HttpPost]
+        public async Task<ActionResult<Klienti>> PostKlienti(Klienti klienti)
         {
-            try
+            if (string.IsNullOrEmpty(klienti.Password))
             {
-                // Query your database to check if the provided credentials are valid
-                string query = @"SELECT ID FROM Klienti WHERE Email = @Email AND Password = @Password";
-                string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
-
-                using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+                // This is a login request
+                var user = await _dbContext.Klienti.FirstOrDefaultAsync(x => x.Email == klienti.Email && x.Password == klienti.Password);
+                if (user != null)
                 {
-                    using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                    {
-                        myCommand.Parameters.AddWithValue("@Email", loginModel.Email);
-                        myCommand.Parameters.AddWithValue("@Password", loginModel.Password);
-                        myCon.Open();
-                        var result = myCommand.ExecuteScalar();
-                        myCon.Close();
-
-                        if (result != null)
-                        {
-                            // Authentication successful
-                            // Here, you can create a session or issue a token to the user
-                            return Ok("Login successful");
-                        }
-                        else
-                        {
-                            // Authentication failed
-                            return Unauthorized("Invalid email or password");
-                        }
-                    }
+                    return Ok(user); // Return authenticated user
+                }
+                else
+                {
+                    return Unauthorized(); // Return unauthorized status
                 }
             }
-            catch (Exception ex)
+            else
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error during login: {ex.Message}");
+                // This is a registration request
+                _dbContext.Klienti.Add(klienti);
+                await _dbContext.SaveChangesAsync();
+
+                return CreatedAtAction(nameof(GetKlienti), new { id = klienti.ID }, klienti); // Return newly registered user
             }
-        }
+        }*/
 
 
 
 
         [HttpPut]
-        [Route("PutKlienti")]
-        public JsonResult PutKlienti(Klienti k)
+        public async Task<ActionResult<Klienti>> PutKlienti(int id, Klienti klienti)
         {
-            string query = @"UPDATE Klienti SET 
-                      Emri = @Emri,
-                      Mbiemri = @Mbiemri,
-                      Email = @Email
-                      -- Add other fields here if needed
-                      WHERE ID = @ID";
-
-            string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            if (id != klienti.ID)
             {
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                return BadRequest();
+            }
+            _dbContext.Entry(klienti).State = EntityState.Modified;
+
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!KlientiAvailable(id))
                 {
-                    myCommand.Parameters.AddWithValue("@Emri", k.Emri);
-                    myCommand.Parameters.AddWithValue("@Mbiemri", k.Mbiemri);
-                    myCommand.Parameters.AddWithValue("@Email", k.Email);
-                    myCommand.Parameters.AddWithValue("@ID", k.ID);
-                    // Add parameters for other fields if needed
-                    myCon.Open();
-                    myCommand.ExecuteNonQuery();
-                    myCon.Close();
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
                 }
             }
-            return new JsonResult("Updated successfully");
+            return Ok();
+        }
+        private bool KlientiAvailable(int id)
+        {
+            return (_dbContext.Klienti?.Any(x => x.ID == id)).GetValueOrDefault();
         }
 
-
         [HttpDelete("{id}")]
-        public JsonResult DeleteKlienti(int id)
+        public async Task<ActionResult> DeleteKlienti(int id)
         {
-            string query = @"DELETE FROM Klienti WHERE ID = @ID";
-                
-            string sqlDataSource = _configuration.GetConnectionString("LibraTechConn");
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            if (_dbContext.Klienti == null)
             {
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myCommand.Parameters.AddWithValue("@ID", id);
-                    myCon.Open();
-                    myCommand.ExecuteNonQuery();
-                    myCon.Close();
-                }
+                return NotFound();
             }
-            return new JsonResult("Deleted successfully");
+            var klienti = await _dbContext.Klienti.FindAsync(id);
+            if (klienti == null)
+            {
+                return NotFound();
+            }
+
+            _dbContext.Klienti.Remove(klienti);
+
+            await _dbContext.SaveChangesAsync();
+            return Ok();
         }
     }
 }

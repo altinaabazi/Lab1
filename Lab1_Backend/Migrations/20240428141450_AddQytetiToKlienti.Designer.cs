@@ -99,6 +99,23 @@ namespace Lab1Backend.Migrations.Klienti
 
                     b.ToTable("KlientiQyteti");
                 });
+           /* modelBuilder.Entity("Lab1_Backend.Models.KlientiGjinia", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                b.Property<string>("Emri")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
+
+                b.HasKey("Id");
+
+                b.ToTable("KlientiGjinia");
+            });*/
+
 #pragma warning restore 612, 618
         }
     }

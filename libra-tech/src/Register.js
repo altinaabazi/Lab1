@@ -52,7 +52,7 @@ function Register() {
             <div className="card o-hidden border-0 shadow-lg my-5">
                 <div className="card-body p-0">
                     <div className="row">
-                        <img src="img/book.png" alt="foto" width="400" height="600" />
+                        <img src="img/book.png" alt="foto" className="img-fluid" />
                         <div className="col-lg-7">
                             <div className="p-5">
                                 <div className="text-center">

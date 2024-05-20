@@ -3,17 +3,23 @@ using Lab1_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Lab1_Backend.Controllers;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<BookContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
-
 
 builder.Services.AddDbContext<PorosiaContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
+
+builder.Services.AddDbContext<LibrariaContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
+
+builder.Services.AddDbContext<KlientiContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
 
 
@@ -74,3 +80,12 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
+    RequestPath = "/Photots"
+});
+
+

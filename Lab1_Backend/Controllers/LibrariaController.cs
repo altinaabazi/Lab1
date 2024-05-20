@@ -26,20 +26,20 @@ namespace Lab1_Backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Libraria>>> GetLibraria()
         {
-            if (_librariaContext.Libraria == null)
+            if (_librariaContext.libraria == null)
             {
                 return NotFound();
             }
-            return await _librariaContext.Libraria.ToListAsync();
+            return await _librariaContext.libraria.ToListAsync();
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<Libraria>> GetLibraria(int id)
         {
-            if (_librariaContext.Libraria == null)
+            if (_librariaContext.libraria == null)
             {
                 return NotFound();
             }
-            var libraria = await _librariaContext.Libraria.FindAsync(id);
+            var libraria = await _librariaContext.libraria.FindAsync(id);
             if (libraria == null)
             {
                 return NotFound();
@@ -51,7 +51,7 @@ namespace Lab1_Backend.Controllers
         [HttpPost]
         public async Task<ActionResult<Libraria>> PostLibraria(Libraria libraria)
         {
-            _librariaContext.Libraria.Add(libraria);
+            _librariaContext.libraria.Add(libraria);
             await _librariaContext.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetLibraria), new { id = libraria.ID }, libraria);
@@ -80,16 +80,16 @@ namespace Lab1_Backend.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteLibraria(int id)
         {
-            if (_librariaContext.Libraria == null)
+            if (_librariaContext.libraria == null)
             {
                 return NotFound();
             }
-            var libraria = await _librariaContext.Libraria.FindAsync(id);
+            var libraria = await _librariaContext.libraria.FindAsync(id);
             if (libraria == null)
             {
                 return NotFound();
             }
-            _librariaContext.Libraria.Remove(libraria);
+            _librariaContext.libraria.Remove(libraria);
             await _librariaContext.SaveChangesAsync();
             return Ok();
         }

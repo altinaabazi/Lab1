@@ -1,13 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Lab1_Backend.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using Lab1_Backend.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Lab1_Backend.Controllers
 {
@@ -15,120 +9,109 @@ namespace Lab1_Backend.Controllers
     [ApiController]
     public class StafiController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
-        public StafiController(IConfiguration configuration)
+        private readonly StafiContext _dbContext;
+
+        public StafiController(StafiContext dbContext)
         {
-            _configuration = configuration;
+            _dbContext = dbContext;
         }
 
-        // Get all staff
         [HttpGet]
-        [Route("GetStafi")]
-        public JsonResult GetStafi()
+        public async Task<ActionResult<IEnumerable<Stafi>>> GetStafis()
         {
-            string query = "select * from dbo.Stafi";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
-            SqlDataReader myReader;
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            if (_dbContext.Stafi == null)
             {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-                    myReader.Close();
-                    myCon.Close();
-                }
+                return NotFound();
             }
-            return new JsonResult(table);
+
+            return await _dbContext.Stafi.ToListAsync();
         }
 
-        // Add a new staff member
+        [HttpGet("{id}")]
+
+
+        public async Task<ActionResult<Stafi>> GetStafi(int id)
+        {
+            if (_dbContext.Stafi == null)
+            {
+                return NotFound();
+            }
+
+            var stafi = await _dbContext.Stafi.FindAsync(id);
+            if (stafi == null)
+            {
+                return NotFound();
+            }
+
+            return stafi;
+        }
+
         [HttpPost]
-        [Route("PostStafi")]
-        public JsonResult PostStafi(Stafi s)
-        {
-            
-            string query = @"INSERT INTO dbo.Stafi (Emri, Mbiemri, ZipCode, Gjinia, Pervoja, IDLibrari)
-                              VALUES 
 
-                                       ('" + s.Emri + @"', 
-                                       ,'" + s.Mbiemri + @"'
-                                       ,'" + s.ZipCode + @" 
-                                       ,'" + s.Gjinia + @"'   
-                                       ,'" + s.Pervoja + @"'
-                                       ,'" + s.IDLibrari + @"
-                                        )";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
-            SqlDataReader myReader;
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
-            {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-                    myReader.Close();
-                    myCon.Close();
-                }
-            }
-            return new JsonResult("Added successfully");
+        public async Task<ActionResult<Stafi>> PostStafi(Stafi stafi)
+        {
+            _dbContext.Stafi.Add(stafi);
+            await _dbContext.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetStafi), new { id = stafi.IDStafi }, stafi);
         }
 
-        // Update a staff member
         [HttpPut]
-        [Route("PutStafi")]
-        public JsonResult PutStafi(Stafi s)
+        public async Task<ActionResult<Stafi>> PutStafi(int id,  Stafi stafi)
         {
-            string query = @"UPDATE  dbo.Stafi SET 
-                             
-                              Emri = '" + s.Emri + @"'
-                              Mbiemri = '"+s.Mbiemri + @"' 
-                              ZipCode = '"+s.ZipCode + @"' 
-                              Gjinia = '"+s.Gjinia + @"'
-                              Pervoja = '"+s.Pervoja + @"' 
-                              IDLibrari = '"+s.IDLibrari+ @"' 
-                              WHERE IDStafi = '"+s.IDStafi + @"'";
-
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
-            SqlDataReader myReader;
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            if (id != stafi.IDStafi)
             {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                return BadRequest();
+            }
+            _dbContext.Entry(stafi).State = EntityState.Modified;
+
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!StafiAvailable(id))
                 {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-                    myReader.Close();
-                    myCon.Close();
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
                 }
             }
-            return new JsonResult("Updated successfully");
+            return Ok();
         }
 
-        // Delete a staff member
+        private bool StafiAvailable(int id)
+        {
+            return (_dbContext.Stafi?.Any(x => x.IDStafi == id)).GetValueOrDefault();
+        }
+
         [HttpDelete("{id}")]
-        public JsonResult DeleteStafi(int id)
-        {
-            string query = @"DELETE FROM dbo.Stafi WHERE IDStafi= " + id + @"";
-            DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DB_BookStoreAppCon");
-            SqlDataReader myReader;
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+   
+        public async Task<ActionResult> DeleteStafi(int id)
+        { 
+            if(_dbContext.Stafi == null)
             {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader);
-                    myReader.Close();
-                    myCon.Close();
-                }
+                return NotFound();
             }
-            return new JsonResult("Deleted successfully");
+
+            var stafi = await _dbContext.Stafi.FindAsync(id);
+            if (stafi == null) 
+            {
+                return NotFound();
+            }
+
+            _dbContext.Stafi.Remove(stafi);
+
+            await _dbContext.SaveChangesAsync();
+
+            return Ok();
         }
+
+
+
+
     }
 }

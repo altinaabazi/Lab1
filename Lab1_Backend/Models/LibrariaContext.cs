@@ -1,4 +1,4 @@
-
+/*
 using Microsoft.EntityFrameworkCore;
 namespace Lab1_Backend.Models
 {
@@ -11,4 +11,4 @@ namespace Lab1_Backend.Models
         public DbSet<Libraria> libraria { get; set; }
 
     }
-}
+}*/

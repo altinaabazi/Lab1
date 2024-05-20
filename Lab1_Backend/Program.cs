@@ -17,6 +17,10 @@ builder.Services.AddDbContext<PorosiaContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
 
 
+builder.Services.AddDbContext<StafiContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
+
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -1,4 +1,4 @@
-namespace Lab1_Backend.Models
+/*namespace Lab1_Backend.Models
 {
     public class Libraria
     {
@@ -11,3 +11,4 @@ namespace Lab1_Backend.Models
 
     }
 }
+*/

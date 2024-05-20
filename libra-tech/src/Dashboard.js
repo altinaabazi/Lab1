@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
 function Dashboard() {
@@ -52,11 +53,12 @@ function Dashboard() {
                         
                         <li className="nav-item active">
                             <a className="nav-link" href="index.html">
-                            <i className="fa fa-home" aria-hidden="true"></i>
+                            <i className="fa fa-home" aria-hidden="true"></ i>
                                 <span>Home</span></a>
-                            <a className="nav-link" href="index.html">
+                            <Link className="nav-link" to="/stafi">
                                 <i className="fas fa-fw fa-tachometer-alt"></i>
-                                <span>Dashboard</span></a>
+                                <span>Dashboard</span></Link>
+
                         </li>
 
                         {/*  <!-- Divider --> */}
@@ -123,6 +125,7 @@ function Dashboard() {
                                     <a className="collapse-item" href="/">Login</a>
                                     <a className="collapse-item" href="register">Register</a>
                                     <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
+                                    <a className="collapse-item" href="/stafi">Staff Dashboard</a>
                                     <div className="collapse-divider"></div>
                                     
                                 </div>

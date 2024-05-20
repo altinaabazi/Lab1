@@ -43,6 +43,19 @@ Gjinia char(1) not null check(Gjinia = 'F' or Gjinia = 'M'),
 IDLibrari int foreign key references Libraria 
 );
 
+
+ CREATE TABLE [Stafi] (
+     [IDStafi] int NOT NULL IDENTITY,
+     [Emri] nvarchar(max) NOT NULL,
+     [Mbiemri] nvarchar(max) NOT NULL,
+     [ZipCode] int NOT NULL,
+     [Gjinia] nvarchar(1) NOT NULL,
+     [Pervoja] nvarchar(max) NOT NULL,
+     [IDLibrari] int NULL,
+     CONSTRAINT [PK_Stafi] PRIMARY KEY ([IDStafi])
+ );
+
+ select * from stafi;
 --Tabela StafiTeknik
 /*
 CREATE TABLE STeknik(
@@ -98,7 +111,7 @@ constraint PK_SDP primary key (IDStafi,IDPorosia),
 foreign key (IDStafi) references SDergues(StafiID),
 foreign key (IDPorosia) references Porosia(NrPorosia)
 );
-
+drop table Libraria;
 
 --Tabela Telefoni
 CREATE TABLE Telefoni (
@@ -107,7 +120,7 @@ CREATE TABLE Telefoni (
 	Nr_Tel int NOT NULL
 );
 
-
+drop table Telefoni;
 --Tabela Dergon
 CREATE TABLE Dergon(
 KlientiID int not null,

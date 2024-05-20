@@ -1,4 +1,4 @@
-
+/*
 using Microsoft.EntityFrameworkCore;
 namespace Lab1_Backend.Models
 {
@@ -25,4 +25,4 @@ namespace Lab1_Backend.Models
 
 
     }
-}
+}*/

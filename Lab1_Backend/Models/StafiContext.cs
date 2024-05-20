@@ -5,9 +5,9 @@ namespace Lab1_Backend.Models
     public class StafiContext : DbContext 
     {
 
-        public StafiContext(DbContextOptions<StafiContext>options) : base(options)
+        public StafiContext(DbContextOptions<StafiContext> options) : base(options)
         {
-                    
+
         }
         public DbSet<Stafi> Stafi {  get; set; }
 

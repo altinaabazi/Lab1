@@ -79,6 +79,25 @@ namespace Lab1Backend.Migrations.Klienti
 
                     b.ToTable("Klienti", (string)null);
                 });
+<<<<<<< HEAD
+=======
+            /*modelBuilder.Entity("Lab1_Backend.Models.KlientiGjinia", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
+
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                b.Property<string>("Emri")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
+
+                b.HasKey("Id");
+
+                b.ToTable("KlientiGjinia");
+            });*/
+>>>>>>> f61140e16cebe2ce7f2dd11e722a631b74781b5e
 #pragma warning restore 612, 618
         }
     }

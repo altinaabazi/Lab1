@@ -18,6 +18,7 @@ import Libraria from './Libraria';
 import Lokacioni from './Lokacioni';
 import Furnizimi from './Furnizimi';
 import Qyteti from './Qyteti';
+<<<<<<< HEAD
 import ProdhuesiMSh from './ProdhuesiMSh';
 import ShtetiMSh from './ShtetiMSh';
 import DimensionetMSh from './DimensionetMSh';
@@ -26,6 +27,10 @@ import Gjuha from './Gjuha';
 import ShtepiaBotuese from './ShtepiaBotuese';
 import NrFaqeve from './NrFaqeve';
 
+=======
+import Header from './Header';
+import NjesiaMSh from './NjesiaMSh';
+>>>>>>> f61140e16cebe2ce7f2dd11e722a631b74781b5e
 function App() {
   return (
     <Router>
@@ -43,6 +48,7 @@ function App() {
         <Route path='/lokacioni' element={<Lokacioni/>}></Route>
         <Route path='/qyteti' element={<Qyteti/>}></Route>
         <Route path='/furnizimi' element={<Furnizimi/>}></Route>
+<<<<<<< HEAD
         <Route path='/prodhuesiMSh' element={<ProdhuesiMSh/>}></Route>
         <Route path='/ngjyraMSh' element={<NgjyraMSh/>}></Route>
         <Route path='/shtetiMSh' element={<ShtetiMSh/>}></Route>
@@ -67,6 +73,11 @@ function App() {
 
 
 
+=======
+        <Route path='/header' element={<Header/>}></Route>
+        <Route path='/njesia' element={<NjesiaMSh/>}></Route>
+       
+>>>>>>> f61140e16cebe2ce7f2dd11e722a631b74781b5e
 
         
       </Routes>

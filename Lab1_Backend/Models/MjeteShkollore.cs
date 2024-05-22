@@ -11,8 +11,8 @@ namespace Lab1_Backend.Models
         public string DimensionetMSh { get; set; }
         public string ShtetiMSh { get; set; }
         public string ProdhuesiMSh { get; set; }
-        public string NgjyraMSh { get; set; }
-
+        public string NjesiaMSh { get; set; }
+       
 
         public string ImgPath { get; set; }
         public double Cmimi { get; set; }

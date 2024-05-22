@@ -9,5 +9,10 @@ namespace Lab1_Backend.Models
 
         [Required]
         public string Emri { get; set; }
+<<<<<<< HEAD
+=======
+
+       
+>>>>>>> f61140e16cebe2ce7f2dd11e722a631b74781b5e
     }
 }

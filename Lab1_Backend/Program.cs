@@ -19,6 +19,12 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn"))
 builder.Services.AddDbContext<LibrariaContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
 
+builder.Services.AddDbContext<KlientiContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
+
+builder.Services.AddDbContext<StafiContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
+
 
 
 builder.Services.AddControllers();

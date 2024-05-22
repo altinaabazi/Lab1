@@ -1,4 +1,4 @@
-/*
+
 using Microsoft.EntityFrameworkCore;
 namespace Lab1_Backend.Models
 {
@@ -20,9 +20,10 @@ namespace Lab1_Backend.Models
         public DbSet<Furnizimi> Furnizimi { get; set; }
         public DbSet<DimensionetMSh> DimensionetMSh { get; set; }
         public DbSet<ShtetiMSh> ShtetiMSh { get; set; }
-        public DbSet<NgjyraMSh> NgjyraMSh { get; set; }
-        public DbSet<ProdhuesiMSh> ProdhuesiMSh { get; set; }
+        public DbSet<NjesiaMSh> NjesiaMSh { get; set; }
 
+        public DbSet<ProdhuesiMSh> ProdhuesiMSh { get; set; }
+      
 
     }
-}*/
+}

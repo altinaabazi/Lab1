@@ -3,6 +3,9 @@ import { variables } from './Variables.js';
 import DimensionetMSh from './DimensionetMSh.js';
 import ProdhuesiMSh from './ProdhuesiMSh.js';
 import ShtetiMSh from './ShtetiMSh.js';
+import Header from './Header';
+import Footer from './Footer';
+
 
 
 export class MjeteShkollore extends Component {
@@ -307,7 +310,7 @@ export class MjeteShkollore extends Component {
 
         return (
             <div>
-
+                   <Header />
                 <button type="button"
                     className="btn btn-primary m-2 float-end"
                     data-bs-toggle="modal"
@@ -505,7 +508,7 @@ export class MjeteShkollore extends Component {
                     </div>
                 </div>
 
-
+                <Footer />
             </div>
         )
     }

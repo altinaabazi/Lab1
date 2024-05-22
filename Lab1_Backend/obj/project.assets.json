@@ -4969,16 +4969,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Zgjim\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\NB\\.nuget\\packages\\": {}
->>>>>>> 89e6a976bcc79272e34b4cdee8395db6241e967b
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
       "projectName": "Lab1_Backend",
       "projectPath": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
@@ -4987,16 +4982,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Zgjim\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
-      "projectName": "Lab1_Backend",
-      "projectPath": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
-      "packagesPath": "C:\\Users\\NB\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\NB\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 89e6a976bcc79272e34b4cdee8395db6241e967b
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5088,5 +5073,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

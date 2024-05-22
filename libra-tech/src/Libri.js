@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { variables } from './Variables.js';
+import Header from './Header';
+import Footer from './Footer';
 
 export class Libri extends Component {
   constructor(props) {
@@ -259,7 +261,7 @@ export class Libri extends Component {
   
     return(
         <div>
-        
+        <Header />
             <button type="button"
             className="btn btn-primary m-2 float-end"
             data-bs-toggle="modal" 
@@ -408,6 +410,7 @@ export class Libri extends Component {
         </div>
       </div>
     </div>
+    <Footer/>
   </div>
 );
   }

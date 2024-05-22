@@ -17,6 +17,8 @@ import Libraria from './Libraria';
 import Lokacioni from './Lokacioni';
 import Furnizimi from './Furnizimi';
 import Qyteti from './Qyteti';
+import Header from './Header';
+import NjesiaMSh from './NjesiaMSh';
 function App() {
   return (
     <Router>
@@ -34,7 +36,9 @@ function App() {
         <Route path='/lokacioni' element={<Lokacioni/>}></Route>
         <Route path='/qyteti' element={<Qyteti/>}></Route>
         <Route path='/furnizimi' element={<Furnizimi/>}></Route>
-
+        <Route path='/header' element={<Header/>}></Route>
+        <Route path='/njesia' element={<NjesiaMSh/>}></Route>
+       
 
         
       </Routes>

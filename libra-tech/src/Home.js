@@ -1,13 +1,16 @@
-import React,{Component} from 'react';
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
 
-export class Home extends Component{
-    render(){
-        return(
-            <div>
-                <h3>This is Home page</h3>
-                <a href='./Libri'>a</a>
-            </div>
-        )
-    }
+function Home() {
+    return (
+        <div>
+            <Header />
+            <h1>LibraTech!</h1>
+            <p>This is the main content of the website.</p>
+            <Footer />
+        </div>
+    );
 }
+
 export default Home;

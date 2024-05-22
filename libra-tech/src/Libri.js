@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { variables } from './Variables.js';
-<<<<<<< HEAD
 import Kategoria from './Kategoria.js';
 import { Gjuha } from './Gjuha.js';
-=======
 import Header from './Header';
 import Footer from './Footer';
->>>>>>> f61140e16cebe2ce7f2dd11e722a631b74781b5e
 
 export class Libri extends Component {
   constructor(props) {

@@ -8,18 +8,11 @@ namespace Lab1_Backend.Models
         {
 
         }
-<<<<<<< HEAD
         
         public DbSet<Klienti> Klienti { get; set; }
         public DbSet<KlientiGjinia> KlientiGjinia { get; set; } // Add DbSet for Gjinia if it's a separate entity
         public DbSet<KlientiQyteti> KlientiQyteti { get; set; } // Add DbSet for Qyteti if it's a separate entity
 
-=======
-
-        public DbSet<Klienti> Klienti { get; set; }
-        public DbSet<KlientiGjinia> KlientiGjinia { get; set; }
-        public DbSet<KlientiQyteti> KlientiQyteti { get; set; }
->>>>>>> f61140e16cebe2ce7f2dd11e722a631b74781b5e
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,7 +22,6 @@ namespace Lab1_Backend.Models
             {
                 entity.HasKey(e => e.ID);
                 entity.ToTable("Klienti");
-<<<<<<< HEAD
 
                 // Map the "Gjinia" property to the database column
                 entity.Property(e => e.GjiniaId)
@@ -41,8 +33,7 @@ namespace Lab1_Backend.Models
                     .HasMaxLength(50) // Set maximum length if needed
                     .IsUnicode(false); // Ensure non-unicode if needed
             });
-=======
-            });
+     
 
             modelBuilder.Entity<KlientiGjinia>(entity =>
             {
@@ -71,7 +62,6 @@ namespace Lab1_Backend.Models
                 .IsRequired() // Ensure the property is required
                 .HasMaxLength(50) // Set maximum length if needed
                 .IsUnicode(false); // Ensure non-unicode if needed
->>>>>>> f61140e16cebe2ce7f2dd11e722a631b74781b5e
         }
     }
 }

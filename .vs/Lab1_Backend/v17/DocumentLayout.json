@@ -1,0 +1,582 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Zgjim\\Desktop\\Lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\klienticontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klienticontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\klientigjinia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klientigjinia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\mjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\mjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\migrations\\20240428141450_addqytetitoklienti.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240428141450_addqytetitoklienti.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\migrations\\20240426210524_addgjiniatoklientitable.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240426210524_addgjiniatoklientitable.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\migrations\\20240510232432_updatemjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240510232432_updatemjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\shtetimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\shtetimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\appsettings.book.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.book.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\staficontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\staficontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\tipicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\tipicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\mjeteshkollorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\mjeteshkollorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\autoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\autoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\dimensionetmsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\dimensionetmsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\shtetimshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\shtetimshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Zgjim\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\prodhuesimshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\prodhuesimshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\librariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\librariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\prodhuesimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\prodhuesimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\tipi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\tipi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\dimensionetmshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\dimensionetmshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\porosiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\porosiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\migrations\\20240407003905_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240407003905_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\lab1_backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\lab1_backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\lab1_backend.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\lab1_backend.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\porosia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\porosia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\BookContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Lab1_Backend\\Models\\BookContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KlientiGjinia.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiGjinia.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiGjinia.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiGjinia.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\KlientiGjinia.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T21:14:56.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KlientiContext.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiContext.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiContext.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiContext.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\KlientiContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T21:14:31.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20240428141450_AddQytetiToKlienti.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240428141450_AddQytetiToKlienti.Designer.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240428141450_AddQytetiToKlienti.Designer.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240428141450_AddQytetiToKlienti.Designer.cs",
+              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240428141450_AddQytetiToKlienti.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T19:54:45.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20240426210524_AddGjiniaToKlientiTable.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240426210524_AddGjiniaToKlientiTable.Designer.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240426210524_AddGjiniaToKlientiTable.Designer.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240426210524_AddGjiniaToKlientiTable.Designer.cs",
+              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240426210524_AddGjiniaToKlientiTable.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T21:02:39.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MjeteShkollore.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\MjeteShkollore.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\MjeteShkollore.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\MjeteShkollore.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\MjeteShkollore.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T23:20:09.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LibrariaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\LibrariaContext.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\LibrariaContext.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\LibrariaContext.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\LibrariaContext.cs",
+              "ViewState": "AQIAAAYAAADgzMzMzMw7wBgAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T00:05:38.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20240510232432_UpdateMjeteShkollore.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
+              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
+              "ViewState": "AQIAAFwAAABAMzMzMzMrwHUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T23:24:32.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ShtetiMSh.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\ShtetiMSh.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\ShtetiMSh.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\ShtetiMSh.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\ShtetiMSh.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T09:02:42.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Book.json",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.Book.json",
+              "RelativeDocumentMoniker": "Lab1_Backend\\appsettings.Book.json",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.Book.json",
+              "RelativeToolTip": "Lab1_Backend\\appsettings.Book.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-11T23:48:04.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "Lab1_Backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.json",
+              "RelativeToolTip": "Lab1_Backend\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-13T22:29:55.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StafiController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\StafiController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\StafiController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\StafiController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\StafiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T21:16:21.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TipiController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\TipiController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\TipiController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\TipiController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\TipiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T21:16:09.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ShtetiMShController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\ShtetiMShController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\ShtetiMShController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\ShtetiMShController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\ShtetiMShController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T00:04:02.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T21:09:59.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AutoriController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\AutoriController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\AutoriController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\AutoriController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\AutoriController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T21:11:32.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DimensionetMSh.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\DimensionetMSh.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\DimensionetMSh.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\DimensionetMSh.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\DimensionetMSh.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:43:00.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MjeteShkolloreController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAUwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T23:46:26.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Lab1_Backend\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.Development.json",
+              "RelativeToolTip": "Lab1_Backend\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-13T22:29:17.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Lab1_Backend\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-23T20:39:55.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Libraria.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Libraria.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Libraria.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Libraria.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\Libraria.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T21:35:43.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProdhuesiMSh.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\ProdhuesiMSh.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\ProdhuesiMSh.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\ProdhuesiMSh.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\ProdhuesiMSh.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T23:50:18.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProdhuesiMShController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\ProdhuesiMShController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\ProdhuesiMShController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\ProdhuesiMShController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\ProdhuesiMShController.cs",
+              "ViewState": "AQIAAAkAAACAZmZmZmYkwCAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T00:06:43.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Tipi.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Tipi.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Tipi.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Tipi.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\Tipi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T23:19:02.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LibrariaController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\LibrariaController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\LibrariaController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\LibrariaController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\LibrariaController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T09:38:19.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Klienti.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Klienti.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\Klienti.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T18:29:13.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PorosiaController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\PorosiaController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\PorosiaController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\PorosiaController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\PorosiaController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T22:58:38.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DimensionetMshController.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\DimensionetMshController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\DimensionetMshController.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\DimensionetMshController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\DimensionetMshController.cs",
+              "ViewState": "AQIAAE4AAACg//////8lwFoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T20:42:28.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20240407003905_initial.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240407003905_initial.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240407003905_initial.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240407003905_initial.cs",
+              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240407003905_initial.cs",
+              "ViewState": "AQIAAAEAAAAAMzMzMzMLwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:33:36.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Lab1_Backend.csproj",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Lab1_Backend.csproj",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
+              "RelativeToolTip": "Lab1_Backend\\Lab1_Backend.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAUwAwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-23T20:40:37.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "BookContext.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\BookContext.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\BookContext.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\BookContext.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\BookContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T21:24:17.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\WeatherForecast.cs",
+              "RelativeToolTip": "Lab1_Backend\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T10:04:50.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Lab1_Backend",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Lab1_Backend.csproj",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
+              "RelativeToolTip": "Lab1_Backend\\Lab1_Backend.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-23T20:39:51.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Porosia.cs",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Porosia.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Porosia.cs",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Porosia.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\Porosia.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T22:45:19.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "libman.json",
+              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\libman.json",
+              "RelativeDocumentMoniker": "Lab1_Backend\\libman.json",
+              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\libman.json",
+              "RelativeToolTip": "Lab1_Backend\\libman.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-20T10:06:07.731Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

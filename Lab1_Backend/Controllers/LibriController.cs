@@ -51,6 +51,30 @@ namespace Lab1_Backend.Controllers
 
         }
 
+
+        [HttpGet("GetAllLibri")]
+        public async Task<ActionResult<IEnumerable<Libri>>> GetAllLibri()
+        {
+            return await _bookContext.Libri.ToListAsync();
+        }
+
+        [HttpGet]
+        [Route("GetFoto/{id}")]
+        public ActionResult<string> GetFoto(int id)
+        {
+            var libri = _bookContext.Libri.FirstOrDefault(l => l.ID == id);
+            if (libri == null)
+            {
+                return NotFound();
+            }
+            return libri.ImgPath;
+        }
+        [HttpGet("TotalLibrat")]
+        public async Task<ActionResult<int>> GetTotalLibrat()
+        {
+            var totalLibrat = await _bookContext.Libri.CountAsync();
+            return totalLibrat;
+        }
         [HttpPost]
         public async Task<ActionResult<Libri>> PostLibri(Libri book)
         {
@@ -59,6 +83,7 @@ namespace Lab1_Backend.Controllers
 
             return CreatedAtAction(nameof(GetLibri), new { id = book.ID }, book);
         }
+     
 
         [HttpPut]
         public async Task<ActionResult> PutLibri(Libri libri)
@@ -97,30 +122,26 @@ namespace Lab1_Backend.Controllers
             return Ok();
         }
         [HttpPost("SaveFile")]
-        public IActionResult SaveFile()
+        public JsonResult SaveFile()
         {
             try
             {
-                var httpRequest = HttpContext.Request;
-                var postedFile = httpRequest.Form.Files[0];
-
-                // Sigurohuni që të krijoni një emër unik për imazhin
-                string filename = Guid.NewGuid().ToString() + Path.GetExtension(postedFile.FileName);
-
-                var physicalPath = Path.Combine(_env.ContentRootPath, "Photos", filename);
+                var httpRequest = Request.Form;
+                var postedFile = httpRequest.Files[0];
+                string filename = postedFile.FileName;
+                var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
 
                 using (var stream = new FileStream(physicalPath, FileMode.Create))
                 {
                     postedFile.CopyTo(stream);
                 }
 
-                // Kthe rrugën e ruajtjes së imazhit si përgjigje
-                return Ok(new { filePath = "/Photos/" + filename });
+                return new JsonResult(filename);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // Kthe një mesazh gabimi në rast se ndodh një problem gjatë ngarkimit
-                return BadRequest(new { message = "Problem gjatë ngarkimit të skedarit: " + ex.Message });
+
+                return new JsonResult("./img.png");
             }
         }
     }

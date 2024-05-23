@@ -79,6 +79,7 @@ namespace Lab1Backend.Migrations.Klienti
 
                     b.ToTable("Klienti", (string)null);
                 });
+
             /*modelBuilder.Entity("Lab1_Backend.Models.KlientiGjinia", b =>
             {
                 b.Property<int>("Id")
@@ -95,6 +96,7 @@ namespace Lab1Backend.Migrations.Klienti
 
                 b.ToTable("KlientiGjinia");
             });*/
+
 #pragma warning restore 612, 618
         }
     }

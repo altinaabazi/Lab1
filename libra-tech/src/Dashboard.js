@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
+import React, { useState, useEffect } from 'react';
+import { variables } from './Variables';
 
 function Dashboard() {
     const [style, setStyle] = useState("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion");
@@ -21,6 +23,24 @@ function Dashboard() {
             setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion")
         }
     };
+    const [totalLibrat, setTotalLibrat] = useState(0);
+
+    useEffect(() => {
+        fetchTotalLibrat();
+    }, []);
+
+    const fetchTotalLibrat = async () => {
+        try {
+            const response = await fetch(variables.API_URL + 'libri/TotalLibrat');
+            if (!response.ok) {
+                throw new Error('Error fetching data');
+            }
+            const data = await response.json();
+            setTotalLibrat(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
     return (
         <div>
@@ -35,7 +55,7 @@ function Dashboard() {
                         {/*  <!-- Sidebar - Brand --> */}
                         <a className="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                             <div className="sidebar-brand-icon rotate-n-15">
-                            <i className="fas fa-book"></i>
+                                <i className="fas fa-book"></i>
                             </div>
                             <div className="sidebar-brand-text mx-3">LibraTech</div>
                             <div className="text-center d-none d-md-inline">
@@ -50,7 +70,7 @@ function Dashboard() {
                         {/*  <!-- Nav Item - Dashboard --> */}
 
                         <li className="nav-item active">
-                            <a className="nav-link" href="index.html">
+                            <a className="nav-link" href="./home">
                                 <i className="fa fa-home" aria-hidden="true"></ i>
                                 <span>Home</span></a>
                             <Link className="nav-link" to="/stafi">
@@ -278,8 +298,17 @@ function Dashboard() {
                                 {/*  <!-- Page Heading --> */}
                                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
                                     <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
+
                                     <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                         className="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                                </div>
+                                <div className="d-sm-flex align-items-center justify-content-between mb-4" >
+
+                                    <a href='Libri' className="h5 mb-0 text-gray-800">Librat</a>
+                                    <a href='MjeteShkollore' className="h5 mb-0 text-gray-800">Mjete Shkollore</a>
+                                    <a href='Porosia' className="h5 mb-0 text-gray-800">Porosit</a>
+                                    <a href='Stafi' className="h5 mb-0 text-gray-800">Stafi</a>
+                                    <a href='Klienti' className="h5 mb-0 text-gray-800">Klinetet</a>
                                 </div>
 
                                 {/*  <!-- Content Row --> */}
@@ -291,12 +320,12 @@ function Dashboard() {
                                             <div className="card-body">
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
-                                                        <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                            Earnings (Monthly)</div>
-                                                        <div className="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                                        <div className="text-m font-weight-bold text-success text-uppercase mb-1">
+                                                            Total Librat: </div>
+                                                            <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalLibrat}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                        <i className="fas fa-calendar fa-2x text-gray-300"></i>
+                                                        <i className="fas fa-book large-icon"></i>
                                                     </div>
                                                 </div>
                                             </div>

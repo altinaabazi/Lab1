@@ -17,8 +17,17 @@ import Libraria from './Libraria';
 import Lokacioni from './Lokacioni';
 import Furnizimi from './Furnizimi';
 import Qyteti from './Qyteti';
+import ProdhuesiMSh from './ProdhuesiMSh';
+import ShtetiMSh from './ShtetiMSh';
+import DimensionetMSh from './DimensionetMSh';
+import Kategoria from './Kategoria';
+import Gjuha from './Gjuha';
+import ShtepiaBotuese from './ShtepiaBotuese';
+import NrFaqeve from './NrFaqeve';
 import Header from './Header';
 import NjesiaMSh from './NjesiaMSh';
+import DetajetELibrit from './DetajetELibrit';
+import Shporta from './Shporta';
 function App() {
   return (
     <Router>
@@ -36,11 +45,19 @@ function App() {
         <Route path='/lokacioni' element={<Lokacioni/>}></Route>
         <Route path='/qyteti' element={<Qyteti/>}></Route>
         <Route path='/furnizimi' element={<Furnizimi/>}></Route>
-        <Route path='/header' element={<Header/>}></Route>
+        <Route path='/prodhuesiMSh' element={<ProdhuesiMSh/>}></Route>
+        <Route path='/shtetiMSh' element={<ShtetiMSh/>}></Route>
+        <Route path='/dimensionetMSh' element={<DimensionetMSh/>}></Route>
+        <Route path='/kategoria' element={<Kategoria/>}></Route>
+        <Route path='/gjuha' element={<Gjuha/>}></Route>
+        <Route path='/shtepiaBotuese' element={<ShtepiaBotuese/>}></Route>
+        <Route path='/nrfaqeve' element={<NrFaqeve/>}></Route>
         <Route path='/njesia' element={<NjesiaMSh/>}></Route>
-       
+        <Route path='/libri/:id' element={<DetajetELibrit/>}></Route>
+        <Route path='/Shporta' element={<Shporta/>}></Route>
 
-        
+
+
       </Routes>
     </Router>
   );

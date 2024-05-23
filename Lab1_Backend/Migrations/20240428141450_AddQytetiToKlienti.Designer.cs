@@ -99,6 +99,7 @@ namespace Lab1Backend.Migrations.Klienti
 
                     b.ToTable("KlientiQyteti");
                 });
+
            /* modelBuilder.Entity("Lab1_Backend.Models.KlientiGjinia", b =>
             {
                 b.Property<int>("Id")

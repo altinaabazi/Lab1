@@ -49,16 +49,18 @@ function Register() {
     return (
         <Fragment>
             <div className="container" style={{ padding: '3em' }}>
-            <div className="card o-hidden border-0 shadow-lg my-5">
-                <div className="card-body p-0">
-                    <div className="row">
-                        <img src="img/book.png" alt="foto" className="img-fluid" />
-                        <div className="col-lg-7">
-                            <div className="p-5">
-                                <div className="text-center">
-                                    <h1 className="h4 text-gray-900 mb-4">Create an Account!</h1>
-                                    {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
-                                </div>
+    <div className="card o-hidden border-0 shadow-lg my-5">
+        <div className="card-body p-0">
+            <div className="row no-gutters d-flex align-items-center">
+                <div className="col-lg-5">
+                    <img src="img/book.png" alt="foto"  height="700"  width="550"/>
+                </div>
+                <div className="col-lg-7">
+                    <div className="p-5">
+                        <div className="text-center">
+                            <h1 className="h4 text-gray-900 mb-4">Create an Account!</h1>
+                            {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
+                        </div>
                                 <form className="user" onSubmit={handleSubmit}>
                                     <div className="form-group row">
                                         <div className="col-sm-6 mb-3 mb-sm-0">

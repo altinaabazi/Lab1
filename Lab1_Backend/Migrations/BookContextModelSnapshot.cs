@@ -38,6 +38,23 @@ namespace Lab1Backend.Migrations
                     b.ToTable("Autori");
                 });
 
+            modelBuilder.Entity("Lab1_Backend.Models.DimensionetMSh", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Dimensione")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("DimensionetMSh");
+                });
+
             modelBuilder.Entity("Lab1_Backend.Models.Furnizimi", b =>
                 {
                     b.Property<int>("ID")
@@ -52,6 +69,40 @@ namespace Lab1Backend.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Furnizimi");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.Gjuha", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("gjuha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Gjuha");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.Kategoria", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("kategoria")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Kategoria");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Libraria", b =>
@@ -93,11 +144,23 @@ namespace Lab1Backend.Migrations
                     b.Property<double>("Cmimi")
                         .HasColumnType("float");
 
+                    b.Property<string>("Gjuha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ISBN")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImgPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Kategoria")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NrFaqeve")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -148,7 +211,15 @@ namespace Lab1Backend.Migrations
                     b.Property<double>("Cmimi")
                         .HasColumnType("float");
 
+                    b.Property<string>("DimensionetMSh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImgPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NgjyraMSh")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -156,8 +227,16 @@ namespace Lab1Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProdhuesiMSh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Sasia")
                         .HasColumnType("int");
+
+                    b.Property<string>("ShtetiMSh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Tipi")
                         .IsRequired()
@@ -166,6 +245,54 @@ namespace Lab1Backend.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("MjeteShkollore");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.NgjyraMSh", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Ngjyra")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("NgjyraMSh");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.NrFaqeve", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("nrfaqeve")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("NrFaqeve");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.ProdhuesiMSh", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Prodhuesi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("ProdhuesiMSh");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.QytetiLibraria", b =>
@@ -182,6 +309,38 @@ namespace Lab1Backend.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("QytetiLibraria");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.ShtepiaBotuese", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("shtepiaBotuese")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("ShtepiaBotuese");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.ShtetiMSh", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Shteti")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("ShtetiMSh");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Tipi", b =>

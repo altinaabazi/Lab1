@@ -51,6 +51,30 @@ namespace Lab1_Backend.Controllers
 
         }
 
+
+        [HttpGet("GetAllLibri")]
+        public async Task<ActionResult<IEnumerable<Libri>>> GetAllLibri()
+        {
+            return await _bookContext.Libri.ToListAsync();
+        }
+
+        [HttpGet]
+        [Route("GetFoto/{id}")]
+        public ActionResult<string> GetFoto(int id)
+        {
+            var libri = _bookContext.Libri.FirstOrDefault(l => l.ID == id);
+            if (libri == null)
+            {
+                return NotFound();
+            }
+            return libri.ImgPath;
+        }
+        [HttpGet("TotalLibrat")]
+        public async Task<ActionResult<int>> GetTotalLibrat()
+        {
+            var totalLibrat = await _bookContext.Libri.CountAsync();
+            return totalLibrat;
+        }
         [HttpPost]
         public async Task<ActionResult<Libri>> PostLibri(Libri book)
         {
@@ -59,6 +83,7 @@ namespace Lab1_Backend.Controllers
 
             return CreatedAtAction(nameof(GetLibri), new { id = book.ID }, book);
         }
+     
 
         [HttpPut]
         public async Task<ActionResult> PutLibri(Libri libri)
@@ -116,7 +141,7 @@ namespace Lab1_Backend.Controllers
             catch (Exception)
             {
 
-                return new JsonResult("img.png");
+                return new JsonResult("./img.png");
             }
         }
     }

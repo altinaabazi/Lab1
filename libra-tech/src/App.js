@@ -26,6 +26,8 @@ import ShtepiaBotuese from './ShtepiaBotuese';
 import NrFaqeve from './NrFaqeve';
 import Header from './Header';
 import NjesiaMSh from './NjesiaMSh';
+import DetajetELibrit from './DetajetELibrit';
+import Shporta from './Shporta';
 function App() {
   return (
     <Router>
@@ -51,26 +53,11 @@ function App() {
         <Route path='/shtepiaBotuese' element={<ShtepiaBotuese/>}></Route>
         <Route path='/nrfaqeve' element={<NrFaqeve/>}></Route>
         <Route path='/njesia' element={<NjesiaMSh/>}></Route>
-
-        
-        
-
-        
+        <Route path='/libri/:id' element={<DetajetELibrit/>}></Route>
+        <Route path='/Shporta' element={<Shporta/>}></Route>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-        
       </Routes>
     </Router>
   );

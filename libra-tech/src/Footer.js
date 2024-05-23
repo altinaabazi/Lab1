@@ -36,7 +36,6 @@ const footerStyle = {
     background: '#75747d',
     color: '#fff',
     padding: '20px 0',
-    marginTop:'220px'
 };
 
 const footerInnerStyle = {

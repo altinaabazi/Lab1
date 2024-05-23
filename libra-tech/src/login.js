@@ -43,9 +43,11 @@ function Login() {
                     <div className="col-xl-10 col-lg-12 col-md-9">
                         <div className="card o-hidden border-0 shadow-lg my-5">
                             <div className="card-body p-0">
-                                <div className="row">
-                                    <img src="img/book.png" alt="foto" width="400" height="600" />
-                                    <div className="col-lg-6">
+                                <div className="row no-gutters">
+                                    <div className="col-md-6 d-flex justify-content-center align-items-center">
+                                        <img src="img/book.png" alt="foto" width="550" height="600" />
+                                    </div>
+                                    <div className="col-md-6">
                                         <div className="p-5">
                                             <div className="text-center">
                                                 <h1 className="h4 text-gray-900 mb-4">Welcome Back!</h1>
@@ -73,7 +75,7 @@ function Login() {
                                                         onChange={(e) => setPassword(e.target.value)}
                                                     />
                                                 </div>
-                                                <button type="submit" onSubmit={()=>handleLogin()} className="btn btn-primary btn-user btn-block">
+                                                <button type="submit" onSubmit={() => handleLogin()} className="btn btn-primary btn-user btn-block">
                                                     Login
                                                 </button>
                                                 <hr />

@@ -30,7 +30,7 @@ export class Libri extends Component {
       Cmimi: 0.0,
       Sasia: 0,
       isFormValid: false,
-      ImgPath:"img.png",
+      ImgPath:'img/img.png',
       PhotoFileName:variables.PHOTO_URL,
     };
 
@@ -65,7 +65,7 @@ export class Libri extends Component {
       Cmimi: 0.0,
       Sasia: 0,
       isFormValid: false,
-      ImgPath:""
+      ImgPath:'img/img.png'
     });
   }
 
@@ -159,7 +159,7 @@ export class Libri extends Component {
       Gjuha:"",
       Cmimi: 0.0,
       Sasia: 0,
-      ImgPath:"img.png"
+      ImgPath:"img/img.png"
     });
   }
   editClick(emp) {
@@ -489,9 +489,12 @@ export class Libri extends Component {
                     onChange={this.changeSasia} />
                 </div>
                 <div className="p-2 w-50 bd-highlight">
-                <img width="250px" height="250px" 
-      src={PhotoFileName + '/' + ImgPath} />
-         <input className="m-2" type="file" onChange={this.imageUpload}/>
+                <div className="p-2 w-50 bd-highlight">
+  <img width="250px" height="250px" 
+    src={PhotoFileName + '/' + ImgPath} />
+  <input className="m-2" type="file" onChange={this.imageUpload}/>
+</div>
+
      </div>
               </div>
             </div>

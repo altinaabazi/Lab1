@@ -26,7 +26,7 @@ namespace Lab1_Backend.Models
         public DbSet<Kategoria> Kategoria { get; set; }
         public DbSet<NrFaqeve> NrFaqeve { get; set; }
 
-        public DbSet<NjesiaMSh> NjesiaMSh { get; set; }
+        public DbSet<NgjyraMSh> NgjyraMSh { get; set; }
       
 
     }

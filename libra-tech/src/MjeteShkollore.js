@@ -16,7 +16,7 @@ export class MjeteShkollore extends Component {
         this.state = {
             shtetet:[],
             prodhuesit:[],
-            njesite: [],
+            ngjyrat: [],
             dimensionet:[],
             tipet: [],
             mjetet: [],
@@ -28,7 +28,7 @@ export class MjeteShkollore extends Component {
             Cmimi: 0.0,
             Sasia: 0,
             DimensionetMSh:"",
-            NjesiaMSh:"",
+            NgjyraMSh:"",
             ProdhuesiMSh:"",
             ShtetiMSh:"",
             PhotoFileName: variables.PHOTO_URL,
@@ -60,7 +60,7 @@ export class MjeteShkollore extends Component {
             Cmimi: 0.0,
             Sasia: 0,
             DimensionetMSh:"",
-            NjesiaMSh:"",
+            NgjyraMSh:"",
             ProdhuesiMSh:"",
             ShtetiMSh:"",
             isFormValid: false,
@@ -69,9 +69,9 @@ export class MjeteShkollore extends Component {
     }
 
     validateForm = () => {
-        const { Pershkrimi, Tipi, Cmimi, Sasia,DimensionetMSh,NjesiaMSh,ProdhuesiMSh
+        const { Pershkrimi, Tipi, Cmimi, Sasia,DimensionetMSh,NgjyraMSh,ProdhuesiMSh
         ,ShtetiMSh} = this.state;
-        return Pershkrimi && Tipi && Cmimi && Sasia && DimensionetMSh && NjesiaMSh && ProdhuesiMSh && ShtetiMSh;
+        return Pershkrimi && Tipi && Cmimi && Sasia && DimensionetMSh && NgjyraMSh && ProdhuesiMSh && ShtetiMSh;
     };
 
     refreshList() {
@@ -94,10 +94,10 @@ export class MjeteShkollore extends Component {
                 this.setState({ dimensionet: data });
             });
 
-            fetch(variables.API_URL + 'NjesiaMSh')
+            fetch(variables.API_URL + 'NgjyraMSh')
             .then(response => response.json())
             .then(data => {
-                this.setState({ njesite: data });
+                this.setState({ ngjyrat: data });
             });
 
             fetch(variables.API_URL + 'ProdhuesiMSh')
@@ -133,8 +133,8 @@ export class MjeteShkollore extends Component {
     changeDimensionetMSh= (e) => {
         this.setState({ DimensionetMSh: e.target.value });
     }
-    changeNjesiaMSh = (e) => {
-        this.setState({ NjesiaMSh: e.target.value });
+    changeNgjyraMSh = (e) => {
+        this.setState({ NgjyraMSh: e.target.value });
     }
     changeProdhuesitMSh = (e) => {
         this.setState({ ProdhuesiMSh: e.target.value });
@@ -154,7 +154,7 @@ export class MjeteShkollore extends Component {
             Sasia: 0,
             ImgPath: "anonymous.png",
             DimensionetMSh:"",
-            NjesiaMSh:"",
+            NgjyraMSh:"",
             ProdhuesiMSh:"",
             ShtetiMSh:""
         });
@@ -169,7 +169,7 @@ export class MjeteShkollore extends Component {
             Sasia: emp.Sasia,
             ImgPath: emp.ImgPath,
             DimensionetMSh:emp.DimensionetMSh,
-            NjesiaMSh: emp.NjesiaMSh,
+            NgjyraMSh: emp.NgjyraMSh,
             ProdhuesiMSh:emp.ProdhuesiMSh,
             ShtetiMSh:emp.ShtetiMSh
 
@@ -190,7 +190,7 @@ export class MjeteShkollore extends Component {
                 Cmimi: this.state.Cmimi,
                 Sasia: this.state.Sasia,
                 DimensionetMSh:this.state.DimensionetMSh,
-                NjesiaMSh: this.state.NjesiaMSh,
+                NgjyraMSh: this.state.NgjyraMSh,
                 ProdhuesiMSh:this.state.ProdhuesiMSh,
                 ShtetiMSh:this.state.ShtetiMSh
 
@@ -223,7 +223,7 @@ export class MjeteShkollore extends Component {
                 Cmimi: this.state.Cmimi,
                 Sasia: this.state.Sasia,
                 DimensionetMSh: this.state.DimensionetMSh,
-                NjesiaMSh: this.state.NjesiaMSh,
+                NgjyraMSh: this.state.NgjyraMSh,
                 ProdhuesiMSh: this.state.ProdhuesiMSh,
                 ShtetiMSh: this.state.ShtetiMSh,
 
@@ -289,7 +289,7 @@ export class MjeteShkollore extends Component {
         const {
             shtetet,
             prodhuesit,
-            njesite,
+            ngjyrat,
             dimensionet,
             tipet,
             mjetet,
@@ -300,7 +300,7 @@ export class MjeteShkollore extends Component {
             Cmimi,
             Sasia,
             DimensionetMSh,
-            NjesiaMSh,
+            NgjyraMSh,
             ProdhuesiMSh,
             ShtetiMSh,
             PhotoFileName,
@@ -362,7 +362,7 @@ export class MjeteShkollore extends Component {
                                 <td>{emp.Cmimi}</td>
                                 <td>{emp.Sasia}</td>
                                 <td>{emp.DimensionetMSh}</td>
-                                <td>{emp.NjesiaMSh}</td>
+                                <td>{emp.NgjyraMSh}</td>
                                 <td>{emp.ProdhuesiMSh}</td>
                                 <td>{emp.ShtetiMSh}</td>
                                 <td>
@@ -426,10 +426,10 @@ export class MjeteShkollore extends Component {
                                         <div className="input-group mb-3">
                                             <span className="input-group-text">Njesia</span>
                                             <select className="form-select"
-                                                onChange={this.changeNjesiaMSh}
-                                                value={NjesiaMSh}>
-                                                {njesite.map(dep => <option key={dep.ID}>
-                                                    {dep.Njesia}
+                                                onChange={this.changeNgjyraMSh}
+                                                value={NgjyraMSh}>
+                                                {ngjyrat.map(dep => <option key={dep.ID}>
+                                                    {dep.Ngjyra}
                                                 </option>)}
                                             </select>
                                         </div>

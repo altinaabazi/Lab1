@@ -31,7 +31,7 @@ export class NgjyraMSh extends Component {
 
     addClick() {
         this.setState({
-            modalTitle: "Shto Ngjyre",
+            modalTitle: "Shto Njesi",
             Ngjyra: "",
             ID: 0
         });
@@ -39,7 +39,7 @@ export class NgjyraMSh extends Component {
 
     editClick(dep) {
         this.setState({
-            modalTitle: "Ndrysho Ngjyren",
+            modalTitle: "Ndrysho Njesin",
             ID: dep.ID,
             Ngjyra: dep.Ngjyra
         });
@@ -47,7 +47,7 @@ export class NgjyraMSh extends Component {
 
     createClick() {
         if (!this.state.Ngjyra) {
-            alert("Ju lutem shkruani emrin e ngjyres.");
+            alert("Ju lutem shkruani emrin e njesise.");
             return; 
         }
 
@@ -133,13 +133,13 @@ export class NgjyraMSh extends Component {
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                     onClick={() => this.addClick()}>
-                    Shto Ngjyren
+                    Shto Njesine
                 </button>
                 <table className="table table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Ngjyra</th>
+                            <th>Njesia</th>
                             <th>Options</th>
                         </tr>
                     </thead>
@@ -181,7 +181,7 @@ export class NgjyraMSh extends Component {
                             </div>
                             <div className="modal-body">
                                 <div className="input-group mb-3">
-                                    <span className="input-group-text">TipiEmri</span>
+                                    <span className="input-group-text">Njesia</span>
                                     <input type="text" className="form-control"
                                         value={Ngjyra}
                                         onChange={this.changeNgjyra} />

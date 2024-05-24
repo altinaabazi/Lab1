@@ -8,48 +8,48 @@ namespace Lab1_Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NjesiaMShController : ControllerBase
+    public class NgjyraMShController : ControllerBase
     {
         private readonly LibrariaContext _context;
 
-        public NjesiaMShController(LibrariaContext context)
+        public NgjyraMShController(LibrariaContext context)
         {
             _context = context;
         }
 
         // GET: api/Tipi
         [HttpGet]
-        public ActionResult<IEnumerable<NjesiaMSh>> GetNjesia()
+        public ActionResult<IEnumerable<NgjyraMSh>> GetNgjyra()
         {
-            return _context.NjesiaMSh.ToList();
+            return _context.NgjyraMSh.ToList();
         }
 
         // GET: api/Tipi/5
         [HttpGet("{id}")]
-        public ActionResult<NjesiaMSh> GetNjesia(int id)
+        public ActionResult<NgjyraMSh> GetNjyra(int id)
         {
-            var njesia = _context.NjesiaMSh.Find(id);
+            var ngjyra = _context.NgjyraMSh.Find(id);
 
-            if (njesia == null)
+            if (ngjyra == null)
             {
                 return NotFound();
             }
 
-            return njesia;
+            return ngjyra;
         }
 
         // POST: api/Tipi
         [HttpPost]
-        public async Task<ActionResult<NjesiaMSh>> PostNjesiaMSh(NjesiaMSh njesia)
+        public async Task<ActionResult<NgjyraMSh>> PostNjesiaMSh(NgjyraMSh njesia)
         {
-            _context.NjesiaMSh.Add(njesia);
+            _context.NgjyraMSh.Add(njesia);
             await _context.SaveChangesAsync();
 
 
-            return CreatedAtAction(nameof(GetNjesia), new { id = njesia.ID }, njesia);
+            return CreatedAtAction(nameof(GetNgjyra), new { id = njesia.ID }, njesia);
         }
         [HttpPut]
-        public IActionResult PutNjesia(NjesiaMSh njesia)
+        public IActionResult PutNjesia(NgjyraMSh njesia)
         {
             if (njesia == null)
             {
@@ -73,15 +73,15 @@ namespace Lab1_Backend.Controllers
 
         // DELETE: api/Tipi/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteNjesia(int id)
+        public IActionResult DeleteNgjyra(int id)
         {
-            var njesia = _context.NjesiaMSh.Find(id);
+            var njesia = _context.NgjyraMSh.Find(id);
             if (njesia == null)
             {
                 return NotFound();
             }
 
-            _context.NjesiaMSh.Remove(njesia);
+            _context.NgjyraMSh.Remove(njesia);
             _context.SaveChanges();
 
             return NoContent();

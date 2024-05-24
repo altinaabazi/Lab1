@@ -408,3 +408,4 @@ C:\Users\NB\Desktop\Lab1\Lab1_Backend\obj\Debug\net7.0\Lab1_Backend.RazorAssembl
 C:\Users\NB\Desktop\Lab1\Lab1_Backend\obj\Debug\net7.0\Lab1_Backend.RazorAssemblyInfo.cs
 C:\Users\NB\Desktop\Lab1\Lab1_Backend\bin\Debug\net7.0\appsettings.Book.json
 >>>>>>> 89e6a976bcc79272e34b4cdee8395db6241e967b
+C:\Users\Zgjim\Desktop\Lab1\Lab1_Backend\bin\Debug\net7.0\appsettings.Book.json

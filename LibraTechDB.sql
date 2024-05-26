@@ -14,7 +14,7 @@ Create table Tipi(
 TipiID int primary key identity(1,1),
 TipiEmri varchar(30)
 )
-drop table Tipi
+
 insert into Tipi values (1,'a');
 
 insert into libraria values (0,'a','b','v')
@@ -111,7 +111,6 @@ constraint PK_SDP primary key (IDStafi,IDPorosia),
 foreign key (IDStafi) references SDergues(StafiID),
 foreign key (IDPorosia) references Porosia(NrPorosia)
 );
-drop table Libraria;
 
 --Tabela Telefoni
 CREATE TABLE Telefoni (
@@ -120,7 +119,7 @@ CREATE TABLE Telefoni (
 	Nr_Tel int NOT NULL
 );
 
-drop table Telefoni;
+
 --Tabela Dergon
 CREATE TABLE Dergon(
 KlientiID int not null,

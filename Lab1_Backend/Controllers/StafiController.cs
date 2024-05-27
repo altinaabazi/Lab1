@@ -19,12 +19,14 @@ namespace Lab1_Backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Stafi>>> GetStafis()
         {
-            if (_dbContext.Stafi == null)
+            var stafiList = await _dbContext.Stafi.ToListAsync();
+
+            if (stafiList == null || stafiList.Count == 0)
             {
                 return NotFound();
             }
 
-            return await _dbContext.Stafi.ToListAsync();
+            return stafiList;
         }
 
         [HttpGet("{id}")]

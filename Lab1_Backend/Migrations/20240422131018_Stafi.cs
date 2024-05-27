@@ -21,7 +21,7 @@ namespace Lab1Backend.Migrations.Stafi
                    ZipCode = table.Column<int>(type: "int", nullable: false),
                    Gjinia = table.Column<string>(type: "nvarchar(1)", nullable: false),
                    Pervoja = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                   IDLibrari = table.Column<int>(type: "int", nullable: true)
+
                },
                constraints: table =>
                {

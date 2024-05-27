@@ -99,37 +99,6 @@ namespace Lab1_Backend.Controllers
             }
         }
 
-
-        /*post per register edhe login prej chatgpt*/
-        /*[HttpPost]
-        public async Task<ActionResult<Klienti>> PostKlienti(Klienti klienti)
-        {
-            if (string.IsNullOrEmpty(klienti.Password))
-            {
-                // This is a login request
-                var user = await _dbContext.Klienti.FirstOrDefaultAsync(x => x.Email == klienti.Email && x.Password == klienti.Password);
-                if (user != null)
-                {
-                    return Ok(user); // Return authenticated user
-                }
-                else
-                {
-                    return Unauthorized(); // Return unauthorized status
-                }
-            }
-            else
-            {
-                // This is a registration request
-                _dbContext.Klienti.Add(klienti);
-                await _dbContext.SaveChangesAsync();
-
-                return CreatedAtAction(nameof(GetKlienti), new { id = klienti.ID }, klienti); // Return newly registered user
-            }
-        }*/
-
-
-
-
         [HttpPut]
         public async Task<ActionResult<Klienti>> PutKlienti(int id, Klienti klienti)
         {

@@ -13,7 +13,7 @@ namespace Lab1Backend.Migrations.Klienti
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Emri = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Gjinia = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -23,7 +23,7 @@ namespace Lab1Backend.Migrations.Klienti
             // Insert specific values into Gjinia table
             migrationBuilder.InsertData(
                 table: "KlientiGjinia",
-                columns: new[] { "Emri" },
+                columns: new[] { "Gjinia" },
                 values: new object[,]
                 {
                     { "Femer" },

@@ -2,13 +2,12 @@
 
 namespace Lab1_Backend.Models
 {
-    public class StafiGjinia
+    public class StafiSektori
     {
         [Key]
         public int Id { get; set; }
 
         [Required]
-        public string Gjinia { get; set; }
-        
+        public string Sektori { get; set; }
     }
 }

@@ -6,31 +6,31 @@ namespace Lab1Backend.Migrations.Klienti
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            // Create Gjinia table
+            // Create Qyteti table
             migrationBuilder.CreateTable(
                 name: "KlientiQyteti",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Emri = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Qyteti = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_KlientiQyteti", x => x.Id);
                 });
 
-            // Insert specific values into Gjinia table
+            // Insert specific values into Qyteti table
             migrationBuilder.InsertData(
                 table: "KlientiQyteti",
-                columns: new[] { "Emri" },
+                columns: new[] { "Qyteti" },
                 values: new object[,]
                 {
                     { "Prishtine" },
                     { "Gjilan" }
                 });
 
-            // Add GjiniaId column to Klienti table as nullable foreign key
+            // Add QytetiId column to Klienti table as nullable foreign key
             migrationBuilder.AddColumn<int>(
                 name: "QytetiId",
                 table: "Klienti",

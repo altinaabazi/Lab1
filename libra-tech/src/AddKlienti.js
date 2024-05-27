@@ -10,7 +10,7 @@ const AddKlientiForm = ({ fetchData }) => {
     const navigate = useNavigate(); 
 
     const [newKlient, setNewKlient] = useState({
-        Emri: '', Mbiemri: '', GjiniaId: '', QytetiId: '', Email: '', Password: ''
+        Emri: '', Mbiemri: '', Gjinia: '', Qyteti: '',Roli: '', Email: '', Password: ''
     });
 
     const handleSave = () => {

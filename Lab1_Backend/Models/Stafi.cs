@@ -15,10 +15,9 @@ namespace Lab1_Backend.Models
         [ForeignKey("StafiOrari")]
         public int OrariId { get; set; }
 
-        [ForeignKey("StafiLloji")]
-        public int LlojiId { get; set; }
+        [ForeignKey("StafiSektori")]
+        public int SektoriId { get; set; }
 
         public string Pervoja { get; set; }
-        public int? IDLibrari { get; set; } // Assuming IDLibrari can be null if not all staff are linked to a library
     }
 }

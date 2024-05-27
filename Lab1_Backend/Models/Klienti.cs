@@ -14,6 +14,11 @@ namespace Lab1_Backend.Models
         [ForeignKey("KlientiQyteti")]
         public int QytetiId { get; set; }
 
+        [ForeignKey("KlientiRoli")]
+        public int RoliId { get; set; }
+
+        /*[ForeignKey("KlientiNrTel")]
+        public int NrTelId { get; set; }*/
         public string Email { get; set; }
         public string Password { get; set; }
 

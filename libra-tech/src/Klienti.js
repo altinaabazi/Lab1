@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
-
+import Header from './Header'; 
+import Footer from './Footer';
 const KlientiDashboard = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -12,7 +13,7 @@ const KlientiDashboard = () => {
 
     const [data, setData] = useState([]);
     const [editData, setEditData] = useState({
-        ID: null, Emri: '', Mbiemri: '', GjiniaId: '', QytetiId: '', Email: '', Password: ''
+        ID: null, Emri: '', Mbiemri: '', GjiniaId: '', QytetiId: '', RoliId: '',Email: '', Password: ''
     });
 
     useEffect(() => {
@@ -20,7 +21,7 @@ const KlientiDashboard = () => {
     }, []);
 
     const fetchData = () => {
-        axios.get('http://localhost:32596/api/Klienti')
+        axios.get('http://localhost:5164/api/Klienti')
         .then((response) => {
             setData(response.data);
         })
@@ -30,10 +31,8 @@ const KlientiDashboard = () => {
         });
     };
 
-
-
     const handleSaveChanges = () => {
-        axios.put(`http://localhost:32596/api/Klienti/${editData.ID}`, editData)
+        axios.put(`http://localhost:5164/api/Klienti/${editData.ID}`, editData)
         .then((response) => {
             fetchData();
             toast.success('Client information updated');
@@ -44,14 +43,16 @@ const KlientiDashboard = () => {
             toast.error('Error updating client information');
         });
     };
+
     const handleEdit = (ID) => {
         handleShow();
         const klient = data.find(k => k.ID === ID);
         setEditData(klient);
     };
+
     const handleDelete = (ID) => {
         if (window.confirm('Are you sure you want to delete this client?')) {
-            axios.delete(`http://localhost:32596/api/Klienti/${ID}`)
+            axios.delete(`http://localhost:5164/api/Klienti/${ID}`)
             .then((response) => {
                 fetchData();
                 toast.success('Client deleted');
@@ -65,11 +66,12 @@ const KlientiDashboard = () => {
 
     return (
         <Fragment>
+            <Header />
             <ToastContainer />
-            {/* <Container>
+            <Container>
                 <Row className="mb-3">                 
                 </Row>
-            </Container> */}
+            </Container>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -79,6 +81,7 @@ const KlientiDashboard = () => {
                         <th>Mbiemri</th>
                         <th>Gjinia</th>
                         <th>Qyteti</th>
+                        <th>Roli</th>
                         <th>Email</th>
                         <th>Password</th>
                         <th>Actions</th>
@@ -93,6 +96,7 @@ const KlientiDashboard = () => {
                             <td>{item.Mbiemri}</td>
                             <td>{item.GjiniaId}</td>
                             <td>{item.QytetiId}</td>
+                            <td>{item.RoliId}</td>
                             <td>{item.Email}</td>
                             <td>{item.Password}</td>
                             <td>
@@ -132,6 +136,7 @@ const KlientiDashboard = () => {
                     <Button variant="primary" onClick={handleSaveChanges}>Save Changes</Button>
                 </Modal.Footer>
             </Modal>
+            <Footer />
         </Fragment>
     );
 }

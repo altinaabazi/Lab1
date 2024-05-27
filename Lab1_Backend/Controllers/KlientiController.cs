@@ -16,27 +16,10 @@ namespace Lab1_Backend.Controllers
         {
             _dbContext = dbContext;
         }
-
-
-        /*[HttpGet]
-        public async Task<ActionResult<IEnumerable<Klienti>>> GetKlient()
-        {
-            var klientiList = await _dbContext.Klienti.ToListAsync();
-
-            if (klientiList == null || klientiList.Count == 0)
-            {
-                return NotFound();
-            }
-
-            return klientiList;
-        }*/
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Klienti>>> GetKlients()
         {
             var klientiList = await _dbContext.Klienti.ToListAsync();
-
-            // Log information about the retrieved klientiList
-            Console.WriteLine($"Retrieved {klientiList.Count} Klienti from the database.");
 
             if (klientiList == null || klientiList.Count == 0)
             {

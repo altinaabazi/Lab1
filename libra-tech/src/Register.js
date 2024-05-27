@@ -26,7 +26,7 @@ function Register() {
         }
     
         try {
-            const response = await axios.post('http://localhost:32596/api/Klienti/PostKlienti', {
+            const response = await axios.post('http://localhost:5164/api/Klienti/PostKlienti', {
                 Emri: firstName,
                 Mbiemri: lastName,
                 Email: email,

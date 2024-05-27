@@ -1,249 +1,34 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "C:\\Users\\Zgjim\\Desktop\\Lab1\\",
+  "WorkspaceRootPath": "C:\\Users\\NB\\Desktop\\Lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\klienticontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\models\\klienticontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klienticontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\klientigjinia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klientigjinia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\models\\klientiroli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klientiroli.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\controllers\\klientirolicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\klientirolicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\mjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\mjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\controllers\\klientinrtelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\klientinrtelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\migrations\\20240428141450_addqytetitoklienti.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240428141450_addqytetitoklienti.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\models\\klientinrtel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klientinrtel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\migrations\\20240426210524_addgjiniatoklientitable.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240426210524_addgjiniatoklientitable.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\migrations\\20240510232432_updatemjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240510232432_updatemjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\shtetimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\shtetimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\appsettings.book.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.book.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\staficontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\staficontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\tipicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\tipicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\mjeteshkollorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\mjeteshkollorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\autoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\autoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\dimensionetmsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\dimensionetmsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\shtetimshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\shtetimshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Zgjim\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\prodhuesimshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\prodhuesimshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\librariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\librariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\prodhuesimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\prodhuesimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\tipi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\tipi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\dimensionetmshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\dimensionetmshcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\controllers\\porosiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\porosiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\migrations\\20240407003905_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240407003905_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\lab1_backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\lab1_backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\lab1_backend.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\lab1_backend.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\models\\porosia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\porosia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\zgjim\\desktop\\lab1\\lab1_backend\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\BookContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Lab1_Backend\\Models\\BookContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-  "WorkspaceRootPath": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\libri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\libri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\libricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\libricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\mjeteshkollorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\mjeteshkollorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\gjuha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\gjuha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\nrfaqeve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\nrfaqeve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\shtepiabotuese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\shtepiabotuese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\nrfaqevecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\nrfaqevecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\migrations\\librariacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\librariacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\migrations\\20240514222149_libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240514222149_libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\migrations\\20240510232432_updatemjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\migrations\\20240510232432_updatemjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\dimensionetmsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\dimensionetmsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\mjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\mjeteshkollore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\ngjyramsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\ngjyramsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\gjuhacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\gjuhacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\stafi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\stafi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\staficontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\staficontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\shtetimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\shtetimsh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\autori.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\autori.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\kategoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\kategoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\models\\kategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\kategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\autoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\autoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\naim\\onedrive\\desktop\\viti2\\lab1\\lab1_backend\\controllers\\shtepiabotuesecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\controllers\\shtepiabotuesecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
     }
   ],
   "DocumentGroupContainers": [
@@ -253,742 +38,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "KlientiGjinia.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiGjinia.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiGjinia.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiGjinia.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\KlientiGjinia.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "KlientiNrTel.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiNrTel.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiNrTel.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiNrTel.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\KlientiNrTel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:14:56.493Z",
-=======
-              "DocumentIndex": 9,
-              "Title": "KlientiController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\KlientiController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\KlientiController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\KlientiController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\KlientiController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:55:43.102Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-<<<<<<< HEAD
-              "Title": "KlientiContext.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiContext.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiContext.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiContext.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\KlientiContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:14:31.553Z",
+              "WhenOpened": "2024-05-27T10:40:17.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "20240428141450_AddQytetiToKlienti.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240428141450_AddQytetiToKlienti.Designer.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240428141450_AddQytetiToKlienti.Designer.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240428141450_AddQytetiToKlienti.Designer.cs",
-              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240428141450_AddQytetiToKlienti.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAaAAAA",
+              "Title": "KlientiNrTelController.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\KlientiNrTelController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\KlientiNrTelController.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\KlientiNrTelController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\KlientiNrTelController.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAF8AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T19:54:45.714Z",
-=======
-              "Title": "Libri.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Libri.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Libri.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Libri.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Libri.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAA5wA4AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:36:20.717Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-<<<<<<< HEAD
-              "Title": "20240426210524_AddGjiniaToKlientiTable.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240426210524_AddGjiniaToKlientiTable.Designer.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240426210524_AddGjiniaToKlientiTable.Designer.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240426210524_AddGjiniaToKlientiTable.Designer.cs",
-              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240426210524_AddGjiniaToKlientiTable.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T21:02:39.799Z",
-=======
-              "Title": "ShtepiaBotuese.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\ShtepiaBotuese.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\ShtepiaBotuese.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\ShtepiaBotuese.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\ShtepiaBotuese.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:37:13.069Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
+              "WhenOpened": "2024-05-27T10:25:02.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-<<<<<<< HEAD
-              "Title": "MjeteShkollore.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\MjeteShkollore.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\MjeteShkollore.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\MjeteShkollore.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\MjeteShkollore.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAcAAAA",
+              "Title": "KlientiRoliController.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\KlientiRoliController.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\KlientiRoliController.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\KlientiRoliController.cs",
+              "RelativeToolTip": "Lab1_Backend\\Controllers\\KlientiRoliController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T23:20:09.819Z",
-=======
-              "Title": "Gjuha.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Gjuha.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Gjuha.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Gjuha.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Gjuha.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:50:36.018Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
+              "WhenOpened": "2024-05-27T10:30:05.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 2,
-              "Title": "LibrariaContext.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\LibrariaContext.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\LibrariaContext.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\LibrariaContext.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\LibrariaContext.cs",
-              "ViewState": "AQIAAAYAAADgzMzMzMw7wBgAAAA9AAAA",
+              "Title": "KlientiRoli.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiRoli.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiRoli.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiRoli.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\KlientiRoli.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T00:05:38.804Z",
-=======
+              "WhenOpened": "2024-05-27T07:47:53.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LibriController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\LibriController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\LibriController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\LibriController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\LibriController.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAAAHoAAAABAAAA",
+              "Title": "KlientiContext.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiContext.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiContext.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiContext.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\KlientiContext.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAswF8AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:16:05.663Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
+              "WhenOpened": "2024-05-27T07:45:41.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Klienti.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Klienti.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\Klienti.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAxwBQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T07:45:41.612Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-<<<<<<< HEAD
-              "Title": "20240510232432_UpdateMjeteShkollore.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
-              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
-              "ViewState": "AQIAAFwAAABAMzMzMzMrwHUAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T23:24:32.418Z",
-=======
-              "Title": "NrFaqeveController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\NrFaqeveController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\NrFaqeveController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\NrFaqeveController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\NrFaqeveController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:16:51.535Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 7,
-              "Title": "ShtetiMSh.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\ShtetiMSh.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\ShtetiMSh.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\ShtetiMSh.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\ShtetiMSh.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T09:02:42.972Z",
-=======
-              "DocumentIndex": 4,
-              "Title": "NrFaqeve.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\NrFaqeve.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\NrFaqeve.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\NrFaqeve.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\NrFaqeve.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:18:28.477Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 9,
-              "Title": "appsettings.Book.json",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.Book.json",
-              "RelativeDocumentMoniker": "Lab1_Backend\\appsettings.Book.json",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.Book.json",
-              "RelativeToolTip": "Lab1_Backend\\appsettings.Book.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-11T23:48:04.439Z",
-=======
-              "DocumentIndex": 2,
-              "Title": "MjeteShkolloreController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAAAHUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:23:24.526Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-<<<<<<< HEAD
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\appsettings.json",
               "RelativeDocumentMoniker": "Lab1_Backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\appsettings.json",
               "RelativeToolTip": "Lab1_Backend\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-13T22:29:55.806Z",
-=======
-              "Title": "LibrariaContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Migrations\\LibrariaContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\LibrariaContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Migrations\\LibrariaContextModelSnapshot.cs",
-              "RelativeToolTip": "Lab1_Backend\\Migrations\\LibrariaContextModelSnapshot.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:30:18.571Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
+              "WhenOpened": "2024-05-27T07:45:41.571Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 10,
-              "Title": "StafiController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\StafiController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\StafiController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\StafiController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\StafiController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T21:16:21.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TipiController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\TipiController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\TipiController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\TipiController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\TipiController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T21:16:09.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ShtetiMShController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\ShtetiMShController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\ShtetiMShController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\ShtetiMShController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\ShtetiMShController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T00:04:02.669Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\cdcc4db60743bfe33937c9665bea360241cd6cb3d16d486a0141d4afae1feabc\\Lab1_Backend\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T21:09:59.545Z",
-=======
-              "DocumentIndex": 7,
-              "Title": "LibrariaContext.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\LibrariaContext.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\LibrariaContext.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\LibrariaContext.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\LibrariaContext.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAA+wBsAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:41:03.415Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-<<<<<<< HEAD
-              "Title": "AutoriController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\AutoriController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\AutoriController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\AutoriController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\AutoriController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T21:11:32.646Z",
-=======
-              "Title": "MjeteShkollore.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\MjeteShkollore.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\MjeteShkollore.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\MjeteShkollore.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\MjeteShkollore.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAoAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:23:32.82Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 15,
-              "Title": "DimensionetMSh.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\DimensionetMSh.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\DimensionetMSh.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\DimensionetMSh.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\DimensionetMSh.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:43:00.971Z",
-=======
-              "DocumentIndex": 10,
-              "Title": "20240514222149_libraria.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Migrations\\20240514222149_libraria.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240514222149_libraria.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Migrations\\20240514222149_libraria.cs",
-              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240514222149_libraria.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACYAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:21:50.254Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-<<<<<<< HEAD
-              "Title": "MjeteShkolloreController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\MjeteShkolloreController.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAUwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T23:46:26.984Z",
-=======
-              "Title": "DimensionetMSh.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\DimensionetMSh.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\DimensionetMSh.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\DimensionetMSh.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\DimensionetMSh.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:30:08.429Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 18,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Lab1_Backend\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\appsettings.Development.json",
-              "RelativeToolTip": "Lab1_Backend\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-13T22:29:17.001Z",
-=======
-              "DocumentIndex": 11,
-              "Title": "20240510232432_UpdateMjeteShkollore.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
-              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240510232432_UpdateMjeteShkollore.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAQwFUAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:42:33.913Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-<<<<<<< HEAD
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Lab1_Backend\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-23T20:39:55.298Z",
-=======
-              "Title": "NgjyraMSh.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\NgjyraMSh.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\NgjyraMSh.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\NgjyraMSh.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\NgjyraMSh.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:18:41.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Klienti.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Klienti.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Klienti.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:12:08.417Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-<<<<<<< HEAD
-              "Title": "Libraria.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Libraria.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Libraria.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Libraria.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Libraria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T21:35:43.071Z",
-=======
-              "Title": "StafiController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\StafiController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\StafiController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\StafiController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\StafiController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:02:48.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Stafi.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Stafi.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Stafi.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Stafi.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Stafi.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAzwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:01:53.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ShtetiMSh.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\ShtetiMSh.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\ShtetiMSh.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\ShtetiMSh.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\ShtetiMSh.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:01:51.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GjuhaController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\GjuhaController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\GjuhaController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\GjuhaController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\GjuhaController.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAYwGQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:52:26.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "Lab1_Backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\appsettings.json",
-              "RelativeToolTip": "Lab1_Backend\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-14T22:09:27.208Z",
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-<<<<<<< HEAD
-              "Title": "ProdhuesiMSh.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\ProdhuesiMSh.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\ProdhuesiMSh.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\ProdhuesiMSh.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\ProdhuesiMSh.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T23:50:18.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ProdhuesiMShController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\ProdhuesiMShController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\ProdhuesiMShController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\ProdhuesiMShController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\ProdhuesiMShController.cs",
-              "ViewState": "AQIAAAkAAACAZmZmZmYkwCAAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T00:06:43.44Z"
-=======
-              "Title": "KategoriaController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\KategoriaController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\KategoriaController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\KategoriaController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\KategoriaController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:57:50.48Z",
-              "EditorCaption": ""
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-<<<<<<< HEAD
-              "Title": "Tipi.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Tipi.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Tipi.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Tipi.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Tipi.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T23:19:02.669Z"
-=======
-              "Title": "Kategoria.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Kategoria.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Kategoria.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Kategoria.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Kategoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:56:15.797Z",
-              "EditorCaption": ""
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-<<<<<<< HEAD
-              "Title": "LibrariaController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\LibrariaController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\LibrariaController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\LibrariaController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\LibrariaController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T09:38:19.359Z"
-=======
-              "Title": "Autori.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Autori.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Autori.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Models\\Autori.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Autori.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAADwvwUAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:50:44.314Z",
-              "EditorCaption": ""
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-<<<<<<< HEAD
-              "Title": "Klienti.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Klienti.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Klienti.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T18:29:13.875Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "PorosiaController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\PorosiaController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\PorosiaController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\PorosiaController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\PorosiaController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T22:58:38.61Z"
-=======
-              "Title": "AutoriController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\AutoriController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\AutoriController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\AutoriController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\AutoriController.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAcwGMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:38:55.928Z",
-              "EditorCaption": ""
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-<<<<<<< HEAD
-              "Title": "DimensionetMshController.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\DimensionetMshController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\DimensionetMshController.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\DimensionetMshController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\DimensionetMshController.cs",
-              "ViewState": "AQIAAE4AAACg//////8lwFoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:42:28.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "20240407003905_initial.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240407003905_initial.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Migrations\\20240407003905_initial.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Migrations\\20240407003905_initial.cs",
-              "RelativeToolTip": "Lab1_Backend\\Migrations\\20240407003905_initial.cs",
-              "ViewState": "AQIAAAEAAAAAMzMzMzMLwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T23:33:36.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Lab1_Backend.csproj",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Lab1_Backend.csproj",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
-              "RelativeToolTip": "Lab1_Backend\\Lab1_Backend.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAUwAwAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-23T20:40:37.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "BookContext.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\BookContext.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\BookContext.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\BookContext.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\BookContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T21:24:17.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\WeatherForecast.cs",
-              "RelativeToolTip": "Lab1_Backend\\WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T10:04:50.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Lab1_Backend",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Lab1_Backend.csproj",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj",
-              "RelativeToolTip": "Lab1_Backend\\Lab1_Backend.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-23T20:39:51.923Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Porosia.cs",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Porosia.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Porosia.cs",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\Models\\Porosia.cs",
-              "RelativeToolTip": "Lab1_Backend\\Models\\Porosia.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T22:45:19.989Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "libman.json",
-              "DocumentMoniker": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\libman.json",
-              "RelativeDocumentMoniker": "Lab1_Backend\\libman.json",
-              "ToolTip": "C:\\Users\\Zgjim\\Desktop\\Lab1\\Lab1_Backend\\libman.json",
-              "RelativeToolTip": "Lab1_Backend\\libman.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-20T10:06:07.731Z"
-=======
-              "Title": "ShtepiaBotueseController.cs",
-              "DocumentMoniker": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\ShtepiaBotueseController.cs",
-              "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\ShtepiaBotueseController.cs",
-              "ToolTip": "C:\\Users\\Naim\\OneDrive\\Desktop\\viti2\\Lab1\\Lab1_Backend\\Controllers\\ShtepiaBotueseController.cs",
-              "RelativeToolTip": "Lab1_Backend\\Controllers\\ShtepiaBotueseController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T00:39:59.657Z",
-              "EditorCaption": ""
->>>>>>> 8f42ebc82861f7006184055c99012d65fe40a254
             }
           ]
         }

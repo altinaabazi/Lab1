@@ -56,6 +56,51 @@ IDLibrari int foreign key references Libraria
  );
 
  select * from stafi;
+
+ALTER TABLE Stafi
+ADD LlojiId INT;
+
+ALTER TABLE Stafi
+ADD CONSTRAINT FK_Stafi_StafiGjinia_GjiniaId FOREIGN KEY (GjiniaId)
+REFERENCES StafiGjinia(Id);
+
+ALTER TABLE Stafi
+DROP CONSTRAINT FK_Stafi_StafiGjinia_GjiniaID;
+
+update Stafi
+set GjiniaId = 2
+where IDStafi=1
+
+update Stafi
+set LlojiId = 1
+where IDStafi=4
+
+update Stafi
+set LlojiId = 1
+where IDStafi=5
+
+update Stafi
+set LlojiId = 2
+where IDStafi=7
+
+update Stafi
+set LlojiId = 2
+where IDStafi=8
+update Stafi
+set LlojiId = 1
+where IDStafi=10
+update Stafi
+set LlojiId = 1
+where IDStafi=12
+update Stafi
+set LlojiId = 2
+where IDStafi=13
+
+
+
+
+
+
 --Tabela StafiTeknik
 /*
 CREATE TABLE STeknik(

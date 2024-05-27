@@ -10,7 +10,7 @@ namespace Lab1Backend.Migrations.Stafi
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropPrimaryKey(
+           /* migrationBuilder.DropPrimaryKey(
                 name: "PK_Stafis",
                 table: "Stafis");
 
@@ -22,6 +22,7 @@ namespace Lab1Backend.Migrations.Stafi
                 name: "PK_Stafi",
                 table: "Stafi",
                 column: "IDStafi");
+           */
 
             migrationBuilder.CreateTable(
                 name: "StafiGjinia",
@@ -43,9 +44,10 @@ namespace Lab1Backend.Migrations.Stafi
             migrationBuilder.DropTable(
                 name: "StafiGjinia");
 
-            migrationBuilder.DropPrimaryKey(
+          /*  migrationBuilder.DropPrimaryKey(
                 name: "PK_Stafi",
                 table: "Stafi");
+          */
 
           //  migrationBuilder.RenameTable(
             //    name: "Stafi",

@@ -12,6 +12,9 @@ namespace Lab1_Backend.Models
         public DbSet<Stafi> Stafi {  get; set; }
         public DbSet<StafiGjinia> StafiGjinia { get; set; }
 
+        public DbSet<StafiOrari> StafiOrari { get; set; }
+        public DbSet<StafiLloji> StafiLloji { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder); 

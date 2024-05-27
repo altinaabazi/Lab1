@@ -28,6 +28,7 @@ import Header from './Header';
 import DetajetELibrit from './DetajetELibrit';
 import Shporta from './Shporta';
 import NgjyraMSh from './NgjyraMSh';
+import Stafi from './Stafi';
 function App() {
   return (
     <Router>
@@ -55,6 +56,7 @@ function App() {
         <Route path='/njesia' element={<NgjyraMSh/>}></Route>
         <Route path='/libri/:id' element={<DetajetELibrit/>}></Route>
         <Route path='/Shporta' element={<Shporta/>}></Route>
+        <Route path='/Stafi' element={<Stafi/>}></Route>
 
 
 

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { login } from './AuthService'; // Adjusted import path
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -18,15 +18,14 @@ function Login() {
         }
 
         try {
-            const response = await axios.post('http://localhost:5164/api/Klienti/Login', {
-                Email: email,
-                Password: password,
-            });
+            const response = await login(email, password);
 
-            if (response.status === 200) {
+            if (response) {
                 console.log('Login successful');
+                // Store JWT token securely (e.g., in local storage)
+                localStorage.setItem('token', response.token);
                 // Redirect to dashboard or any other page after successful login
-                navigate('/dashboard');
+                navigate('/home');
             } else {
                 setErrorMessage('Login failed.');
             }
@@ -75,7 +74,7 @@ function Login() {
                                                         onChange={(e) => setPassword(e.target.value)}
                                                     />
                                                 </div>
-                                                <button type="submit" onSubmit={() => handleLogin()} className="btn btn-primary btn-user btn-block">
+                                                <button type="submit" className="btn btn-primary btn-user btn-block">
                                                     Login
                                                 </button>
                                                 <hr />

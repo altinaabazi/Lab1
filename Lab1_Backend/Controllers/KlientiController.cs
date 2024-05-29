@@ -1,9 +1,14 @@
-﻿using Lab1_Backend.Models;
+﻿/*using Lab1_Backend.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
-
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Lab1_Backend.Controllers
 {
@@ -12,10 +17,14 @@ namespace Lab1_Backend.Controllers
     public class KlientiController : ControllerBase
     {
         private readonly KlientiContext _dbContext;
-        public KlientiController(KlientiContext dbContext)
+        private readonly IConfiguration _configuration;
+
+        public KlientiController(KlientiContext dbContext, IConfiguration configuration)
         {
             _dbContext = dbContext;
+            _configuration = configuration;
         }
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Klienti>>> GetKlients()
         {
@@ -29,40 +38,9 @@ namespace Lab1_Backend.Controllers
             return klientiList;
         }
 
-        /*[HttpGet]
-        public async Task<ActionResult<IEnumerable<Klienti>>> GetKlients()
-        {
-            var klientiList = await _dbContext.Klienti
-                .Include(k => k.GjiniaId) // Include the related Gjinia entity
-                .ToListAsync();
-
-            if (klientiList == null || !klientiList.Any())
-            {
-                return NotFound();
-            }
-
-            return klientiList;
-        }
-        */
-
-        /*[HttpGet]
-        public async Task<ActionResult<IEnumerable<Klienti>>> GetKlients()
-        {
-            if (_dbContext.Klienti == null)
-            {
-                return NotFound();
-            }
-            return await _dbContext.Klienti.ToListAsync();
-        }*/
-
         [HttpGet("{id}")]
         public async Task<ActionResult<Klienti>> GetKlienti(int id)
         {
-            if (_dbContext.Klienti == null)
-            {
-                return NotFound();
-            }
-
             var klienti = await _dbContext.Klienti.FindAsync(id);
             if (klienti == null)
             {
@@ -71,6 +49,7 @@ namespace Lab1_Backend.Controllers
 
             return klienti;
         }
+
         [HttpPost]
         public async Task<ActionResult<Klienti>> PostKlienti(Klienti klienti)
         {
@@ -79,33 +58,50 @@ namespace Lab1_Backend.Controllers
 
             return CreatedAtAction(nameof(GetKlienti), new { id = klienti.ID }, klienti);
         }
-        /*post per login*/
+
         [HttpPost("login")]
-        public async Task<ActionResult<Klienti>> Login(LoginModel loginModel)
+        public async Task<ActionResult> Login(LoginModel loginModel)
         {
-            // Find the user in the database based on the provided email
             var user = await _dbContext.Klienti.FirstOrDefaultAsync(x => x.Email == loginModel.Email);
 
-            // Check if the user exists and if the provided password matches the stored password
             if (user != null && user.Password == loginModel.Password)
             {
-                // If authentication is successful, return the user data
-                return Ok(user);
+                var token = GenerateJwtToken(user);
+                return Ok(new { Token = token });
             }
             else
             {
-                // If authentication fails (incorrect email or password), return Unauthorized status
                 return Unauthorized();
             }
         }
 
-        [HttpPut]
+        private string GenerateJwtToken(Klienti user)
+        {
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: new[] {
+                    new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                },
+                expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["Jwt:ExpiryMinutes"])),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        [HttpPut("{id}")]
         public async Task<ActionResult<Klienti>> PutKlienti(int id, Klienti klienti)
         {
             if (id != klienti.ID)
             {
                 return BadRequest();
             }
+
             _dbContext.Entry(klienti).State = EntityState.Modified;
 
             try
@@ -114,7 +110,7 @@ namespace Lab1_Backend.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!KlientiAvailable(id))
+                if (!KlientiExists(id))
                 {
                     return NotFound();
                 }
@@ -123,20 +119,13 @@ namespace Lab1_Backend.Controllers
                     throw;
                 }
             }
+
             return Ok();
-        }
-        private bool KlientiAvailable(int id)
-        {
-            return (_dbContext.Klienti?.Any(x => x.ID == id)).GetValueOrDefault();
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteKlienti(int id)
         {
-            if (_dbContext.Klienti == null)
-            {
-                return NotFound();
-            }
             var klienti = await _dbContext.Klienti.FindAsync(id);
             if (klienti == null)
             {
@@ -144,9 +133,124 @@ namespace Lab1_Backend.Controllers
             }
 
             _dbContext.Klienti.Remove(klienti);
-
             await _dbContext.SaveChangesAsync();
+
             return Ok();
+        }
+
+        private bool KlientiExists(int id)
+        {
+            return _dbContext.Klienti.Any(e => e.ID == id);
+        }
+    }
+}
+*/
+
+using Lab1_Backend.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab1_Backend.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class KlientiController : ControllerBase
+    {
+        private readonly KlientiContext _dbContext;
+
+        public KlientiController(KlientiContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+        // GET: api/Klienti
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Klienti>>> GetKlients()
+        {
+            return await _dbContext.Klienti.ToListAsync();
+        }
+
+        // GET: api/Klienti/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Klienti>> GetKlienti(int id)
+        {
+            var klienti = await _dbContext.Klienti.FindAsync(id);
+
+            if (klienti == null)
+            {
+                return NotFound();
+            }
+
+            return klienti;
+        }
+
+        // PUT: api/Klienti/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutKlienti(int id, Klienti klienti)
+        {
+            if (id != klienti.ID)
+            {
+                return BadRequest();
+            }
+
+            _dbContext.Entry(klienti).State = EntityState.Modified;
+
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!KlientiExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // POST: api/Klienti
+        [HttpPost]
+        public async Task<ActionResult<Klienti>> PostKlienti(Klienti klienti)
+        {
+            _dbContext.Klienti.Add(klienti);
+            await _dbContext.SaveChangesAsync();
+
+            return CreatedAtAction("GetKlienti", new { id = klienti.ID }, klienti);
+        }
+
+        // DELETE: api/Klienti/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteKlienti(int id)
+        {
+            var klienti = await _dbContext.Klienti.FindAsync(id);
+            if (klienti == null)
+            {
+                return NotFound();
+            }
+
+            _dbContext.Klienti.Remove(klienti);
+            await _dbContext.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool KlientiExists(int id)
+        {
+            return _dbContext.Klienti.Any(e => e.ID == id);
         }
     }
 }

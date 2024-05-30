@@ -31,6 +31,8 @@
 // import AddStaff from './AddStaff';
 // import Logout from './Logout';
 // import { AuthProvider, useAuth } from './AuthProvider';
+
+
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import React from 'react';
 import Login from './login';
@@ -40,6 +42,7 @@ import Dashboard from './Dashboard';
 import Klienti from './Klienti';
 import Stafi from './Stafi';
 import Home from './Home';
+import ForgotPassword from './ForgotPassword';
 import { AuthProvider, useAuth } from './AuthProvider';
 // Import other components...
 
@@ -53,6 +56,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/klienti" element={<Klienti />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
 
         {/* Other public routes */}
 

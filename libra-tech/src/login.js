@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { login } from './AuthService'; // Adjusted import path
+import { useNavigate, Link } from 'react-router-dom'; // Import Link
+import { login } from './AuthService';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -11,9 +11,8 @@ function Login() {
     const handleLogin = async (event) => {
         event.preventDefault();
 
-        // Basic validation
         if (!email.trim() || !password.trim()) {
-            setErrorMessage('Please fill in all fields.');
+            setErrorMessage('Please enter both email and password.');
             return;
         }
 
@@ -21,17 +20,14 @@ function Login() {
             const response = await login(email, password);
 
             if (response) {
-                console.log('Login successful');
-                // Store JWT token securely (e.g., in local storage)
                 localStorage.setItem('token', response.token);
-                // Redirect to dashboard or any other page after successful login
                 navigate('/home');
             } else {
-                setErrorMessage('Login failed.');
+                setErrorMessage('Invalid email or password.');
             }
         } catch (error) {
             console.error('Error during login:', error);
-            setErrorMessage('Login failed.');
+            setErrorMessage('An error occurred during login.');
         }
     };
 
@@ -80,10 +76,10 @@ function Login() {
                                                 <hr />
                                             </form>
                                             <div className="text-center">
-                                                <a className="small" href="forgot-password">Forgot Password?</a>
+                                                <Link className="small" to="/forgotpassword">Forgot Password?</Link>
                                             </div>
                                             <div className="text-center">
-                                                <a className="small" href="register">Create an Account!</a>
+                                                <Link className="small" to="/register">Create an Account!</Link>
                                             </div>
                                         </div>
                                     </div>

@@ -1,12 +1,13 @@
-﻿using Lab1_Backend.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using System;
+﻿using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Lab1_Backend.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Http;
 
 namespace Lab1_Backend.Services
 {
@@ -14,11 +15,13 @@ namespace Lab1_Backend.Services
     {
         private readonly KlientiContext _dbContext;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor; // Inject HttpContextAccessor
 
-        public AuthenticationService(KlientiContext dbContext, IConfiguration configuration)
+        public AuthenticationService(KlientiContext dbContext, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
             _dbContext = dbContext;
             _configuration = configuration;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<string> AuthenticateAndGetJwtToken(LoginModel loginModel)
@@ -72,6 +75,23 @@ namespace Lab1_Backend.Services
             }
 
             return false;
+        }
+
+        public async Task<bool> Logout()
+        {
+            try
+            {
+                // Clear JWT token from the client-side (e.g., remove cookie, clear local storage)
+                _httpContextAccessor.HttpContext.Response.Cookies.Delete("jwtToken");
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Log any errors
+                Console.WriteLine($"Error during logout: {ex.Message}");
+                return false;
+            }
         }
 
         private string GenerateJwtToken(Klienti user)

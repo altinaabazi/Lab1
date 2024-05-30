@@ -3,8 +3,32 @@ import { Link } from 'react-router-dom';
 import './Dashboard.css';
 import React, { useState, useEffect } from 'react';
 import { variables } from './Variables';
+import axios from 'axios';
+
+const handleLogout = async () => {
+    try {
+        // Send a request to the backend to log the user out
+        const response = await axios.post('http://localhost:5164/api/Authorization/logout');
+
+        if (response.status === 200) {
+            // If logout is successful, redirect the user to the login page or perform any other necessary actions
+            window.location.href = '/';
+        } else {
+            // Handle logout failure (optional)
+            console.error('Logout failed');
+        }
+    } catch (error) {
+        // Handle errors (optional)
+        console.error('Error during logout:', error);
+    }
+};
+
+
+
+
 
 function Dashboard() {
+    const [showModal, setShowModal] = useState(false);
     const [style, setStyle] = useState("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion");
 
     const changeStyle = () => {
@@ -40,6 +64,8 @@ function Dashboard() {
         } catch (error) {
             console.error('Error fetching data:', error);
         }
+
+        
     };
 
     return (
@@ -650,26 +676,24 @@ function Dashboard() {
                     <i className="fas fa-angle-up"></i>
                 </a>
 
-                {/*  <!-- Logout Modal--> */}
-                <div className="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                                <button className="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div className="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                            <div className="modal-footer">
-                                <button className="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a className="btn btn-primary" href='Logout'>Logout</a>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               {/* Logout Modal */}
+<div className="modal fade" id="logoutModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal-dialog" role="document">
+        <div className="modal-content">
+            <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button className="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div className="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div className="modal-footer">
+                <button className="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
+            </div>
+        </div>
+    </div>
+</div>
 
             </body>
         </div>

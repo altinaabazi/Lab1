@@ -7,5 +7,6 @@ namespace Lab1_Backend.Services
         Task<string> AuthenticateAndGetJwtToken(LoginModel loginModel);
         Task<bool> RegisterUser(RegisterModel registerModel);
         Task<bool> AssignRole(AssignRoleModel assignRoleModel);
+        Task<bool> Logout();
     }
 }

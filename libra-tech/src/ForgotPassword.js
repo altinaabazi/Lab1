@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ForgotPassword() {
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const [showConfirmation, setShowConfirmation] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -13,26 +16,42 @@ function ForgotPassword() {
             return;
         }
 
-        // If validation passes, you can proceed with the password reset logic
-        // For now, just log the email
-        console.log('Email:', email);
+        // Simulate sending confirmation email
+        sendConfirmationEmail(email);
 
-        // Reset fields and error message after submission
+        // Show confirmation message
+        setShowConfirmation(true);
+
+        // Reset email and error message
         setEmail('');
         setErrorMessage('');
+
+        // Redirect to login page after 2 seconds
+        setTimeout(() => {
+            navigate('/');
+        }, 2000);
+    };
+
+    // Function to simulate sending confirmation email
+    const sendConfirmationEmail = (email) => {
+        console.log(`Confirmation email sent to ${email}`);
     };
 
     return (
         <body className="bg-gradient-primary">
             <div className="container">
-                {/* Outer Row */}
                 <div className="row justify-content-center">
                     <div className="col-xl-10 col-lg-12 col-md-9">
                         <div className="card o-hidden border-0 shadow-lg my-5">
                             <div className="card-body p-0">
-                                {/* Nested Row within Card Body */}
+                                {showConfirmation && (
+                                    <div className="row">
+                                        <div className="col-lg-12">
+                                            <div className="alert alert-success mt-3">A confirmation email has been sent to your email address.</div>
+                                        </div>
+                                    </div>
+                                )}
                                 <div className="row">
-                                    <img src="img/book.png" alt="foto" width="400" height="600" />
                                     <div className="col-lg-6">
                                         <div className="p-5">
                                             <div className="text-center">
@@ -60,6 +79,9 @@ function ForgotPassword() {
                                                 <a className="small" href="/">Back to Login</a>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <img src="img/book.png" alt="foto" width="400" height="600" />
                                     </div>
                                 </div>
                             </div>

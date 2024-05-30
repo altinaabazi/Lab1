@@ -27,6 +27,8 @@ builder.Services.AddDbContext<KlientiContext>(options =>
 builder.Services.AddDbContext<StafiContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
 
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;

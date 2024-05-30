@@ -1,4 +1,3 @@
-// src/services/authService.js
 import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:5164';
@@ -9,20 +8,27 @@ export const login = async (email, password) => {
             Email: email,
             Password: password,
         });
-        return response.data; // assuming the response contains the token in response.data.token
+        return response.data;
     } catch (error) {
         throw error;
     }
 };
 
-export const register = async (email, password) => {
+export const register = async (userData) => {
     try {
         const response = await axios.post(`${API_BASE_URL}/api/Authorization/register`, {
-            Email: email,
-            Password: password,
+            Emri: userData.name,
+            Mbiemri: userData.lastname,
+            GjiniaId: userData.gender,
+            QytetiId: userData.city,
+            Email: userData.email,
+            Password: userData.password,
+            ConfirmPassword: userData.confirmPassword
         });
+        console.log('Registration response:', response.data);
         return response.data;
     } catch (error) {
+        console.error('Registration error:', error.response ? error.response.data : error);
         throw error;
     }
 };

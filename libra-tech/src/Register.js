@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { register } from './AuthService'; // Adjusted import path
 
 function Register() {
+    const [name, setName] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [gender, setGender] = useState('');
+    const [city, setCity] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -13,7 +17,7 @@ function Register() {
         event.preventDefault();
 
         // Basic validation
-        if (!email.trim() || !password.trim() || !confirmPassword.trim()) {
+        if (!name.trim() || !lastname.trim() || !gender.trim() || !city.trim() || !email.trim() || !password.trim() || !confirmPassword.trim()) {
             setErrorMessage('Please fill in all fields.');
             return;
         }
@@ -24,11 +28,12 @@ function Register() {
         }
 
         try {
-            const response = await register(email, password);
+            console.log('Registering user with data:', { name, lastname, gender, city, email, password, confirmPassword });
+            const response = await register({ name, lastname, gender, city, email, password, confirmPassword });
 
-            if (response) {
+            if (response === 'Registration successful') {
                 console.log('Registration successful');
-                navigate('/login');
+                navigate('/');
             } else {
                 setErrorMessage('Registration failed.');
             }
@@ -56,6 +61,42 @@ function Register() {
                                                 {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
                                             </div>
                                             <form className="user" onSubmit={handleRegister}>
+                                                <div className="form-group">
+                                                    <input
+                                                        type="text"
+                                                        className="form-control form-control-user"
+                                                        placeholder="First Name"
+                                                        value={name}
+                                                        onChange={(e) => setName(e.target.value)}
+                                                    />
+                                                </div>
+                                                <div className="form-group">
+                                                    <input
+                                                        type="text"
+                                                        className="form-control form-control-user"
+                                                        placeholder="Last Name"
+                                                        value={lastname}
+                                                        onChange={(e) => setLastname(e.target.value)}
+                                                    />
+                                                </div>
+                                                <div className="form-group">
+                                                    <input
+                                                        type="text"
+                                                        className="form-control form-control-user"
+                                                        placeholder="Gender"
+                                                        value={gender}
+                                                        onChange={(e) => setGender(e.target.value)}
+                                                    />
+                                                </div>
+                                                <div className="form-group">
+                                                    <input
+                                                        type="text"
+                                                        className="form-control form-control-user"
+                                                        placeholder="City"
+                                                        value={city}
+                                                        onChange={(e) => setCity(e.target.value)}
+                                                    />
+                                                </div>
                                                 <div className="form-group">
                                                     <input
                                                         type="email"

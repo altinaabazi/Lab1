@@ -49,9 +49,18 @@ namespace Lab1_Backend.Controllers
         [HttpPost("logout")]
         public async Task<ActionResult> Logout()
         {
-            // Implement logout logic here
-            return Ok();
+            var logoutResult = await _authenticationService.Logout();
+
+            if (logoutResult)
+            {
+                return Ok("Logout successful");
+            }
+            else
+            {
+                return BadRequest("Logout failed");
+            }
         }
+
 
         [HttpPost("assign-role")]
         public async Task<ActionResult> AssignRole(AssignRoleModel assignRoleModel)

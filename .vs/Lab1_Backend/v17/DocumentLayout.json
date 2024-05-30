@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\NB\\Desktop\\Lab1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\models\\klienticontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|c:\\users\\nb\\desktop\\lab1\\lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{272DCD01-0641-4F9A-9FFD-A7B1D70F880C}|Lab1_Backend\\Lab1_Backend.csproj|solutionrelative:lab1_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Lab1_Backend\\Lab1_Backend.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -66,24 +70,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "LibrariaContext.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\LibrariaContext.cs",
+              "RelativeDocumentMoniker": "Lab1_Backend\\Models\\LibrariaContext.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\LibrariaContext.cs",
+              "RelativeToolTip": "Lab1_Backend\\Models\\LibrariaContext.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAwwBYAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T11:17:53.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Services\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Services\\AuthenticationService.cs",
               "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Services\\AuthenticationService.cs",
               "RelativeToolTip": "Lab1_Backend\\Services\\AuthenticationService.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAswGYAAAA1AAAA",
+              "ViewState": "AQIAAGAAAAAAAAAAAAA9wGYAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T21:36:59.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T21:36:59.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "IAuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Services\\IAuthenticationService.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Services\\IAuthenticationService.cs",
@@ -91,12 +107,11 @@
               "RelativeToolTip": "Lab1_Backend\\Services\\IAuthenticationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T21:33:00.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T21:33:00.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AuthorizationController.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\AuthorizationController.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\AuthorizationController.cs",
@@ -104,12 +119,11 @@
               "RelativeToolTip": "Lab1_Backend\\Controllers\\AuthorizationController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T20:33:43.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T20:33:43.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AssignRoleModel .cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\AssignRoleModel .cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Models\\AssignRoleModel .cs",
@@ -117,12 +131,11 @@
               "RelativeToolTip": "Lab1_Backend\\Models\\AssignRoleModel .cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAswAkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T21:12:00.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T21:12:00.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Models\\RegisterModel.cs",
@@ -130,12 +143,11 @@
               "RelativeToolTip": "Lab1_Backend\\Models\\RegisterModel.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAgwBQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T20:51:51.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T20:51:51.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Models\\LoginModel.cs",
@@ -143,12 +155,11 @@
               "RelativeToolTip": "Lab1_Backend\\Models\\LoginModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T20:22:01.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T20:22:01.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "KlientiController.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\KlientiController.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\KlientiController.cs",
@@ -160,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Program.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Program.cs",
@@ -168,12 +179,11 @@
               "RelativeToolTip": "Lab1_Backend\\Program.cs",
               "ViewState": "AQIAAFkAAAAAAAAAAIAwwGQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T17:04:07.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T17:04:07.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Lab1_Backend.csproj.user",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Lab1_Backend.csproj.user",
               "RelativeDocumentMoniker": "Lab1_Backend\\Lab1_Backend.csproj.user",
@@ -185,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "KlientiRoliController.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Controllers\\KlientiRoliController.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Controllers\\KlientiRoliController.cs",
@@ -197,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "KlientiRoli.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiRoli.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiRoli.cs",
@@ -209,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Klienti.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\Klienti.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Models\\Klienti.cs",
@@ -221,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "KlientiContext.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\Models\\KlientiContext.cs",
               "RelativeDocumentMoniker": "Lab1_Backend\\Models\\KlientiContext.cs",
@@ -233,15 +243,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\appsettings.json",
               "RelativeDocumentMoniker": "Lab1_Backend\\appsettings.json",
               "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Lab1_Backend\\appsettings.json",
               "RelativeToolTip": "Lab1_Backend\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-27T07:45:41.571Z"
+              "WhenOpened": "2024-05-27T07:45:41.571Z",
+              "EditorCaption": ""
             }
           ]
         }

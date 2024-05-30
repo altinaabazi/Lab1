@@ -43,6 +43,9 @@ import Klienti from './Klienti';
 import Stafi from './Stafi';
 import Home from './Home';
 import ForgotPassword from './ForgotPassword';
+
+import Libri from './Libri';
+import DetajetELibrit from './DetajetELibrit';
 import { AuthProvider, useAuth } from './AuthProvider';
 // Import other components...
 
@@ -57,6 +60,9 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/klienti" element={<Klienti />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
+
+        <Route path='/libri' element={<Libri />} />
+        <Route path='/libri/:id' element={<DetajetELibrit />} />
 
         {/* Other public routes */}
 

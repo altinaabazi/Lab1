@@ -14,7 +14,7 @@ const AddKlientiForm = ({ fetchData }) => {
     });
 
     const handleSave = () => {
-        axios.post('http://localhost:5164/api/Klienti', newKlient)
+        axios.post('http://localhost:5170/api/Klienti', newKlient)
             .then((response) => {
                 fetchData();
                 setNewKlient({ Emri: '', Mbiemri: '', GjiniaId: '', QytetiId: '', RoliId: '',Email: '', Password: '' });

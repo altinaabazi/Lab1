@@ -1,44 +1,34 @@
-// import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-// import React from 'react';
-// import Login from './login';
-// import Register from './Register';
-// import Dashboard from './Dashboard';
-// import ForgotPassword from './forgot-password';
-// import Libri from './Libri';
-// import Autori from './Autori';
-// import Porosia from './Porosia';
-// import Home from './Home';
-// import MjeteShkollore from './MjeteShkollore';
-// import Tipi from './Tipi';
-// import Libraria from './Libraria';
-// import Lokacioni from './Lokacioni';
-// import Furnizimi from './Furnizimi';
-// import Qyteti from './Qyteti';
-// import ProdhuesiMSh from './ProdhuesiMSh';
-// import ShtetiMSh from './ShtetiMSh';
-// import DimensionetMSh from './DimensionetMSh';
-// import Kategoria from './Kategoria';
-// import Gjuha from './Gjuha';
-// import ShtepiaBotuese from './ShtepiaBotuese';
-// import NrFaqeve from './NrFaqeve';
-// import Header from './Header';
-// import DetajetELibrit from './DetajetELibrit';
-// import Shporta from './Shporta';
-// import NgjyraMSh from './NgjyraMSh';
-// import Klienti from './Klienti';
-// import AddKlienti from './AddKlienti';
-// import Stafi from './Stafi';
-// import AddStaff from './AddStaff';
-// import Logout from './Logout';
-// import { AuthProvider, useAuth } from './AuthProvider';
-
-
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import React from 'react';
 import Login from './login';
 import Logout from './Logout';
 import Register from './Register';
 import Dashboard from './Dashboard';
+import Autori from './Autori';
+import Porosia from './Porosia';
+
+import MjeteShkollore from './MjeteShkollore';
+import Tipi from './Tipi';
+import Libraria from './Libraria';
+import Lokacioni from './Lokacioni';
+import Furnizimi from './Furnizimi';
+import Qyteti from './Qyteti';
+import ProdhuesiMSh from './ProdhuesiMSh';
+import ShtetiMSh from './ShtetiMSh';
+import DimensionetMSh from './DimensionetMSh';
+import Kategoria from './Kategoria';
+import Gjuha from './Gjuha';
+import ShtepiaBotuese from './ShtepiaBotuese';
+import NrFaqeve from './NrFaqeve';
+import Header from './Header';
+
+import Shporta from './Shporta';
+import NgjyraMSh from './NgjyraMSh';
+import LibratSipasKategorise from './LibratSipasKategorise';
+
+import AddKlienti from './AddKlienti';
+
+import AddStaff from './AddStaff';
 import Klienti from './Klienti';
 import Stafi from './Stafi';
 import Home from './Home';
@@ -60,9 +50,32 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/klienti" element={<Klienti />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path='/mjeteShkollore' element={<MjeteShkollore />} />
+          <Route path='/tipi' element={<Tipi />} />
+         
+          
+          <Route path='/autori' element={<Autori />} />
+          <Route path='/libraria' element={<Libraria />} />  
+          <Route path='/lokacioni' element={<Lokacioni />} />
+          <Route path='/qyteti' element={<Qyteti />} />
+          <Route path='/furnizimi' element={<Furnizimi />} />
+          <Route path='/prodhuesiMSh' element={<ProdhuesiMSh />} />
+          <Route path='/shtetiMSh' element={<ShtetiMSh />} />
+          <Route path='/dimensionetMSh' element={<DimensionetMSh />} />
+          <Route path='/kategoria' element={<Kategoria />} />
+          <Route path='/gjuha' element={<Gjuha />} />
+          <Route path='/shtepiaBotuese' element={<ShtepiaBotuese />} />
+          <Route path='/nrfaqeve' element={<NrFaqeve />} />
+          <Route path='/njesia' element={<NgjyraMSh />} />
+          <Route path='/addKlienti' element={<AddKlienti />} />
 
+          
+          <Route path='/Shporta' element={<Shporta />} />
+        
+          <Route path='/addstaff' element={<AddStaff />} />
         <Route path='/libri' element={<Libri />} />
         <Route path='/libri/:id' element={<DetajetELibrit />} />
+        <Route path="/kategoria/:kategoria/librat" element={<LibratSipasKategorise/>}></Route>
 
         {/* Other public routes */}
 
@@ -88,12 +101,12 @@ export default App;
 //     <AuthProvider>
 //       <Router>
 //         <Routes>
-          {/* <Route path='/' element={<Login />} />
-          <Route path='/register' element={<Register />} />
+          {/* 
+         
           <Route path='/mjeteShkollore' element={<MjeteShkollore />} />
           <Route path='/tipi' element={<Tipi />} />
-          <Route path='/forgot-password' element={<ForgotPassword />} />
-          <Route path='/libri' element={<Libri />} />
+         
+          
           <Route path='/autori' element={<Autori />} />
           <Route path='/libraria' element={<Libraria />} />  
           <Route path='/lokacioni' element={<Lokacioni />} />
@@ -107,11 +120,11 @@ export default App;
           <Route path='/shtepiaBotuese' element={<ShtepiaBotuese />} />
           <Route path='/nrfaqeve' element={<NrFaqeve />} />
           <Route path='/njesia' element={<NgjyraMSh />} />
-          <Route path='/libri/:id' element={<DetajetELibrit />} />
+          
           <Route path='/Shporta' element={<Shporta />} />
-          <Route path='/stafi' element={<Stafi />} />
+        
           <Route path='/addstaff' element={<AddStaff />} />
-          <Route path='/logout' element={<Logout />} /> */}
+          }
 
           {/* the Private Routes - jo te qasshme pa u bo login*/}
           {/* <Route path='/dashboard' element={<PrivateRoute component={Dashboard} />} />

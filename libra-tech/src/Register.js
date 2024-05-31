@@ -1,8 +1,10 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register } from './AuthService'; // Adjusted import path
-
+import axios from 'axios';
 function Register() {
+    const [cities, setCities] = useState([]);
+    const [genders, setGenders] = useState([]);
     const [name, setName] = useState('');
     const [lastname, setLastname] = useState('');
     const [gender, setGender] = useState('');
@@ -13,6 +15,20 @@ function Register() {
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const fetchCitiesAndGenders = async () => {
+            try {
+                const cityResponse = await axios.get('/api/KlientiQyteti');
+                setCities(cityResponse.data);
+                const genderResponse = await axios.get('/api/KlientiGjinia');
+                setGenders(genderResponse.data);
+            } catch (error) {
+                console.error('Error fetching cities and genders:', error);
+            }
+        };
+
+        fetchCitiesAndGenders();
+    }, []);
     const handleRegister = async (event) => {
         event.preventDefault();
 
@@ -80,23 +96,33 @@ function Register() {
                                                     />
                                                 </div>
                                                 <div className="form-group">
-                                                    <input
-                                                        type="text"
-                                                        className="form-control form-control-user"
-                                                        placeholder="Gender"
-                                                        value={gender}
-                                                        onChange={(e) => setGender(e.target.value)}
-                                                    />
-                                                </div>
-                                                <div className="form-group">
-                                                    <input
-                                                        type="text"
-                                                        className="form-control form-control-user"
-                                                        placeholder="City"
-                                                        value={city}
-                                                        onChange={(e) => setCity(e.target.value)}
-                                                    />
-                                                </div>
+                                                       <select
+                                                           className="form-control form-control-user"
+                                                           value={gender}
+                                                           onChange={(e) => setGender(e.target.value)}
+                                                       >
+                                                           <option value="">Select Gender</option>
+                                                           {genders.map((gender) => (
+                                                               <option key={gender} value={gender}>
+                                                                   {gender}
+                                                               </option>
+                                                           ))}
+                                                       </select>
+                                                   </div>
+                                                   <div className="form-group">
+                                                       <select
+                                                           className="form-control form-control-user"
+                                                           value={city}
+                                                           onChange={(e) => setCity(e.target.value)}
+                                                       >
+                                                           <option value="">Select City</option>
+                                                           {cities.map((city) => (
+                                                               <option key={city} value={city}>
+                                                                   {city}
+                                                               </option>
+                                                           ))}
+                                                       </select>
+                                                   </div>
                                                 <div className="form-group">
                                                     <input
                                                         type="email"
@@ -137,7 +163,7 @@ function Register() {
                                                 <a className="small" href="forgot-password">Forgot Password?</a>
                                             </div>
                                             <div className="text-center">
-                                                <a className="small" href="login">Already have an account? Login!</a>
+                                                <a className="small" href="/">Already have an account? Login!</a>
                                             </div>
                                         </div>
                                     </div>

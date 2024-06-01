@@ -28,20 +28,20 @@ import Header from './Header';
 import Shporta from './Shporta';
 import NgjyraMSh from './NgjyraMSh';
 import LibratSipasKategorise from './LibratSipasKategorise';
-
-import AddKlienti from './AddKlienti';
-
+import KlientiRoli from './KlientiRoli';
 
 import Klienti from './Klienti';
 import Stafi from './Stafi';
 import Home from './Home';
 import ForgotPassword from './ForgotPassword';
 import MjetetSipasTipit from './MjetetSipasTipit';
+import KlientiGjinia from './KlientiGjinia';
 
 import Libri from './Libri';
 import DetajetELibrit from './DetajetELibrit';
 import DetajetEMjetit from './DetajetEMjetit';
 import { AuthProvider, useAuth } from './AuthProvider';
+import KlientiQyteti from './KlientiQyteti';
 // Import other components...
 
 function App() {
@@ -75,8 +75,14 @@ function App() {
           <Route path='/stafiGjinia' element={<StafiGjinia />} />
           <Route path='/stafiOrari' element={<StafiOrari />} />
           <Route path='/stafiSektori' element={<StafiSektori />} />
-          <Route path='/addKlienti' element={<AddKlienti />} />
-         
+          <Route path='/KlientiGjinia' element={<KlientiGjinia />} />
+          <Route path='/KlientiRoli' element={<KlientiRoli />} />
+          <Route path='/KlientiQyteti' element={<KlientiQyteti />} />
+
+
+          
+          
+          
         
           
           <Route path='/Shporta' element={<Shporta />} />

@@ -193,6 +193,25 @@ namespace Lab1_Backend.Controllers
 
             return klienti;
         }
+        [HttpPut]
+        public async Task<ActionResult> PutKlienti(Klienti k)
+        {
+            if (k == null || k.ID == 0)
+            {
+                return BadRequest("Invalid object or ID.");
+            }
+
+            _dbContext.Entry(k).State = EntityState.Modified;
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+            return Ok();
+        }
 
         // PUT: api/Klienti/5
         [HttpPut("{id}")]

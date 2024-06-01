@@ -90,6 +90,61 @@ namespace Lab1_Backend.Controllers
         {
             return _mjeteShkolloreContext.MjeteShkollore.Any(e => e.ID == id);
         }
+        [HttpGet("GetMjetetShkollore")]
+        public async Task<ActionResult<IEnumerable<MjeteShkollore>>> GetNewestBooks()
+        {
+
+            var newestBooks = await _mjeteShkolloreContext.MjeteShkollore.OrderByDescending(l => l.ID).Take(6).ToListAsync();
+            if (newestBooks == null)
+            {
+                return NotFound();
+            }
+            return newestBooks;
+        }
+        [HttpGet("tipi/{tipi}")]
+        public ActionResult<IEnumerable<MjeteShkollore>> GetMjetetbyTipi(string tipi)
+        {
+            var mjetet = _mjeteShkolloreContext.MjeteShkollore.Where(l => l.Tipi == tipi).ToList();
+
+            if (mjetet == null || mjetet.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return mjetet;
+        }
+        [HttpGet("GetAllMjetet")]
+        public async Task<ActionResult<IEnumerable<MjeteShkollore>>> GetAllMjetet()
+        {
+            return await _mjeteShkolloreContext.MjeteShkollore.ToListAsync();
+        }
+
+        [HttpGet]
+        [Route("GetFoto/{id}")]
+        public IActionResult GetFoto(int id)
+        {
+            var libri = _mjeteShkolloreContext.MjeteShkollore.FirstOrDefault(l => l.ID == id);
+            if (libri == null || string.IsNullOrEmpty(libri.ImgPath))
+            {
+                return NotFound();
+            }
+
+            var imagePath = Path.Combine("Photos", libri.ImgPath);
+            if (!System.IO.File.Exists(imagePath))
+            {
+                return NotFound();
+            }
+
+            var image = System.IO.File.OpenRead(imagePath);
+            return File(image, "image/jpeg");
+        }
+
+        [HttpGet("TotalMjetet")]
+        public async Task<ActionResult<int>> GetTotalMjetet()
+        {
+            var totalLibrat = await _mjeteShkolloreContext.MjeteShkollore.CountAsync();
+            return totalLibrat;
+        }
 
 
         [Route("SaveFile")]

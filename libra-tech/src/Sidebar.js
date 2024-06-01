@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { variables } from './Variables';
-
 
 function Sidebar() {
     const [style, setStyle] = useState("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion");
@@ -14,7 +12,9 @@ function Sidebar() {
             setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion");
         }
     };
+
     const [categories, setCategories] = useState([]);
+    const [tipet, setTipet] = useState([]);
 
     useEffect(() => {
         fetchCategories();
@@ -30,6 +30,19 @@ function Sidebar() {
         }
     };
 
+    useEffect(() => {
+        fetchTipet();
+    }, []);
+
+    const fetchTipet = async () => {
+        try {
+            const response = await fetch(variables.API_URL + 'Tipi');
+            const data = await response.json();
+            setTipet(data);
+        } catch (error) {
+            console.error('Gabim gjatë marrjes së kategorive: ', error);
+        }
+    };
 
     return (
         <div>
@@ -41,7 +54,6 @@ function Sidebar() {
                 .navbar-nav {
                     background-color: #4e73df;
                     color: white;
-                    
                     position: fixed;
                     height: 100%;
                     top: 0;
@@ -49,7 +61,6 @@ function Sidebar() {
                     padding-top: 20px;
                     transition: all 0.3s;
                 }
-               
                 .navbar-nav .nav-item a {
                     color: white;
                     text-decoration: none;
@@ -59,7 +70,6 @@ function Sidebar() {
                 .navbar-nav .nav-item a i {
                     margin-right: 10px;
                 }
-                
                 .navbar-nav .sidebar-brand {
                     display: flex;
                     justify-content: center;
@@ -89,12 +99,11 @@ function Sidebar() {
                         </div>
                     </a>
 
-
                     <hr className="sidebar-divider my-0" />
 
                     <li className="nav-item active">
                         <Link className="nav-link" to="/home">
-                        <i className="fa fa-home"></i>
+                            <i className="fa fa-home"></i>
                             <span>Home</span>
                         </Link>
                         <Link className="nav-link" to="/dashboard">
@@ -106,11 +115,11 @@ function Sidebar() {
                     <hr className="sidebar-divider" />
 
                     <li className="nav-item">
-                        <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUserProfile" aria-expanded="true" aria-controls="collapseUserProfile">
                             <i className="fa fa-user" aria-hidden="true"></i>
                             <span>User Profile</span>
                         </a>
-                        <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div id="collapseUserProfile" className="collapse" aria-labelledby="headingUserProfile" data-parent="#accordionSidebar">
                             <div className="bg-white py-2 collapse-inner rounded">
                                 <a className="collapse-item" href="#">My Profile</a>
                                 <a className="collapse-item" href="#">Edit Profile</a>
@@ -125,7 +134,6 @@ function Sidebar() {
                         </a>
                         <div id="collapseLibra" className="collapse" aria-labelledby="headingLibra" data-parent="#accordionSidebar">
                             <div className="bg-white py-2 collapse-inner rounded">
-
                                 <div className="list-group">
                                     {categories.map(kategoria => (
                                         <Link key={kategoria.ID} to={`/kategoria/${kategoria.kategoria}/librat`} style={{ color: 'black' }} className="collapse-item">
@@ -133,8 +141,6 @@ function Sidebar() {
                                         </Link>
                                     ))}
                                 </div>
-
-
                             </div>
                         </div>
                     </li>
@@ -146,10 +152,13 @@ function Sidebar() {
                         </a>
                         <div id="collapseMjeteShkollore" className="collapse" aria-labelledby="headingMjeteShkollore" data-parent="#accordionSidebar">
                             <div className="bg-white py-2 collapse-inner rounded">
-                                <h6 className="collapse-header">Tipi:</h6>
-                                <a className="collapse-item" href="#">Fletore</a>
-                                <a className="collapse-item" href="#">Qante</a>
-                                <a className="collapse-item" href="#">Aksesore te ndryshem</a>
+                                <div className="list-group">
+                                    {tipet.map(tipi => (
+                                        <Link key={tipi.TipiID} to={`/tipi/${tipi.TipiEmri}/MjeteShkollore`} style={{ color: 'black' }} className="collapse-item">
+                                            {tipi.TipiEmri}
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </li>

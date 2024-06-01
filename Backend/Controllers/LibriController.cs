@@ -75,7 +75,7 @@ namespace Lab1_Backend.Controllers
             }
 
             var image = System.IO.File.OpenRead(imagePath);
-            return File(image, "image/jpeg"); // Ndryshoni MIME type sipas formatit të imazhit
+            return File(image, "image/jpeg");
         }
 
         [HttpGet("TotalLibrat")]
@@ -134,7 +134,7 @@ namespace Lab1_Backend.Controllers
         [HttpGet("GetLibratMeTeRinje")]
         public async Task<ActionResult<IEnumerable<Libri>>> GetNewestBooks()
         {
-            // Merrni 6 librat më të rinj sipas viti të publikimit
+           
             var newestBooks = await _bookContext.Libri.OrderByDescending(l => l.ID).Take(6).ToListAsync();
             if (newestBooks == null)
             {

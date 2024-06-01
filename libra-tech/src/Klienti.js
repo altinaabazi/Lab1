@@ -4,8 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
-import Header from './Header'; 
-import Footer from './Footer';
+import Footer from './Footer.js';
+import Header from './Header';
+import Sidebar from './Sidebar.js';
 const KlientiDashboard = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);

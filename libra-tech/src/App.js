@@ -20,6 +20,9 @@ import Kategoria from './Kategoria';
 import Gjuha from './Gjuha';
 import ShtepiaBotuese from './ShtepiaBotuese';
 import NrFaqeve from './NrFaqeve';
+import StafiGjinia from './StafiGjinia';
+import StafiOrari from './StafiOrari';
+import StafiSektori from './StafiSektori';
 import Header from './Header';
 
 import Shporta from './Shporta';
@@ -28,14 +31,16 @@ import LibratSipasKategorise from './LibratSipasKategorise';
 
 import AddKlienti from './AddKlienti';
 
-import AddStaff from './AddStaff';
+
 import Klienti from './Klienti';
 import Stafi from './Stafi';
 import Home from './Home';
 import ForgotPassword from './ForgotPassword';
+import MjetetSipasTipit from './MjetetSipasTipit';
 
 import Libri from './Libri';
 import DetajetELibrit from './DetajetELibrit';
+import DetajetEMjetit from './DetajetEMjetit';
 import { AuthProvider, useAuth } from './AuthProvider';
 // Import other components...
 
@@ -67,15 +72,21 @@ function App() {
           <Route path='/shtepiaBotuese' element={<ShtepiaBotuese />} />
           <Route path='/nrfaqeve' element={<NrFaqeve />} />
           <Route path='/njesia' element={<NgjyraMSh />} />
+          <Route path='/stafiGjinia' element={<StafiGjinia />} />
+          <Route path='/stafiOrari' element={<StafiOrari />} />
+          <Route path='/stafiSektori' element={<StafiSektori />} />
           <Route path='/addKlienti' element={<AddKlienti />} />
-
+         
+        
           
           <Route path='/Shporta' element={<Shporta />} />
         
-          <Route path='/addstaff' element={<AddStaff />} />
         <Route path='/libri' element={<Libri />} />
         <Route path='/libri/:id' element={<DetajetELibrit />} />
+        <Route path='/mjeteShkollore/:id' element={<DetajetEMjetit />} />
         <Route path="/kategoria/:kategoria/librat" element={<LibratSipasKategorise/>}></Route>
+        <Route path="/tipi/:tipi/MjeteShkollore" element={<MjetetSipasTipit/>}></Route>
+
 
         {/* Other public routes */}
 

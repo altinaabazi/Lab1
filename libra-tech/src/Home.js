@@ -8,10 +8,13 @@ import Sidebar from './Sidebar';
 
 function Home() {
   const [librat, setLibrat] = useState([]);
+  const [mjetet, setMjetet] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [shporta, setShporta] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [kategorite, setKategorite] = useState([]);
+  const [tipet, setTipet] = useState([]);
 
   useEffect(() => {
     fetchLibrat();
@@ -33,6 +36,26 @@ function Home() {
     }
   };
 
+  useEffect(() => {
+    fetchMjetet();
+  }, []);
+
+  const fetchMjetet = async () => {
+    try {
+      const response = await fetch(variables.API_URL + 'MjeteShkollore/GetMjetetShkollore');
+      if (!response.ok) {
+        throw new Error('Gabim gjatë marrjes së të dhënave');
+      }
+      const data = await response.json();
+      setMjetet(data);
+      setLoading(false);
+    } catch (error) {
+      console.error('Gabim gjatë marrjes së të dhënave:', error);
+      setError(error.message);
+      setLoading(false);
+    }
+  };
+
   const addToCart = (libri) => {
     setShporta([...shporta, libri]);
     setShowModal(true);
@@ -41,10 +64,6 @@ function Home() {
   const handleCloseModal = () => {
     setShowModal(false);
   };
-
-
-  const [kategorite, setKategorite] = useState([]);
-
 
   useEffect(() => {
     fetchKategorite();
@@ -65,7 +84,27 @@ function Home() {
       setLoading(false);
     }
   };
-  
+
+  useEffect(() => {
+    fetchTipet();
+  }, []);
+
+  const fetchTipet = async () => {
+    try {
+      const response = await fetch(variables.API_URL + 'tipi');
+      if (!response.ok) {
+        throw new Error('Gabim gjatë marrjes së të dhënave');
+      }
+      const data = await response.json();
+      setTipet(data);
+      setLoading(false);
+    } catch (error) {
+      console.error('Gabim gjatë marrjes së të dhënave:', error);
+      setError(error.message);
+      setLoading(false);
+    }
+  };
+
   if (loading) {
     return <div className="spinner text-center">Loading...</div>;
   }
@@ -73,7 +112,6 @@ function Home() {
   if (error) {
     return <div className="alert alert-danger text-center">{error}</div>;
   }
-
 
   return (
     <div>
@@ -119,7 +157,7 @@ function Home() {
           <div className="col-md-9">
             <div className="row" style={{ margin: '20px 0' }}>
               <div className="col-12">
-                <h1 className="mb-4 text-center">Kategoritë</h1>
+                <h1 className="mb-4 text-center">Kategorite</h1>
                 <div className="card-deck">
                   {kategorite.map(kategoria => (
                     <div key={kategoria.ID} className="col-md-4 mb-4">
@@ -127,6 +165,25 @@ function Home() {
                         <div className="card h-100">
                           <div className="card-body text-center">
                             <h5 className="card-title">{kategoria.kategoria}</h5>
+                          </div>
+                          <div className="card-footer">
+                            <small className="text-muted">Kliko per më shumë</small>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="col-12">
+                <h1 className="mb-4 text-center">Tipet</h1>
+                <div className="card-deck">
+                  {tipet.map(tipi => (
+                    <div key={tipi.TipiID} className="col-md-4 mb-4">
+                      <Link to={`/tipi/${tipi.TipiEmri}/MjeteShkollore`} className="text-decoration-none">
+                        <div className="card h-100">
+                          <div className="card-body text-center">
+                            <h5 className="card-title">{tipi.TipiEmri}</h5>
                           </div>
                           <div className="card-footer">
                             <small className="text-muted">Kliko për më shumë</small>
@@ -137,69 +194,96 @@ function Home() {
                   ))}
                 </div>
               </div>
-              </div>
+            </div>
 
-
-
-
-              <div className="row" style={{ margin: '20px 0' }}>
-
-
-
-
-                <h1>Librat Me Te Rinje</h1>
-                {librat.map(libri => (
-                  <div className="col-md-4 mb-4" key={libri.ID}>
-                    <div className="card h-100 shadow-sm">
-                      <img
-                        src={variables.API_URL + 'libri/GetFoto/' + libri.ID}
-                        alt={libri.Titulli}
-                        className="card-img-top"
-                        style={{ width: '100%', height: '200px', objectFit: 'contain' }} // Stilet inline
-                      />
-                      <div className="card-body d-flex flex-column">
-                        <h5 className="card-title">{libri.Titulli}</h5>
-                        <p className="card-text flex-grow-1">{libri.ShtepiaBotuese}</p>
-                        <div className="mt-auto">
-                          <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
-                            Shiko Detajet
-                          </Link>
-                          <button
-                            onClick={() => addToCart({
-                              ID: libri.ID,
-                              Titulli: libri.Titulli,
-                              Pershkrimi: libri.Pershkrimi,
-                              image: variables.API_URL + 'libri/GetFoto/' + libri.ID
-                            })}
-                            className="btn btn-success"
-                          >
-                            Shto në Shportë
-                          </button>
-                        </div>
+            <div className="row" style={{ margin: '20px 0' }}>
+              <h1>Librat Me Te Rinje</h1>
+              {librat.map(libri => (
+                <div className="col-md-4 mb-4" key={libri.ID}>
+                  <div className="card h-100 shadow-sm">
+                    <img
+                      src={variables.API_URL + 'libri/GetFoto/' + libri.ID}
+                      alt={libri.Titulli}
+                      className="card-img-top"
+                      style={{ width: '100%', height: '200px', objectFit: 'contain' }} // Stilet inline
+                    />
+                    <div className="card-body d-flex flex-column">
+                      <h5 className="card-title">{libri.Titulli}</h5>
+                      <p className="card-text flex-grow-1">{libri.ShtepiaBotuese}</p>
+                      <div className="mt-auto">
+                        <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
+                          Shiko Detajet
+                        </Link>
+                        <button
+                          onClick={() => addToCart({
+                            ID: libri.ID,
+                            Titulli: libri.Titulli,
+                            Pershkrimi: libri.Pershkrimi,
+                            image: variables.API_URL + 'libri/GetFoto/' + libri.ID
+                          })}
+                          className="btn btn-success"
+                        >
+                          Shto në Shportë
+                        </button>
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="row" style={{ margin: '20px 0' }}>
+              <h1>Mjetet Shkollore</h1>
+              {mjetet.map(mjeti => (
+                <div className="col-md-4 mb-4" key={mjeti.ID}>
+                  <div className="card h-100 shadow-sm">
+                    <img
+                      src={variables.API_URL + 'MjeteShkollore/GetFoto/' + mjeti.ID}
+                      alt={mjeti.Tipi}
+                      className="card-img-top"
+                      style={{ width: '100%', height: '200px', objectFit: 'contain' }}
+                    />
+                    <div className="card-body d-flex flex-column">
+                      <h5 className="card-title">{mjeti.Tipi}</h5>
+                      <p className="card-text flex-grow-1">{mjeti.Pershkrimi}</p>
+                      <div className="mt-auto">
+                        <Link to={`/MjeteShkollore/${mjeti.ID}`} className="btn btn-primary mr-2">
+                          Shiko Detajet
+                        </Link>
+                        <button
+                          onClick={() => addToCart({
+                            ID: mjeti.ID,
+                            Tipi: mjeti.Tipi,
+                            Pershkrimi: mjeti.Pershkrimi,
+                            image: variables.API_URL + 'MjeteShkollore/GetFoto/' + mjeti.ID
+                          })}
+                          className="btn btn-success"
+                        >
+                          Shto në Shportë
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <Footer />
-
-        <Modal show={showModal} onHide={handleCloseModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>Shtimi në Shportë</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Libri është shtuar me sukses në shportë!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseModal}>
-              Mbylle
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </div >
-      );
+      </div>
+      <Footer />
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Shtimi në Shportë</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Libri është shtuar me sukses në shportë!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Mbylle
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
+  );
 }
 
-      export default Home;
-
+export default Home;

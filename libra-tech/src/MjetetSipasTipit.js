@@ -7,27 +7,26 @@ import { Modal, Button } from 'react-bootstrap';
 import Sidebar from './Sidebar';
 import { Link } from 'react-router-dom';
 
-
-function LibratSipasKategorise() {
-    const { kategoria } = useParams();
-    const [librat, setLibrat] = useState([]);
+function MjetetSipasTipit() {
+    const { tipi } = useParams();
+    const [mjetet, setMjetet] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [shporta, setShporta] = useState([]);
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        fetchLibratByKategoria(kategoria);
-    }, [kategoria]);
+        fetchMjetetByTipi(tipi);
+    }, [tipi]);
 
-    const fetchLibratByKategoria = async (kategoria) => {
+    const fetchMjetetByTipi = async (tipi) => {
         try {
-            const response = await fetch(variables.API_URL + `libri/kategoria/${kategoria}`);
+            const response = await fetch(variables.API_URL + `MjeteShkollore/tipi/${tipi}`);
             if (!response.ok) {
                 throw new Error('Error fetching data');
             }
             const data = await response.json();
-            setLibrat(data);
+            setMjetet(data);
             setLoading(false);
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -36,8 +35,8 @@ function LibratSipasKategorise() {
         }
     };
 
-    const addToCart = (libri) => {
-        setShporta([...shporta, libri]);
+    const addToCart = (mjeti) => {
+        setShporta([...shporta, mjeti]);
         setShowModal(true);
     };
 
@@ -63,31 +62,29 @@ function LibratSipasKategorise() {
                     </div>
                     <div className="col-md-9">
                         <div className="row" style={{ margin: '20px 0' }}>
-
-                            <h1>Librat për kategorine: {kategoria}</h1>
+                            <h1>Mjetet për tipin: {tipi}</h1>
                             <div className="row">
-
-                                {librat.map(libri => (
-                                    <div className="col-md-4 mb-4" key={libri.ID}>
+                                {mjetet.map(mjeti => (
+                                    <div className="col-md-4 mb-4" key={mjeti.ID}>
                                         <div className="card h-100 shadow-sm">
-                                        <img
-                      src={variables.API_URL + 'libri/GetFoto/' + libri.ID}
-                      alt={libri.Titulli}
-                      className="card-img-top"
-                      style={{ width: '100%', height: '200px', objectFit: 'contain' }} // Stilet inline
-                    />
+                                            <img
+                                                src={variables.API_URL + 'MjeteShkollore/GetFoto/' + mjeti.ID}
+                                                alt={mjeti.Tipi}
+                                                className="card-img-top"
+                                                style={{ width: '100%', height: '200px', objectFit: 'contain' }}
+                                            />
                                             <div className="card-body d-flex flex-column">
-                                                <h5 className="card-title">{libri.Titulli}</h5>
-                                                <p className="card-text flex-grow-1">{libri.ShtepiaBotuese}</p>
+                                                <h5 className="card-title">{mjeti.Tipi}</h5>
+                                                <p className="card-text flex-grow-1">{mjeti.Pershkrimi}</p>
                                                 <div className="mt-auto">
-                                                    <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
+                                                    <Link to={`/MjeteShkollore/${mjeti.ID}`} className="btn btn-primary mr-2">
                                                         Shiko Detajet
                                                     </Link>
                                                     <button onClick={() => addToCart({
-                                                        ID: libri.ID,
-                                                        Titulli: libri.Titulli,
-                                                        Pershkrimi: libri.Pershkrimi,
-                                                        image: variables.API_URL + 'libri/GetFoto/' + libri.ID
+                                                        ID: mjeti.ID,
+                                                        Tipi: mjeti.Tipi,
+                                                        Pershkrimi: mjeti.Pershkrimi,
+                                                        image: variables.API_URL + 'MjeteShkollore/GetFoto/' + mjeti.ID
                                                     })} className="btn btn-success">
                                                         Shto në Shportë
                                                     </button>
@@ -107,7 +104,7 @@ function LibratSipasKategorise() {
                 <Modal.Header closeButton>
                     <Modal.Title>Shtimi në Shportë</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Libri është shtuar me sukses në shportë!</Modal.Body>
+                <Modal.Body>Mjeti është shtuar me sukses në shportë!</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseModal}>
                         Mbylle
@@ -115,8 +112,7 @@ function LibratSipasKategorise() {
                 </Modal.Footer>
             </Modal>
         </div>
-                
     );
 }
 
-export default LibratSipasKategorise;
+export default MjetetSipasTipit;

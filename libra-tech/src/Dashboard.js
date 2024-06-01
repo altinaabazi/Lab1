@@ -56,6 +56,39 @@ function Dashboard() {
             console.error('Gabim gjatë marrjes së kategorive: ', error);
         }
     };
+    const [totalMjetet, setTotalMjetet] = useState(0);
+
+    useEffect(() => {
+        fetchTotalMjetet();
+    }, []);
+
+    const fetchTotalMjetet = async () => {
+        try {
+            const response = await fetch(variables.API_URL + 'MjeteShkollore/TotalMjetet');
+            if (!response.ok) {
+                throw new Error('Error fetching data');
+            }
+            const data = await response.json();
+            setTotalMjetet(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    const [tipet, setTipi] = useState([]);
+
+    useEffect(() => {
+        fetchTipi();
+    }, []);
+
+    const fetchTipi = async () => {
+        try {
+            const response = await fetch(variables.API_URL + 'Tipi');
+            const data = await response.json();
+            setTipi(data);
+        } catch (error) {
+            console.error('Gabim gjatë marrjes së tipeve: ', error);
+        }
+    };
 
 
     return (
@@ -142,19 +175,24 @@ function Dashboard() {
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMjeteShkollore"
-                                aria-expanded="true" aria-controls="collapseMjeteShkollore">
+                            <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLibra"
+                                aria-expanded="true" aria-controls="collapseLibra">
                                 <i className="fa fa-list"></i>
                                 <span>Mjete Shkollore</span>
                             </a>
-                            <div id="collapseMjeteShkollore" className="collapse" aria-labelledby="headingMjeteShkollore"
+                            <div id="collapseLibra" className="collapse" aria-labelledby="headingLibra"
                                 data-parent="#accordionSidebar">
-                                <div className="bg-white py-2 collapse-inner rounded">
-                                    <h6 className="collapse-header">Tipi:</h6>
-                                    <a className="collapse-item" href="#">Fletore</a>
-                                    <a className="collapse-item" href="#">Qante</a>
-                                    <a className="collapse-item" href="#">Aksesore te ndryshem</a>
+                               <div className="bg-white py-2 collapse-inner rounded">
+                                
+                               <div className="list-group">
+                                    {tipet.map(tipi => (
+                                        <Link key={tipi.TipiID} to={`/tipi/${tipi.TipiEmri}/mjeteshkollore`} style={{ color: 'black' }} className="collapse-item">
+                                            {tipi.TipiEmri}
+                                        </Link>
+                                    ))}
                                 </div>
+
+                            </div>
                             </div>
                         </li>
 
@@ -353,16 +391,16 @@ function Dashboard() {
 
                                     {/*  <!-- Earnings (Monthly) Card Example --> */}
                                     <div className="col-xl-3 col-md-6 mb-4">
-                                        <div className="card border-left-success shadow h-100 py-2">
+                                        <div className="card border-left-primary shadow h-100 py-2">
                                             <div className="card-body">
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
-                                                        <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                            Earnings (Annual)</div>
-                                                        <div className="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                                        <div className="text-m font-weight-bold text-success text-uppercase mb-1">
+                                                            Total MjetetShkollore: </div>
+                                                            <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalMjetet}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                        <i className="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                                        <i className="fas fa-book large-icon"></i>
                                                     </div>
                                                 </div>
                                             </div>

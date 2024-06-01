@@ -1,28 +1,31 @@
+
 import React, { Component } from 'react';
 import { variables } from './Variables.js';
-import Header from './Header.js';
 import Footer from './Footer.js';
+import Header from './Header';
 import Sidebar from './Sidebar.js';
 
-export class Lokacioni extends Component {
+export class StafiGjinia extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            lokacionet: [],
+            gjinite: [],
             modalTitle: "",
-            Lokacioni: "",
-            ID: 0,
+            Gjinia: "",
+            Id: 0,
+
+            
         }
     }
 
 
     refreshList() {
-        fetch(variables.API_URL + 'LokacioniL')
+        fetch(variables.API_URL + 'StafiGjinia')
             .then(response => response.json())
             .then(data => {
-                this.setState({ lokacionet: data });
+                this.setState({ gjinite: data });
             });
     }
 
@@ -30,41 +33,34 @@ export class Lokacioni extends Component {
         this.refreshList();
     }
 
-    changeLokacioni = (e) => {
-        this.setState({ Lokacioni: e.target.value });
+    changeGjinia = (e) => {
+        this.setState({ Gjinia: e.target.value });
     }
 
     addClick() {
         this.setState({
-            modalTitle: "Shto Lokacionin",
-            ID: 0,
-            Lokacioni: ""
+            modalTitle: "Shto Gjini",
+            Id: 0,
+            Gjinia: ""
         });
     }
     editClick(dep) {
         this.setState({
-            modalTitle: "Ndrysho Lokacionin",
-            ID: dep.ID,
-            Lokacioni: dep.Lokacioni
+            modalTitle: "Edit Gjinia",
+            Id: dep.Id,
+            Gjinia: dep.Gjinia
         });
     }
 
     createClick() {
-        const { Lokacioni } = this.state;
-
-        if (!Lokacioni) {
-            alert('Ju lutem vendosni lokacionin.');
-            return;
-        }
-
-        fetch(variables.API_URL + 'LokacioniL', {
+        fetch(variables.API_URL + 'StafiGjinia', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                Lokacioni: Lokacioni
+                Gjinia: this.state.Gjinia
             })
         })
             .then(res => res.json())
@@ -73,47 +69,39 @@ export class Lokacioni extends Component {
                 this.refreshList();
                 document.getElementById("exampleModal").classList.remove("show");
                 document.querySelector(".modal-backdrop").remove();
-            })
-            .catch((error) => {
+            }, (error) => {
                 alert('Failed');
-            });
+            })
     }
 
 
     updateClick() {
-        const { ID, Lokacioni } = this.state;
-
-        if (!Lokacioni) {
-            alert('Ju lutem vendosni lokacionin.');
-            return;
-        }
-
-        fetch(variables.API_URL + 'LokacioniL', {
+        fetch(variables.API_URL + 'StafiGjinia', {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                ID: ID,
-                Lokacioni: Lokacioni
+                Id: this.state.Id,
+                Gjinia: this.state.Gjinia
             })
         })
             .then(res => res.json())
             .then((result) => {
                 alert('Failed');
-                this.refreshList();
-            })
-            .catch((error) => {
+
+            }, (error) => {
                 alert('Updated');
                 this.refreshList();
                 document.getElementById("exampleModal").classList.remove("show");
                 document.querySelector(".modal-backdrop").remove();
-            });
+            })
     }
+
     deleteClick(id) {
         if (window.confirm('A jeni i sigurt?')) {
-            fetch(variables.API_URL + 'LokacioniL/' + id, {
+            fetch(variables.API_URL + 'StafiGjinia/' + id, {
                 method: 'DELETE',
                 headers: {
                     'Accept': 'application/json',
@@ -133,10 +121,10 @@ export class Lokacioni extends Component {
 
     render() {
         const {
-            lokacionet,
+            gjinite,
             modalTitle,
-            ID,
-            Lokacioni
+            Id,
+            Gjinia
         } = this.state;
 
         return (
@@ -154,7 +142,7 @@ export class Lokacioni extends Component {
                                 data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"
                                 onClick={() => this.addClick()}>
-                                Shto Lokacionin
+                                Shto Gjinin
                             </button>
                             <table className="table table-striped">
                                 <thead>
@@ -163,15 +151,14 @@ export class Lokacioni extends Component {
                                             <div className="d-flex flex-row">
 
 
-
                                             </div>
-                                            ID
+                                            Id
                                         </th>
                                         <th>
                                             <div className="d-flex flex-row">
 
                                             </div>
-                                            Lokacioni
+                                            Gjinia
 
                                         </th>
                                         <th>
@@ -180,10 +167,10 @@ export class Lokacioni extends Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {lokacionet.map(dep =>
-                                        <tr key={dep.ID}>
-                                            <td>{dep.ID}</td>
-                                            <td>{dep.Lokacioni}</td>
+                                    {gjinite.map(dep =>
+                                        <tr key={dep.Id}>
+                                            <td>{dep.Id}</td>
+                                            <td>{dep.Gjinia}</td>
                                             <td>
                                                 <button type="button"
                                                     className="btn btn-light mr-1"
@@ -198,7 +185,7 @@ export class Lokacioni extends Component {
 
                                                 <button type="button"
                                                     className="btn btn-light mr-1"
-                                                    onClick={() => this.deleteClick(dep.ID)}>
+                                                    onClick={() => this.deleteClick(dep.Id)}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash-fill" viewBox="0 0 16 16">
                                                         <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
                                                     </svg>
@@ -221,20 +208,20 @@ export class Lokacioni extends Component {
 
                                         <div className="modal-body">
                                             <div className="input-group mb-3">
-                                                <span className="input-group-text">Lokacioni</span>
+                                                <span className="input-group-text">Gjinia</span>
                                                 <input type="text" className="form-control"
-                                                    value={Lokacioni}
-                                                    onChange={this.changeLokacioni} />
+                                                    value={Gjinia}
+                                                    onChange={this.changeGjinia} />
                                             </div>
 
-                                            {ID == 0 ?
+                                            {Id == 0 ?
                                                 <button type="button"
                                                     className="btn btn-primary float-start"
                                                     onClick={() => this.createClick()}
                                                 >Create</button>
                                                 : null}
 
-                                            {ID != 0 ?
+                                            {Id != 0 ?
                                                 <button type="button"
                                                     className="btn btn-primary float-start"
                                                     onClick={() => this.updateClick()}
@@ -253,4 +240,4 @@ export class Lokacioni extends Component {
         )
     }
 }
-export default Lokacioni;
+export default StafiGjinia;

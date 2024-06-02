@@ -1,66 +1,56 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Footer from './Footer.js';
-import Header from './Header';
-import Sidebar from './Sidebar.js';
+import React from 'react';
+import { Modal, Button } from 'react-bootstrap';
 
-function Shporta() {
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    setCart(cartItems);
-  }, []);
-
-  const removeFromCart = (id) => {
-    const updatedCart = cart.filter(item => item.ID !== id);
-    setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-  };
+function Shporta({ shporta, removeFromCart, showModal, handleCloseModal, handleBuy }) {
+  const total = shporta.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div>
-      <body id="page-top">
-        <Header />
-        <div className="container">
-
-          <Sidebar />
-          <div className="container-fluid" style={{ marginLeft: '110px', }}>
-
-            <div className="container mt-5">
-              <h1 className="text-center mb-4">Shporta</h1>
-              {cart.length === 0 ? (
-                <p className="text-center">Shporta është bosh</p>
-              ) : (
-                <div className="row">
-                  {cart.map(libri => (
-                    <div className="col-md-4 mb-4" key={libri.ID}>
-                      <div className="card h-100 shadow-sm">
-                        <img src={libri.image} alt={libri.Titulli} className="card-img-top" />
-                        <div className="card-body d-flex flex-column">
-                          <h5 className="card-title">{libri.Titulli}</h5>
-                          <p className="card-text flex-grow-1">{libri.Pershkrimi}</p>
-                          <button onClick={() => removeFromCart(libri.ID)} className="btn btn-danger mt-auto">
-                            Hiq nga Shporta
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-              <div className="text-center mt-4">
-                <Link to="/home" className="btn btn-primary">Vazhdoni Blerjet</Link>
-              </div>
-
-
+    <Modal show={showModal} onHide={handleCloseModal}>
+      <Modal.Header closeButton>
+        <Modal.Title>Shporta</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        {shporta.length === 0 ? (
+          <div className="text-center">Shporta është bosh.</div>
+        ) : (
+          <div>
+            <ul className="list-group mb-3">
+              {shporta.map((item, index) => (
+                <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
+                  <div>
+                    <img
+                      src={item.image}
+                      alt={item.Titulli}
+                      style={{ width: '50px', height: '50px', objectFit: 'cover' }}
+                      className="mr-3"
+                    />
+                    {item.Titulli || item.Tipi}
+                  </div>
+                  <div>
+                    {item.price}€
+                    <button className="btn btn-danger btn-sm ml-3" onClick={() => removeFromCart(index)}>Hiqe</button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="d-flex justify-content-between align-items-center">
+              <strong>Total:</strong>
+              <strong>{total}€</strong>
             </div>
-
-          </div >
-        </div >
-        <Footer />
-      </body >
-    </div >
+          </div>
+        )}
+      </Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={handleCloseModal}>
+          Mbylle
+        </Button>
+        {shporta.length > 0 && (
+          <Button variant="primary" onClick={handleBuy}> {/* Këtu shtoni prop-in e re për handleBuy */}
+            Blej
+          </Button>
+        )}
+      </Modal.Footer>
+    </Modal>
   );
 }
 

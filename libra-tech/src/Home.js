@@ -223,7 +223,7 @@ function Home() {
                           })}
                           className="btn btn-success"
                         >
-                          Shto në Shportë
+                          Blej
                         </button>
                       </div>
                     </div>

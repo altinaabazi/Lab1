@@ -42,6 +42,7 @@ import DetajetELibrit from './DetajetELibrit';
 import DetajetEMjetit from './DetajetEMjetit';
 import { AuthProvider, useAuth } from './AuthProvider';
 import KlientiQyteti from './KlientiQyteti';
+import { PorosiaService } from './PorosiaService';
 // Import other components...
 
 function App() {
@@ -60,8 +61,12 @@ function App() {
          
           
           <Route path='/autori' element={<Autori />} />
+          <Route path='/shporta' element={<Shporta />} />
           <Route path='/libraria' element={<Libraria />} />  
           <Route path='/lokacioni' element={<Lokacioni />} />
+          <Route path='/porosia' element={<Porosia />} />
+          <Route path='/porosiaService' element={<PorosiaService />} />
+        
           <Route path='/qyteti' element={<Qyteti />} />
           <Route path='/furnizimi' element={<Furnizimi />} />
           <Route path='/prodhuesiMSh' element={<ProdhuesiMSh />} />
@@ -91,6 +96,7 @@ function App() {
         <Route path='/libri/:id' element={<DetajetELibrit />} />
         <Route path='/mjeteShkollore/:id' element={<DetajetEMjetit />} />
         <Route path="/kategoria/:kategoria/librat" element={<LibratSipasKategorise/>}></Route>
+       
         <Route path="/tipi/:tipi/MjeteShkollore" element={<MjetetSipasTipit/>}></Route>
 
 
@@ -99,6 +105,8 @@ function App() {
         <Route path="/dashboard" element={isAuthenticated ? <Dashboard /> : <Navigate to="/" />} />
         <Route path="/stafi" element={isAuthenticated ? <Stafi /> : <Navigate to="/" />} />
         <Route path="/home" element={isAuthenticated ? <Home /> : <Navigate to="/" />} />
+        <Route path="/klienti" element={isAuthenticated ? <Klienti /> : <Navigate to="/" />} />
+        
         {/* Other private routes */}
       </Routes>
     </Router>

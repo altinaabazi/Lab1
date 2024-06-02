@@ -13,6 +13,7 @@ namespace Lab1_Backend.Models
         public DbSet<Tipi> Tipi { get; set; }
 
         public DbSet<Libri> Libri { get; set; }
+        public DbSet<Libraria> libraria { get; set; }
 
         public DbSet<Autori> Autori { get; set; }
         public DbSet<QytetiLibraria> QytetiLibraria{ get; set; }
@@ -36,7 +37,8 @@ namespace Lab1_Backend.Models
         public DbSet<StafiGjinia> StafiGjinia { get; set; }
         public DbSet<StafiOrari> StafiOrari { get; set; }
         public DbSet<StafiSektori> StafiSektori { get; set; }
-        
+        public DbSet<Porosia> Porosia { get; set; }
+
 
 
 

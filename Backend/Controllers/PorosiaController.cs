@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Lab1_Backend.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Lab1_Backend.Controllers
 {
@@ -11,56 +10,74 @@ namespace Lab1_Backend.Controllers
     [ApiController]
     public class PorosiaController : ControllerBase
     {
-        private readonly PorosiaContext _context;
+        private readonly LibrariaContext _context; // MyDbContext është konteksti i bazës së të dhënave
 
-        public PorosiaController(PorosiaContext context)
+        public PorosiaController(LibrariaContext context)
         {
             _context = context;
         }
 
         // GET: api/Porosia
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Porosia>>> GetPorosite()
+        public IEnumerable<Porosia> GetPorosite()
         {
-            return await _context.Porosite.ToListAsync();
+            return _context.Porosia;
         }
 
         // GET: api/Porosia/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Porosia>> GetPorosia(int id)
+        public IActionResult GetPorosia(int id)
         {
-            var porosia = await _context.Porosite.FindAsync(id);
+            var porosia = _context.Porosia.Find(id);
 
             if (porosia == null)
             {
                 return NotFound();
             }
 
-            return porosia;
+            return Ok(porosia);
         }
 
         // POST: api/Porosia
         [HttpPost]
-        public async Task<ActionResult<Porosia>> PostPorosia(Porosia porosia)
+        public IActionResult PostPorosia(Porosia porosia)
         {
-            _context.Porosite.Add(porosia);
-            await _context.SaveChangesAsync();
+            porosia.Data = DateTime.Now; // Vendos datën aktuale për porosinë
+
+            _context.Porosia.Add(porosia);
+            _context.SaveChanges();
 
             return CreatedAtAction(nameof(GetPorosia), new { id = porosia.ID }, porosia);
         }
 
+        // PUT: api/Porosia/5
+        [HttpPut("{id}")]
+        public IActionResult PutPorosia(int id, Porosia porosia)
+        {
+            if (id != porosia.ID)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(porosia).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.SaveChanges();
+
+            return NoContent();
+        }
+
         // DELETE: api/Porosia/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePorosia(int id)
+        public IActionResult DeletePorosia(int id)
         {
-            var porosia = await _context.Porosite.FindAsync(id);
+            var porosia = _context.Porosia.Find(id);
+
             if (porosia == null)
             {
                 return NotFound();
             }
 
-            _context.Porosite.Remove(porosia);
-            await _context.SaveChangesAsync();
+            _context.Porosia.Remove(porosia);
+            _context.SaveChanges();
 
             return NoContent();
         }

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Importoni Link nëse po përdorni React Router
+import Shporta from './Shporta'; // Importoni komponentin e shportës
 
 function Header() {
     const [style, setStyle] = useState("navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow");
@@ -11,7 +13,6 @@ function Header() {
         }
     };
 
-
     return (
         <div id="content-wrapper" className="d-flex flex-column">
             {/* Main Content */}
@@ -22,9 +23,8 @@ function Header() {
                     <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3" onClick={changeStyle1}>
                         <i className="fa fa-bars"></i>
                     </button>
-                    {/* Topbar Search */}
-                    <div class="d-flex justify-content-center">
-
+                    <div className="d-flex justify-content-center">
+                        {/* Search Form */}
                         <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                             <div className="input-group">
                                 <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..."
@@ -36,9 +36,15 @@ function Header() {
                                 </div>
                             </div>
                         </form>
+                        {/* Cart Button */}
+                        <div style={{ marginLeft: '400px', marginRight: 'auto',paddingTop:'23px' }}>
+                        {/* Butoni i shportës */}
+                        <Link to="/Shporta" className="nav-link">
+                            <i className="fas fa-shopping-cart fa-fw" style={{ fontSize: '24px' }}></i>
+                        </Link>
                     </div>
-                    <div style={{ marginLeft: '500px' }}>
-
+                    </div>
+                    <div style={{ marginLeft: 'auto', marginRight: '30px' }}>
                         <li className="nav-item dropdown no-arrow">
                             <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,31 +74,27 @@ function Header() {
                                 </a>
                             </div>
                         </li>
-
-                        
-                        </div>
-
+                    </div>
                 </nav>
-
             </div>
-            <div className="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                                <button className="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div className="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                            <div className="modal-footer">
-                                <button className="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a className="btn btn-primary" href="/">Logout</a>
-                            </div>
+            <div className="modal fade" id="logoutModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button className="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div className="modal-footer">
+                            <button className="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a className="btn btn-primary" href="/">Logout</a>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     );
 }

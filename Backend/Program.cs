@@ -18,8 +18,7 @@ using AuthenticationService = Lab1_Backend.Services.AuthenticationService;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<PorosiaContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));
+
 
 builder.Services.AddDbContext<LibrariaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("LibraTechConn")));

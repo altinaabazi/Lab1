@@ -29,14 +29,19 @@ namespace Lab1_Backend.Models
 
         public DbSet<NgjyraMSh> NgjyraMSh { get; set; }
 
+        /*Klienti*/
         public DbSet<Klienti> Klienti { get; set; }
         public DbSet<KlientiGjinia> KlientiGjinia { get; set; }
         public DbSet<KlientiQyteti> KlientiQyteti { get; set; }
         public DbSet<KlientiRoli> KlientiRoli { get; set; }
+
+        /*Stafi*/
         public DbSet<Stafi> Stafi { get; set; }
         public DbSet<StafiGjinia> StafiGjinia { get; set; }
         public DbSet<StafiOrari> StafiOrari { get; set; }
         public DbSet<StafiSektori> StafiSektori { get; set; }
+
+        /*Porosia*/
         public DbSet<Porosia> Porosia { get; set; }
 
 

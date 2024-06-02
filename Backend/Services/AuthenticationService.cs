@@ -50,8 +50,8 @@ namespace Lab1_Backend.Services
             {
                 Emri = registerModel.Emri,
                 Mbiemri = registerModel.Mbiemri,
-                KlientiGjinia = registerModel.Gjinia,
-                KlientiQyteti = registerModel.Qyteti,
+                KlientiGjinia = registerModel.KlientiGjinia,
+                KlientiQyteti = registerModel.KlientiQyteti,
                 KlientiRoli = "User", // Default role for 'User'
                 Email = registerModel.Email,
                 Password = registerModel.Password

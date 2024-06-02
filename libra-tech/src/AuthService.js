@@ -1,4 +1,5 @@
 import axios from 'axios';
+import KlientiGjinia from './KlientiGjinia';
 
 const API_BASE_URL = 'http://localhost:5170';
 
@@ -19,8 +20,8 @@ export const register = async (userData) => {
         const response = await axios.post(`${API_BASE_URL}/api/Authorization/register`, {
             Emri: userData.name,
             Mbiemri: userData.lastname,
-            GjiniaId: userData.gender,
-            QytetiId: userData.city,
+            KlientiGjinia: userData.gender,
+            KlientiQyteti: userData.city,
             Email: userData.email,
             Password: userData.password,
             ConfirmPassword: userData.confirmPassword

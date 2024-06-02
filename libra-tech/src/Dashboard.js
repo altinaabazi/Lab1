@@ -362,9 +362,9 @@ function Dashboard() {
 
                                     <a href='Libri' className="h5 mb-0 text-gray-800">Librat</a>
                                     <a href='MjeteShkollore' className="h5 mb-0 text-gray-800">Mjete Shkollore</a>
-                                    <a href='Porosia' className="h5 mb-0 text-gray-800">Porosit</a>
+                                    <a href='Porosia' className="h5 mb-0 text-gray-800">Porosite</a>
                                     <a href='Stafi' className="h5 mb-0 text-gray-800">Stafi</a>
-                                    <a href='Klienti' className="h5 mb-0 text-gray-800">Klinetet</a>
+                                    <a href='Klienti' className="h5 mb-0 text-gray-800">Klientet</a>
                                 </div>
 
                                 {/*  <!-- Content Row --> */}

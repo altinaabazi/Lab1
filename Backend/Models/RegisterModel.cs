@@ -11,10 +11,10 @@ namespace Lab1_Backend.Models
         public string Mbiemri { get; set; }
 
         [Required]
-        public string Gjinia { get; set; }
+        public string KlientiGjinia { get; set; }
 
         [Required]
-        public string Qyteti { get; set; }
+        public string KlientiQyteti { get; set; }
 
         [Required]
         [EmailAddress]

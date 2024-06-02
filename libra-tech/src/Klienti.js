@@ -261,15 +261,17 @@ export class Klienti extends Component {
             <div className="container-fluid" style={{ marginLeft: '110px', }}>
              <div className='d-flex justify-content-between'>
               <div>
-              <Link style={{ background:'#a9c0cf' }} to="/KlientiGjinia" className="btn btn-primary m-2 float-end">
-                + KlientiGjinia
-              </Link>
               <Link  style={{ background:'#a9c0cf' }} to="/KlientiRoli" className="btn btn-primary m-2 float-end">
-                + KlientiRoli
+                + Roli
               </Link>
               <Link style={{ background:'#a9c0cf' }} to="/KlientiQyteti" className="btn btn-primary m-2 float-end">
-                + KlientiQyteti
+                + Qyteti
               </Link>
+
+              <Link style={{ background:'#a9c0cf' }} to="/KlientiGjinia" className="btn btn-primary m-2 float-end">
+                + Gjinia
+              </Link>
+              
               </div>
               <div>
               <button type="button"
@@ -289,8 +291,8 @@ export class Klienti extends Component {
                     <th>Mbiemri</th>
                     <th>Password</th>
                     <th>Gjinia</th>
-                    <th>Orari</th>
-                    <th>Sektori</th>
+                    <th>Qyteti</th>
+                    <th>Roli</th>
                     <th>Email</th>
                     <th>Options</th>
                   </tr>

@@ -1,11 +1,12 @@
 import React, { Fragment, useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom'; // Import Link
-import { login } from './AuthService';
+import { useNavigate, Link } from 'react-router-dom';
+import { useAuth } from './AuthProvider';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const { login } = useAuth();
     const navigate = useNavigate();
 
     const handleLogin = async (event) => {
@@ -17,13 +18,21 @@ function Login() {
         }
 
         try {
-            const response = await login(email, password);
+            const response = await fetch('http://localhost:5170/api/Authorization/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
 
-            if (response) {
-                localStorage.setItem('token', response.token);
+            const data = await response.json();
+
+            if (response.ok) {
+                login(data.Token, data.Roli);
                 navigate('/home');
             } else {
-                setErrorMessage('Invalid email or password.');
+                setErrorMessage(data.message || 'Invalid email or password.');
             }
         } catch (error) {
             console.error('Error during login:', error);
@@ -53,8 +62,6 @@ function Login() {
                                                     <input
                                                         type="email"
                                                         className="form-control form-control-user"
-                                                        id="exampleInputEmail"
-                                                        aria-describedby="emailHelp"
                                                         placeholder="Enter Email Address..."
                                                         value={email}
                                                         onChange={(e) => setEmail(e.target.value)}
@@ -64,7 +71,6 @@ function Login() {
                                                     <input
                                                         type="password"
                                                         className="form-control form-control-user"
-                                                        id="exampleInputPassword"
                                                         placeholder="Password"
                                                         value={password}
                                                         onChange={(e) => setPassword(e.target.value)}

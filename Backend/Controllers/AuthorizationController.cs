@@ -1,5 +1,6 @@
-﻿using Lab1_Backend.Models;
-using Lab1_Backend.Services; // Add this line
+﻿//AuthorizationController.cs
+using Lab1_Backend.Models;
+using Lab1_Backend.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -19,11 +20,11 @@ namespace Lab1_Backend.Controllers
         [HttpPost("login")]
         public async Task<ActionResult> Login(LoginModel loginModel)
         {
-            var token = await _authenticationService.AuthenticateAndGetJwtToken(loginModel);
+            var (token, roli) = await _authenticationService.AuthenticateAndGetJwtToken(loginModel);
 
             if (token != null)
             {
-                return Ok(new { Token = token });
+                return Ok(new { Token = token, Roli = roli });
             }
             else
             {
@@ -60,7 +61,6 @@ namespace Lab1_Backend.Controllers
                 return BadRequest("Logout failed");
             }
         }
-
 
         [HttpPost("assign-role")]
         public async Task<ActionResult> AssignRole(AssignRoleModel assignRoleModel)

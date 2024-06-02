@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
+
 import { variables } from './Variables.js';
 import KlientiQyteti from './KlientiQyteti.js';
 import { Gjuha } from './Gjuha.js';
@@ -8,6 +9,7 @@ import Sidebar from './Sidebar.js';
 import { useHref } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Qyteti from './Qyteti.js';
+
 
 export class Klienti extends Component {
   constructor(props) {

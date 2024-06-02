@@ -1,4 +1,5 @@
-﻿using System;
+﻿//AuthenticationServices.cs
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -24,17 +25,17 @@ namespace Lab1_Backend.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<string> AuthenticateAndGetJwtToken(LoginModel loginModel)
+        public async Task<(string Token, string Roli)> AuthenticateAndGetJwtToken(LoginModel loginModel)
         {
             var user = await _dbContext.Klienti.FirstOrDefaultAsync(x => x.Email == loginModel.Email);
 
             if (user != null && user.Password == loginModel.Password)
             {
                 var token = GenerateJwtToken(user);
-                return token;
+                return (token, user.KlientiRoli); // Ktheni tokenin dhe rolin
             }
 
-            return null;
+            return (null, null);
         }
 
         public async Task<bool> RegisterUser(RegisterModel registerModel)
@@ -81,14 +82,11 @@ namespace Lab1_Backend.Services
         {
             try
             {
-                // Clear JWT token from the client-side (e.g., remove cookie, clear local storage)
                 _httpContextAccessor.HttpContext.Response.Cookies.Delete("jwtToken");
-
                 return true;
             }
             catch (Exception ex)
             {
-                // Log any errors
                 Console.WriteLine($"Error during logout: {ex.Message}");
                 return false;
             }
@@ -102,9 +100,11 @@ namespace Lab1_Backend.Services
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
-                claims: new[] {
+                claims: new[]
+                {
                     new Claim(JwtRegisteredClaimNames.Sub, user.Email),
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                    new Claim("Roli", user.KlientiRoli)
                 },
                 expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["Jwt:ExpiryMinutes"])),
                 signingCredentials: creds

@@ -142,7 +142,7 @@ namespace Lab1_Backend.Controllers
             }
             return newestBooks;
         }
-        [HttpGet("kategoria/{kategoria}")]
+       [HttpGet("kategoria/{kategoria}")]
         public ActionResult<IEnumerable<Libri>> GetLibratByKategoria(string kategoria)
         {
             var librat = _bookContext.Libri.Where(l => l.Kategoria == kategoria).ToList();
@@ -155,7 +155,7 @@ namespace Lab1_Backend.Controllers
             return librat;
         }
 
-
+       
         [HttpPost("SaveFile")]
         public JsonResult SaveFile()
         {

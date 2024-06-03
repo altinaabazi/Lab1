@@ -15,7 +15,14 @@ function LibratSipasKategorise() {
     const [error, setError] = useState(null);
     const [shporta, setShporta] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
+    const handleSearch = (searchTerm) => {
+        setSearchTerm(searchTerm);
+    };
 
+    const filteredLibrat = librat.filter(libri =>
+        libri.Titulli.toLowerCase().includes(searchTerm.toLowerCase())
+    );
     useEffect(() => {
         fetchLibratByKategoria(kategoria);
     }, [kategoria]);
@@ -55,27 +62,26 @@ function LibratSipasKategorise() {
 
     return (
         <div>
-            <Header />
+            <Header onSearch={handleSearch} />
+
             <div>
                 <div className="row">
                     <div className="col-md-3">
                         <Sidebar />
                     </div>
                     <div className="col-md-9">
-                        <div className="row" style={{ margin: '20px 0' }}>
-
-                            <h1>Librat për kategorine: {kategoria}</h1>
-                            <div className="row">
-
-                                {librat.map(libri => (
+                        {searchTerm ? (
+                            <div className="row" style={{ margin: '20px 0' }}>
+                                 {filteredLibrat.length > 0 ? (
+                                    filteredLibrat.map(libri => (
                                     <div className="col-md-4 mb-4" key={libri.ID}>
                                         <div className="card h-100 shadow-sm">
-                                        <img
-                      src={variables.API_URL + 'libri/GetFoto/' + libri.ID}
-                      alt={libri.Titulli}
-                      className="card-img-top"
-                      style={{ width: '100%', height: '200px', objectFit: 'contain' }} // Stilet inline
-                    />
+                                            <img
+                                                src={variables.API_URL + 'libri/GetFoto/' + libri.ID}
+                                                alt={libri.Titulli}
+                                                className="card-img-top"
+                                                style={{ width: '100%', height: '200px', objectFit: 'contain' }} // Stilet inline
+                                            />
                                             <div className="card-body d-flex flex-column">
                                                 <h5 className="card-title">{libri.Titulli}</h5>
                                                 <p className="card-text flex-grow-1">{libri.ShtepiaBotuese}</p>
@@ -95,9 +101,53 @@ function LibratSipasKategorise() {
                                             </div>
                                         </div>
                                     </div>
-                                ))}
+                                ))
+                            ) : (
+                                <div className="col-12">
+                                    <p className="text-center">Nuk u gjet asnje liber per kerkesen tuaj.</p>
+                                </div>
+                            )}
                             </div>
-                        </div>
+                             ) : (
+                                <>
+
+                                <div className="row" style={{ margin: '20px 0' }}>
+                                    <h1>Librat për kategorine: {kategoria}</h1>
+                                    <div className="row">
+
+                                        {librat.map(libri => (
+                                            <div className="col-md-4 mb-4" key={libri.ID}>
+                                                <div className="card h-100 shadow-sm">
+                                                    <img
+                                                        src={variables.API_URL + 'libri/GetFoto/' + libri.ID}
+                                                        alt={libri.Titulli}
+                                                        className="card-img-top"
+                                                        style={{ width: '100%', height: '200px', objectFit: 'contain' }} // Stilet inline
+                                                    />
+                                                    <div className="card-body d-flex flex-column">
+                                                        <h5 className="card-title">{libri.Titulli}</h5>
+                                                        <p className="card-text flex-grow-1">{libri.ShtepiaBotuese}</p>
+                                                        <div className="mt-auto">
+                                                            <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
+                                                                Shiko Detajet
+                                                            </Link>
+                                                            <button onClick={() => addToCart({
+                                                                ID: libri.ID,
+                                                                Titulli: libri.Titulli,
+                                                                Pershkrimi: libri.Pershkrimi,
+                                                                image: variables.API_URL + 'libri/GetFoto/' + libri.ID
+                                                            })} className="btn btn-success">
+                                                                Shto në Shportë
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
@@ -115,7 +165,7 @@ function LibratSipasKategorise() {
                 </Modal.Footer>
             </Modal>
         </div>
-                
+
     );
 }
 

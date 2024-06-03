@@ -370,6 +370,7 @@ export class Klienti extends Component {
                             <select className="form-select"
                               onChange={this.changeKlientiGjinia}
                               value={KlientiGjinia}>
+                                 <option value="">Select</option>
                               {gjinite.map(dep => <option key={dep.Id}>
                                 {dep.Gjinia}
                               </option>)}
@@ -380,6 +381,7 @@ export class Klienti extends Component {
                             <select className="form-select"
                               onChange={this.changeKlientiQyteti}
                               value={KlientiQyteti}>
+                                 <option value="">Select</option>
                               {qytetet.map(dep => <option key={dep.Id}>
                                 {dep.Qyteti}
                               </option>)}
@@ -390,6 +392,7 @@ export class Klienti extends Component {
                             <select className="form-select"
                               onChange={this.changeKlientiRoli}
                               value={KlientiRoli}>
+                                 <option value="">Select</option>
                               {rolet.map(dep => <option key={dep.Id}>
                                 {dep.Roli}
                               </option>)}

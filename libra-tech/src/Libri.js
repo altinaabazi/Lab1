@@ -332,42 +332,41 @@ export class Libri extends Component {
 
 
             <Sidebar />
-            <div className="container-fluid" style={{ marginLeft: '110px', }}>
-             <div className='d-flex justify-content-between'>
-              <div>
-              <Link style={{ background:'#a9c0cf' }} to="/Autori" className="btn btn-primary m-2 float-end">
-                + Autori
-              </Link>
-              <Link  style={{ background:'#a9c0cf' }} to="/ShtepiaBotuese" className="btn btn-primary m-2 float-end">
-                + ShtepiaBotuese
-              </Link>
-              <Link style={{ background:'#a9c0cf' }} to="/Gjuha" className="btn btn-primary m-2 float-end">
-                + Gjuha
-              </Link>
-              <Link style={{ background:'#a9c0cf' }} to="/Kategoria" className="btn btn-primary m-2 float-end">
-                + Kategoria
-              </Link>
-              <Link style={{ background:'#a9c0cf' }} to="/NrFaqeve" className="btn btn-primary m-2 float-end">
-                + NrFaqeve
-              </Link>
-              </div>
-              <div>
-              <button type="button"
-                className="btn btn-primary m-2 float-end"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                onClick={() => this.addClick()}>
-                Shto Librin
-              </button>
-              </div>
+            <div className="container-fluid" style={{ paddingLeft: '50px' }}>
+              <div className='d-flex justify-content-between'>
+                <div>
+                  <Link style={{ background: '#a9c0cf' }} to="/Autori" className="btn btn-primary m-2 float-end">
+                    + Autori
+                  </Link>
+                  <Link style={{ background: '#a9c0cf' }} to="/ShtepiaBotuese" className="btn btn-primary m-2 float-end">
+                    + ShtepiaBotuese
+                  </Link>
+                  <Link style={{ background: '#a9c0cf' }} to="/Gjuha" className="btn btn-primary m-2 float-end">
+                    + Gjuha
+                  </Link>
+                  <Link style={{ background: '#a9c0cf' }} to="/Kategoria" className="btn btn-primary m-2 float-end">
+                    + Kategoria
+                  </Link>
+                  <Link style={{ background: '#a9c0cf' }} to="/NrFaqeve" className="btn btn-primary m-2 float-end">
+                    + NrFaqeve
+                  </Link>
+                </div>
+                <div>
+                  <button type="button"
+                    className="btn btn-primary m-2 float-end"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    onClick={() => this.addClick()}>
+                    Shto Librin
+                  </button>
+                </div>
               </div>
               <table className="table table-striped">
                 <thead>
                   <tr>
-                    <th>ID</th>
                     <th>ISBN</th>
                     <th>Titulli</th>
-                    <th>Pershkrimi</th>
+                    <th style={{ paddingRight: '100px' }}>Pershkrimi</th>
                     <th>Autori</th>
                     <th>Nr.Faqeve</th>
                     <th>Kategoria</th>
@@ -382,7 +381,6 @@ export class Libri extends Component {
                 <tbody>
                   {librat.map(emp =>
                     <tr key={emp.ID}>
-                      <td>{emp.ID}</td>
                       <td>{emp.ISBN}</td>
                       <td>{emp.Titulli}</td>
                       <td>{emp.Pershkrimi}</td>
@@ -451,9 +449,11 @@ export class Libri extends Component {
                           </div>
                           <div className="input-group mb-3">
                             <span className="input-group-text">Autori</span>
+                           
                             <select className="form-select"
                               onChange={this.changeAutori}
                               value={Autori}>
+                                 <option value="">Select</option>
                               {autoret.map(dep => <option key={dep.AutoriID}>
                                 {dep.Emri}
                               </option>)}
@@ -464,6 +464,7 @@ export class Libri extends Component {
                             <select className="form-select"
                               onChange={this.changeNrFaqeve}
                               value={NrFaqeve}>
+                                <option value="">Select</option>
                               {faqet.map(dep => <option key={dep.ID}>
                                 {dep.nrfaqeve}
                               </option>)}
@@ -474,7 +475,9 @@ export class Libri extends Component {
                             <select className="form-select"
                               onChange={this.changeKategoria}
                               value={Kategoria}>
+                                 <option value="">Select</option>
                               {kategorit.map(dep => <option key={dep.ID}>
+                               
                                 {dep.kategoria}
                               </option>)}
                             </select>
@@ -490,6 +493,7 @@ export class Libri extends Component {
                             <select className="form-select"
                               onChange={this.changeShtepiaBotuese}
                               value={ShtepiaBotuese}>
+                                 <option value="">Select</option>
                               {botuesit.map(dep => <option key={dep.ID}>
                                 {dep.shtepiaBotuese}
                               </option>)}
@@ -499,7 +503,9 @@ export class Libri extends Component {
                             <span className="input-group-text">Gjuha</span>
                             <select className="form-select"
                               onChange={this.changeGjuha}
+                              placeholder="Last Name"
                               value={Gjuha}>
+                                 <option value="">Select</option>
                               {gjuhet.map(dep => <option key={dep.ID}>
                                 {dep.gjuha}
                               </option>)}
@@ -516,12 +522,13 @@ export class Libri extends Component {
                           <div className="input-group mb-3">
                             <span className="input-group-text">Sasia</span>
                             <input type="text" className="form-control"
+                            
                               value={Sasia}
                               onChange={this.changeSasia} />
                           </div>
                           <div className="p-2 w-50 bd-highlight">
                             <div className="p-2 w-50 bd-highlight">
-                             
+
                               <input className="m-2" type="file" onChange={this.imageUpload} />
                             </div>
 

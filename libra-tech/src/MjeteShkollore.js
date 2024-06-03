@@ -447,6 +447,7 @@ export class MjeteShkollore extends Component {
                                                         <select className="form-select"
                                                             onChange={this.changeTipi}
                                                             value={Tipi}>
+                                                                 <option value="">Select</option>
                                                             {tipet.map(dep => <option key={dep.TipiID}>
                                                                 {dep.TipiEmri}
                                                             </option>)}
@@ -458,6 +459,7 @@ export class MjeteShkollore extends Component {
                                                         <select className="form-select"
                                                             onChange={this.changeNgjyraMSh}
                                                             value={NgjyraMSh}>
+                                                                 <option value="">Select</option>
                                                             {ngjyrat.map(dep => <option key={dep.ID}>
                                                                 {dep.Ngjyra}
                                                             </option>)}
@@ -468,6 +470,7 @@ export class MjeteShkollore extends Component {
                                                         <select className="form-select"
                                                             onChange={this.changeDimensionetMSh}
                                                             value={DimensionetMSh}>
+                                                                 <option value="">Select</option>
                                                             {dimensionet.map(dep => <option key={dep.ID}>
                                                                 {dep.Dimensione}
                                                             </option>)}
@@ -494,6 +497,7 @@ export class MjeteShkollore extends Component {
                                                         <select className="form-select"
                                                             onChange={this.changeShtetetMSh}
                                                             value={ShtetiMSh}>
+                                                                 <option value="">Select</option>
                                                             {shtetet.map(dep => <option key={dep.ID}>
                                                                 {dep.Shteti}
                                                             </option>)}
@@ -505,6 +509,7 @@ export class MjeteShkollore extends Component {
                                                         <select className="form-select"
                                                             onChange={this.changeProdhuesitMSh}
                                                             value={ProdhuesiMSh}>
+                                                                 <option value="">Select</option>
                                                             {prodhuesit.map(dep => <option key={dep.ID}>
                                                                 {dep.Prodhuesi}
                                                             </option>)}

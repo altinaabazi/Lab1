@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importoni Link nëse po përdorni React Router
-import Shporta from './Shporta'; // Importoni komponentin e shportës
+import { Link } from 'react-router-dom'; 
 
-function Header() {
+function Header({ onSearch }) { 
     const [style, setStyle] = useState("navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow");
+    const [searchTerm, setSearchTerm] = useState("");
 
     const changeStyle1 = () => {
         if (style === "navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow") {
@@ -11,6 +11,11 @@ function Header() {
         } else {
             setStyle("navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow");
         }
+    };
+
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+        onSearch(event.target.value); 
     };
 
     return (
@@ -27,8 +32,15 @@ function Header() {
                         {/* Search Form */}
                         <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                             <div className="input-group">
-                                <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..."
-                                    aria-label="Search" aria-describedby="basic-addon2" />
+                                <input
+                                    type="text"
+                                    className="form-control bg-light border-0 small"
+                                    placeholder="Kerko..."
+                                    aria-label="Search"
+                                    aria-describedby="basic-addon2"
+                                    value={searchTerm}
+                                    onChange={handleSearchChange}
+                                />
                                 <div className="input-group-append">
                                     <button className="btn btn-primary" type="button">
                                         <i className="fas fa-search fa-sm"></i>
@@ -37,22 +49,22 @@ function Header() {
                             </div>
                         </form>
                         {/* Cart Button */}
-                        <div style={{ marginLeft: '400px', marginRight: 'auto',paddingTop:'23px' }}>
-                        {/* Butoni i shportës */}
-                        <Link to="/Shporta" className="nav-link">
-                            <i className="fas fa-shopping-cart fa-fw" style={{ fontSize: '24px' }}></i>
-                        </Link>
+                        <div style={{ marginLeft: '400px' }}>
+                            {/* Butoni i shportes */}
+                            <Link to="/Shporta" className="nav-link">
+                                <i className="fas fa-shopping-cart fa-fw" style={{ fontSize: '24px' }}></i>
+                            </Link>
+                        </div>
                     </div>
-                    </div>
-                    <div style={{ marginLeft: 'auto', marginRight: '30px' }}>
+                    <div style={{ marginLeft: 'auto', marginRight: '30px', paddingBottom: '30px' }}>
                         <li className="nav-item dropdown no-arrow">
                             <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span className="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                                 <img className="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg" />
+                                    src="img/undraw_profile.svg" alt="Profile" />
                             </a>
-                            {/*  <!-- Dropdown - User Information --> */}
+                            {/* Dropdown - User Information */}
                             <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a className="dropdown-item" href="#">

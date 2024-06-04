@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\NB\\Desktop\\Lab1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,32 +15,48 @@
       "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\services\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\migrations\\20240602002819_porosiaupdate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240602002819_porosiaupdate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\migrations\\20240601224229_porosia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240601224229_porosia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\migrations\\20240531165318_libraria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240531165318_libraria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\migrations\\20240531165318_libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240531165318_libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,63 +66,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "20240602002819_PorosiaUpdate.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240602002819_PorosiaUpdate.Designer.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20240602002819_PorosiaUpdate.Designer.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240602002819_PorosiaUpdate.Designer.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20240602002819_PorosiaUpdate.Designer.cs",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAAAI8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T21:10:45.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20240601224229_Porosia.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240601224229_Porosia.Designer.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20240601224229_Porosia.Designer.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240601224229_Porosia.Designer.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20240601224229_Porosia.Designer.cs",
+              "ViewState": "AQIAALkAAAAAAAAAAAAuwMgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T21:10:41.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20240531165318_Libraria.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240531165318_Libraria.Designer.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20240531165318_Libraria.Designer.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240531165318_Libraria.Designer.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20240531165318_Libraria.Designer.cs",
+              "ViewState": "AQIAALgAAAAAAAAAAAAuwMcAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T21:10:33.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20240531165318_Libraria.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240531165318_Libraria.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20240531165318_Libraria.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240531165318_Libraria.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20240531165318_Libraria.cs",
+              "ViewState": "AQIAAGQBAAAAAAAAAAAuwHMBAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T21:10:13.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\LoginModel.cs",
+              "RelativeToolTip": "Backend\\Models\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T20:06:56.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "IAuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Services\\IAuthenticationService.cs",
               "RelativeDocumentMoniker": "Backend\\Services\\IAuthenticationService.cs",
               "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Services\\IAuthenticationService.cs",
               "RelativeToolTip": "Backend\\Services\\IAuthenticationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T19:52:01.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthenticationService.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Services\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "Backend\\Services\\AuthenticationService.cs",
               "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Services\\AuthenticationService.cs",
               "RelativeToolTip": "Backend\\Services\\AuthenticationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAuwFgAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T10:15:10.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AuthorizationController.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\AuthorizationController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\AuthorizationController.cs",
               "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\AuthorizationController.cs",
               "RelativeToolTip": "Backend\\Controllers\\AuthorizationController.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAqwFAAAAAAAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAuwEgAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T10:27:43.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\RegisterModel.cs",
               "RelativeDocumentMoniker": "Backend\\Models\\RegisterModel.cs",
               "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\RegisterModel.cs",
               "RelativeToolTip": "Backend\\Models\\RegisterModel.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBcAAAAlAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T10:28:41.642Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "KlientiController.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\KlientiController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\KlientiController.cs",
@@ -115,20 +200,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Klienti.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\Klienti.cs",
               "RelativeDocumentMoniker": "Backend\\Models\\Klienti.cs",
               "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\Klienti.cs",
               "RelativeToolTip": "Backend\\Models\\Klienti.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAsAAAAvAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T10:24:39.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Backend\\Program.cs",
@@ -141,20 +226,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "LibrariaContext.cs",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\LibrariaContext.cs",
               "RelativeDocumentMoniker": "Backend\\Models\\LibrariaContext.cs",
               "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\LibrariaContext.cs",
               "RelativeToolTip": "Backend\\Models\\LibrariaContext.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAA0wCoAAAAAAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAswCMAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T09:58:40.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\appsettings.json",
               "RelativeDocumentMoniker": "Backend\\appsettings.json",

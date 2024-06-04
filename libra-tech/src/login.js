@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from './AuthProvider';
+import { login as loginService } from './AuthService';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -18,18 +19,18 @@ function Login() {
         }
 
         try {
-            const response = await fetch('http://localhost:5170/api/Authorization/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email, password })
-            });
+            const data = await loginService(email, password);
 
-            const data = await response.json();
-
-            if (response.ok) {
-                login(data.Token, data.Roli);
+            if (data.Token) {
+                login(data.Token, data.Roli, {
+                    id: data.ID,
+                    emri: data.Emri,
+                    mbiemri: data.Mbiemri,
+                    klientiGjinia: data.KlientiGjinia,
+                    klientiQyteti: data.KlientiQyteti,
+                    email: data.Email,
+                    password: data.Password // Note: Avoid storing passwords in local storage in production
+                });
                 navigate('/home');
             } else {
                 setErrorMessage(data.message || 'Invalid email or password.');

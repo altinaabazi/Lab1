@@ -4,33 +4,89 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [Roli, setRoli] = useState('');
+  const [user, setUser] = useState({
+    id: null,
+    emri: '',
+    mbiemri: '',
+    klientiGjinia: '',
+    klientiQyteti: '',
+    email: '',
+    password: '',
+    roli: '',
+    token: ''
+  });
 
   useEffect(() => {
-    const Token = localStorage.getItem('Token');
-    const Roli = localStorage.getItem('Roli');
-    if (Token && Roli) {
+    const token = localStorage.getItem('Token');
+    const roli = localStorage.getItem('Roli');
+    const id = localStorage.getItem('ID');
+    const emri = localStorage.getItem('Emri');
+    const mbiemri = localStorage.getItem('Mbiemri');
+    const klientiGjinia = localStorage.getItem('KlientiGjinia');
+    const klientiQyteti = localStorage.getItem('KlientiQyteti');
+    const email = localStorage.getItem('Email');
+    const password = localStorage.getItem('Password');
+
+    if (token && roli && id && emri && mbiemri && klientiGjinia && klientiQyteti && email && password) {
       setIsAuthenticated(true);
-      setRoli(Roli);
+      setUser({
+        token,
+        roli,
+        id,
+        emri,
+        mbiemri,
+        klientiGjinia,
+        klientiQyteti,
+        email,
+        password
+      });
     }
   }, []);
 
-  const login = (Token, Roli) => {
-    localStorage.setItem('Token', Token);
-    localStorage.setItem('Roli', Roli);
+  const login = (token, roli, userData) => {
+    localStorage.setItem('Token', token);
+    localStorage.setItem('Roli', roli);
+    localStorage.setItem('ID', userData.id);
+    localStorage.setItem('Emri', userData.emri);
+    localStorage.setItem('Mbiemri', userData.mbiemri);
+    localStorage.setItem('KlientiGjinia', userData.klientiGjinia);
+    localStorage.setItem('KlientiQyteti', userData.klientiQyteti);
+    localStorage.setItem('Email', userData.email);
+    localStorage.setItem('Password', userData.password);
+
     setIsAuthenticated(true);
-    setRoli(Roli);
+    setUser({
+      token,
+      roli,
+      id: userData.id,
+      emri: userData.emri,
+      mbiemri: userData.mbiemri,
+      klientiGjinia: userData.klientiGjinia,
+      klientiQyteti: userData.klientiQyteti,
+      email: userData.email,
+      password: userData.password
+    });
   };
 
   const logout = () => {
-    localStorage.removeItem('Token');
-    localStorage.removeItem('Roli');
+    localStorage.clear(); // Clear all local storage items
+
     setIsAuthenticated(false);
-    setRoli('');
+    setUser({
+      id: null,
+      emri: '',
+      mbiemri: '',
+      klientiGjinia: '',
+      klientiQyteti: '',
+      email: '',
+      password: '',
+      roli: '',
+      token: ''
+    });
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, Roli, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

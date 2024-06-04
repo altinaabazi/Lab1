@@ -1,5 +1,4 @@
 import axios from 'axios';
-import KlientiGjinia from './KlientiGjinia';
 
 const API_BASE_URL = 'http://localhost:5170';
 

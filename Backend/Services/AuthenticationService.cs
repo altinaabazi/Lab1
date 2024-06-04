@@ -1,5 +1,4 @@
-﻿//AuthenticationServices.cs
-using System;
+﻿using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -25,17 +24,17 @@ namespace Lab1_Backend.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<(string Token, string Roli)> AuthenticateAndGetJwtToken(LoginModel loginModel)
+        public async Task<(string Token, string Roli, int ID, string Emri, string Mbiemri, string KlientiGjinia, string KlientiQyteti, string Email, string Password)> AuthenticateAndGetJwtToken(LoginModel loginModel)
         {
             var user = await _dbContext.Klienti.FirstOrDefaultAsync(x => x.Email == loginModel.Email);
 
             if (user != null && user.Password == loginModel.Password)
             {
                 var token = GenerateJwtToken(user);
-                return (token, user.KlientiRoli); // Ktheni tokenin dhe rolin
+                return (token, user.KlientiRoli, user.ID, user.Emri, user.Mbiemri, user.KlientiGjinia, user.KlientiQyteti, user.Email, user.Password);
             }
 
-            return (null, null);
+            return (null, null, 0, null, null, null, null, null, null);
         }
 
         public async Task<bool> RegisterUser(RegisterModel registerModel)
@@ -97,20 +96,29 @@ namespace Lab1_Backend.Services
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+            var claims = new[]
+            {
+        new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        new Claim("Roli", user.KlientiRoli),
+        new Claim("ID", user.ID.ToString()),
+        new Claim("Emri", user.Emri),
+        new Claim("Mbiemri", user.Mbiemri),
+        new Claim("KlientiGjinia", user.KlientiGjinia),
+        new Claim("KlientiQyteti", user.KlientiQyteti),
+        new Claim("Email", user.Email)
+    };
+
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Audience"],
-                claims: new[]
-                {
-                    new Claim(JwtRegisteredClaimNames.Sub, user.Email),
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                    new Claim("Roli", user.KlientiRoli)
-                },
+                claims: claims,
                 expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_configuration["Jwt:ExpiryMinutes"])),
                 signingCredentials: creds
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
     }
 }

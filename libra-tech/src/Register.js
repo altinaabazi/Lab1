@@ -179,9 +179,6 @@ function Register() {
                                                 <hr />
                                             </form>
                                             <div className="text-center">
-                                                <a className="small" href="forgot-password">Forgot Password?</a>
-                                            </div>
-                                            <div className="text-center">
                                                 <a className="small" href="/">Already have an account? Login!</a>
                                             </div>
                                         </div>

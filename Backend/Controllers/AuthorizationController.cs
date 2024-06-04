@@ -1,5 +1,4 @@
-﻿//AuthorizationController.cs
-using Lab1_Backend.Models;
+﻿using Lab1_Backend.Models;
 using Lab1_Backend.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -20,17 +19,30 @@ namespace Lab1_Backend.Controllers
         [HttpPost("login")]
         public async Task<ActionResult> Login(LoginModel loginModel)
         {
-            var (token, roli) = await _authenticationService.AuthenticateAndGetJwtToken(loginModel);
+            var (token, roli, id, emri, mbiemri, klientiGjinia, klientiQyteti, email, password) = await _authenticationService.AuthenticateAndGetJwtToken(loginModel);
 
             if (token != null)
             {
-                return Ok(new { Token = token, Roli = roli });
+                return Ok(new
+                {
+                    Token = token,
+                    Roli = roli,
+                    ID = id,
+                    Emri = emri,
+                    Mbiemri = mbiemri,
+                    KlientiGjinia = klientiGjinia,
+                    KlientiQyteti = klientiQyteti,
+                    Email = email,
+                    Password = password
+                });
             }
             else
             {
                 return Unauthorized();
             }
         }
+
+
 
         [HttpPost("register")]
         public async Task<ActionResult> Register(RegisterModel registerModel)

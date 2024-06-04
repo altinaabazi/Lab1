@@ -44,6 +44,11 @@ function DetajetEMjetit() {
   if (!mjeti) {
     return <div className="error">Mjeti nuk u gjet.</div>;
   }
+  const addToCart = (libri) => {
+    const shporta = JSON.parse(localStorage.getItem('shporta')) || [];
+    shporta.push(libri);
+    localStorage.setItem('shporta', JSON.stringify(shporta));
+  };
 
   return (
     <div>
@@ -69,6 +74,8 @@ function DetajetEMjetit() {
                     <p><strong>Njesia:</strong> {mjeti.NgjyraMSh}</p>
                     <p><strong>Cmimi:</strong> {mjeti.Cmimi}$</p>
                     <p><strong>Sasia:</strong> {mjeti.Sasia}</p>
+                    <button onClick={() => addToCart(mjeti)} className="btn btn-success">Shto ne shportë</button>
+
                   </div>
                 </div>
               </div>

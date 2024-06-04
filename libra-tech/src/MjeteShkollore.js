@@ -519,8 +519,7 @@ export class MjeteShkollore extends Component {
 
                                                 </div>
                                                 <div className="p-2 w-50 bd-highlight">
-                                                    <img width="250px" height="250px"
-                                                        src={PhotoFileName + ImgPath} />
+                                                    
                                                     <input className="m-2" type="file" onChange={this.imageUpload} />
                                                 </div>
                                             </div>

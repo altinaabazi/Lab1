@@ -1,57 +1,120 @@
-import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios'; // Importo axios
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
+import { variables } from './Variables';
 
-function Shporta({ shporta, removeFromCart, showModal, handleCloseModal, handleBuy }) {
-  const total = shporta.reduce((sum, item) => sum + item.price, 0);
+const Shporta = () => {
+  const [cart, setCart] = useState([]);
+  const [libra, setLibra] = useState([]);
+  const [mjetetShkollore, setMjetetShkollore] = useState([]);
+
+  useEffect(() => {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const shporta = JSON.parse(localStorage.getItem('shporta')) || [];
+    const libraList = shporta.filter((produkt) => produkt.hasOwnProperty('Titulli'));
+    const mjetetList = shporta.filter((produkt) => !produkt.hasOwnProperty('Titulli'));
+    setLibra(libraList);
+    setMjetetShkollore(mjetetList);
+    setCart(cartItems);
+  }, []);
+
+  const removeFromCart = (id) => {
+    const updatedLibraList = libra.filter(item => item.ISBN !== id);
+    const updatedMjetetList = mjetetShkollore.filter(item => item.ID !== id);
+    const updatedShporta = updatedLibraList.concat(updatedMjetetList);
+    localStorage.setItem('shporta', JSON.stringify(updatedShporta));
+    setLibra(updatedLibraList);
+    setMjetetShkollore(updatedMjetetList);
+    const updatedCart = cart.filter(item => item.ID !== id);
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+  };
+
+  const placeOrder = () => {
+    const orderData = {
+      Klienti: {
+        // Shtoni të dhënat e klientit sipas nevojës
+      },
+      Porosia: {
+        Libra: libra,
+        MjetetShkollore: mjetetShkollore
+      }
+    };
+
+    axios.post('/api/Porosia', orderData)
+      .then(response => {
+        localStorage.removeItem('shporta');
+        setLibra([]);
+        setMjetetShkollore([]);
+        setCart([]);
+        // Rifresko faqen ose kryej ndonjë veprim tjetër pas porosisë së suksesshme
+      })
+      .catch(error => {
+        // Traktoni gabimet nëse ka
+      });
+  };
 
   return (
-    <Modal show={showModal} onHide={handleCloseModal}>
-      <Modal.Header closeButton>
-        <Modal.Title>Shporta</Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        {shporta.length === 0 ? (
-          <div className="text-center">Shporta është bosh.</div>
+    <div>
+      <Header />
+      <div className="container mt-5">
+        <Sidebar />
+        <h1 className="text-center mb-4">Shporta</h1>
+        {libra.length === 0 && mjetetShkollore.length === 0 ? (
+          <p className="text-center">Shporta është bosh</p>
         ) : (
-          <div>
-            <ul className="list-group mb-3">
-              {shporta.map((item, index) => (
-                <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
-                  <div>
-                    <img
-                      src={item.image}
-                      alt={item.Titulli}
-                      style={{ width: '50px', height: '50px', objectFit: 'cover' }}
-                      className="mr-3"
-                    />
-                    {item.Titulli || item.Tipi}
-                  </div>
-                  <div>
-                    {item.price}€
-                    <button className="btn btn-danger btn-sm ml-3" onClick={() => removeFromCart(index)}>Hiqe</button>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <div className="d-flex justify-content-between align-items-center">
-              <strong>Total:</strong>
-              <strong>{total}€</strong>
+          <div className="row">
+            {libra.length > 0 && (
+              <div className="col-md-6">
+                <h2>Librat</h2>
+                <ul>
+                  {libra.map((libri, index) => (
+                    <li key={index}>
+                      <div>
+                        <img src={variables.API_URL + 'libri/GetFoto/' + libri.ID} alt={libri.Titulli} style={{ width: '100%', height: '200px', objectFit: 'contain' }} className="img-fluid" />
+                        <p>{libri.Titulli}</p>
+                        <p>Cmimi: {libri.Cmimi}</p>
+                        <button onClick={() => removeFromCart(libri.ISBN)} className="btn btn-danger ml-2">Fshij</button>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {mjetetShkollore.length > 0 && (
+              <div className="col-md-6">
+                <h2>Mjetet Shkollore</h2>
+                <ul>
+                  {mjetetShkollore.map((mjeti, index) => (
+                    <li key={index}>
+                      <div>
+                        <img src={variables.API_URL + 'MjeteShkollore/GetFoto/' + mjeti.ID} alt={mjeti.Tipi} style={{ width: '100%', height: '200px', objectFit: 'contain' }} className="img-fluid" />
+                        <p>Mjet Shkollor</p>
+                        <p>Cmimi: {mjeti.Cmimi}</p>
+                        <button onClick={() => removeFromCart(mjeti.ID)} className="btn btn-danger ml-2">Fshij</button>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className="text-center">
+              <button onClick={placeOrder} className="btn btn-success">Konfirmoni Porosinë</button>
             </div>
           </div>
         )}
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={handleCloseModal}>
-          Mbylle
-        </Button>
-        {shporta.length > 0 && (
-          <Button variant="primary" onClick={handleBuy}> {/* Këtu shtoni prop-in e re për handleBuy */}
-            Blej
-          </Button>
-        )}
-      </Modal.Footer>
-    </Modal>
+
+        <div className="text-center mt-4">
+          <Link to="/home" className="btn btn-primary">Vazhdoni Blerjet</Link>
+        </div>
+      </div>
+      <Footer />
+    </div>
   );
-}
+};
 
 export default Shporta;

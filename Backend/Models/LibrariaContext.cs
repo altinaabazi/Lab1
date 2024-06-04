@@ -42,8 +42,9 @@ namespace Lab1_Backend.Models
         public DbSet<StafiSektori> StafiSektori { get; set; }
 
         /*Porosia*/
+        public DbSet<Shporta> Shporta { get; set; }
         public DbSet<Porosia> Porosia { get; set; }
-
+      
 
 
 

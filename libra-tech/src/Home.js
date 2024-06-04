@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { Modal, Button } from 'react-bootstrap';
 import Sidebar from './Sidebar';
+import MjeteShkollore from './MjeteShkollore';
 
 function Home() {
     const [librat, setLibrat] = useState([]);
@@ -108,10 +109,11 @@ function Home() {
     }
 
     const addToCart = (libri) => {
-        setShporta([...shporta, libri]);
-        setShowModal(true);
+        const shporta = JSON.parse(localStorage.getItem('shporta')) || [];
+        shporta.push(libri);
+        localStorage.setItem('shporta', JSON.stringify(shporta));
+        setShowModal(true); // Shfaq modal-in
     };
-
     const handleCloseModal = () => {
         setShowModal(false);
     };
@@ -303,17 +305,8 @@ function Home() {
                                                         <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
                                                             Shiko Detajet
                                                         </Link>
-                                                        <button
-                                                            onClick={() => addToCart({
-                                                                ID: libri.ID,
-                                                                Titulli: libri.Titulli,
-                                                                Pershkrimi: libri.Pershkrimi,
-                                                                image: variables.API_URL + 'libri/GetFoto/' + libri.ID
-                                                            })}
-                                                            className="btn btn-success"
-                                                        >
-                                                            Blej
-                                                        </button>
+                                                        <button onClick={() => addToCart(libri)} className="btn btn-success"> Shto në Shportë</button>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -339,17 +332,8 @@ function Home() {
                                                         <Link to={`/MjeteShkollore/${mjeti.ID}`} className="btn btn-primary mr-2">
                                                             Shiko Detajet
                                                         </Link>
-                                                        <button
-                                                            onClick={() => addToCart({
-                                                                ID: mjeti.ID,
-                                                                Tipi: mjeti.Tipi,
-                                                                Pershkrimi: mjeti.Pershkrimi,
-                                                                image: variables.API_URL + 'MjeteShkollore/GetFoto/' + mjeti.ID
-                                                            })}
-                                                            className="btn btn-success"
-                                                        >
-                                                            Shto në Shportë
-                                                        </button>
+                                                        <button onClick={() => addToCart(mjeti)} className="btn btn-success"> Shto në Shportë</button>
+
                                                     </div>
                                                 </div>
                                             </div>

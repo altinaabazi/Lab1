@@ -49,7 +49,7 @@ function Header({ onSearch }) {
                             </div>
                         </form>
                         {/* Cart Button */}
-                        <div style={{ marginLeft: '400px' }}>
+                        <div style={{ marginLeft: '500px' }}>
                             {/* Butoni i shportes */}
                             <Link to="/Shporta" className="nav-link">
                                 <i className="fas fa-shopping-cart fa-fw" style={{ fontSize: '24px' }}></i>

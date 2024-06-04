@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { variables } from './Variables';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-
 
 function DetajetELibrit() {
   const [libri, setLibri] = useState(null);
@@ -31,6 +30,12 @@ function DetajetELibrit() {
       setError(error.message);
       setLoading(false);
     }
+  };
+
+  const addToCart = (libri) => {
+    const shporta = JSON.parse(localStorage.getItem('shporta')) || [];
+    shporta.push(libri);
+    localStorage.setItem('shporta', JSON.stringify(shporta));
   };
 
   if (loading) {
@@ -68,16 +73,16 @@ function DetajetELibrit() {
                     <p><strong>Viti i Publikimit:</strong> {libri.VitiPublikimit}</p>
                     <p><strong>Gjuha:</strong> {libri.Gjuha}</p>
                     <p><strong>Cmimi:</strong> ${libri.Cmimi}</p>
+                    <button onClick={() => addToCart(libri)} className="btn btn-success">Shto ne shportë</button>
                   </div>
                 </div>
               </div>
-              <Footer />
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
-
   );
 }
 

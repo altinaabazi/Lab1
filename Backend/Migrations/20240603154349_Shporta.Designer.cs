@@ -4,6 +4,7 @@ using Lab1_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Migrations
 {
     [DbContext(typeof(LibrariaContext))]
-    partial class LibrariaContextModelSnapshot : ModelSnapshot
+    [Migration("20240603154349_Shporta")]
+    partial class Shporta
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -260,9 +263,6 @@ namespace Backend.Migrations
                     b.Property<string>("Pershkrimi")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PorosiaID")
-                        .HasColumnType("int");
-
                     b.Property<int>("Sasia")
                         .HasColumnType("int");
 
@@ -276,8 +276,6 @@ namespace Backend.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("PorosiaID");
 
                     b.ToTable("Libri");
                 });
@@ -325,9 +323,6 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PorosiaID")
-                        .HasColumnType("int");
-
                     b.Property<string>("ProdhuesiMSh")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -344,8 +339,6 @@ namespace Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("PorosiaID");
 
                     b.ToTable("MjeteShkollore");
                 });
@@ -382,6 +375,40 @@ namespace Backend.Migrations
                     b.ToTable("NrFaqeve");
                 });
 
+            modelBuilder.Entity("Lab1_Backend.Models.PorosiItem", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<double>("Cmimi")
+                        .HasColumnType("float");
+
+                    b.Property<int>("LibriID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MjeteShkolloreID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PorosiaID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sasia")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("LibriID");
+
+                    b.HasIndex("MjeteShkolloreID");
+
+                    b.HasIndex("PorosiaID");
+
+                    b.ToTable("PorosiItem");
+                });
+
             modelBuilder.Entity("Lab1_Backend.Models.Porosia", b =>
                 {
                     b.Property<int>("ID")
@@ -390,14 +417,14 @@ namespace Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<double>("CmimiTotal")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime>("Data")
+                    b.Property<DateTime>("DataPorosise")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("KlientiID")
                         .HasColumnType("int");
+
+                    b.Property<double>("Totali")
+                        .HasColumnType("float");
 
                     b.HasKey("ID");
 
@@ -611,18 +638,31 @@ namespace Backend.Migrations
                     b.ToTable("Tipi");
                 });
 
-            modelBuilder.Entity("Lab1_Backend.Models.Libri", b =>
+            modelBuilder.Entity("Lab1_Backend.Models.PorosiItem", b =>
                 {
-                    b.HasOne("Lab1_Backend.Models.Porosia", null)
-                        .WithMany("Librat")
-                        .HasForeignKey("PorosiaID");
-                });
+                    b.HasOne("Lab1_Backend.Models.Libri", "Libri")
+                        .WithMany()
+                        .HasForeignKey("LibriID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-            modelBuilder.Entity("Lab1_Backend.Models.MjeteShkollore", b =>
-                {
-                    b.HasOne("Lab1_Backend.Models.Porosia", null)
-                        .WithMany("Mjetet")
-                        .HasForeignKey("PorosiaID");
+                    b.HasOne("Lab1_Backend.Models.MjeteShkollore", "MjeteShkollore")
+                        .WithMany()
+                        .HasForeignKey("MjeteShkolloreID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Lab1_Backend.Models.Porosia", "Porosia")
+                        .WithMany("PorosiItems")
+                        .HasForeignKey("PorosiaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Libri");
+
+                    b.Navigation("MjeteShkollore");
+
+                    b.Navigation("Porosia");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Porosia", b =>
@@ -665,9 +705,7 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Lab1_Backend.Models.Porosia", b =>
                 {
-                    b.Navigation("Librat");
-
-                    b.Navigation("Mjetet");
+                    b.Navigation("PorosiItems");
                 });
 #pragma warning restore 612, 618
         }

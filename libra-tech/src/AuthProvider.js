@@ -43,6 +43,28 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  const updateUser = (userData) => {
+  
+    const { emri, mbiemri, email, klientiQyteti, klientiGjinia } = userData;
+  
+    
+    if (!emri || !mbiemri || !email || !klientiQyteti || !klientiGjinia) {
+     
+      console.error('Missing required fields');
+      return; // Exit the function without updating the user state
+    }
+  
+   
+    setUser({
+      ...user, 
+      emri: emri,
+      mbiemri: mbiemri,
+      email: email,
+      klientiQyteti: klientiQyteti,
+      klientiGjinia: klientiGjinia
+    });
+  };
+  
   const login = (token, roli, userData) => {
     localStorage.setItem('Token', token);
     localStorage.setItem('Roli', roli);
@@ -53,6 +75,8 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('KlientiQyteti', userData.klientiQyteti);
     localStorage.setItem('Email', userData.email);
     localStorage.setItem('Password', userData.password);
+
+   
 
     setIsAuthenticated(true);
     setUser({
@@ -84,13 +108,18 @@ export const AuthProvider = ({ children }) => {
       token: ''
     });
   };
+  
+  
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, login, logout, updateUser}}>
       {children}
     </AuthContext.Provider>
   );
 };
+
+
+
 
 export const useAuth = () => {
   return useContext(AuthContext);

@@ -297,12 +297,18 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './login';
 import Logout from './Logout';
+import Register from './Register';
 import Home from './Home';
 import Klienti from './Klienti';
+import KlientiGjinia from './KlientiGjinia';
+import KlientiQyteti from './KlientiQyteti';
+import KlientiRoli from './KlientiRoli';
 import Dashboard from './Dashboard';
 import NotAuthorized from './NotAuthorized';
 import { AuthProvider } from './AuthProvider';
 import PrivateRoute from './PrivateRoute';
+import UserProfile from './UserProfile';
+import EditProfile from './EditProfile';
 
 function App() {
   return (
@@ -311,9 +317,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/klienti" element={<Klienti />} />
+          <Route path="/UserProfile" element={<UserProfile />} />
+          <Route path="/EditProfile" element={<EditProfile />} />
           <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/dashboard" element={<PrivateRoute roles={['Admin']}><Dashboard /></PrivateRoute>} />
-          <Route path="/klienti" element={<PrivateRoute roles={['Admin']} userIds={[1]}><Klienti /></PrivateRoute>} />
+          {/* <Route path="/klienti" element={<PrivateRoute roles={['Admin']} userIds={[1]}><Klienti /></PrivateRoute>} /> */}
+          <Route path="/register" element={<Register />} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
         </Routes>
       </Router>

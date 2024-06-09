@@ -3,60 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\Lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\stafi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\stafi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\authorizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240608194042_StafiSchedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Backend\\Migrations\\20240608194042_StafiSchedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\services\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\services\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\migrations\\20240602002819_porosiaupdate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240602002819_porosiaupdate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\migrations\\20240601224229_porosia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240601224229_porosia.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\migrations\\20240531165318_libraria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240531165318_libraria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\migrations\\20240531165318_libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240531165318_libraria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\stafischedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\stafischedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\stafisektoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\stafisektoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,172 +38,81 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20240531165318_Libraria.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240531165318_Libraria.cs",
-              "RelativeDocumentMoniker": "Backend\\Migrations\\20240531165318_Libraria.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240531165318_Libraria.cs",
-              "RelativeToolTip": "Backend\\Migrations\\20240531165318_Libraria.cs",
-              "ViewState": "AQIAAGQBAAAAAAAAAAAuwHMBAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T21:10:13.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\LoginModel.cs",
-              "RelativeToolTip": "Backend\\Models\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T20:06:56.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Services\\IAuthenticationService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\IAuthenticationService.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Services\\IAuthenticationService.cs",
-              "RelativeToolTip": "Backend\\Services\\IAuthenticationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T19:52:01.88Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AuthorizationController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\AuthorizationController.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\AuthorizationController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\AuthorizationController.cs",
-              "RelativeToolTip": "Backend\\Controllers\\AuthorizationController.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAuwEgAAAApAAAA",
+              "Title": "20240608194042_StafiSchedule.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240608194042_StafiSchedule.cs",
+              "RelativeDocumentMoniker": "Backend\\Migrations\\20240608194042_StafiSchedule.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240608194042_StafiSchedule.cs",
+              "RelativeToolTip": "Backend\\Migrations\\20240608194042_StafiSchedule.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T10:27:43.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "20240601224229_Porosia.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240601224229_Porosia.Designer.cs",
-              "RelativeDocumentMoniker": "Backend\\Migrations\\20240601224229_Porosia.Designer.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240601224229_Porosia.Designer.cs",
-              "RelativeToolTip": "Backend\\Migrations\\20240601224229_Porosia.Designer.cs",
-              "ViewState": "AQIAALkAAAAAAAAAAAAuwMgAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T21:10:41.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\appsettings.json",
-              "RelativeDocumentMoniker": "Backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\appsettings.json",
-              "RelativeToolTip": "Backend\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-02T09:56:53.935Z",
+              "WhenOpened": "2024-06-08T19:40:43.204Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240531165318_Libraria.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240531165318_Libraria.Designer.cs",
-              "RelativeDocumentMoniker": "Backend\\Migrations\\20240531165318_Libraria.Designer.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240531165318_Libraria.Designer.cs",
-              "RelativeToolTip": "Backend\\Migrations\\20240531165318_Libraria.Designer.cs",
-              "ViewState": "AQIAALgAAAAAAAAAAAAuwMcAAAAqAAAA",
+              "DocumentIndex": 5,
+              "Title": "StafiSektoriController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiSektoriController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\StafiSektoriController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiSektoriController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\StafiSektoriController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T21:10:33.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20240602002819_PorosiaUpdate.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240602002819_PorosiaUpdate.Designer.cs",
-              "RelativeDocumentMoniker": "Backend\\Migrations\\20240602002819_PorosiaUpdate.Designer.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240602002819_PorosiaUpdate.Designer.cs",
-              "RelativeToolTip": "Backend\\Migrations\\20240602002819_PorosiaUpdate.Designer.cs",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAAAI8AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T21:10:45.909Z"
+              "WhenOpened": "2024-06-08T19:18:22.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Services\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "Backend\\Services\\AuthenticationService.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Services\\AuthenticationService.cs",
-              "RelativeToolTip": "Backend\\Services\\AuthenticationService.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAuwFgAAAA3AAAA",
+              "Title": "StafiScheduleController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiScheduleController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\StafiScheduleController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiScheduleController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\StafiScheduleController.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAowAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T10:15:10.728Z"
+              "WhenOpened": "2024-06-08T19:16:43.599Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RegisterModel.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\RegisterModel.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\RegisterModel.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\RegisterModel.cs",
-              "RelativeToolTip": "Backend\\Models\\RegisterModel.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBcAAAAlAAAA",
+              "DocumentIndex": 4,
+              "Title": "StafiSchedule.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\StafiSchedule.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\StafiSchedule.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\StafiSchedule.cs",
+              "RelativeToolTip": "Backend\\Models\\StafiSchedule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T10:28:41.642Z"
+              "WhenOpened": "2024-06-08T19:13:20.709Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "KlientiController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\KlientiController.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\KlientiController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\KlientiController.cs",
-              "RelativeToolTip": "Backend\\Controllers\\KlientiController.cs",
-              "ViewState": "AQIAAO0AAAAAAAAAAAAowPUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T10:25:18.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Klienti.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\Klienti.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\Klienti.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\Klienti.cs",
-              "RelativeToolTip": "Backend\\Models\\Klienti.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T10:24:39.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Backend\\Program.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Program.cs",
-              "RelativeToolTip": "Backend\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T10:08:27.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "LibrariaContext.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\LibrariaContext.cs",
               "RelativeDocumentMoniker": "Backend\\Models\\LibrariaContext.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\LibrariaContext.cs",
               "RelativeToolTip": "Backend\\Models\\LibrariaContext.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAswCMAAAAtAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwCsAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T09:58:40.996Z"
+              "WhenOpened": "2024-06-08T19:06:25.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Stafi.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\Stafi.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Stafi.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\Stafi.cs",
+              "RelativeToolTip": "Backend\\Models\\Stafi.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T19:02:25.963Z",
+              "EditorCaption": ""
             }
           ]
         }

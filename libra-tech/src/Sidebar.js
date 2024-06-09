@@ -180,7 +180,9 @@
                                     <a className="collapse-item" href="/">Login</a>
                                     <a className="collapse-item" href="register">Register</a>
                                     <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
+                                    <a className="collapse-item" href="/stafiSchedule">Staff Schedule</a>
                                     <a className="collapse-item" href="/stafi">Staff Dashboard</a>
+                                    
                                     <div className="collapse-divider"></div>
                                 </div>
                             </div>

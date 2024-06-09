@@ -309,6 +309,8 @@ import { AuthProvider } from './AuthProvider';
 import PrivateRoute from './PrivateRoute';
 import UserProfile from './UserProfile';
 import EditProfile from './EditProfile';
+import StafiSchedule from './StafiSchedule';
+
 
 function App() {
   return (
@@ -320,6 +322,7 @@ function App() {
           <Route path="/klienti" element={<Klienti />} />
           <Route path="/UserProfile" element={<UserProfile />} />
           <Route path="/EditProfile" element={<EditProfile />} />
+          <Route path="/StafiSchedule" element={<StafiSchedule />} />
           <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/dashboard" element={<PrivateRoute roles={['Admin']}><Dashboard /></PrivateRoute>} />
           {/* <Route path="/klienti" element={<PrivateRoute roles={['Admin']} userIds={[1]}><Klienti /></PrivateRoute>} /> */}

@@ -14,6 +14,9 @@ namespace Lab1_Backend.Models
 
         public string StafiSektori { get; set; }
 
+        public String StafiSchedule { get; set; }
+
         public string Pervoja { get; set; }
+
     }
 }

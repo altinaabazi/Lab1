@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
 
-function Header({ onSearch }) { 
+function Header() { 
     const [style, setStyle] = useState("navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow");
-    const [searchTerm, setSearchTerm] = useState("");
+    // const [searchTerm, setSearchTerm] = useState("");
 
     const changeStyle1 = () => {
         if (style === "navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow") {
@@ -12,42 +12,18 @@ function Header({ onSearch }) {
             setStyle("navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow");
         }
     };
-
-    const handleSearchChange = (event) => {
-        setSearchTerm(event.target.value);
-        onSearch(event.target.value); 
-    };
-
     return (
         <div id="content-wrapper" className="d-flex flex-column">
             {/* Main Content */}
             <div id="content">
                 {/* Topbar */}
-                <nav className={style} style={{ paddingLeft: '500px' }}>
+                <nav className={style} style={{ paddingLeft: '800px' }}>
                     {/* Sidebar Toggle (Topbar) */}
                     <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3" onClick={changeStyle1}>
                         <i className="fa fa-bars"></i>
                     </button>
                     <div className="d-flex justify-content-center">
-                        {/* Search Form */}
-                        <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div className="input-group">
-                                <input
-                                    type="text"
-                                    className="form-control bg-light border-0 small"
-                                    placeholder="Kerko..."
-                                    aria-label="Search"
-                                    aria-describedby="basic-addon2"
-                                    value={searchTerm}
-                                    onChange={handleSearchChange}
-                                />
-                                <div className="input-group-append">
-                                    <button className="btn btn-primary" type="button">
-                                        <i className="fas fa-search fa-sm"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                       
                         {/* Cart Button */}
                         <div style={{ marginLeft: '500px' }}>
                             {/* Butoni i shportes */}
@@ -102,7 +78,7 @@ function Header({ onSearch }) {
                         <div className="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                         <div className="modal-footer">
                             <button className="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                            <a className="btn btn-primary" href="/">Logout</a>
+                            <a className="btn btn-primary" href="/logout">Logout</a>
                         </div>
                     </div>
                 </div>

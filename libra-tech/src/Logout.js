@@ -12,6 +12,7 @@ const Logout = () => {
                 localStorage.clear(); // Clear all local storage items
                 console.log('localStorage was cleared');
                 navigate('/'); // Navigate to the login page
+                window.location.reload();
             } catch (error) {
                 console.error('Error during logout:', error);
             }

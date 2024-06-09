@@ -26,7 +26,15 @@ namespace Lab1_Backend.Services
 
         public async Task<(string Token, string Roli, int ID, string Emri, string Mbiemri, string KlientiGjinia, string KlientiQyteti, string Email, string Password)> AuthenticateAndGetJwtToken(LoginModel loginModel)
         {
-            var user = await _dbContext.Klienti.FirstOrDefaultAsync(x => x.Email == loginModel.Email);
+            Klienti? user = null;
+            try
+            {
+                user = await _dbContext.Klienti.FirstOrDefaultAsync(x => x.Email == loginModel.Email);
+            }
+            catch (Exception ex)
+            {
+
+            }
 
             if (user != null && user.Password == loginModel.Password)
             {

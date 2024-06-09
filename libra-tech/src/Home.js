@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { variables } from './Variables';
 import { Link } from 'react-router-dom';
@@ -24,6 +25,11 @@ function Home() {
         fetchKategorite();
         fetchTipet();
     }, []);
+    
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+      
+    };
 
     const fetchLibrat = async () => {
         try {
@@ -89,9 +95,7 @@ function Home() {
         }
     };
 
-    const handleSearch = (searchTerm) => {
-        setSearchTerm(searchTerm);
-    };
+   
 
     const filteredLibrat = librat.filter(libri =>
         libri.Titulli.toLowerCase().includes(searchTerm.toLowerCase())
@@ -153,13 +157,31 @@ function Home() {
                 }
                 `}
             </style>
-            <Header onSearch={handleSearch} />
+            <Header/>
             <div>
                 <div className="row">
                     <div className="col-md-3">
                         <Sidebar />
                     </div>
                     <div className="col-md-9">
+                    <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div className="input-group">
+                                <input
+                                    type="text"
+                                    className="form-control bg-light border-0 small"
+                                    placeholder="Kerko..."
+                                    aria-label="Search"
+                                    aria-describedby="basic-addon2"
+                                    value={searchTerm}
+                                    onChange={handleSearchChange}
+                                />
+                                <div className="input-group-append">
+                                    <button className="btn btn-primary" type="button">
+                                        <i className="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form> 
                         {searchTerm ? (
                             <div className="row">
                                 {filteredLibrat.length > 0 ? (
@@ -362,4 +384,3 @@ function Home() {
 }
 
 export default Home;
-

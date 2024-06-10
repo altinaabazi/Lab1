@@ -166,6 +166,7 @@ import DetajetELibrit from './DetajetELibrit';
 import DetajetEMjetit from './DetajetEMjetit';
 import KlientiQyteti from './KlientiQyteti';
 import { PorosiaService } from './PorosiaService';
+import StafiSchedule from './StafiSchedule';
 // import  Profile  from './Profile';
 
 import ProtectedRoute from './ProtectedRoute';  // Import the ProtectedRoute component
@@ -203,6 +204,7 @@ function App() {
         <Route path='/shtepiaBotuese' element={<ShtepiaBotuese />} />
         <Route path='/nrfaqeve' element={<NrFaqeve />} />
         <Route path='/njesia' element={<NgjyraMSh />} />
+        <Route path="/StafiSchedule" element={<StafiSchedule />} />
         {/* <Route path='/stafiGjinia' element={<StafiGjinia />} />
         <Route path='/stafiOrari' element={<StafiOrari />} />
         <Route path='/stafiSektori' element={<StafiSektori />} /> */}

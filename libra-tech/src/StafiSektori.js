@@ -63,16 +63,26 @@ export class StafiSektori extends Component {
                 Sektori: this.state.Sektori
             })
         })
-            .then(res => res.json())
-            .then((result) => {
-                alert('U shtua me sukses');
-                this.refreshList();
-                document.getElementById("exampleModal").classList.remove("show");
-                document.querySelector(".modal-backdrop").remove();
-            }, (error) => {
-                alert('Failed');
-            })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Something went wrong');
+            }
+        })
+        .then((result) => {
+            alert('U shtua me sukses');
+            this.refreshList();
+            document.getElementById("exampleModal").classList.remove("show");
+            document.querySelector(".modal-backdrop").remove();
+        })
+        .catch((error) => {
+            console.error('Failed:', error);
+            alert('Failed');
+        });
     }
+    
+
 
 
     updateClick() {
@@ -87,15 +97,23 @@ export class StafiSektori extends Component {
                 Sektori: this.state.Sektori
             })
         })
-            .then(res => res.json())
-            .then((result) => {
-                alert('Failed');
-
-            }, (error) => {
-                alert('Updated');
-                this.refreshList();
-            })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Something went wrong');
+            }
+        })
+        .then((result) => {
+            alert('Updated');
+            this.refreshList();
+        })
+        .catch((error) => {
+            console.error('Failed to update:', error);
+            alert('Failed');
+        });
     }
+    
 
     deleteClick(id) {
         if (window.confirm('A jeni i sigurt?')) {

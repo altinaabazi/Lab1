@@ -145,7 +145,7 @@ function Dashboard() {
                             <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                                 <div className="bg-white py-2 collapse-inner rounded">
                                     <a className="collapse-item" href="buttons.html">My Profile</a>
-                                    <a className="collapse-item" href="cards.html">Edit Profile</a>
+                                    <a className="collapse-item" href="EditProfile.js">Edit Profile</a>
                                 </div>
                             </div>
                         </li>

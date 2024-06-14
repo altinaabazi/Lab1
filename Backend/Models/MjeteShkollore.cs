@@ -17,5 +17,7 @@ namespace Lab1_Backend.Models
         public string ImgPath { get; set; }
         public double Cmimi { get; set; }
         public int Sasia { get; set; }
+
+       
     }
 }

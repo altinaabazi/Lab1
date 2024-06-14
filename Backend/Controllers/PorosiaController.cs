@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Lab1_Backend.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.InteropServices;
 
 namespace Lab1_Backend.Controllers
 {
@@ -10,7 +11,7 @@ namespace Lab1_Backend.Controllers
     [ApiController]
     public class PorosiaController : ControllerBase
     {
-        private readonly LibrariaContext _context; // MyDbContext është konteksti i bazës së të dhënave
+        private readonly LibrariaContext _context;
 
         public PorosiaController(LibrariaContext context)
         {
@@ -38,32 +39,48 @@ namespace Lab1_Backend.Controllers
             return Ok(porosia);
         }
 
+
+        public class ShportaItem
+        {
+            public int Klienti { get; set; }
+            public int Id { get; set; }
+            public bool IsBook { get; set; }
+        }
         // POST: api/Porosia
         [HttpPost]
-        public IActionResult PostPorosia(Porosia porosia)
+        public async Task<IActionResult> Porosia(List<ShportaItem> resultArray)
         {
-            porosia.Data = DateTime.Now; // Vendos datën aktuale për porosinë
-
-            _context.Porosia.Add(porosia);
-            _context.SaveChanges();
-
-            return CreatedAtAction(nameof(GetPorosia), new { id = porosia.ID }, porosia);
-        }
-
-        // PUT: api/Porosia/5
-        [HttpPut("{id}")]
-        public IActionResult PutPorosia(int id, Porosia porosia)
-        {
-            if (id != porosia.ID)
+            try
             {
-                return BadRequest();
+                if (resultArray != null)
+                {
+
+                    var porosia = new Porosia()
+                    {
+                        CmimiTotal = 3.4,
+                        Data = DateTime.Now,
+                        KlientiID = resultArray.Select(e => e.Klienti).FirstOrDefault(),
+                        Produktet = resultArray.Select(item => new Produkti
+                        {
+                            LibriID = item.IsBook ? item.Id : null,
+                            MjeteShkolloreID = !item.IsBook ? item.Id : null
+                        }).ToList(),
+                    };
+
+                    await _context.Porosia.AddAsync(porosia);
+
+                    await _context.SaveChangesAsync();
+                }
+            }catch(Exception ex)
+            {
+
             }
 
-            _context.Entry(porosia).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            _context.SaveChanges();
-
-            return NoContent();
+            return Ok("Orders processed successfully.");
         }
+
+
+       
 
         // DELETE: api/Porosia/5
         [HttpDelete("{id}")]

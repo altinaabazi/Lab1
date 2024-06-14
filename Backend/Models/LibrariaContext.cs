@@ -46,7 +46,7 @@
             /*Porosia*/
             public DbSet<Shporta> Shporta { get; set; }
             public DbSet<Porosia> Porosia { get; set; }
-      
+            public DbSet<Produkti> Produkti { get; set; }
 
 
 
@@ -57,5 +57,6 @@
 
 
 
-        }
+
+    }
     }

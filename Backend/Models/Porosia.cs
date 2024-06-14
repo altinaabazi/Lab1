@@ -13,11 +13,7 @@ namespace Lab1_Backend.Models
         public int KlientiID { get; set; }  // Foreign key for Klienti
 
         [ForeignKey("KlientiID")]
-        public Klienti Klienti { get; set; }  // Reference to Klienti
-
-        public List<Libri> Librat { get; set; } = new List<Libri>();  // List of ordered books, initialized
-
-        public List<MjeteShkollore> Mjetet { get; set; } = new List<MjeteShkollore>();  // List of ordered school supplies, initialized
+        public Klienti Klienti { get; set; }  
 
         [Required]
         [Range(0, double.MaxValue, ErrorMessage = "CmimiTotal must be a positive number.")]
@@ -25,5 +21,6 @@ namespace Lab1_Backend.Models
 
         [Required]
         public DateTime Data { get; set; }
+        public List<Produkti> Produktet { get; set; }
     }
 }

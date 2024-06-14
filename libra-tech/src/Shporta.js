@@ -6,6 +6,8 @@ import Sidebar from './Sidebar';
 import Footer from './Footer';
 import { variables } from './Variables';
 
+
+
 const Shporta = () => {
   const [cart, setCart] = useState([]);
   const [libra, setLibra] = useState([]);
@@ -33,28 +35,27 @@ const Shporta = () => {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
-  const placeOrder = () => {
-    const orderData = {
-      Klienti: {
-        // Shtoni të dhënat e klientit sipas nevojës
-      },
-      Porosia: {
-        Libra: libra,
-        MjetetShkollore: mjetetShkollore
-      }
-    };
-
-    axios.post('/api/Porosia', orderData)
-      .then(response => {
+  
+   const placeOrder = async () =>  {
+    try {
+        let resultArray = JSON.parse(localStorage.getItem('shporta')).map(item => {
+            return {
+                Klienti: Number(localStorage.getItem('ID')),
+                Id: item.ID,
+                IsBook: !!item.Titulli 
+            };
+        });
+    
+      await axios.post('http://localhost:5170/api/Porosia', resultArray).then((e) =>{
         localStorage.removeItem('shporta');
         setLibra([]);
         setMjetetShkollore([]);
         setCart([]);
-        // Rifresko faqen ose kryej ndonjë veprim tjetër pas porosisë së suksesshme
-      })
-      .catch(error => {
-        // Traktoni gabimet nëse ka
-      });
+     })
+    
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (

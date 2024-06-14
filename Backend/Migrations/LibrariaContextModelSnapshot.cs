@@ -260,9 +260,6 @@ namespace Backend.Migrations
                     b.Property<string>("Pershkrimi")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PorosiaID")
-                        .HasColumnType("int");
-
                     b.Property<int>("Sasia")
                         .HasColumnType("int");
 
@@ -276,8 +273,6 @@ namespace Backend.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("PorosiaID");
 
                     b.ToTable("Libri");
                 });
@@ -325,9 +320,6 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PorosiaID")
-                        .HasColumnType("int");
-
                     b.Property<string>("ProdhuesiMSh")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -344,8 +336,6 @@ namespace Backend.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("PorosiaID");
 
                     b.ToTable("MjeteShkollore");
                 });
@@ -420,6 +410,36 @@ namespace Backend.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("ProdhuesiMSh");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.Produkti", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int?>("LibriID")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MjeteShkolloreID")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int>("PorosiaID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("LibriID");
+
+                    b.HasIndex("MjeteShkolloreID");
+
+                    b.HasIndex("PorosiaID");
+
+                    b.ToTable("Produkti");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.QytetiLibraria", b =>
@@ -632,20 +652,6 @@ namespace Backend.Migrations
                     b.ToTable("Tipi");
                 });
 
-            modelBuilder.Entity("Lab1_Backend.Models.Libri", b =>
-                {
-                    b.HasOne("Lab1_Backend.Models.Porosia", null)
-                        .WithMany("Librat")
-                        .HasForeignKey("PorosiaID");
-                });
-
-            modelBuilder.Entity("Lab1_Backend.Models.MjeteShkollore", b =>
-                {
-                    b.HasOne("Lab1_Backend.Models.Porosia", null)
-                        .WithMany("Mjetet")
-                        .HasForeignKey("PorosiaID");
-                });
-
             modelBuilder.Entity("Lab1_Backend.Models.Porosia", b =>
                 {
                     b.HasOne("Lab1_Backend.Models.Klienti", "Klienti")
@@ -655,6 +661,33 @@ namespace Backend.Migrations
                         .IsRequired();
 
                     b.Navigation("Klienti");
+                });
+
+            modelBuilder.Entity("Lab1_Backend.Models.Produkti", b =>
+                {
+                    b.HasOne("Lab1_Backend.Models.Libri", "Libri")
+                        .WithMany()
+                        .HasForeignKey("LibriID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Lab1_Backend.Models.MjeteShkollore", "MjeteShkollore")
+                        .WithMany()
+                        .HasForeignKey("MjeteShkolloreID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Lab1_Backend.Models.Porosia", "Porosia")
+                        .WithMany("Produktet")
+                        .HasForeignKey("PorosiaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Libri");
+
+                    b.Navigation("MjeteShkollore");
+
+                    b.Navigation("Porosia");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Shporta", b =>
@@ -686,9 +719,7 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Lab1_Backend.Models.Porosia", b =>
                 {
-                    b.Navigation("Librat");
-
-                    b.Navigation("Mjetet");
+                    b.Navigation("Produktet");
                 });
 #pragma warning restore 612, 618
         }

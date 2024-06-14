@@ -1,342 +1,407 @@
 import React, { Component } from 'react';
 import { variables } from './Variables.js';
+import StafiOrari from './StafiOrari.js';
+import { Gjuha } from './Gjuha.js';
 import Header from './Header';
 import Footer from './Footer';
-import Sidebar from './Sidebar';
-import './StafiSchedule.css';
+import Sidebar from './Sidebar.js';
+import { useHref } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class StafiSchedule extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
+      gjinite: [],
+      stafet: [],
+      sektoret: [],
+      oraret: [],
       schedules: [],
       modalTitle: "",
-      scheduleId: 0,
-      fillon: "",
-      mbaron: "",
-      sektori: "",
-      stafi: ""
+      IDStafi: 0,
+      Emri: "",
+      Mbiemri: "",
+      StafiGjinia: "",
+      StafiOrari: "",
+      StafiSektori: "",
+      Pervoja:"",
+      ZipCode: 0,
+      isFormValid: false,
     };
-  
+
     this.handleModalHidden = this.handleModalHidden.bind(this);
-    this.addClick = this.addClick.bind(this);  // Bind addClick
-    this.editClick = this.editClick.bind(this);  // Bind editClick
-    this.deleteClick = this.deleteClick.bind(this);  // Bind deleteClick
-    this.changeFillon = this.changeFillon.bind(this);  // And so on for other methods...
-    this.changeMbaron = this.changeMbaron.bind(this);
-    this.changeSektori = this.changeSektori.bind(this);
-    this.changeStafi = this.changeStafi.bind(this);
-    console.log('Constructor called');
   }
-  
 
   componentDidMount() {
-    console.log('Component did mount');
-    this.refreshSchedules();
-    const modal = document.getElementById("scheduleModal");
-    if (modal) {
-      modal.addEventListener("hidden.bs.modal", this.handleModalHidden);
-      console.log('Event listener added');
-    } else {
-      console.log('Modal not found');
-    }
+    this.refreshList();
+    const modal = document.getElementById("exampleModal");
+    modal.addEventListener("hidden.bs.modal", this.handleModalHidden);
   }
 
   componentWillUnmount() {
-    console.log('Component will unmount');
-    const modal = document.getElementById("scheduleModal");
-    if (modal) {
-      modal.removeEventListener("hidden.bs.modal", this.handleModalHidden);
-      console.log('Event listener removed');
-    }
+    const modal = document.getElementById("exampleModal");
+    modal.removeEventListener("hidden.bs.modal", this.handleModalHidden);
   }
 
   handleModalHidden() {
-    console.log('Modal hidden');
+    // Reset modal state values
     this.setState({
       modalTitle: "",
-      scheduleId: 0,
-      fillon: "",
-      mbaron: "",
-      sektori: "",
-      stafi: ""
+      IDStafi: 0,
+      Emri: "",
+      Mbiemri: "",
+      StafiOrari: "",
+      StafiSchedule:"",
+      StafiSektori: "",
+      isFormValid: false,
+  
     });
   }
-  refreshSchedules() {
-    fetch(variables.API_URL + 'StafiSchedule')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ schedules: data });
-      })
-      .catch(error => console.error('Error fetching schedules:', error));
+
+  validateForm = () => {
+    const { Emri, Mbiemri,  StafiOrari,StafiSchedule, StafiSektori } = this.state;
+    return Emri && Mbiemri && StafiOrari && StafiSchedule && StafiSektori ;
+  };
+
+  refreshList() {
+    const apiUrl = variables.API_URL;
+    Promise.all([
+        fetch(`${apiUrl}StafiSchedule`).then(res => res.json()),  // New API with schedule and id
+        fetch(`${apiUrl}StafiSektori`).then(res => res.json()),   // Existing StafiSektori API
+        fetch(`${apiUrl}stafi`).then(res => res.json()),           // Existing Stafi API
+        fetch(`${apiUrl}StafiOrari`).then(res => res.json())       
+    ]).then(([schedules, sektoret, stafet, oraret]) => {
+        this.setState({
+            schedules: schedules,
+            sektoret: sektoret,
+            stafet: stafet,
+            oraret: oraret,  
+        });
+    }).catch(error => {
+        console.error('Error fetching data:', error);
+    });
 }
 
 
-  changeFillon = (e) => {
-    console.log('Changing fillon');
-    this.setState({ fillon: e.target.value });
+
+  changeEmri = (e) => {
+    this.setState({ Emri: e.target.value });
   }
-  changeMbaron = (e) => {
-    console.log('Changing mbaron');
-    this.setState({ mbaron: e.target.value });
+  changeMbiemri = (e) => {
+    this.setState({ Mbiemri: e.target.value });
   }
-  changeSektori = (e) => {
-    console.log('Changing sektori');
-    this.setState({ sektori: e.target.value });
+
+  changeStafiOrari = (e) => {
+    this.setState({ StafiOrari: e.target.value });
   }
-  changeStafi = (e) => {
-    console.log('Changing stafi');
-    this.setState({ stafi: e.target.value });
+  changeStafiSchedule = (e) => {
+    this.setState({ StafiSchedule: e.target.value });
   }
+  changeStafiSektori = (e) => {
+    this.setState({ StafiSektori: e.target.value });
+  }
+  
 
   addClick() {
-    console.log('Adding schedule',);
     this.setState({
-      modalTitle: "Add Schedule",
-      scheduleId: 0,
-      fillon: "",
-      mbaron: "",
-      sektori: "",
-      stafi: ""
+      modalTitle: "Shto Stafin",
+      IDStafi: 0,
+      Emri: "",
+      Mbiemri: "",
+      StafiOrari: "",
+      StafiSchedule: "",
+      StafiSektori: ""
     });
   }
-
-  editClick(schedule) {
-    console.log('Editing schedule', schedule);
+  editClick(emp) {
+    console.log("Editing employee:", emp);
     this.setState({
-      modalTitle: "Edit Schedule",
-      scheduleId: schedule.scheduleId,
-      fillon: schedule.fillon,
-      mbaron: schedule.mbaron,
-      sektori: schedule.sektori,
-      stafi: schedule.stafi
+      modalTitle: "Ndrysho Stafin",
+      IDStafi: emp.IDStafi,
+      Emri: emp.Emri,
+      Mbiemri: emp.Mbiemri,
+      StafiOrari: emp.StafiOrari,
+      StafiSchedule: emp.StafiSchedule,
+      StafiSektori: emp.StafiSektori,
     });
   }
+  
 
 
- 
-  createStaffSchedule() {
-    fetch(variables.API_URL + 'schedule', {
+  createClick() {
+    fetch(variables.API_URL + 'stafi', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            fillon: this.state.fillon,
-            mbaron: this.state.mbaron,
-            sektori: this.state.sektori,
-            stafi: this.state.stafi,
+            Emri: this.state.Emri,
+            Mbiemri: this.state.Mbiemri,
+            StafiOrari: this.state.StafiOrari,
+            StafiSchedule: this.state.StafiSchedule,
+            StafiSektori: this.state.StafiSektori,
         })
     })
-    .then(res => {
-        if (!res.ok) {
-            return res.json().then(data => Promise.reject(data));
-        }
-        return res.json();
-    })
-    .then(result => {
+    .then(res => res.json())
+    .then((result) => {
         alert('U shtua me sukses');
-        this.refreshSchedules();
+        // Add the newly created schedule to the local state
+        this.setState(prevState => ({
+            stafet: [...prevState.stafet, {
+                IDStafi: result.IDStafi,
+                Emri: prevState.Emri,
+                Mbiemri: prevState.Mbiemri,
+                StafiOrari: prevState.StafiOrari,
+                StafiSchedule: prevState.StafiSchedule,
+                StafiSektori: prevState.StafiSektori,
+            }]
+        }));
+        // Clear the form fields
+        this.setState({
+            Emri: "",
+            Mbiemri: "",
+            StafiOrari: "",
+            StafiSchedule: "",
+            StafiSektori: ""
+        });
+        // Close the modal
         document.getElementById("exampleModal").classList.remove("show");
         document.querySelector(".modal-backdrop").remove();
-        this.setState({
-            fillon: "",
-            mbaron: "",
-            sektori: "",
-            stafi: "",
-            scheduleId: 0
-        });
     })
     .catch(error => {
-        console.error('Failed to create staff schedule:', error);
-        alert('Failed: ' + (error.message || 'Unknown Error'));
+        console.error('Error adding schedule:', error);
+        alert('Failed');
     });
 }
 
 
-
-  updateStaffSchedule() {
-    fetch(variables.API_URL + 'schedule', {
+updateClick() {
+  fetch(variables.API_URL + 'stafi', {
       method: 'PUT',
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        fillon: this.state.fillon,
-        mbaron: this.state.mbaron,
-        sektori: this.state.sektori,
-        stafi: this.state.stafi,
+        Emri: "",
+        Mbiemri: "",
+        StafiOrari: "",
+        StafiSchedule: "",
+        StafiSektori: ""
+
       })
-    })
+  })
       .then(res => {
-        if (res.ok) {
-          alert('Updated');
-          this.refreshSchedules();
-          document.getElementById("exampleModal").classList.remove("show");
-          document.querySelector(".modal-backdrop").remove();
+          if (res.ok) {
+              alert('Updated');
+              this.refreshList();
+              document.getElementById("exampleModal").classList.remove("show");
+              document.querySelector(".modal-backdrop").remove();
 
 
-        } else {
-          alert('Failed');
-        }
+          } else {
+              alert('Failed');
+          }
       })
       .catch(error => {
-        console.error('Error updating book:', error);
-        alert('Failed');
+          console.error('Error updating schedule:', error);
+          alert('Failed');
       });
-  }
-
-saveStaffSchedule = () => {
-    const { scheduleId, fillon, mbaron, sektori, stafi } = this.state;
-    const url = scheduleId ? `${variables.API_URL}StafiSchedule/${scheduleId}` : `${variables.API_URL}StafiSchedule`;
-    const method = scheduleId ? 'PUT' : 'POST';
-    const body = JSON.stringify({
-        fillon, mbaron, sektori, stafi
-    });
-
-    console.log(method === 'POST' ? 'Creating staff schedule' : 'Updating staff schedule:', body);
-
-    fetch(url, {
-        method: method,
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: body
-    })
-    .then(res => {
-        if (!res.ok) throw new Error('Response not OK');
-        return res.json();
-    })
-    .then(result => {
-        alert(`Staff schedule ${scheduleId ? 'updated' : 'added'} successfully`);
-        this.refreshSchedules();
-        document.getElementById("scheduleModal").classList.remove("show");
-        document.querySelector(".modal-backdrop").remove();
-    })
-    .catch(error => {
-        console.error(`Failed to ${scheduleId ? 'update' : 'add'} staff schedule:`, error);
-        alert(`Failed to ${scheduleId ? 'update' : 'add'} staff schedule`);
-    });
 }
 
+
   deleteClick(id) {
-    console.log('Deleting schedule', id);
-    if (window.confirm('Are you sure?')) {
-      fetch(variables.API_URL + 'schedule/' + id, {
+    if (window.confirm('A jeni i sigurt?')) {
+      fetch(variables.API_URL + 'Stafi/' + id, {
         method: 'DELETE',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         }
       })
-      .then(res => {
-        if (!res.ok) {
-          throw new Error('Delete response not OK');
-        }
-        return res.json();
-      })
-      .then(result => {
-        console.log('Delete result', result);
-        alert('Schedule Deleted');
-        this.refreshSchedules();
-      })
-      .catch(error => {
-        console.error('Failed to delete schedule:', error);
-        alert('Failed to delete schedule');
-      });
+        .then(res => res.json())
+        .then((result) => {
+          alert('Failed');
+          this.refreshList();
+        }, (error) => {
+          alert('Success');
+          this.refreshList();
+        })
     }
   }
 
+
   render() {
     const {
+      sektoret,
       schedules,
+      oraret,
+      stafet,
       modalTitle,
-      fillon,
-      mbaron,
-      sektori,
-      stafi
+      IDStafi,
+      Emri,
+      Mbiemri,
+      StafiOrari,
+      StafiSchedule,
+      StafiSektori
     } = this.state;
 
-    console.log('Rendering component', this.state);
+
     return (
       <div>
-        <Header />
-        <Sidebar />
-        <div className="container-fluid" style={{ marginLeft: '110px' }}>
-          <table className='table table-striped'>
-            <thead>
-              <tr>
-                <th>Fillon</th>
-                <th>Mbaron</th>
-                <th>Sektori</th>
-                <th>Stafi</th>
-                <th>Options</th>
-              </tr>
-            </thead>
-            <tbody>
-              {schedules.map(schedule =>
-                <tr key={schedule.scheduleId}>
-                  <td>{schedule.fillon}</td>
-                  <td>{schedule.mbaron}</td>
-                  <td>{schedule.sektori}</td>
-                  <td>{schedule.stafi}</td>
-                  <td>
-                    <button className="btn btn-light mr-1" onClick={() => this.editClick(schedule)}>Edit</button>
-                    <button className="btn btn-danger" onClick={() => this.deleteClick(schedule.scheduleId)}>Delete</button>
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-          <div className="d-flex justify-content-end">
-            <button type="button" className="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#scheduleModal" onClick={this.addClick}>
-              Add New Schedule
-            </button>
-          </div>
-        </div>
-        <Footer />
-        {/* Modal Code */}
-        <div className="modal fade" id="scheduleModal" tabIndex="-1" aria-hidden="true">
-          <div className="modal-dialog modal-lg modal-dialog-centered">
-              <div className="modal-content">
-                  <div className="modal-header">
-                      <h5 className="modal-title">{modalTitle}</h5>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div className="modal-body">
-                      <form>
-                          <div className="mb-3">
-                              <label htmlFor="fillon" className="form-label">Fillimi i Orari-t</label>
-                              <input type="text" className="form-control" id="fillon" value={this.state.fillon} onChange={this.changeFillon} />
-                          </div>
-                          <div className="mb-3">
-                              <label htmlFor="mbaron" className="form-label">Mbarimi i Orari-t</label>
-                              <input type="text" className="form-control" id="mbaron" value={this.state.mbaron} onChange={this.changeMbaron} />
-                          </div>
-                          <div className="mb-3">
-                              <label htmlFor="sektori" className="form-label">Sektori</label>
-                              <input type="text" className="form-control" id="sektori" value={this.state.sektori} onChange={this.changeSektori} />
-                          </div>
-                          <div className="mb-3">
-                              <label htmlFor="stafi" className="form-label">Stafi</label>
-                              <input type="text" className="form-control" id="stafi" value={this.state.stafi} onChange={this.changeStafi} />
-                          </div>
-                      </form>
-                  </div>
-                  <div className="modal-footer">
-                      <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" className="btn btn-primary" onClick={this.createStaffSchedule}>Save Changes</button>
-                  </div>
+        <body id="page-top">
+          <Header />
+          <div className="container">
+
+
+            <Sidebar />
+            <div className="container-fluid" style={{ marginLeft: '110px', }}>
+             <div className='d-flex justify-content-between'>
+              <div>
+              
+              
               </div>
+              <div>
+              <button type="button"
+                className="btn btn-primary m-2 float-end"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                onClick={() => this.addClick()}>
+                Add new Schedule
+              </button>
+              </div>
+              </div>
+              <table className="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Emri</th>
+                    <th>Mbiemri</th>
+                    <th>Orari</th>
+                    <th>Schedule</th>
+                    <th>Sektori</th>
+                    <th>Options</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stafet.map(emp =>
+                    <tr key={emp.IDStafi}>
+                      <td>{emp.IDStafi}</td>
+                      <td>{emp.Emri}</td>
+                      <td>{emp.Mbiemri}</td>
+                      <td>{emp.StafiOrari}</td>
+                      <td>{emp.StafiSchedule}</td>
+                      <td>{emp.StafiSektori}</td>
+                      <td>
+                        <button type="button"
+                          className="btn btn-light mr-1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          onClick={() => this.editClick(emp)}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-pencil-square" viewBox="0 0 16 16">
+                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                            <path fillRule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                          </svg>
+                        </button>
+
+                        <button type="button"
+                          className="btn btn-light mr-1"
+                          onClick={() => this.deleteClick(emp.IDStafi)}>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash-fill" viewBox="0 0 16 16">
+                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+
+
+              <div className="modal fade" id="exampleModal" tabIndex="-1" aria-hidden="true">
+                <div className="modal-dialog modal-lg modal-dialog-centered">
+                  <div className="modal-content" >
+                    <div className="modal-header">
+                      <h5 className="modal-title">{modalTitle}</h5>
+                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                    </div>
+
+                    <div className="modal-body">
+                      <div className="d-flex flex-row bd-highlight mb-3">
+                        <div className="p-2 w-50 bd-highlight">
+                          <div className="input-group mb-3">
+                            <span className="input-group-text">Emri</span>
+                            <input type="text" className="form-control"
+                              value={Emri}
+                              onChange={this.changeEmri} />
+                          </div>
+                          <div className="input-group mb-3">
+                            <span className="input-group-text">Mbiemri</span>
+                            <input type="text" className="form-control"
+                              value={Mbiemri}
+                              onChange={this.changeMbiemri} />
+                          </div>
+                          
+                          
+                          <div className="input-group mb-3">
+                            <span className="input-group-text">Orari</span>
+                            <select className="form-select"
+                              onChange={this.changeStafiOrari}
+                              value={StafiOrari}>
+                              {oraret.map(dep => <option key={dep.Id}>
+                                {dep.Orari}
+                              </option>)}
+                            </select>
+                          </div>
+                          <div className="input-group mb-3">
+                            <span className="input-group-text">Schedule</span>
+                            <select className="form-select"
+                              onChange={this.changeStafiSchedule}
+                              value={StafiSchedule}>
+                              {schedules.map(dep => <option key={dep.Id}>
+                                {dep.Schedule}
+                              </option>)}
+                            </select>
+                          </div>
+                          <div className="input-group mb-3">
+                            <span className="input-group-text">Sektori</span>
+                            <select className="form-select"
+                              onChange={this.changeStafiSektori}
+                              value={StafiSektori}>
+                              {sektoret.map(dep => <option key={dep.Id}>
+                                {dep.Sektori}
+                              </option>)}
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      {IDStafi === 0 ?
+                        <button type="button" className="btn btn-primary float-end"
+                          onClick={() => this.createClick()}
+                          disabled={!this.validateForm()}>
+                          Create
+                        </button> :
+                        <button type="button" className="btn btn-primary float-end"
+                          onClick={() => this.updateClick()}
+                          disabled={!this.validateForm()}>
+                          Update
+                        </button>
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Footer />
+            </div>
           </div>
-        </div>
+
+        </body>
       </div>
+
     );
-    
   }
 }
-
 export default StafiSchedule;

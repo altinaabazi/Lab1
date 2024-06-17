@@ -252,7 +252,12 @@ namespace Lab1_Backend.Controllers
 
             return CreatedAtAction("GetKlienti", new { id = klienti.ID }, klienti);
         }
-
+        [HttpGet("TotalKlienti")]
+        public async Task<ActionResult<int>> GetTotalKlienti()
+        {
+            var total = await _dbContext.Klienti.CountAsync();
+            return total;
+        }
         // DELETE: api/Klienti/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteKlienti(int id)

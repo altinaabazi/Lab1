@@ -67,7 +67,12 @@ namespace Lab1_Backend.Controllers
             }
             return Ok();
         }
-
+        [HttpGet("TotalStafi")]
+        public async Task<ActionResult<int>> GetTotalStafi()
+        {
+            var total = await _stafi.Stafi.CountAsync();
+            return total;
+        }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteStafi(int id)

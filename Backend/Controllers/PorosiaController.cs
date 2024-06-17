@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Lab1_Backend.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 namespace Lab1_Backend.Controllers
 {
@@ -51,6 +52,7 @@ namespace Lab1_Backend.Controllers
         [HttpPost]
         public async Task<IActionResult> Porosia(List<ShportaItem> resultArray)
         {
+
             try
             {
                 double cmimiTotal = 0;
@@ -98,8 +100,22 @@ namespace Lab1_Backend.Controllers
             }
         }
 
-        // DELETE: api/Porosia/5
-        [HttpDelete("{id}")]
+
+        [HttpGet("CountOnDate/{date}")]
+        public async Task<ActionResult<int>> CountPorositeOnDate(DateTime date)
+        {
+
+
+            int numerPorosish = await _context.Porosia
+                .Where(p => EF.Functions.DateDiffDay(p.Data, date) == 0)
+                .CountAsync();
+
+            return numerPorosish;
+
+        }
+       
+    // DELETE: api/Porosia/5
+    [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePorosia(int id)
         {
             var porosia = await _context.Porosia.FindAsync(id);

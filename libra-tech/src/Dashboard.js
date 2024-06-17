@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import './Dashboard.css';
 import React, { useState, useEffect } from 'react';
 import { variables } from './Variables';
+import { useAuth } from './AuthProvider';
+import axios from 'axios';
 
 function Dashboard() {
+    const { isAuthenticated, user, logout } = useAuth();
     const [style, setStyle] = useState("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion");
 
     const changeStyle = () => {
@@ -21,6 +24,22 @@ function Dashboard() {
         }
         else {
             setStyle("navbar-nav bg-gradient-primary sidebar sidebar-dark accordion")
+        }
+    };
+    const [porositeCount, setPorositeCount] = useState(null);
+    const currentDate = new Date().toISOString().split('T')[0]; // Merr datën e sotme në formatin 'yyyy-MM-dd'
+
+    useEffect(() => {
+        // Kur komponenti ngarkohet, thirr funksionin për të numëruar porositët për datën aktuale
+        countPorosite(currentDate);
+    }, []); // [] siguron që useEffect thirret vetëm një herë në fillim
+
+    const countPorosite = async (date) => {
+        try {
+            const response = await axios.get(`http://localhost:5170/api/Porosia/CountOnDate/${date}`);
+            setPorositeCount(response.data);
+        } catch (error) {
+            console.error('Gabim gjatë kërkesës në backend:', error);
         }
     };
     const [totalLibrat, setTotalLibrat] = useState(0);
@@ -41,6 +60,44 @@ function Dashboard() {
             console.error('Error fetching data:', error);
         }
     };
+    const [totalKlienti, setTotalKlienti] = useState(0);
+
+    useEffect(() => {
+        fetchtotalKlienti();
+    }, []);
+
+    const fetchtotalKlienti = async () => {
+        try {
+            const response = await fetch(variables.API_URL + 'klienti/TotalKlienti');
+            if (!response.ok) {
+                throw new Error('Error fetching data');
+            }
+            const data = await response.json();
+            setTotalKlienti(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    const [totalStafi, setTotalStafi] = useState(0);
+
+    useEffect(() => {
+        fetchtotalStafi();
+    }, []);
+
+    const fetchtotalStafi = async () => {
+        try {
+            const response = await fetch(variables.API_URL + 'stafi/TotalStafi');
+            if (!response.ok) {
+                throw new Error('Error fetching data');
+            }
+            const data = await response.json();
+            setTotalStafi(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -145,7 +202,7 @@ function Dashboard() {
                             <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                                 <div className="bg-white py-2 collapse-inner rounded">
                                     <a className="collapse-item" href="buttons.html">My Profile</a>
-                                    <a className="collapse-item" href="EditProfile.js">Edit Profile</a>
+
                                 </div>
                             </div>
                         </li>
@@ -160,17 +217,17 @@ function Dashboard() {
                             </a>
                             <div id="collapseLibra" className="collapse" aria-labelledby="headingLibra"
                                 data-parent="#accordionSidebar">
-                               <div className="bg-white py-2 collapse-inner rounded">
-                                
-                               <div className="list-group">
-                                    {categories.map(kategoria => (
-                                        <Link key={kategoria.ID} to={`/kategoria/${kategoria.kategoria}/librat`} style={{ color: 'black' }} className="collapse-item">
-                                            {kategoria.kategoria}
-                                        </Link>
-                                    ))}
-                                </div>
+                                <div className="bg-white py-2 collapse-inner rounded">
 
-                            </div>
+                                    <div className="list-group">
+                                        {categories.map(kategoria => (
+                                            <Link key={kategoria.ID} to={`/kategoria/${kategoria.kategoria}/librat`} style={{ color: 'black' }} className="collapse-item">
+                                                {kategoria.kategoria}
+                                            </Link>
+                                        ))}
+                                    </div>
+
+                                </div>
                             </div>
                         </li>
 
@@ -182,17 +239,17 @@ function Dashboard() {
                             </a>
                             <div id="collapseLibra" className="collapse" aria-labelledby="headingLibra"
                                 data-parent="#accordionSidebar">
-                               <div className="bg-white py-2 collapse-inner rounded">
-                                
-                               <div className="list-group">
-                                    {tipet.map(tipi => (
-                                        <Link key={tipi.TipiID} to={`/tipi/${tipi.TipiEmri}/mjeteshkollore`} style={{ color: 'black' }} className="collapse-item">
-                                            {tipi.TipiEmri}
-                                        </Link>
-                                    ))}
-                                </div>
+                                <div className="bg-white py-2 collapse-inner rounded">
 
-                            </div>
+                                    <div className="list-group">
+                                        {tipet.map(tipi => (
+                                            <Link key={tipi.TipiID} to={`/tipi/${tipi.TipiEmri}/mjeteshkollore`} style={{ color: 'black' }} className="collapse-item">
+                                                {tipi.TipiEmri}
+                                            </Link>
+                                        ))}
+                                    </div>
+
+                                </div>
                             </div>
                         </li>
 
@@ -288,13 +345,13 @@ function Dashboard() {
                                 <ul className="navbar-nav ml-auto">
 
                                     {/*  <!-- Nav Item - Search Dropdown (Visible Only XS) --> */}
-                                    <li className="nav-item dropdown no-arrow d-sm-none">
+                                    {/* <li className="nav-item dropdown no-arrow d-sm-none">
                                         <a className="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i className="fas fa-search fa-fw"></i>
-                                        </a>
-                                        {/*   <!-- Dropdown - Messages --> */}
-                                        <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                        </a> */}
+                                    {/*   <!-- Dropdown - Messages --> */}
+                                    {/* <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                             aria-labelledby="searchDropdown">
                                             <form className="form-inline mr-auto w-100 navbar-search">
                                                 <div className="input-group">
@@ -309,40 +366,35 @@ function Dashboard() {
                                                 </div>
                                             </form>
                                         </div>
-                                    </li>
+                                    </li> */}
 
 
                                     {/* <!-- Nav Item - User Information --> */}
-                                    <li className="nav-item dropdown no-arrow">
-                                        <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span className="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
-                                            <img className="img-profile rounded-circle"
-                                                src="img/undraw_profile.svg" />
-                                        </a>
-                                        {/*  <!-- Dropdown - User Information --> */}
-                                        <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                            aria-labelledby="userDropdown">
-                                            <a className="dropdown-item" href="#">
-                                                <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Profile
-                                            </a>
-                                            <a className="dropdown-item" href="#">
-                                                <i className="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Settings
-                                            </a>
-                                            <a className="dropdown-item" href="#">
-                                                <i className="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Activity Log
-                                            </a>
-                                            <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                                <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                                Logout
-                                            </a>
-                                        </div>
-                                    </li>
+                                    {isAuthenticated ? (
+                                        <li className="nav-item dropdown no-arrow">
+                                            <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span className="mr-2 d-none d-lg-inline text-dark font-weight-bold text-uppercase">{user.emri}</span>
 
+
+                                            </a>
+                                            {/*  <!-- Dropdown - User Information --> */}
+                                            <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                                aria-labelledby="userDropdown">
+                                                <a className="dropdown-item" href="#">
+                                                    <i className="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                    Profile
+                                                </a>
+                                                <div className="dropdown-divider"></div>
+                                                <a className="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                                    <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                    Logout
+                                                </a>
+                                            </div>
+                                        </li>
+                                    ) : (
+                                        <Link className="btn btn-primary" to="/login">Login</Link>
+                                    )}
                                 </ul>
 
                             </nav>
@@ -354,21 +406,10 @@ function Dashboard() {
                                 {/*  <!-- Page Heading --> */}
                                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
                                     <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-
-                                    <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                        className="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                                </div>
-                                <div className="d-sm-flex align-items-center justify-content-between mb-4" >
-
-                                    <a href='Libri' className="h5 mb-0 text-gray-800">Librat</a>
-                                    <a href='MjeteShkollore' className="h5 mb-0 text-gray-800">Mjete Shkollore</a>
-                                    <a href='Porosia' className="h5 mb-0 text-gray-800">Porosite</a>
-                                    <a href='Stafi' className="h5 mb-0 text-gray-800">Stafi</a>
-                                    <a href='Klienti' className="h5 mb-0 text-gray-800">Klientet</a>
                                 </div>
 
                                 {/*  <!-- Content Row --> */}
-                                
+
                                 <div className="row">
 
                                     {/*  <!-- Earnings (Monthly) Card Example --> */}
@@ -378,11 +419,11 @@ function Dashboard() {
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
                                                         <div className="text-m font-weight-bold text-success text-uppercase mb-1">
-                                                            Total Librat: </div>
-                                                            <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalLibrat}</div>
+                                                            Librat: </div>
+                                                        <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalLibrat}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                        <i className="fas fa-book large-icon"></i>
+                                                    <a href='Libri' className="h5 mb-0 text-gray-800"> <i className="fas fa-book large-icon"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -396,57 +437,74 @@ function Dashboard() {
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
                                                         <div className="text-m font-weight-bold text-success text-uppercase mb-1">
-                                                            Total MjetetShkollore: </div>
-                                                            <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalMjetet}</div>
+                                                            MjetetShkollore: </div>
+                                                        <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalMjetet}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                        <i className="fas fa-book large-icon"></i>
+                                                        
+                                                    <a href='MjeteShkollore' className="h5 mb-0 text-gray-800"> <i className="fas fa-book large-icon"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    {/*  <!-- Earnings (Monthly) Card Example --> */}
                                     <div className="col-xl-3 col-md-6 mb-4">
-                                        <div className="card border-left-info shadow h-100 py-2">
+                                        <div className="card border-left-primary shadow h-100 py-2">
                                             <div className="card-body">
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
-                                                        <div className="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                                        </div>
-                                                        <div className="row no-gutters align-items-center">
-                                                            <div className="col-auto">
-                                                                <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                            </div>
-                                                            <div className="col">
-                                                                <div className="progress progress-sm mr-2">
-                                                                    <div className="progress-bar bg-info a1" role="progressbar"
-                                                                    ></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        <div className="text-m font-weight-bold text-success text-uppercase mb-1">
+                                                            Klientat: </div>
+                                                        <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalKlienti}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                        <i className="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                                    <a href='klienti' className="h5 mb-0 text-gray-800"><i class="fa fa-user" aria-hidden="true"></i></a>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="col-xl-3 col-md-6 mb-4">
+                                        <div className="card border-left-primary shadow h-100 py-2">
+                                            <div className="card-body">
+                                                <div className="row no-gutters align-items-center">
+                                                    <div className="col mr-2">
+                                                        <div className="text-m font-weight-bold text-success text-uppercase mb-1">
+                                                            Stafi: </div>
+                                                        <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalStafi}</div>
+                                                    </div>
+                                                    <div className="col-auto">
+                                                    <a href='stafi' className="h5 mb-0 text-gray-800"><i class="fa fa-user" aria-hidden="true"></i></a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div className="d-sm-flex align-items-center justify-content-between mb-4" >
+
+                                   
+                                    <a href='Porosia' className="h5 mb-0 text-gray-800">Porosite</a>
+                                    
+                                </div>
+                                   
 
                                     {/*  <!-- Pending Requests Card Example --> */}
                                     <div className="col-xl-3 col-md-6 mb-4">
-                                        <div className="card border-left-warning shadow h-100 py-2">
+                                    <div className="card border-left-info shadow h-100 py-2">
                                             <div className="card-body">
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
-                                                        <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                            Pending Requests</div>
-                                                        <div className="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                                        <div>
+                                                            <p>Numri i porosive për datën {currentDate}:</p>
+                                                        </div>
+                                                        <div className="h3 mb-0 font-weight-bold text-gray-800"> {porositeCount !== null ? porositeCount : 'Loading...'}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                        <i className="fas fa-comments fa-2x text-gray-300"></i>
+                                                    <a href='Porosia' className="h5 mb-0 text-gray-800"> <i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                                                   
                                                     </div>
                                                 </div>
                                             </div>
@@ -478,6 +536,7 @@ function Dashboard() {
                                                         <div className="dropdown-divider"></div>
                                                         <a className="dropdown-item" href="#">Something else here</a>
                                                     </div>
+                                                    
                                                 </div>
                                             </div>
                                             {/*  <!-- Card Body --> */}
@@ -485,6 +544,7 @@ function Dashboard() {
                                                 <div className="chart-area">
                                                     <canvas id="myAreaChart"></canvas>
                                                 </div>
+                                          
                                             </div>
                                         </div>
                                     </div>

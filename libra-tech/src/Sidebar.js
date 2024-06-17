@@ -122,7 +122,6 @@
                             <div id="collapseUserProfile" className="collapse" aria-labelledby="headingUserProfile" data-parent="#accordionSidebar">
                                 <div className="bg-white py-2 collapse-inner rounded">
                                     <a className="collapse-item" href="/UserProfile">My Profile</a>
-                                    <a className="collapse-item" href="/EditProfile">Edit Profile</a>
                                 </div>
                             </div>
                         </li>

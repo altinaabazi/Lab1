@@ -35,8 +35,9 @@ const Shporta = () => {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
-  
+
    const placeOrder = async () =>  {
+    debugger
     try {
         let resultArray = JSON.parse(localStorage.getItem('shporta')).map(item => {
             return {
@@ -45,7 +46,6 @@ const Shporta = () => {
                 IsBook: !!item.Titulli 
             };
         });
-    
       await axios.post('http://localhost:5170/api/Porosia', resultArray).then((e) =>{
         localStorage.removeItem('shporta');
         setLibra([]);

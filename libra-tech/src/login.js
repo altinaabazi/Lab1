@@ -32,6 +32,7 @@ function Login() {
                     password: data.Password // Note: Avoid storing passwords in local storage in production
                 });
                 navigate('/home');
+                window.location.reload();
             } else {
                 setErrorMessage(data.message || 'Invalid email or password.');
             }

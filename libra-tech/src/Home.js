@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { variables } from './Variables';
 import { Link } from 'react-router-dom';

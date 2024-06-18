@@ -386,7 +386,7 @@ function Home() {
 
                                                         {user && user.roli === 'User' && (
 
-                                                        <Link onClick={() => addToWishList(mjeti)} className="btn btn-outline-danger">
+                                                        <Link onClick={() => addToWishList(mjeti)} className="btn btn-outline-danger" style={{marginLeft:'8px'}}>
                                                             <i className="fa fa-heart" aria-hidden="true"></i>
                                                         </Link>
                                                         )}
@@ -416,7 +416,7 @@ function Home() {
             </Modal>
             <Modal show={showWishListModal} onHide={handleCloseWishListModal}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Shtimi ne Listen e Deshirave <i class="fa fa-check" aria-hidden="true"></i></Modal.Title>
+                    <Modal.Title> WishList <i class="fa fa-check" aria-hidden="true"></i></Modal.Title>
                 </Modal.Header>
 <               Modal.Body>Produkti eshte shtuar me sukses ne listen e deshirave!</Modal.Body>
                 <Modal.Footer>

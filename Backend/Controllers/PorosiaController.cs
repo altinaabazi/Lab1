@@ -130,5 +130,37 @@ namespace Lab1_Backend.Controllers
 
             return NoContent();
         }
+        [HttpGet("TopProducts")]
+        public async Task<ActionResult<IEnumerable<object>>> GetTopProducts()
+        {
+            var topLibra = await _context.Produkti
+                .Where(p => p.LibriID != null)
+                .GroupBy(p => new { p.LibriID, p.Libri.Titulli })
+                .Select(g => new
+                {
+                    ProduktID = g.Key.LibriID,
+                    EmriProduktit = g.Key.Titulli,
+                    NumriShitjeve = g.Count()
+
+                })
+                .ToListAsync();
+
+            var topMjete = await _context.Produkti
+                .Where(p => p.MjeteShkolloreID != null)
+                .GroupBy(p => new { p.MjeteShkolloreID, p.MjeteShkollore.Tipi })
+                .Select(g => new
+                {
+                    ProduktID = g.Key.MjeteShkolloreID,
+                    EmriProduktit = g.Key.Tipi,
+                    NumriShitjeve = g.Count()
+                })
+                .ToListAsync();
+
+            var topProducts = topLibra.Concat(topMjete)
+                .OrderByDescending(p => p.NumriShitjeve)
+                .ToList();
+
+            return Ok(topProducts);
+        }
     }
 }

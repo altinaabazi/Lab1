@@ -19,10 +19,13 @@ function LibratSipasKategorise() {
     const [searchTerm, setSearchTerm] = useState("");
     const [wishList, setWishList] = useState([]);
     const { user } = useAuth();
-   
+    const [showWishListModal, setShowWishListModal] = useState(false);
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
       
+    };
+    const handleCloseWishListModal = () => {
+        setShowWishListModal(false);
     };
     const filteredLibrat = librat.filter(libri =>
         libri.Titulli.toLowerCase().includes(searchTerm.toLowerCase())
@@ -59,7 +62,7 @@ function LibratSipasKategorise() {
         const wishList = JSON.parse(localStorage.getItem('WishList')) || [];
         wishList.push(libri);
         localStorage.setItem('WishList', JSON.stringify(wishList));
-      
+        setShowWishListModal(true);
     };
 
     if (loading) {
@@ -202,6 +205,18 @@ function LibratSipasKategorise() {
                     </Button>
                 </Modal.Footer>
             </Modal>
+            <Modal show={showWishListModal} onHide={handleCloseWishListModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title> WishList <i class="fa fa-check" aria-hidden="true"></i></Modal.Title>
+                </Modal.Header>
+<               Modal.Body>Produkti eshte shtuar me sukses ne listen e deshirave!</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseWishListModal}>
+                        Mbylle
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
         </div>
 
     );

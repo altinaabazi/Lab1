@@ -67,7 +67,7 @@ const Shporta = () => {
         {libra.length === 0 && mjetetShkollore.length === 0 ? (
           <p className="text-center">Shporta është bosh</p>
         ) : (
-          <div className="row">
+          <div className="row" style={{marginLeft:'30px'}}>
             {libra.length > 0 && (
               <div className="col-md-6">
                 <h2>Librat</h2>

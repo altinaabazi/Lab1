@@ -27,11 +27,13 @@ function Dashboard() {
     };
     const [porositeCount, setPorositeCount] = useState(null);
     const currentDate = new Date().toISOString().split('T')[0]; // Merr datën e sotme në formatin 'yyyy-MM-dd'
+    const [selectedDate, setSelectedDate] = useState('');
+    const [porositeCountt, setPorositeCountt] = useState(0);
+    const [topProduktet, setTopProduktet] = useState([]);
 
     useEffect(() => {
-        // Kur komponenti ngarkohet, thirr funksionin për të numëruar porositët për datën aktuale
         countPorosite(currentDate);
-    }, []); // [] siguron që useEffect thirret vetëm një herë në fillim
+    }, []);
 
     const countPorosite = async (date) => {
         try {
@@ -41,6 +43,42 @@ function Dashboard() {
             console.error('Gabim gjatë kërkesës në backend:', error);
         }
     };
+    const countSelectedPorosite = async (date) => {
+        try {
+            const response = await axios.get(`http://localhost:5170/api/Porosia/CountOnDate/${date}`);
+            setPorositeCountt(response.data);
+        } catch (error) {
+            console.error('Gabim gjatë kërkesës në backend:', error);
+        }
+    };
+
+    useEffect(() => {
+        const fetchTopProduktet = async () => {
+
+            try {
+                const response = await axios.get('http://localhost:5170/api/Porosia/TopProducts');
+                setTopProduktet(response.data);
+            } catch (error) {
+                console.error('Error fetching top products:', error);
+            }
+        };
+
+        fetchTopProduktet();
+    }, []);
+
+
+    const handleDateChange = (event) => {
+        const date = event.target.value;
+        setSelectedDate(date);
+    };
+
+    const handleButtonClick = () => {
+        if (selectedDate) {
+            countSelectedPorosite(selectedDate);
+        } else {
+            alert('Ju lutem zgjidhni një datë.');
+        }
+    }
     const [totalLibrat, setTotalLibrat] = useState(0);
 
     useEffect(() => {
@@ -252,21 +290,8 @@ function Dashboard() {
                             </div>
                         </li>
 
-
-                        {/*  <!-- Divider --> */}
                         <hr className="sidebar-divider" />
-
-                        {/* <!-- Heading --> */}
-                       
-                        {/*  <!-- Nav Item - Pages Collapse Menu --> */}
-                        
-
-                        {/* <!-- Nav Item - Charts --> */}
-                        
-                        {/* <!-- Divider --> */}
                         <hr className="sidebar-divider d-none d-md-block" />
-
-                                             
                     </ul>
                     {/*  <!-- End of Sidebar --> */}
 
@@ -284,46 +309,11 @@ function Dashboard() {
                                     <i className="fa fa-bars"></i>
                                 </button>
 
-                                {/*  <!-- Topbar Search --> */}
-                                <form
-                                    className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                                    <div className="input-group">
-                                        <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..."
-                                            aria-label="Search" aria-describedby="basic-addon2" />
-                                        <div className="input-group-append">
-                                            <button className="btn btn-primary" type="button">
-                                                <i className="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+
 
                                 {/*  <!-- Topbar Navbar --> */}
                                 <ul className="navbar-nav ml-auto">
 
-                                    {/*  <!-- Nav Item - Search Dropdown (Visible Only XS) --> */}
-                                    {/* <li className="nav-item dropdown no-arrow d-sm-none">
-                                        <a className="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i className="fas fa-search fa-fw"></i>
-                                        </a> */}
-                                    {/*   <!-- Dropdown - Messages --> */}
-                                    {/* <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                            aria-labelledby="searchDropdown">
-                                            <form className="form-inline mr-auto w-100 navbar-search">
-                                                <div className="input-group">
-                                                    <input type="text" className="form-control bg-light border-0 small"
-                                                        placeholder="Search for..." aria-label="Search"
-                                                        aria-describedby="basic-addon2" />
-                                                    <div className="input-group-append">
-                                                        <button className="btn btn-primary" type="button">
-                                                            <i className="fas fa-search fa-sm"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </li> */}
 
 
                                     {/* <!-- Nav Item - User Information --> */}
@@ -376,11 +366,11 @@ function Dashboard() {
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
                                                         <div className="text-m font-weight-bold text-success text-uppercase mb-1">
-                                                            Librat: </div>
+                                                            <a href='Libri'>Librat</a></div>
                                                         <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalLibrat}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                    <a href='Libri' className="h5 mb-0 text-gray-800"> <i className="fas fa-book large-icon"></i></a>
+                                                        <a href='Libri' className="h5 mb-0 text-gray-800"> <i className="fas fa-book large-icon"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -394,12 +384,12 @@ function Dashboard() {
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
                                                         <div className="text-m font-weight-bold text-success text-uppercase mb-1">
-                                                            MjetetShkollore: </div>
+                                                            <a href='mjeteshkollore'>MjetetShkollore</a></div>
                                                         <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalMjetet}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                        
-                                                    <a href='MjeteShkollore' className="h5 mb-0 text-gray-800"> <i className="fas fa-book large-icon"></i></a>
+
+                                                        <a href='MjeteShkollore' className="h5 mb-0 text-gray-800"> <i className="fas fa-book large-icon"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -412,11 +402,11 @@ function Dashboard() {
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
                                                         <div className="text-m font-weight-bold text-success text-uppercase mb-1">
-                                                            Klientat: </div>
+                                                            <a href='Klienti'>Klientat</a></div>
                                                         <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalKlienti}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                    <a href='klienti' className="h5 mb-0 text-gray-800"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                                        <a href='klienti' className="h5 mb-0 text-gray-800"><i class="fa fa-user" aria-hidden="true"></i></a>
 
                                                     </div>
                                                 </div>
@@ -429,28 +419,28 @@ function Dashboard() {
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
                                                         <div className="text-m font-weight-bold text-success text-uppercase mb-1">
-                                                            Stafi: </div>
+                                                            <a href='Stafi'>Stafi</a></div>
                                                         <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalStafi}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                    <a href='stafi' className="h5 mb-0 text-gray-800"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                                        <a href='stafi' className="h5 mb-0 text-gray-800"><i class="fa fa-user" aria-hidden="true"></i></a>
 
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
-                                        <div className="d-sm-flex align-items-center justify-content-between mb-4" >
+                                    </div>
+                                    <div className="d-sm-flex align-items-center justify-content-between mb-4" >
 
-                                   
-                                    <a href='Porosia' className="h5 mb-0 text-gray-800">Porosite</a>
-                                    
-                                </div>
-                                   
+
+                                        <a href='Porosia' className="h5 mb-0 text-gray-800">Porosite</a>
+
+                                    </div>
+
 
                                     {/*  <!-- Pending Requests Card Example --> */}
                                     <div className="col-xl-3 col-md-6 mb-4">
-                                    <div className="card border-left-info shadow h-100 py-2">
+                                        <div className="card border-left-info shadow h-100 py-2">
                                             <div className="card-body">
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
@@ -460,266 +450,76 @@ function Dashboard() {
                                                         <div className="h3 mb-0 font-weight-bold text-gray-800"> {porositeCount !== null ? porositeCount : 'Loading...'}</div>
                                                     </div>
                                                     <div className="col-auto">
-                                                    <a href='Porosia' className="h5 mb-0 text-gray-800"> <i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-                                                   
+                                                        <a href='Porosia' className="h5 mb-0 text-gray-800"> <i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div className="col-xl-6 col-md-8 mb-4">
+                                        <div className="card border-left-warning shadow h-100 py-2">
+                                            <div className="card-body">
+                                                <div className="row no-gutters align-items-center">
+                                                    <div className="col mr-2">
+                                                        <div className="form-group">
+                                                            <label htmlFor="dateInput">Zgjidhni datën:</label>
+                                                            <input
+                                                                type="date"
+                                                                id="dateInput"
+                                                                value={selectedDate}
+                                                                onChange={handleDateChange}
+                                                                className="form-control w-50"
+                                                            />
+                                                        </div>
+                                                        <button onClick={handleButtonClick} className="btn btn-primary mb-3">Numëro Porositë</button>
+                                                        <p className="font-weight-bold">Numri i porosive më: {selectedDate} është {porositeCountt !== null ? porositeCountt : 'Loading...'}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className="card shadow mb-4">
+                                <div className="card-header py-3">
+                                    <h6 className="m-0 font-weight-bold text-primary">Top Produktet</h6>
+                                </div>
+                                <div className="card-body">
+                                    {topProduktet.length > 0 ? (
+                                        <ul>
+                                            {topProduktet.map((produkt, index) => (
+                                                <li key={index}>
+                                                    {produkt.EmriProduktit} - {produkt.NumriShitjeve} shitje
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <p>Nuk ka të dhëna për të shfaqur.</p>
+                                    )}
+                                </div>
                                 </div>
 
-                                {/*  <!-- Content Row --> */}
-
-                                <div className="row">
-
-                                    {/*   <!-- Area Chart --> */}
-                                    <div className="col-xl-8 col-lg-7">
-                                        <div className="card shadow mb-4">
-                                            {/*  <!-- Card Header - Dropdown --> */}
-                                            <div
-                                                className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                                <h6 className="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                                <div className="dropdown no-arrow">
-                                                    <a className="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                                    </a>
-                                                    <div className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                                        aria-labelledby="dropdownMenuLink">
-                                                        <div className="dropdown-header">Dropdown Header:</div>
-                                                        <a className="dropdown-item" href="#">Action</a>
-                                                        <a className="dropdown-item" href="#">Another action</a>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">Something else here</a>
-                                                    </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            {/*  <!-- Card Body --> */}
-                                            <div className="card-body">
-                                                <div className="chart-area">
-                                                    <canvas id="myAreaChart"></canvas>
-                                                </div>
-                                          
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/*  <!-- Pie Chart --> */}
-                                    <div className="col-xl-4 col-lg-5">
-                                        <div className="card shadow mb-4">
-                                            {/*  <!-- Card Header - Dropdown --> */}
-                                            <div
-                                                className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                                <h6 className="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                                <div className="dropdown no-arrow">
-                                                    <a className="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                                    </a>
-                                                    <div className="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                                        aria-labelledby="dropdownMenuLink">
-                                                        <div className="dropdown-header">Dropdown Header:</div>
-                                                        <a className="dropdown-item" href="#">Action</a>
-                                                        <a className="dropdown-item" href="#">Another action</a>
-                                                        <div className="dropdown-divider"></div>
-                                                        <a className="dropdown-item" href="#">Something else here</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            {/*  <!-- Card Body --> */}
-                                            <div className="card-body">
-                                                <div className="chart-pie pt-4 pb-2">
-                                                    <canvas id="myPieChart"></canvas>
-                                                </div>
-                                                <div className="mt-4 text-center small">
-                                                    <span className="mr-2">
-                                                        <i className="fas fa-circle text-primary"></i> Direct
-                                                    </span>
-                                                    <span className="mr-2">
-                                                        <i className="fas fa-circle text-success"></i> Social
-                                                    </span>
-                                                    <span className="mr-2">
-                                                        <i className="fas fa-circle text-info"></i> Referral
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/*   <!-- Content Row --> */}
-                                <div className="row">
-
-                                    {/*   <!-- Content Column --> */}
-                                    <div className="col-lg-6 mb-4">
-
-                                        {/* <!-- Project Card Example --> */}
-                                        <div className="card shadow mb-4">
-                                            <div className="card-header py-3">
-                                                <h6 className="m-0 font-weight-bold text-primary">Projects</h6>
-                                            </div>
-                                            <div className="card-body">
-                                                <h4 className="small font-weight-bold">Server Migration <span
-                                                    className="float-right">20%</span></h4>
-                                                <div className="progress mb-4">
-                                                    <div className="progress-bar bg-danger a2" role="progressbar" ></div>
-                                                </div>
-                                                <h4 className="small font-weight-bold">Sales Tracking <span
-                                                    className="float-right">40%</span></h4>
-                                                <div className="progress mb-4">
-                                                    <div className="progress-bar bg-warning a3" role="progressbar" ></div>
-                                                </div>
-                                                <h4 className="small font-weight-bold">Customer Database <span
-                                                    className="float-right">60%</span></h4>
-                                                <div className="progress mb-4">
-                                                    <div className="progress-bar a7" role="progressbar"></div>
-                                                </div>
-                                                <h4 className="small font-weight-bold">Payout Details <span
-                                                    className="float-right">80%</span></h4>
-                                                <div className="progress mb-4">
-                                                    <div className="progress-bar bg-info a4" role="progressbar" ></div>
-                                                </div>
-                                                <h4 className="small font-weight-bold">Account Setup <span
-                                                    className="float-right">Complete!</span></h4>
-                                                <div className="progress">
-                                                    <div className="progress-bar bg-success a5" role="progressbar" ></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* <!-- Color System --> */}
-                                        <div className="row">
-                                            <div className="col-lg-6 mb-4">
-                                                <div className="card bg-primary text-white shadow">
-                                                    <div className="card-body">
-                                                        Primary
-                                                        <div className="text-white-50 small">#4e73df</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 mb-4">
-                                                <div className="card bg-success text-white shadow">
-                                                    <div className="card-body">
-                                                        Success
-                                                        <div className="text-white-50 small">#1cc88a</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 mb-4">
-                                                <div className="card bg-info text-white shadow">
-                                                    <div className="card-body">
-                                                        Info
-                                                        <div className="text-white-50 small">#36b9cc</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 mb-4">
-                                                <div className="card bg-warning text-white shadow">
-                                                    <div className="card-body">
-                                                        Warning
-                                                        <div className="text-white-50 small">#f6c23e</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 mb-4">
-                                                <div className="card bg-danger text-white shadow">
-                                                    <div className="card-body">
-                                                        Danger
-                                                        <div className="text-white-50 small">#e74a3b</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 mb-4">
-                                                <div className="card bg-secondary text-white shadow">
-                                                    <div className="card-body">
-                                                        Secondary
-                                                        <div className="text-white-50 small">#858796</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 mb-4">
-                                                <div className="card bg-light text-black shadow">
-                                                    <div className="card-body">
-                                                        Light
-                                                        <div className="text-black-50 small">#f8f9fc</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 mb-4">
-                                                <div className="card bg-dark text-white shadow">
-                                                    <div className="card-body">
-                                                        Dark
-                                                        <div className="text-white-50 small">#5a5c69</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div className="col-lg-6 mb-4">
-
-                                        {/* <!-- Illustrations --> */}
-                                        <div className="card shadow mb-4">
-                                            <div className="card-header py-3">
-                                                <h6 className="m-0 font-weight-bold text-primary">Illustrations</h6>
-                                            </div>
-                                            <div className="card-body">
-                                                <div className="text-center">
-                                                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4 a6"
-                                                        src="img/undraw_posting_photo.svg" alt="..." />
-                                                </div>
-                                                <p>Add some quality, svg illustrations to your project courtesy of <a
-                                                    target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                                    constantly updated collection of beautiful svg images that you can use
-                                                    completely free and without attribution!</p>
-                                                <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                                                    unDraw &rarr;</a>
-                                            </div>
-                                        </div>
-
-                                        {/* <!-- Approach --> */}
-                                        <div className="card shadow mb-4">
-                                            <div className="card-header py-3">
-                                                <h6 className="m-0 font-weight-bold text-primary">Development Approach</h6>
-                                            </div>
-                                            <div className="card-body">
-                                                <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classNamees in order to reduce
-                                                    CSS bloat and poor page performance. Custom CSS classNamees are used to create
-                                                    custom components and custom utility classNamees.</p>
-                                                <p className="mb-0">Before working with this theme, you should become familiar with the
-                                                    Bootstrap framework, especially the utility classNamees.</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
 
                             </div>
-                            {/*   <!-- /.container-fluid --> */}
 
                         </div>
+
                         {/*   <!-- End of Main Content -->
 
                                         <!-- Footer --> */}
                         <footer className="sticky-footer bg-white">
                             <div className="container my-auto">
                                 <div className="copyright text-center my-auto">
-                                    <span>Copyright &copy; Your Website 2021</span>
+                                    <span>Copyright &copy; LibraTech</span>
                                 </div>
                             </div>
                         </footer>
-                        {/* <!-- End of Footer --> */}
 
                     </div>
-                    {/*  <!-- End of Content Wrapper --> */}
-
                 </div>
-                {/*  <!-- End of Page Wrapper -->
 
-                                <!-- Scroll to Top Button--> */}
                 <a className="scroll-to-top rounded" href="#page-top">
                     <i className="fas fa-angle-up"></i>
                 </a>
@@ -744,8 +544,8 @@ function Dashboard() {
                     </div>
                 </div>
 
-            </body>
-        </div>
+            </body >
+        </div >
     )
 }
 

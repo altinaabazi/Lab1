@@ -4,12 +4,14 @@ import { variables } from './Variables';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
+import { useAuth } from './AuthProvider';
 
 
 function DetajetEMjetit() {
   const [mjeti, setMjeti] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { user } = useAuth();
 
   const { id } = useParams();
 
@@ -74,8 +76,9 @@ function DetajetEMjetit() {
                     <p><strong>Njesia:</strong> {mjeti.NgjyraMSh}</p>
                     <p><strong>Cmimi:</strong> {mjeti.Cmimi}$</p>
                     <p><strong>Sasia:</strong> {mjeti.Sasia}</p>
+                    {user && user.roli === 'User' && (
                     <button onClick={() => addToCart(mjeti)} className="btn btn-success">Shto ne shportë</button>
-
+                    )}
                   </div>
                 </div>
               </div>

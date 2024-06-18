@@ -4,11 +4,13 @@ import { variables } from './Variables';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
+import { useAuth } from './AuthProvider';
 
 function DetajetELibrit() {
   const [libri, setLibri] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { user } = useAuth();
 
   const { id } = useParams();
 
@@ -73,7 +75,10 @@ function DetajetELibrit() {
                     <p><strong>Viti i Publikimit:</strong> {libri.VitiPublikimit}</p>
                     <p><strong>Gjuha:</strong> {libri.Gjuha}</p>
                     <p><strong>Cmimi:</strong> ${libri.Cmimi}</p>
+
+                    {user && user.roli === 'User' && (
                     <button onClick={() => addToCart(libri)} className="btn btn-success">Shto ne shportë</button>
+                    )}
                   </div>
                 </div>
               </div>

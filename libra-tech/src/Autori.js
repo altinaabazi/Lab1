@@ -110,6 +110,8 @@ export class Autori extends Component {
                 this.refreshList();
                 document.getElementById("exampleModal").classList.remove("show");
                 document.querySelector(".modal-backdrop").remove();
+                window.location.reload();
+
             });
     }
     deleteClick(id) {
@@ -128,6 +130,8 @@ export class Autori extends Component {
                 }, (error) => {
                     alert('Success');
                     this.refreshList();
+                   
+
                 })
         }
     }

@@ -248,7 +248,7 @@ export class Libri extends Component {
           this.refreshList();
           document.getElementById("exampleModal").classList.remove("show");
           document.querySelector(".modal-backdrop").remove();
-
+          window.location.reload();
 
         } else {
           alert('Failed');

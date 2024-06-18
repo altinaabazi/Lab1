@@ -118,7 +118,7 @@ function Sidebar() {
                     <hr className="sidebar-divider" />
 
                     <li className="nav-item">
-                        <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUserProfile" aria-expanded="true" aria-controls="collapseUserProfile">
+                        <a className="nav-link collapsed" href="/userProfile" data-toggle="collapse" data-target="#collapseUserProfile" aria-expanded="true" aria-controls="collapseUserProfile">
                             <i className="fa fa-user" aria-hidden="true"></i>
                             <span>User Profile</span>
                         </a>

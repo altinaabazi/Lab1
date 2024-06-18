@@ -63,7 +63,6 @@ function App() {
             <>
               <Route path="/" element={<Home />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/forgotpassword" element={<ForgotPassword />} />
               <Route path='/mjeteShkollore' element={<MjeteShkollore />} />
               <Route path='/libri' element={<Libri />} />
               <Route path="/tipi" element={<ProtectedRoute requiredRoli="Admin"><Tipi /></ProtectedRoute>} />
@@ -83,7 +82,7 @@ function App() {
               <Route path="/kategoria" element={<ProtectedRoute requiredRoli="Admin"><Kategoria /></ProtectedRoute>} />
               <Route path="/gjuha" element={<ProtectedRoute requiredRoli="Admin"><Gjuha /></ProtectedRoute>} />
               <Route path="/shtepiaBotuese" element={<ProtectedRoute requiredRoli="Admin"><ShtepiaBotuese /></ProtectedRoute>} />
-              <Route path="/StafiSchedule" element={<ProtectedRoute requiredRoli="Admin"><StafiSchedule /></ProtectedRoute>} />
+
               <Route path="/nrfaqeve" element={<ProtectedRoute requiredRoli="Admin"><NrFaqeve /></ProtectedRoute>} />
               <Route path="/njesia" element={<ProtectedRoute requiredRoli="Admin"><NgjyraMSh /></ProtectedRoute>} />
               <Route path="/stafiGjinia" element={<ProtectedRoute requiredRoli="Admin"><StafiGjinia /></ProtectedRoute>} />
@@ -93,10 +92,8 @@ function App() {
               <Route path='/mjeteShkollore/:id' element={<DetajetEMjetit />} />
               <Route path="/kategoria/:kategoria/librat" element={<LibratSipasKategorise />} />
               <Route path="/tipi/:tipi/MjeteShkollore" element={<MjetetSipasTipit />} />
-              <Route path='/UserProfile' element={<UserProfile />} />
 
-              <Route path="/klienti" element={<Klienti />} />
-              <Route path="/stafi" element={<Stafi />} />
+
               <Route path="/klientigjinia" element={<ProtectedRoute requiredRoli="Admin"><KlientiGjinia /></ProtectedRoute>} />
               <Route path="/klientiqyteti" element={<ProtectedRoute requiredRoli="Admin"><KlientiQyteti /></ProtectedRoute>} />
               <Route path="/klientiroli" element={<ProtectedRoute requiredRoli="Admin"><KlientiRoli /></ProtectedRoute>} />
@@ -110,6 +107,12 @@ function App() {
            <Route path="/stafi" element={<Stafi/>} />
            <Route path='/mjeteShkollore' element={<MjeteShkollore />} />
            <Route path="/logout" element={<Logout />} />
+           <Route path='/UserProfile' element={<UserProfile />} />
+           <Route path="/forgotpassword" element={<ForgotPassword />} />
+           <Route path="/stafischedule" element={<StafiSchedule />} />
+
+
+
 
 
         </Routes>

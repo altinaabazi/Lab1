@@ -4,6 +4,7 @@ import './Profile.css';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
 
 function UserProfile() {
     const { user, updateUser } = useAuth();
@@ -49,7 +50,9 @@ function UserProfile() {
                     </div>
                     <div className="profile-actions">
                         <button className="btn-primary" onClick={openModal}>Edit Profile</button>
-                        <button className="btn-secondary">Change Password</button>
+                        <Link to="/ForgotPassword" className="btn btn-secondary">
+                            Change Password
+                        </Link>
                     </div>
                 </div>
             </div>

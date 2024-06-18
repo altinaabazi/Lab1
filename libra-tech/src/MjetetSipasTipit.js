@@ -14,7 +14,9 @@ function MjetetSipasTipit() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [shporta, setShporta] = useState([]);
-    const [showModal, setShowModal] = useState(false); const [wishList, setWishList] = useState([]);
+    const [showModal, setShowModal] = useState(false); 
+    const [wishList, setWishList] = useState([]);
+    const [showWishListModal, setShowWishListModal] = useState(false);
     const { user } = useAuth();
 
     useEffect(() => {
@@ -45,10 +47,15 @@ function MjetetSipasTipit() {
         const wishList = JSON.parse(localStorage.getItem('WishList')) || [];
         wishList.push(libri);
         localStorage.setItem('WishList', JSON.stringify(wishList));
+        setShowWishListModal(true);
+
       
     };
     const handleCloseModal = () => {
         setShowModal(false);
+    };
+    const handleCloseWishListModal = () => {
+        setShowWishListModal(false);
     };
 
     if (loading) {
@@ -121,9 +128,20 @@ function MjetetSipasTipit() {
                 <Modal.Header closeButton>
                     <Modal.Title>Shtimi në Shportë</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Mjeti është shtuar me sukses në shportë!</Modal.Body>
+                <Modal.Body>Libri është shtuar me sukses në shportë!</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseModal}>
+                        Mbylle
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showWishListModal} onHide={handleCloseWishListModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title> WishList <i class="fa fa-check" aria-hidden="true"></i></Modal.Title>
+                </Modal.Header>
+<               Modal.Body>Produkti eshte shtuar me sukses ne listen e deshirave!</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseWishListModal}>
                         Mbylle
                     </Button>
                 </Modal.Footer>

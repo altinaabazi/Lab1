@@ -166,15 +166,20 @@ function Sidebar() {
                     </li>
 
                     <hr className="sidebar-divider my-0" />
+                    <li className="nav-item active">
                     {user && user.roli === 'User' && (
-                    <div className="sidebar-heading">
-                    
-                   Shporta
-                        <Link to="/Shporta" className="nav-link">
-                        <i className="fas fa-shopping-cart fa-fw" style={{ fontSize: '24px' }}></i>
+                        <Link className="nav-link" to="/shporta">
+                        <i className="fas fa-shopping-cart fa-fw"aria-hidden="true" ></i>
+                            <span>Shporta</span>
                         </Link>
-                    </div>
-                     )}
+                    )}
+                 {user && user.roli === 'User' && (
+                            <Link className="nav-link" to="/wishlist">
+                                 <i className="fa fa-heart "aria-hidden="true" ></i>
+                                <span>WishList</span>
+                            </Link>
+                        )}
+                    </li>
 
                     {/* <li className="nav-item">
                         <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">

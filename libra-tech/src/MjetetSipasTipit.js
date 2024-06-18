@@ -6,6 +6,7 @@ import Footer from './Footer';
 import { Modal, Button } from 'react-bootstrap';
 import Sidebar from './Sidebar';
 import { Link } from 'react-router-dom';
+import { useAuth } from './AuthProvider';
 
 function MjetetSipasTipit() {
     const { tipi } = useParams();
@@ -13,7 +14,8 @@ function MjetetSipasTipit() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [shporta, setShporta] = useState([]);
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false); const [wishList, setWishList] = useState([]);
+    const { user } = useAuth();
 
     useEffect(() => {
         fetchMjetetByTipi(tipi);
@@ -39,7 +41,12 @@ function MjetetSipasTipit() {
         setShporta([...shporta, mjeti]);
         setShowModal(true);
     };
-
+    const addToWishList = (libri) => {
+        const wishList = JSON.parse(localStorage.getItem('WishList')) || [];
+        wishList.push(libri);
+        localStorage.setItem('WishList', JSON.stringify(wishList));
+      
+    };
     const handleCloseModal = () => {
         setShowModal(false);
     };
@@ -78,8 +85,11 @@ function MjetetSipasTipit() {
                                                 <p className="card-text flex-grow-1">{mjeti.Pershkrimi}</p>
                                                 <div className="mt-auto">
                                                     <Link to={`/MjeteShkollore/${mjeti.ID}`} className="btn btn-primary mr-2">
-                                                        Shiko Detajet
+                                                        Detajet
                                                     </Link>
+
+                                                    {user && user.roli === 'User' && (
+
                                                     <button onClick={() => addToCart({
                                                         ID: mjeti.ID,
                                                         Tipi: mjeti.Tipi,
@@ -88,6 +98,13 @@ function MjetetSipasTipit() {
                                                     })} className="btn btn-success">
                                                         Shto në Shportë
                                                     </button>
+                                                    )}
+
+                                                    {user && user.roli === 'User' && (
+                                                    <Link onClick={() => addToWishList(mjeti)} className="btn btn-outline-danger"  style={{marginLeft:'5px'}}>
+                                                            <i className="fa fa-heart" aria-hidden="true"></i>
+                                                    </Link>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>

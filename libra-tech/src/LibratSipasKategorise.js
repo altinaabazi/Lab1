@@ -6,6 +6,7 @@ import Footer from './Footer';
 import { Modal, Button } from 'react-bootstrap';
 import Sidebar from './Sidebar';
 import { Link } from 'react-router-dom';
+import { useAuth } from './AuthProvider';
 
 
 function LibratSipasKategorise() {
@@ -16,6 +17,8 @@ function LibratSipasKategorise() {
     const [shporta, setShporta] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [searchTerm, setSearchTerm] = useState("");
+    const [wishList, setWishList] = useState([]);
+    const { user } = useAuth();
    
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
@@ -51,6 +54,12 @@ function LibratSipasKategorise() {
 
     const handleCloseModal = () => {
         setShowModal(false);
+    };
+    const addToWishList = (libri) => {
+        const wishList = JSON.parse(localStorage.getItem('WishList')) || [];
+        wishList.push(libri);
+        localStorage.setItem('WishList', JSON.stringify(wishList));
+      
     };
 
     if (loading) {
@@ -116,6 +125,7 @@ function LibratSipasKategorise() {
                                                     })} className="btn btn-success">
                                                         Shto në Shportë
                                                     </button>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -148,8 +158,10 @@ function LibratSipasKategorise() {
                                                         <p className="card-text flex-grow-1">{libri.ShtepiaBotuese}</p>
                                                         <div className="mt-auto">
                                                             <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
-                                                                Shiko Detajet
+                                                                Detajet
                                                             </Link>
+                                                            {user && user.roli === 'User' && (
+
                                                             <button onClick={() => addToCart({
                                                                 ID: libri.ID,
                                                                 Titulli: libri.Titulli,
@@ -157,7 +169,14 @@ function LibratSipasKategorise() {
                                                                 image: variables.API_URL + 'libri/GetFoto/' + libri.ID
                                                             })} className="btn btn-success">
                                                                 Shto në Shportë
-                                                            </button>
+                                                            </button>)}
+
+                                                            {user && user.roli === 'User' && (
+
+                                                            <Link onClick={() => addToWishList(libri)} className="btn btn-outline-danger"  style={{marginLeft:'5px'}}>
+                                                            <i className="fa fa-heart" aria-hidden="true"></i>
+                                                            </Link>
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>

@@ -24,10 +24,17 @@ function Header() {
                         <i className="fa fa-bars"></i>
                     </button>
                     <div className="d-flex justify-content-center">
-
-                        {/* Cart Button */}
                         {user && user.roli === 'User' && (
                         <div style={{ marginLeft: '500px' }}>
+                            {/* Butoni i shportes */}
+                            <Link to="/wishlist" className="nav-link">
+                            <i className="fa fa-heart" aria-hidden="true" style={{ fontSize: '24px' }}></i>
+                            </Link>
+                        </div>
+                        )}
+                        {/* Cart Button */}
+                        {user && user.roli === 'User' && (
+                        <div>
                             {/* Butoni i shportes */}
                             <Link to="/Shporta" className="nav-link">
                                 <i className="fas fa-shopping-cart fa-fw" style={{ fontSize: '24px' }}></i>

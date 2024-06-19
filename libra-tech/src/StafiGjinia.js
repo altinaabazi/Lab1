@@ -39,7 +39,7 @@ export class StafiGjinia extends Component {
 
     addClick() {
         this.setState({
-            modalTitle: "Shto Gjini",
+            modalTitle: "Shto Gjinine",
             Id: 0,
             Gjinia: ""
         });
@@ -142,7 +142,7 @@ export class StafiGjinia extends Component {
                                 data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"
                                 onClick={() => this.addClick()}>
-                                Shto Gjinin
+                                Shto Gjinine
                             </button>
                             <table className="table table-striped">
                                 <thead>

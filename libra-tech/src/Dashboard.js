@@ -384,7 +384,7 @@ function Dashboard() {
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
                                                         <div className="text-m font-weight-bold text-success text-uppercase mb-1">
-                                                            <a href='mjeteshkollore'>MjetetShkollore</a></div>
+                                                            <a href='mjeteshkollore'>Mjetet Shkollore</a></div>
                                                         <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalMjetet}</div>
                                                     </div>
                                                     <div className="col-auto">
@@ -402,7 +402,7 @@ function Dashboard() {
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col mr-2">
                                                         <div className="text-m font-weight-bold text-success text-uppercase mb-1">
-                                                            <a href='Klienti'>Klientat</a></div>
+                                                            <a href='Klienti'>Klientët</a></div>
                                                         <div className="h3 mb-0 font-weight-bold text-gray-800"> {totalKlienti}</div>
                                                     </div>
                                                     <div className="col-auto">

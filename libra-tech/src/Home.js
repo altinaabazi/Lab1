@@ -182,7 +182,7 @@ function Home() {
                                 <input
                                     type="text"
                                     className="form-control bg-light border-0 small"
-                                    placeholder="Kerko..."
+                                    placeholder="Kërko..."
                                     aria-label="Search"
                                     aria-describedby="basic-addon2"
                                     value={searchTerm}
@@ -283,7 +283,7 @@ function Home() {
                             <>
                                 <div className="row" style={{ marginRight: '30px' }}>
                                     <div className="col-12">
-                                        <h1 className="mb-4 text-center">Kategorite</h1>
+                                        <h1 className="mb-4 text-center">Kategoritë</h1>
                                         <div className="card-deck">
                                             {kategorite.map(kategoria => (
                                                 <div key={kategoria.ID} className="col-md-4 mb-4">
@@ -323,7 +323,7 @@ function Home() {
                                 </div>
 
                                 <div className="row" style={{ margin: '20px 0' }}>
-                                    <h1>Librat Me Te Rinje</h1>
+                                    <h1>Librat Më Të Rinjë</h1>
                                     {librat.map(libri => (
                                         <div className="col-md-4 mb-4" key={libri.ID}>
                                             <div className="card h-100 shadow-sm">

@@ -1,53 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\NB\\Desktop\\Lab1\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\Lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\stafi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\stafi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\resetpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\resetpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\controllers\\stafischedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\stafischedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\stafischedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\controllers\\stafisektoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\stafisektoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\stafisektoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\nb\\desktop\\lab1\\backend\\migrations\\20240608194042_stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\staficontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\staficontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\stafi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\stafi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\klienti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\klienticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\resetpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\resetpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\models\\librariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|c:\\users\\lenovo\\desktop\\lab1\\backend\\migrations\\20240608194042_stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FB9B375-D6C6-4C53-92EB-130E7E31548C}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240608194042_stafischedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -58,41 +62,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Klienti.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\Klienti.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\Klienti.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\Klienti.cs",
-              "RelativeToolTip": "Backend\\Models\\Klienti.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAIwBQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T21:40:53.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\LoginModel.cs",
-              "RelativeToolTip": "Backend\\Models\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T20:46:48.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Backend\\Controllers\\LoginController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -101,23 +79,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ResetPasswordRequest.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\ResetPasswordRequest.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\ResetPasswordRequest.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\ResetPasswordRequest.cs",
-              "RelativeToolTip": "Backend\\Models\\ResetPasswordRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T19:12:25.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "KlientiController.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\KlientiController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\KlientiController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\KlientiController.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\KlientiController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\KlientiController.cs",
               "RelativeToolTip": "Backend\\Controllers\\KlientiController.cs",
               "ViewState": "AQIAAKQAAAAAAAAAAAAQwAEBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -126,23 +92,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\appsettings.json",
               "RelativeDocumentMoniker": "Backend\\appsettings.json",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\appsettings.json",
               "RelativeToolTip": "Backend\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAwAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-10T13:59:15.594Z"
+              "WhenOpened": "2024-06-10T13:59:15.594Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "20240608194042_StafiSchedule.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240608194042_StafiSchedule.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240608194042_StafiSchedule.cs",
               "RelativeDocumentMoniker": "Backend\\Migrations\\20240608194042_StafiSchedule.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Migrations\\20240608194042_StafiSchedule.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Migrations\\20240608194042_StafiSchedule.cs",
               "RelativeToolTip": "Backend\\Migrations\\20240608194042_StafiSchedule.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -150,64 +117,118 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "StafiSektoriController.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\StafiSektoriController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiSektoriController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\StafiSektoriController.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\StafiSektoriController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiSektoriController.cs",
               "RelativeToolTip": "Backend\\Controllers\\StafiSektoriController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAiAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T19:18:22.185Z"
+              "WhenOpened": "2024-06-08T19:18:22.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "StafiScheduleController.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\StafiScheduleController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiScheduleController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\StafiScheduleController.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Controllers\\StafiScheduleController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiScheduleController.cs",
               "RelativeToolTip": "Backend\\Controllers\\StafiScheduleController.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAowAgAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T19:16:43.599Z"
+              "WhenOpened": "2024-06-08T19:16:43.599Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StafiSchedule.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\StafiSchedule.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\StafiSchedule.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\StafiSchedule.cs",
-              "RelativeToolTip": "Backend\\Models\\StafiSchedule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAdAAAA",
+              "DocumentIndex": 2,
+              "Title": "StafiController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiController.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\StafiController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Controllers\\StafiController.cs",
+              "RelativeToolTip": "Backend\\Controllers\\StafiController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAkwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T19:13:20.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LibrariaContext.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\LibrariaContext.cs",
-              "RelativeDocumentMoniker": "Backend\\Models\\LibrariaContext.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\LibrariaContext.cs",
-              "RelativeToolTip": "Backend\\Models\\LibrariaContext.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAgwCsAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T19:06:25.381Z"
+              "WhenOpened": "2024-06-23T19:03:51.131Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Stafi.cs",
-              "DocumentMoniker": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\Stafi.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\Stafi.cs",
               "RelativeDocumentMoniker": "Backend\\Models\\Stafi.cs",
-              "ToolTip": "C:\\Users\\NB\\Desktop\\Lab1\\Backend\\Models\\Stafi.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\Stafi.cs",
               "RelativeToolTip": "Backend\\Models\\Stafi.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAgAAAAoAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwAgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-08T19:02:25.963Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StafiSchedule.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\StafiSchedule.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\StafiSchedule.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\StafiSchedule.cs",
+              "RelativeToolTip": "Backend\\Models\\StafiSchedule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T19:13:20.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ResetPasswordRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\ResetPasswordRequest.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\ResetPasswordRequest.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\ResetPasswordRequest.cs",
+              "RelativeToolTip": "Backend\\Models\\ResetPasswordRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T19:12:25.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\LoginModel.cs",
+              "RelativeToolTip": "Backend\\Models\\LoginModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T20:46:48.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Klienti.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\Klienti.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\Klienti.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\Klienti.cs",
+              "RelativeToolTip": "Backend\\Models\\Klienti.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAIwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T21:40:53.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LibrariaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\LibrariaContext.cs",
+              "RelativeDocumentMoniker": "Backend\\Models\\LibrariaContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\Lab1\\Backend\\Models\\LibrariaContext.cs",
+              "RelativeToolTip": "Backend\\Models\\LibrariaContext.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwCsAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T19:06:25.381Z"
             }
           ]
         }

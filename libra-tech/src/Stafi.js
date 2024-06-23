@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Sidebar from './Sidebar.js';
 import { useHref } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import StafiSchedule from './StafiSchedule.js';
 
 export class Stafi extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export class Stafi extends Component {
       stafet: [],
       sektoret: [],
       oraret: [],
+      schedules: [],
       modalTitle: "",
       IDStafi: 0,
       Emri: "",
@@ -24,6 +26,7 @@ export class Stafi extends Component {
       StafiGjinia: "",
       StafiOrari: "",
       StafiSektori: "",
+      StafiSchedule:"",
       Pervoja:"",
       ZipCode: 0,
       isFormValid: false,
@@ -53,6 +56,7 @@ export class Stafi extends Component {
       StafiGjinia: "",
       StafiOrari: "",
       StafiSektori: "",
+      StafiSchedule: "",
       Pervoja:"",
       ZipCode: 0,
       isFormValid: false,
@@ -61,8 +65,8 @@ export class Stafi extends Component {
   }
 
   validateForm = () => {
-    const { Emri, Mbiemri, Pervoja, StafiGjinia, StafiOrari, StafiSektori, ZipCode } = this.state;
-    return Emri && Mbiemri && Pervoja && StafiGjinia && StafiOrari && StafiSektori  && ZipCode;
+    const { Emri, Mbiemri, Pervoja, StafiGjinia, StafiOrari, StafiSektori, StafiSchedule,ZipCode } = this.state;
+    return Emri && Mbiemri && Pervoja && StafiGjinia && StafiOrari && StafiSektori  && StafiSchedule && ZipCode;
   };
 
   refreshList() {
@@ -88,6 +92,12 @@ export class Stafi extends Component {
       .then(data => {
         this.setState({ sektoret: data });
       });
+
+      fetch(variables.API_URL + 'StafiSchedule')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ schedules: data });
+      });
   }
 
   changeEmri = (e) => {
@@ -109,6 +119,11 @@ export class Stafi extends Component {
   changeStafiSektori = (e) => {
     this.setState({ StafiSektori: e.target.value });
   }
+
+  changeStafiSchedule = (e) => {
+    this.setState({ StafiSchedule: e.target.value });
+  }
+
   changeZipCode = (e) => {
     this.setState({ ZipCode: e.target.value });
   }
@@ -122,6 +137,7 @@ export class Stafi extends Component {
       StafiGjinia: "",
       StafiOrari: "",
       StafiSektori: "",
+      StafiSchedule: "",
       Pervoja:"",
       ZipCode: 0
     });
@@ -136,6 +152,7 @@ export class Stafi extends Component {
       StafiGjinia: emp.StafiGjinia,
       StafiOrari: emp.StafiOrari,
       StafiSektori: emp.StafiSektori,
+      StafiSchedule: emp.StafiSchedule,
       ZipCode: emp.ZipCode,
       
 
@@ -158,6 +175,7 @@ export class Stafi extends Component {
         StafiGjinia: this.state.StafiGjinia,
         StafiOrari: this.state.StafiOrari,
         StafiSektori: this.state.StafiSektori,
+        StafiSchedule: this.state.StafiSchedule,
         ZipCode: this.state.ZipCode,
       })
     })
@@ -187,6 +205,7 @@ export class Stafi extends Component {
         StafiGjinia: this.state.StafiGjinia,
         StafiOrari: this.state.StafiOrari,
         StafiSektori: this.state.StafiSektori,
+        StafiSchedule: this.state.StafiSchedule,
         ZipCode: this.state.ZipCode,
       })
     })
@@ -236,6 +255,7 @@ export class Stafi extends Component {
       sektoret,
       oraret,
       stafet,
+      schedules,
       modalTitle,
       IDStafi,
       Emri,
@@ -244,6 +264,7 @@ export class Stafi extends Component {
       StafiGjinia,
       StafiOrari,
       StafiSektori,
+      StafiSchedule,
       Pervoja
       
     } = this.state;
@@ -269,6 +290,9 @@ export class Stafi extends Component {
               <Link style={{ background:'#a9c0cf' }} to="/StafiOrari" className="btn btn-primary m-2 float-end">
                 + StafiOrari
               </Link>
+              <Link style={{ background:'#a9c0cf' }} to="/StafiSchedule" className="btn btn-primary m-2 float-end">
+                + StafiSchedule
+              </Link>
               </div>
               <div>
               <button type="button"
@@ -290,6 +314,7 @@ export class Stafi extends Component {
                     <th>Gjinia</th>
                     <th>Orari</th>
                     <th>Sektori</th>
+                    <th>Schedule</th>
                     <th>Pervoja</th>
                     <th>Options</th>
                   </tr>
@@ -304,6 +329,7 @@ export class Stafi extends Component {
                       <td>{emp.StafiGjinia}</td>
                       <td>{emp.StafiOrari}</td>
                       <td>{emp.StafiSektori}</td>
+                      <td>{emp.StafiSchedule}</td>
                       <td>{emp.Pervoja}</td>
                       <td>
                         <button type="button"
@@ -387,6 +413,17 @@ export class Stafi extends Component {
                               value={StafiSektori}>
                               {sektoret.map(dep => <option key={dep.Id}>
                                 {dep.Sektori}
+                              </option>)}
+                            </select>
+                          </div>
+
+                          <div className="input-group mb-3">
+                            <span className="input-group-text">Schedule</span>
+                            <select className="form-select"
+                              onChange={this.changeStafiSchedule}
+                              value={StafiSchedule}>
+                              {schedules.map(dep => <option key={dep.Id}>
+                                {dep.Schedule}
                               </option>)}
                             </select>
                           </div>

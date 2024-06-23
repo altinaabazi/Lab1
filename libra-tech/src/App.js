@@ -40,6 +40,7 @@ import DetajetEMjetit from './DetajetEMjetit';
 import KlientiQyteti from './KlientiQyteti';
 import { PorosiaService } from './PorosiaService';
 import StafiSchedule from './StafiSchedule';
+import Schedule from './Schedule';
 import ProtectedRoute from './ProtectedRoute';  // Import the ProtectedRoute component
 import { useAuth } from './AuthProvider';
 import { AuthProvider } from './AuthProvider';
@@ -110,6 +111,7 @@ function App() {
            <Route path='/UserProfile' element={<UserProfile />} />
            <Route path="/forgotpassword" element={<ForgotPassword />} />
            <Route path="/stafischedule" element={<StafiSchedule />} />
+           <Route path="/schedule" element={<Schedule />} />
 
 
 

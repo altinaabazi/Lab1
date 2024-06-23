@@ -113,6 +113,12 @@ function Sidebar() {
                                 <span>Dashboard</span>
                             </Link>
                         )}
+                          {user && user.roli === 'Staf' && (
+                            <Link className="nav-link" to="/schedule">
+                                <i className="fas fa-fw fa-tachometer-alt"></i>
+                                <span>Schedule</span>
+                            </Link>
+                        )}
                     </li>
 
                     <hr className="sidebar-divider" />

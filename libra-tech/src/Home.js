@@ -210,22 +210,24 @@ function Home() {
                                                 <div className="card-body d-flex flex-column">
                                                     <h5 className="card-title">{libri.Titulli}</h5>
                                                     <p className="card-text flex-grow-1">{libri.ShtepiaBotuese}</p>
-                                                    <div className="mt-auto">
+                                                    <div className="mt-auto d-flex align-items-center">
                                                         <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
-                                                            Shiko Detajet
+                                                           Detajet
                                                         </Link>
-                                                        <button
-                                                            onClick={() => addToCart({
-                                                                ID: libri.ID,
-                                                                Titulli: libri.Titulli,
-                                                                Pershkrimi: libri.Pershkrimi,
-                                                                image: variables.API_URL + 'libri/GetFoto/' + libri.ID
-                                                            })}
-                                                            className="btn btn-success"
-                                                        >
-                                                            Blej
+
+                                                        {user && user.roli === 'User' && (
+                                                        <button onClick={() => addToCart(libri)} className="btn btn-success mr-2"> 
+                                                             Shto ne Shportë
                                                         </button>
-                                                    </div>
+                                                        )}
+
+                                                        {user && user.roli === 'User' && (
+
+                                                        <Link onClick={() => addToWishList(libri)} className="btn btn-outline-danger">
+                                                            <i className="fa fa-heart" aria-hidden="true"></i>
+                                                         </Link>
+                                                        )}
+                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -251,22 +253,24 @@ function Home() {
                                                 <div className="card-body d-flex flex-column">
                                                     <h5 className="card-title">{mjeti.Tipi}</h5>
                                                     <p className="card-text flex-grow-1">{mjeti.Pershkrimi}</p>
-                                                    <div className="mt-auto">
-                                                        <Link to={`/MjeteShkollore/${mjeti.ID}`} className="btn btn-primary mr-2">
-                                                            Shiko Detajet
+                                                    <div className="mt-auto d-flex align-items-center">
+                                                        <Link to={`/libri/${mjeti.ID}`} className="btn btn-primary mr-2">
+                                                           Detajet
                                                         </Link>
-                                                        <button
-                                                            onClick={() => addToCart({
-                                                                ID: mjeti.ID,
-                                                                Tipi: mjeti.Tipi,
-                                                                Pershkrimi: mjeti.Pershkrimi,
-                                                                image: variables.API_URL + 'MjeteShkollore/GetFoto/' + mjeti.ID
-                                                            })}
-                                                            className="btn btn-success"
-                                                        >
-                                                            Shto në Shportë
+
+                                                        {user && user.roli === 'User' && (
+                                                        <button onClick={() => addToCart(mjeti)} className="btn btn-success mr-2"> 
+                                                             Shto ne Shportë
                                                         </button>
-                                                    </div>
+                                                        )}
+
+                                                        {user && user.roli === 'User' && (
+
+                                                        <Link onClick={() => addToWishList(mjeti)} className="btn btn-outline-danger">
+                                                            <i className="fa fa-heart" aria-hidden="true"></i>
+                                                         </Link>
+                                                        )}
+                                                     </div>
                                                 </div>
                                             </div>
                                         </div>

@@ -144,6 +144,7 @@ export class Stafi extends Component {
 
 
   createClick() {
+    debugger
     fetch(variables.API_URL + 'stafi', {
       method: 'POST',
       headers: {

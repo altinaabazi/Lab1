@@ -116,20 +116,24 @@ function LibratSipasKategorise() {
                                             <div className="card-body d-flex flex-column">
                                                 <h5 className="card-title">{libri.Titulli}</h5>
                                                 <p className="card-text flex-grow-1">{libri.ShtepiaBotuese}</p>
-                                                <div className="mt-auto">
-                                                    <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
-                                                        Shiko Detajet
-                                                    </Link>
-                                                    <button onClick={() => addToCart({
-                                                        ID: libri.ID,
-                                                        Titulli: libri.Titulli,
-                                                        Pershkrimi: libri.Pershkrimi,
-                                                        image: variables.API_URL + 'libri/GetFoto/' + libri.ID
-                                                    })} className="btn btn-success">
-                                                        Shto në Shportë
-                                                    </button>
+                                                <div className="mt-auto d-flex align-items-center">
+                                                        <Link to={`/libri/${libri.ID}`} className="btn btn-primary mr-2">
+                                                           Detajet
+                                                        </Link>
 
-                                                </div>
+                                                        {user && user.roli === 'User' && (
+                                                        <button onClick={() => addToCart(libri)} className="btn btn-success mr-2"> 
+                                                             Shto ne Shportë
+                                                        </button>
+                                                        )}
+
+                                                        {user && user.roli === 'User' && (
+
+                                                        <Link onClick={() => addToWishList(libri)} className="btn btn-outline-danger">
+                                                            <i className="fa fa-heart" aria-hidden="true"></i>
+                                                         </Link>
+                                                        )}
+                                                     </div>
                                             </div>
                                         </div>
                                     </div>

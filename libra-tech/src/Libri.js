@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Sidebar from './Sidebar.js';
 import { useHref } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export class Libri extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export class Libri extends Component {
       ISBN: "",
       Titulli: "",
       Pershkrimi: "",
-      Autori: "",
+      AutoriID: "",
       NrFaqeve: "",
       Kategoria: "",
       VitiPublikimit: 0,
@@ -33,7 +34,7 @@ export class Libri extends Component {
       Cmimi: 0.0,
       Sasia: 0,
       isFormValid: false,
-      ImgPath: 'img/img.png',
+      ImgPath: "img.png",
       PhotoFileName: variables.PHOTO_URL,
     };
 
@@ -59,7 +60,7 @@ export class Libri extends Component {
       ISBN: "",
       Titulli: "",
       Pershkrimi: "",
-      Autori: "",
+      AutoriID: "",
       NrFaqeve: "",
       Kategoria: "",
       VitiPublikimit: 0,
@@ -68,50 +69,59 @@ export class Libri extends Component {
       Cmimi: 0.0,
       Sasia: 0,
       isFormValid: false,
-      ImgPath: 'img/img.png'
+      ImgPath: "img.png"
     });
   }
 
-  validateForm = () => {
-    const { ISBN, Titulli, Pershkrimi, Autori, NrFaqeve, Kategoria, VitiPublikimit, ShtepiaBotuese, Gjuha, Cmimi, Sasia } = this.state;
-    return ISBN && Titulli && Pershkrimi && Autori && VitiPublikimit && ShtepiaBotuese && Cmimi && Sasia;
-  };
 
-  refreshList() {
-    fetch(variables.API_URL + 'libri')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ librat: data });
-      });
+  refreshList = () => {
+    axios.get(variables.API_URL + 'libri')
+        .then(response => {
+            this.setState({ librat: response.data });
+        })
+        .catch(error => {
+            console.error('Error fetching players:', error);
+        });
 
-    fetch(variables.API_URL + 'autori')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ autoret: data });
-      });
-    fetch(variables.API_URL + 'kategoria')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ kategorit: data });
-      });
+    axios.get(variables.API_URL + 'Autori')
+        .then(response => {
+            this.setState({ autoret: response.data });
+        })
+        .catch(error => {
+            console.error('Error fetching teams:', error);
+        });
 
-    fetch(variables.API_URL + 'gjuha')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ gjuhet: data });
-      });
+        axios.get(variables.API_URL + 'kategoria')
+        .then(response => {
+            this.setState({ kategorit: response.data });
+        })
+        .catch(error => {
+            console.error('Error fetching teams:', error);
+        });
+        axios.get(variables.API_URL + 'gjuha')
+        .then(response => {
+            this.setState({ gjuhet: response.data });
+        })
+        .catch(error => {
+            console.error('Error fetching teams:', error);
+        });
+        axios.get(variables.API_URL + 'nrfaqeve')
+        .then(response => {
+            this.setState({ faqet: response.data });
+        })
+        .catch(error => {
+            console.error('Error fetching teams:', error);
+        });
 
-    fetch(variables.API_URL + 'nrfaqeve')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ faqet: data });
-      });
-    fetch(variables.API_URL + 'shtepiabotuese')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ botuesit: data });
-      });
-  }
+        axios.get(variables.API_URL + 'shtepiabotuese')
+        .then(response => {
+            this.setState({ botuesit: response.data });
+        })
+        .catch(error => {
+            console.error('Error fetching teams:', error);
+        });
+};
+  
 
   changeISBN = (e) => {
     this.setState({ ISBN: e.target.value });
@@ -122,8 +132,8 @@ export class Libri extends Component {
   changePershkrimi = (e) => {
     this.setState({ Pershkrimi: e.target.value });
   }
-  changeAutori = (e) => {
-    this.setState({ Autori: e.target.value });
+  changeAutoriID = (e) => {
+    this.setState({ AutoriID: e.target.value });
   }
   changeNrFaqeve = (e) => {
     this.setState({ NrFaqeve: e.target.value });
@@ -146,6 +156,12 @@ export class Libri extends Component {
   changeSasia = (e) => {
     this.setState({ Sasia: e.target.value });
   }
+  validateForm = () => {
+    const { ISBN, Titulli, Pershkrimi, AutoriID,NrFaqeve,Kategoria,VitiPublikimit,ShtepiaBotuese,Gjuha,Cmimi,Sasia } = this.state;
+    return ISBN !== "" && Titulli !== 0 && Pershkrimi !== 0 && AutoriID !== ""  && NrFaqeve !== ""   && Kategoria !== ""  && VitiPublikimit !== "-"  && ShtepiaBotuese !== ""
+    && Gjuha !== ""  && Cmimi !== ""  && Sasia !== "";
+};
+
 
   addClick() {
     this.setState({
@@ -154,7 +170,7 @@ export class Libri extends Component {
       ISBN: "",
       Titulli: "",
       Pershkrimi: "",
-      Autori: "",
+      AutoriID: "",
       NrFaqeve: "",
       Kategoria: "",
       VitiPublikimit: 0,
@@ -162,7 +178,7 @@ export class Libri extends Component {
       Gjuha: "",
       Cmimi: 0.0,
       Sasia: 0,
-      ImgPath: "img/img.png"
+      ImgPath: "img.png"
     });
   }
   editClick(emp) {
@@ -172,7 +188,7 @@ export class Libri extends Component {
       ISBN: emp.ISBN,
       Titulli: emp.Titulli,
       Pershkrimi: emp.Pershkrimi,
-      Autori: emp.Autori,
+      AutoriID: emp.AutoriID,
       NrFaqeve: emp.NrFaqeve,
       Kategoria: emp.Kategoria,
       VitiPublikimit: emp.VitiPublikimit,
@@ -185,80 +201,63 @@ export class Libri extends Component {
     });
   }
 
-
-  createClick() {
-    fetch(variables.API_URL + 'Libri', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        ISBN: this.state.ISBN,
-        Titulli: this.state.Titulli,
-        Pershkrimi: this.state.Pershkrimi,
-        Autori: this.state.Autori,
-        NrFaqeve: this.state.NrFaqeve,
-        Kategoria: this.state.Kategoria,
-        VitiPublikimit: this.state.VitiPublikimit,
-        ShtepiaBotuese: this.state.ShtepiaBotuese,
-        Gjuha: this.state.Gjuha,
-        Cmimi: this.state.Cmimi,
-        Sasia: this.state.Sasia,
-        ImgPath: this.state.ImgPath
-      })
+  createClick = () => {
+    axios.post(variables.API_URL + 'Libri', {
+      ISBN: this.state.ISBN,
+      Titulli: this.state.Titulli,
+      Pershkrimi: this.state.Pershkrimi,
+      AutoriID: this.state.AutoriID,
+      NrFaqeve: this.state.NrFaqeve,
+      Kategoria: this.state.Kategoria,
+      VitiPublikimit: this.state.VitiPublikimit,
+      ShtepiaBotuese: this.state.ShtepiaBotuese,
+      Gjuha: this.state.Gjuha,
+      Cmimi: this.state.Cmimi,
+      Sasia: this.state.Sasia,
+      ImgPath: this.state.ImgPath
     })
-      .then(res => res.json())
-      .then((result) => {
+    .then((response) => {
         alert('U shtua me sukses');
         this.refreshList();
         document.getElementById("exampleModal").classList.remove("show");
         document.querySelector(".modal-backdrop").remove();
-      }, (error) => {
-        alert('Failed');
-      })
-  }
-
-  updateClick() {
-    fetch(variables.API_URL + 'Libri', {
-      method: 'PUT',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        ID: this.state.ID,
-        ISBN: this.state.ISBN,
-        Titulli: this.state.Titulli,
-        Pershkrimi: this.state.Pershkrimi,
-        Autori: this.state.Autori,
-        NrFaqeve: this.state.NrFaqeve,
-        Kategoria: this.state.Kategoria,
-        VitiPublikimit: this.state.VitiPublikimit,
-        ShtepiaBotuese: this.state.ShtepiaBotuese,
-        Gjuha: this.state.Gjuha,
-        Cmimi: this.state.Cmimi,
-        Sasia: this.state.Sasia,
-        ImgPath: this.state.ImgPath
-      })
     })
-      .then(res => {
-        if (res.ok) {
-          alert('Updated');
-          this.refreshList();
-          document.getElementById("exampleModal").classList.remove("show");
-          document.querySelector(".modal-backdrop").remove();
-          window.location.reload();
-
-        } else {
-          alert('Failed');
-        }
-      })
-      .catch(error => {
-        console.error('Error updating book:', error);
+    .catch(error => {
+        console.error('Error creating player:', error);
         alert('Failed');
-      });
-  }
+    });
+};
+updateClick = () => {
+  const { ID,ISBN, Titulli, Pershkrimi, AutoriID,NrFaqeve,Kategoria,VitiPublikimit,ShtepiaBotuese,Gjuha,Cmimi,Sasia,ImgPath  } = this.state;
+
+  axios.put(`http://localhost:5170/api/Libri/${ID}`, {
+    ID,
+    ISBN,
+    Titulli,
+    Pershkrimi,
+    AutoriID,
+    NrFaqeve,
+    Kategoria,
+    VitiPublikimit,
+    ShtepiaBotuese,
+    Gjuha,
+    Cmimi,
+    Sasia,
+    ImgPath
+      
+  })
+  .then(response => {
+      alert('Updated successfully');
+      this.refreshList();
+      document.getElementById("exampleModal").classList.remove("show");
+      document.querySelector(".modal-backdrop").remove();
+  })
+  .catch(error => {
+      console.error('Error updating player:', error);
+      alert('Failed to update player');
+  });
+};
+
 
 
   deleteClick(id) {
@@ -310,7 +309,7 @@ export class Libri extends Component {
       ISBN,
       Titulli,
       Pershkrimi,
-      Autori,
+      AutoriID,
       NrFaqeve,
       Kategoria,
       VitiPublikimit,
@@ -364,6 +363,7 @@ export class Libri extends Component {
               <table className="table table-striped">
                 <thead>
                   <tr>
+                  <th>ID</th>
                     <th>ISBN</th>
                     <th>Titulli</th>
                     <th style={{ paddingRight: '100px' }}>Pershkrimi</th>
@@ -381,10 +381,11 @@ export class Libri extends Component {
                 <tbody>
                   {librat.map(emp =>
                     <tr key={emp.ID}>
+                      <td>{emp.ID}</td>
                       <td>{emp.ISBN}</td>
                       <td>{emp.Titulli}</td>
                       <td>{emp.Pershkrimi}</td>
-                      <td>{emp.Autori}</td>
+                      <td>{autoret.find(t => t.AutoriID === emp.AutoriID)?.Emri || 'No Team'}</td>
                       <td>{emp.NrFaqeve}</td>
                       <td>{emp.Kategoria}</td>
                       <td>{emp.VitiPublikimit}</td>
@@ -451,10 +452,10 @@ export class Libri extends Component {
                             <span className="input-group-text">Autori</span>
                            
                             <select className="form-select"
-                              onChange={this.changeAutori}
-                              value={Autori}>
+                              onChange={this.changeAutoriID}
+                              value={AutoriID}>
                                  <option value="">Select</option>
-                              {autoret.map(dep => <option key={dep.AutoriID}>
+                              {autoret.map(dep => <option key={dep.AutoriID} value={dep.AutoriID}>
                                 {dep.Emri}
                               </option>)}
                             </select>

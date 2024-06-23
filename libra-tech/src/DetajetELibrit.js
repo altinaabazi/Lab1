@@ -69,13 +69,17 @@ function DetajetELibrit() {
                     <img src={variables.API_URL + 'libri/GetFoto/' + libri.ID} alt={libri.Titulli} className="img-fluid" />
                   </div>
                   <div className="col-md-8">
-                    <p><strong>Autori:</strong> {libri.Autori}</p>
+                    <p><strong>Titulli:</strong> {libri.Titulli}</p>
                     <p><strong>Pershkrimi:</strong> {libri.Pershkrimi}</p>
+                    <p><strong>Autori:</strong> {libri.Autori.Emri}</p>
                     <p><strong>Kategoria:</strong> {libri.Kategoria}</p>
-                    <p><strong>Viti i Publikimit:</strong> {libri.VitiPublikimit}</p>
                     <p><strong>Gjuha:</strong> {libri.Gjuha}</p>
+                    <p><strong>NrFaqeve:</strong> {libri.NrFaqeve}</p>
+                    <p><strong>ShtepiaBotuese:</strong> {libri.ShtepiaBotuese}</p>
+                    <p><strong>Viti i Publikimit:</strong> {libri.VitiPublikimit}</p>
+                    <p><strong>Sasia:</strong> {libri.Sasia}</p>
                     <p><strong>Cmimi:</strong> ${libri.Cmimi}</p>
-
+                    
                     {user && user.roli === 'User' && (
                     <button onClick={() => addToCart(libri)} className="btn btn-success">Shto ne shportë</button>
                     )}

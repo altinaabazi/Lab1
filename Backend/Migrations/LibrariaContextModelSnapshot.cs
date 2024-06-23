@@ -231,8 +231,9 @@ namespace Backend.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<string>("Autori")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("AutoriID")
+                        .IsRequired()
+                        .HasColumnType("int");
 
                     b.Property<double>("Cmimi")
                         .HasColumnType("float");
@@ -273,6 +274,8 @@ namespace Backend.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("AutoriID");
 
                     b.ToTable("Libri");
                 });
@@ -458,40 +461,6 @@ namespace Backend.Migrations
                     b.ToTable("QytetiLibraria");
                 });
 
-            modelBuilder.Entity("Lab1_Backend.Models.Shporta", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<DateTime>("DataShtimit")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("KlientiID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LibriID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MjeteShkolloreID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Sasia")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("KlientiID");
-
-                    b.HasIndex("LibriID");
-
-                    b.HasIndex("MjeteShkolloreID");
-
-                    b.ToTable("Shporta");
-                });
-
             modelBuilder.Entity("Lab1_Backend.Models.ShtepiaBotuese", b =>
                 {
                     b.Property<int>("ID")
@@ -652,6 +621,17 @@ namespace Backend.Migrations
                     b.ToTable("Tipi");
                 });
 
+            modelBuilder.Entity("Lab1_Backend.Models.Libri", b =>
+                {
+                    b.HasOne("Lab1_Backend.Models.Autori", "Autori")
+                        .WithMany()
+                        .HasForeignKey("AutoriID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Autori");
+                });
+
             modelBuilder.Entity("Lab1_Backend.Models.Porosia", b =>
                 {
                     b.HasOne("Lab1_Backend.Models.Klienti", "Klienti")
@@ -688,33 +668,6 @@ namespace Backend.Migrations
                     b.Navigation("MjeteShkollore");
 
                     b.Navigation("Porosia");
-                });
-
-            modelBuilder.Entity("Lab1_Backend.Models.Shporta", b =>
-                {
-                    b.HasOne("Lab1_Backend.Models.Klienti", "Klienti")
-                        .WithMany()
-                        .HasForeignKey("KlientiID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Lab1_Backend.Models.Libri", "Libri")
-                        .WithMany()
-                        .HasForeignKey("LibriID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Lab1_Backend.Models.MjeteShkollore", "MjeteShkollore")
-                        .WithMany()
-                        .HasForeignKey("MjeteShkolloreID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Klienti");
-
-                    b.Navigation("Libri");
-
-                    b.Navigation("MjeteShkollore");
                 });
 
             modelBuilder.Entity("Lab1_Backend.Models.Porosia", b =>

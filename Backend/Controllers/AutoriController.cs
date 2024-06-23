@@ -45,7 +45,7 @@ namespace Lab1_Backend.Controllers
             return autori;
         }
 
-      
+
 
         // POST: api/Autori
         [HttpPost]

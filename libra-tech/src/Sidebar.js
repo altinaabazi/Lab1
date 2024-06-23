@@ -130,7 +130,7 @@ function Sidebar() {
                         </a>
                         <div id="collapseUserProfile" className="collapse" aria-labelledby="headingUserProfile" data-parent="#accordionSidebar">
                             <div className="bg-white py-2 collapse-inner rounded">
-                                <a className="collapse-item" href="/UserProfile">My Profile</a>
+                                <a className="collapse-item" href="/UserProfileDisplay">My Profile</a>
                             </div>
                         </div>
                     </li>

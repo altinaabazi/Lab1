@@ -35,7 +35,7 @@ import MjetetSipasTipit from './MjetetSipasTipit';
 import KlientiGjinia from './KlientiGjinia';
 import Libri from './Libri';
 import DetajetELibrit from './DetajetELibrit';
-import UserProfile from './UserProfile';
+import UserProfileDisplay from './UserProfileDisplay';
 import DetajetEMjetit from './DetajetEMjetit';
 import KlientiQyteti from './KlientiQyteti';
 import { PorosiaService } from './PorosiaService';
@@ -45,6 +45,7 @@ import ProtectedRoute from './ProtectedRoute';  // Import the ProtectedRoute com
 import { useAuth } from './AuthProvider';
 import { AuthProvider } from './AuthProvider';
 import WishList from './WishList';
+
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -108,7 +109,7 @@ function App() {
            <Route path="/stafi" element={<Stafi/>} />
            <Route path='/mjeteShkollore' element={<MjeteShkollore />} />
            <Route path="/logout" element={<Logout />} />
-           <Route path='/UserProfile' element={<UserProfile />} />
+           <Route path='/UserProfileDisplay' element={<UserProfileDisplay />} />
            <Route path="/forgotpassword" element={<ForgotPassword />} />
            <Route path="/stafischedule" element={<StafiSchedule />} />
            <Route path="/schedule" element={<Schedule />} />
